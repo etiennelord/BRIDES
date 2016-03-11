@@ -31,7 +31,7 @@ using namespace std;
 // MAX POSSIBLE NODE for SPEED 10*1024*1024
 #define  maxnodes 10485760
 // MAX POSSIBLE SPP between i and j investigated
-#define max_individual_path 100
+//#define max_individual_path 100
 #define SSTR( x ) static_cast< std::ostringstream & >( \
         ( std::ostringstream() << std::dec << x ) ).str()
 		
@@ -107,9 +107,10 @@ struct Parameters {
 		int maxtime;
         float maxnode;
 		bool verbose; 
-		
+	
+	int max_individual_path; 	
 	int weight_method; //All weight as equal, inverse, default
-	int use_graphinfo; //We use the graphinfo file to define node type	
+		
 	
 	bool use_multiple_color; // do we required multiple color?
       
@@ -137,7 +138,6 @@ void load_info(char* filename);
 int get_node(std::string name);
 void load_attributes(char *filename);
 std::map<int,int> load_edge(char *filename, std::vector<edge> &edge_list);
-void build_matrix();
 int add_node(std::string name);
 void cout_map(vector< map<int, int> > p);
 int randomInt (int min, int max);
@@ -155,10 +155,12 @@ std::map<int,int> node_id_g2;				 //--Map of the nodes in g2 (faster)
 std::map<int, std::string> attributes;
 std::map<std::string, int> uniques_attributes; //--Atrtibutes and their count
 
+
 vector< vector<int> > undirected_adjlist_g1;
 vector< vector<int> > undirected_adjlist_g2;
 vector< vector<float> > undirected_adjlist_g1_dist;
-vector< vector<float> > undirected_adjlist_g2_dist;
+vector< vector<float> > undirected_adjlist_g2_dist; 
+vector< vector<float> > statistics; //statistics for each nodes
 vector<int> random_paths; // unique random paths 
 
 bool* node_graph1; //Node in node_name in graph1  
@@ -168,6 +170,7 @@ int total_n=0; //--Internal Counter
 int total_n_g1=0;
 int total_n_g2=0;
 bool* Nsb;   //--Vector from 0..n of node_appartenance (if true, found in g2 only) 
+bool* Nsu;   //--Vector from 0..n of node_usage (default true, we use all nodes)
 //--Internal informations
 int total_group=0;
 int size_of_groups=0;
@@ -177,32 +180,22 @@ int total_nonk_node=0; //--shoudl be equal to g1 normally
 	
 ofstream FileOutput; //verbose path to output
 
+void add_statistics(int src_id,int dest_id,int path_type, vector <int> path) {
+	// Array statistics:
+	// 0 1 2 3 4 5  6
+	// B R I D E S  inside_path
+	statistics[src_id][path_type]++;
+	statistics[dest_id][path_type]++;
+	 for (int i=0; i<path.size();i++) {
+	   if (path[i]!=src_id&&path[i]!=dest_id) statistics[path[i]][6]++;
+	 }
+	
+}
+
 void debug_info() {
 	for (int i=0; i<total_n;i++) {
 		cout<<node_name[i]<<" "<<Nsb[i]<<" "<<attributes[i]<<" "<<node_id_g1.count(i)<<" "<<node_id_g2.count(i)<<endl;
-	}
-	// cout<<"=== g1:"<<endl;
-	// for (int i=0;i<total_n;i++) {
-		// cout<<i<<undirected_adjlist_g1[i]<<endl;
-	// }
-	// for (int i=0; i<edge_list_g1.size();i++) {
-		// edge t=edge_list_g1[i];
-		// cout<<t.from<<"-"<<t.to<<endl;
-	// }
-	
-	// cout<<"=== g2:"<<endl;
-	// for (int i=0;i<total_n;i++) {
-		// cout<<i<<undirected_adjlist_g2[i]<<endl;
-	// }
-	// //--
-	// for (int i=0; i<edge_list_g1.size();i++) {
-		// edge t=edge_list_g1[i];
-		// cout<<t.from<<"-"<<t.to<<endl;
-	// }
-	// for (int i=0; i<edge_list_g2.size();i++) {
-		// edge t=edge_list_g2[i];
-		// cout<<t.from<<"-"<<t.to<<endl;
-	// }
+	}	
 }
 
 void dijkstra (int S, int T,vector< vector<int> > adj, vector< vector<float> > adj_dist,vector<float> &dist, vector< map<int,int> > &prev, map<int,int> ignored_nodes) {			
@@ -328,7 +321,7 @@ void dijkstra (int S, vector< vector<int> > adj, vector< vector<float> > adj_dis
 
  // use DFS
      void dfs_path(int s, int t, vector< map<int,int> > prev, vector< vector<int> > &paths, vector<int> &path, vector<bool> &onPath ) {		 
-        if (paths.size()>max_individual_path) return;
+        if (paths.size()>param.max_individual_path) return;
 		// found path from s to t
         if (s == t) {    			
 			vector<int> tmp=path;
@@ -513,11 +506,11 @@ if (random) {
 	while (created.size()<size) {
 		int s=randomInt(0,total_n_g1);
 		int t=randomInt(0,total_n_g1);
-		if (s>t) {
+		if (s>t&&!directed) {
 			int w=s;
 			s=t;t=w;
 		}
-		if (s!=t&&node_id_g2.count(s)>0&&node_id_g2.count(t)>0&&!Nsb[s]&&!Nsb[t]) created.insert(std::pair<std::pair<int,int>, int>(std::pair<int,int>(s,t),0));
+		if (s!=t&&node_id_g2.count(s)>0&&node_id_g2.count(t)>0&&!Nsb[s]&&!Nsb[t]&&Nsu[s]&&Nsu[t]) created.insert(std::pair<std::pair<int,int>, int>(std::pair<int,int>(s,t),0));
 	}
 	for (std::map<std::pair<int,int>,int>::iterator it=created.begin(); it!=created.end(); ++it) {
 		 path.push_back(((*it).first).first);
@@ -528,7 +521,7 @@ if (random) {
 	 for(j = 0; j < total_n_g1; j++) {
 		for(i = j+1; i < total_n_g1; i++){
 			//cout<<(t/size)<<endl;
-			if (i>j&&node_id_g2.count(i)>0&&node_id_g2.count(j)>0&&!Nsb[i]&&!Nsb[j]) {			
+			if (i>j&&node_id_g2.count(i)>0&&node_id_g2.count(j)>0&&!Nsb[i]&&!Nsb[j]&&Nsu[i]&&Nsu[j]) {			
 				if ((int)((t/size))+1==soffset) {			
 					path.push_back(i);
 					path.push_back(j);
@@ -542,14 +535,14 @@ if (random) {
 	  for(j = 0; j < total_n_g1; j++) {
 		for(i = 0; i < total_n_g1; i++){
 			
-			if (i!=j&&node_id_g2.count(i)>0&&node_id_g2.count(j)>0) {			
-				if (((t/size)+1)==soffset) {			
+			if (i!=j&&node_id_g2.count(i)>0&&node_id_g2.count(j)>0&&!Nsb[i]&&!Nsb[j]) {			
+				if ((int)((t/size))+1==soffset) {			
 					path.push_back(i);
 					path.push_back(j);					
 				}
 				t++;
 			}
-			if (((t/size)+1)>soffset+1) break;
+			if (((int)(t/size)+1)>soffset) break;
 		}
 	}	 
  } 
@@ -779,7 +772,7 @@ vector<int> brides(int group) {
 					case c_equal:  FileOutput<<"E"; break;
 					case c_shortcut:  FileOutput<<"S"; break;
 					}
-					
+					add_statistics(i,j,path_type,gp);
 					FileOutput<<"\t"<<elapsed<<"\t";
 					// cout<<"\t"; 
 					  fout_paths(gp);				
@@ -923,7 +916,7 @@ int main(int nargc, char** argv) {
 	cout<<"Group\tB\tR\tI\tD\tE\tS\tTotal\tCPU time (ms)"<<endl;
 	if (param.verbose) {
 		  FileOutput<<"\n============================ PARTIAL RESULTS ==================================\n";	
-		  FileOutput<<"Node1\tNode2\t\tDist_X\tDist_Y\tPath_type\tCPU time (ms)\tName\tTaxa"<<endl;
+		  FileOutput<<"Node1\tNode2\tDist_X\tDist_Y\tType\tCPU time (ms)\tPath\tTaxa"<<endl;
 	}
 	
 	#pragma omp parallel for ordered reduction(+:B,R,I,D,E,S,total,total_time) shared(random_paths)
@@ -967,6 +960,21 @@ int main(int nargc, char** argv) {
 			FileOutput<<"(D) etour       : pathway shorter in network X than in network Y.\n";
 			FileOutput<<"(E) qual        : pathway of same length in networks X and Y.\n";
 			FileOutput<<"(S) hortcut     : pathway longer in network X than in network Y.\n";
+			FileOutput<<"\n============================== STATISTICS ====================================\n";
+			FileOutput<<"Name (NK)\tB\tR\tI\tD\tE\tS\tInside\tAttribute"<<endl;
+			for (int i=0; i<total_n;i++) {
+				if (Nsu[i]&&!Nsb[i]) {
+					FileOutput<<node_name[i]<<"\t"<<statistics[i][0]<<"\t"<<statistics[i][1]<<"\t"<<statistics[i][2]<<"\t"<<statistics[i][3]<<"\t"<<statistics[i][4]<<"\t"<<statistics[i][5]<<"\t"<<statistics[i][6]<<"\t"<<attributes[i]<<endl;
+				}
+			}
+			FileOutput<<endl<<"Name (K)\tInside\tAttribute"<<endl;
+			
+			for (int i=0; i<total_n;i++) {
+				if (Nsb[i]) {
+					FileOutput<<node_name[i]<<"\t"<<statistics[i][6]<<"\t"<<attributes[i]<<endl;
+				}
+			}
+			FileOutput<<"*Inside: number of time a node is inside another path;K: K nodes;NK: non-K nodes\n";
 			FileOutput<<"\n================================ RESULTS ======================================\n";
 			FileOutput<<"\tB\tR\tI\tD\tE\tS\tTotal\tTime (s)"<<endl;
 			FileOutput<<"\t"<<B<<"\t"<<R<<"\t"<<I<<"\t"<<D<<"\t"<<E<<"\t"<<S<<"\t"<<total<<"\t"<<ttime<<endl;
@@ -984,6 +992,7 @@ int main(int nargc, char** argv) {
  */
 void constructor() {
      Nsb=new bool[maxnodes+1];
+	 Nsu=new bool[maxnodes+1];
 }
 
 
@@ -991,7 +1000,8 @@ void constructor() {
  * Destructor
  */ 
 void destructor() {    
-    delete[] Nsb;    
+    delete[] Nsb;
+	delete[] Nsu;   
 }
 
 
@@ -1008,7 +1018,15 @@ void build_adjacency_list() {
 		//--Total
 		if (Nsb[i]) {
 			total_k_node++;
-		} else {
+		} 
+	}
+	for (int i=0; i<total_n;i++) {
+		Nsu[i]=true;
+		if (!param.nonK.empty()&&param.found_attributes) {
+			string attr=attributes[i];
+			Nsu[i]=(std::find(param.nonK.begin(), param.nonK.end(), attr)!=param.nonK.end());		
+		}
+		if (Nsu[i]&&!Nsb[i]) {
 			total_nonk_node++;
 		}
 	}
@@ -1025,7 +1043,7 @@ void build_adjacency_list() {
 	for (int i=0; i<edge_list_g1.size();i++) {
 		
 		edge e=edge_list_g1[i];		
-		if (e.to!=-1&&!Nsb[e.to]&&!Nsb[e.from]) {
+		if (e.to!=-1&&!Nsb[e.to]&&!Nsb[e.from]&&Nsu[e.to]&&Nsu[e.from]) {
 			undirected_adjlist_g1[e.from].push_back(e.to);
 			undirected_adjlist_g1_dist[e.from].push_back(e.dist);
 			if (!param.directed) {
@@ -1052,6 +1070,12 @@ void build_adjacency_list() {
 			attributes.insert(std::pair<int,std::string>(i,s));
 		}
 	}
+	for (int i=0; i<total_n;i++) {
+		vector<float> tmp(8,0.0f);
+		statistics.push_back(tmp);
+		
+	}
+	
 }
 
 
@@ -1077,7 +1101,13 @@ void load_attributes(char* filename) {
 				if (node_id>-1) {
 					attributes.insert(std::pair<int,string>(node_id,tokens[1]));
 					//if (uniques_attributes.count(tokens[1])>0) {
-						uniques_attributes.insert(std::pair<string,int>(tokens[1],uniques_attributes.count(tokens[1])+1));
+					int count=uniques_attributes.count(tokens[1]);
+					if (count==0) {
+						uniques_attributes.insert(std::pair<string,int>(tokens[1],1));
+					}	else {
+						uniques_attributes.insert(std::pair<string,int>(tokens[1],uniques_attributes[tokens[1]]++));
+					}
+					
 					//} else {
 					//	uniques_attributes.insert(std::pair<string,int>(tokens[1],1));
 					//}
@@ -1199,13 +1229,13 @@ void output_header(char** argv) {
 	  cout<<"Nodes in networkX: "<<total_nonk_node<<endl;   
       cout<<"Nodes in networkY: "<<total_n_g2<<endl; 
       if (param.found_attributes)  {
-		  cout<<"Attributes|count : "<<total_n_g1<<endl;   
+		  cout<<"Attributes|count : "<<uniques_attributes.size()<<endl;   
 		  for(map<string,int>::iterator it = uniques_attributes.begin(); it != uniques_attributes.end(); ++it) {
-			  cout<<"\t"<<it->first<<endl;
+			  cout<<"\t"<<it->first<<"|"<<it->second<<endl;
 		  }
-	  }	  
-      // cout<<"Attributes       : "<<total_n_g2<<endl; 
-      cout<<"Total K nodes    : "<<total_k_node<<endl; 
+	  }	   
+      if (!param.nonK.empty()) cout<<"non-K nodes attr.: "<<param.nonK<<endl;
+	  cout<<"Total K nodes    : "<<total_k_node<<endl; 
 	  if (!param.K.empty()) cout<<"K nodes attr.    : "<<param.K<<endl;
 	  cout<<"Total paths      : "<<total_paths<<endl; 
       cout<<"\n-=[Run parameters]=-"<<endl;
@@ -1226,6 +1256,7 @@ void output_header(char** argv) {
       cout<<"Maxdistance      : "<<param.maxdistance<<endl;       
       cout<<"Maxnode          : "<<param.maxnode<<endl;       	  
 	  cout<<"Maxtime (s)      : "<<(param.maxtime/1000)<<endl;    
+	  if (param.max_individual_path!=100) cout<<"Maxpath          : "<<param.max_individual_path<<endl; 
 	  
 	  cout<<"\n-=[Miscellaneous]=-"<<endl;
  	  if (param.seed<0) {
@@ -1234,7 +1265,7 @@ void output_header(char** argv) {
 		  cout<<"Seed             : "<<param.seed<<endl;      
 	  }  
 	  if (param.verbose) 
-		  cout<<"verbose          : "<<param.outputfile<<endl;      
+		  cout<<"Output file      : "<<param.outputfile<<endl;      
 	  cout<<"\n===============================================================================\n";	
       
 	  if (param.verbose) {
@@ -1252,8 +1283,20 @@ void output_header(char** argv) {
 			  if (param.found_g2) FileOutput<<"NetworkY         : "<<param.graph2<<endl;
 			  FileOutput<<"Nodes in networkX: "<<total_nonk_node<<endl;   
 			  FileOutput<<"Nodes in networkY: "<<total_n_g2<<endl; 			  
+			  if (param.found_attributes)  {
+				  FileOutput<<"Attributes|count : "<<uniques_attributes.size()<<endl;   
+				  for(map<string,int>::iterator it = uniques_attributes.begin(); it != uniques_attributes.end(); ++it) {
+					  FileOutput<<"\t"<<it->first<<"|"<<it->second<<endl;
+				  }
+			  }	   
+			 
+			  
+			  
+			  if (!param.nonK.empty()) FileOutput<<"non-K nodes attr.: "<<param.nonK<<endl;
 			  FileOutput<<"Total K nodes    : "<<total_k_node<<endl; 
+			  if (!param.K.empty()) FileOutput<<"K nodes attr.    : "<<param.K<<endl;
 			  FileOutput<<"Total paths      : "<<total_paths<<endl; 
+      
 			  //--Running parameters
 			  FileOutput<<"\n-=[Run parameters]=-"<<endl;
 			  FileOutput<<"Group size       : "<<param.size<<endl;      
@@ -1263,6 +1306,7 @@ void output_header(char** argv) {
 			  FileOutput<<"Maxdistance      : "<<param.maxdistance<<endl;       
 			  FileOutput<<"Maxnode          : "<<param.maxnode<<endl;       	  
 			  FileOutput<<"Maxtime (s)      : "<<(param.maxtime/1000)<<endl;      
+			  if (param.max_individual_path!=100) FileOutput<<"Maxpath          : "<<param.max_individual_path<<endl; 
 			  FileOutput<<"\n-=[Miscellaneous]=-"<<endl;
 			  if (param.seed<0) {
 				  FileOutput<<"Seed            : clock time"<<endl;      
@@ -1284,27 +1328,21 @@ void help(){
 	//printf("       -kmax=[0... n-1] -replicate=[1..n] -inputtype=[0,1]\n");
 
          printf("\nParameters :");
-        printf("\nX           [filename]");
-        printf("\nY           [filename]");
-		printf("\nattributes  [filename]");
-		printf("\nK           [list of attribute to considers as K separated by comma e.g. A,B,C]");
-        //printf("\nNK          [list of attribute to considers as K separated by comma e.g. A,B,C]");
-		printf("\nfirst       [starting group]");
-        printf("\nlast        [ending group]");
-		printf("\nsize        [group size]");
-        // printf("\nWe expect g1 and g2 to be a list of edges/nodes in the form:\n");
-        // printf("\n\t\tnode1\tnode2\tdistance");
-        // printf("\n\t\tnode1\tnode4\tdistance");
-        // printf("\n...");        
-        // //printf("\nnodes        [filename, group annotation for g1]");
-         // printf("\n\nWe expect attributes in the form:\n");
-        // printf("\n\t\tnode1\tattribute");
-        // printf("\n\t\tnode2\tattribute");
-        // printf("\n...");        
-        printf("\nmaxdistance [maximum path length to search, default      : 100]");
-		printf("\nmaxnodes    [maximum augmented node (K) to search,default: 100]");
-		printf("\nmaxtime     [maximum time for each path search, default  : 1 second]");
-        printf("\n\nExample : \n: ./BRIDES -X=sample_g1.txt -Y=sample_g2.txt\n\n");
+        printf("\n-X=file           [filename for network X]");
+        printf("\n-Y=file           [filename for network Y]");
+		printf("\n-attributes=file  [filename for node attributes]");
+		printf("\nK=B               [attributes to considers as K separated by comma e.g. A,B,C]");
+        printf("\nNK=A              [attributes to considers as non-K]");
+		printf("\n-random=XXX       [sample XXX random pathways]");
+		printf("\n-first=1          [first group of path to process]");
+        printf("\n-last=n           [last group of path to process]");
+		printf("\n-size=1000        [group size, default                         : 1000]");      
+        printf("\n-maxdistance=100  [maximum path length to search, default      : 100]");
+		printf("\n-maxnodes=100     [maximum augmented node (K) to search,default: 100]");
+		printf("\n-maxtime=1        [maximum time for each path search, default  : 1 second]");
+        printf("\n-output=file      [output to file each path information: taxa, distance, etc.]");
+		printf("\n-seed=999         [set the random seed generator to a specific seed]");
+		printf("\n\nExample : \n: ./BRIDES -X=sample_g1.txt -Y=sample_g2.txt\n\n");
 }
 
 
@@ -1359,10 +1397,12 @@ int readParameters(Parameters *param, char **argv, int nargc){
 		(*param).maxnode=100; //--Maxnode K to investigate
 		(*param).maxtime=10000; //--Maxtime in millsecond (10s per path)
 		(*param).size=1000; //-- default group size
+		(*param).max_individual_path=100; //Since we keep all shortest path, this is the number of shortest path investigated for each path
         (*param).seed=-1;
 		(*param).first=0;
 		(*param).last=0;
 		(*param).K.clear();
+		(*param).nonK.clear();
 		(*param).random=-1;		
          sprintf((*param).graph1,"%s","");
          sprintf((*param).graph2,"%s","");
@@ -1394,7 +1434,7 @@ int readParameters(Parameters *param, char **argv, int nargc){
                             return -1;
             }
 			//======== debug ==============
-			else if(strcmp("verbose",champs) == 0){
+			else if(strcmp("verbose",champs) == 0||strcmp("output",champs) == 0){
 							sprintf((*param).outputfile,"%s",contenu);
 							(*param).verbose=true;							
             }  
@@ -1424,6 +1464,12 @@ int readParameters(Parameters *param, char **argv, int nargc){
              std::string token;
                 while(std::getline(linestream, token, ',')) (*param).K.push_back(token); 
 			}
+			//======= non-K ================
+			 else if(strcmp("nK",champs) == 0||strcmp("NK",champs) == 0){    
+			  std::stringstream   linestream(contenu);
+             std::string token;
+                while(std::getline(linestream, token, ',')) (*param).nonK.push_back(token); 
+			}
             //======= random path ==============       
                else if(strcmp("random",champs) == 0){
 				(*param).random = atoi(contenu);
@@ -1437,6 +1483,10 @@ int readParameters(Parameters *param, char **argv, int nargc){
 			 //======= MAXTIME ==============       
                          else if(strcmp("maxtime",champs) == 0){                                
                               (*param).maxtime = atoi(contenu)*1000;
+			}
+			//======= MAXPATH ==============       
+                         else if(strcmp("maxpath",champs) == 0){                                
+                              (*param).max_individual_path = atoi(contenu);
 			}
 			//======== input file ==============
 			else if(strcmp("g1",champs) == 0||strcmp("X",champs) == 0||strcmp("x",champs) == 0){
