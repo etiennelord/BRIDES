@@ -1301,11 +1301,11 @@ void output_header(char** argv) {
 	  cout<<"Running mode     : normal"<<endl;
 	  }
 	  if (param.use_dist&&param.inv_dist) {
-		cout<<"Edge distance    : Inverse distance"<<endl;      	  
+		cout<<"Edge distance    : inverse distance"<<endl;      	  
 	  } else if (param.use_dist) {
-		cout<<"Edge distance    : Edge distance"<<endl;    
+		cout<<"Edge distance    : edge distance"<<endl;    
 	  } else {
-		cout<<"Edge distance    : Topological"<<endl;     
+		cout<<"Edge distance    : topological"<<endl;     
 	  }
 	  cout<<"Group size       : "<<param.size<<endl;      
 	  cout<<"Number of groups : "<<total_group<<endl;      
@@ -1368,11 +1368,11 @@ void output_header(char** argv) {
 			    FileOutput<<"Running mode     : normal"<<endl;
 			  }
 			  if (param.use_dist&&param.inv_dist) {
-				FileOutput<<"Edge distance    : Inverse distance"<<endl;      	  
+				FileOutput<<"Edge distance    : inverse distance"<<endl;      	  
 			  } else if (param.use_dist) {
-				FileOutput<<"Edge distance    : Edge distance"<<endl;    
+				FileOutput<<"Edge distance    : edge distance"<<endl;    
 			  } else {
-				FileOutput<<"Edge distance    : Topological"<<endl;     
+				FileOutput<<"Edge distance    : topological"<<endl;     
 			  }
 			  FileOutput<<"Group size       : "<<param.size<<endl;      
 			  FileOutput<<"Number of groups : "<<total_group<<endl;      
