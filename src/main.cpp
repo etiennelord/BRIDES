@@ -1232,7 +1232,7 @@ std::map<int,int> load_edge(char* filename, std::vector<edge> &edge_list) {
 				}
 				dist=1.0f;
                 if (tokens.size()>2) dist=atoi(tokens[2].c_str());
-				if (dist<0) dist=0.0f; //--Don't permit negative distance
+				if (dist<=0.0f) dist=1.0f; //--Don't permit negative distance
                  edge t;             
                  t.from=add_node(from);
                  t.to=add_node(to);
