@@ -96,6 +96,8 @@ struct Parameters {
         bool found_g2;//-found g2 file?
         bool found_attributes; //--Annotations
         bool info;
+		bool use_dist; //by default false, (dist set to 1)
+		bool inv_dist; // use the inverse of the distance
 		
         bool directed;
 		int seed;  //--seed
@@ -158,8 +160,8 @@ std::map<std::string, int> uniques_attributes; //--Atrtibutes and their count
 
 vector< vector<int> > undirected_adjlist_g1;
 vector< vector<int> > undirected_adjlist_g2;
-vector< vector<float> > undirected_adjlist_g1_dist;
-vector< vector<float> > undirected_adjlist_g2_dist; 
+vector< std::map<int,float> > undirected_adjlist_g1_dist;
+vector< std::map<int,float> > undirected_adjlist_g2_dist; 
 vector< vector<float> > statistics; //statistics for each nodes
 vector<int> random_paths; // unique random paths 
 
@@ -182,8 +184,8 @@ ofstream FileOutput; //verbose path to output
 
 void add_statistics(int src_id,int dest_id,int path_type, vector <int> path) {
 	// Array statistics:
-	// 0 1 2 3 4 5  6
-	// B R I D E S  inside_path
+	// 0 1 2 3 4 5  6            7             8 
+	// B R I D E S  inside_path  Min_len_to_k  Max_len_to_k
 	statistics[src_id][path_type]++;
 	statistics[dest_id][path_type]++;
 	 for (int i=0; i<path.size();i++) {
@@ -198,7 +200,7 @@ void debug_info() {
 	}	
 }
 
-void dijkstra (int S, int T,vector< vector<int> > adj, vector< vector<float> > adj_dist,vector<float> &dist, vector< map<int,int> > &prev, map<int,int> ignored_nodes) {			
+void dijkstra (int S, int T,vector< vector<int> > adj, vector< std::map<int,float> > adj_dist,vector<float> &dist, vector< map<int,int> > &prev, map<int,int> ignored_nodes) {			
 			int len=adj.size();
 			prev.clear();			
 			for (int i=0; i<len; i++) {
@@ -218,9 +220,9 @@ void dijkstra (int S, int T,vector< vector<int> > adj, vector< vector<float> > a
 					if (u==T) break;
 					//if (dist[u]>=1e14) break;
 					if (cost_to_u <= dist[u]) {
-						for ( int j=0;j<adj[u].size();j++ ) {
-							 float Duv = adj_dist[u][j]; // Change here if edge is weighted
+						for ( int j=0;j<adj[u].size();j++ ) { 
 							 int v=adj[u][j];
+							 float Duv = adj_dist[u][v]; // Change here if edge is weighted
 							if (ignored_nodes.count(v)==0) {
 								float new_cost = cost_to_u + Duv;
 								if (new_cost<dist[v]) {
@@ -240,7 +242,7 @@ void dijkstra (int S, int T,vector< vector<int> > adj, vector< vector<float> > a
 			}					
 	 }
 
-void dijkstra (int S, vector< vector<int> > adj, vector< vector<float> > adj_dist,vector<float> &dist, vector< map<int,int> > &prev, int ignored_nodes) {
+void dijkstra (int S, vector< vector<int> > adj, vector< std::map<int,float> > adj_dist,vector<float> &dist, vector< map<int,int> > &prev, int ignored_nodes) {
 			int len=adj.size();
 			prev.clear();			
 			for (int i=0; i<len; i++) {
@@ -259,8 +261,8 @@ void dijkstra (int S, vector< vector<int> > adj, vector< vector<float> > adj_dis
 					pq.erase(it);		
 					if (cost_to_u <= dist[u]) {
 						for ( int j=0;j<adj[u].size();j++ ) {
-							 float Duv = adj_dist[u][j]; // Change here if edge is weighted
-							 int v=adj[u][j];
+							int v=adj[u][j];
+							 float Duv = adj_dist[u][v]; // Change here if edge is weighted
 							if (ignored_nodes!=v) {
 								float new_cost = cost_to_u + Duv;
 								if (new_cost<dist[v]) {
@@ -278,7 +280,7 @@ void dijkstra (int S, vector< vector<int> > adj, vector< vector<float> > adj_dis
 			}		
 	 }	 
 	 
- void dijkstra (int S, vector< vector<int> > adj,vector< vector<float> > adj_dist, vector<float> &dist, vector< map<int,int> > &prev) {
+ void dijkstra (int S, vector< vector<int> > adj,vector< std::map<int,float> > adj_dist, vector<float> &dist, vector< map<int,int> > &prev) {
 			int len=adj.size();
 			prev.clear();			
 			for (int i=0; i<len; i++) {
@@ -299,8 +301,8 @@ void dijkstra (int S, vector< vector<int> > adj, vector< vector<float> > adj_dis
 					//if (dist[u]>=1e14) break;
 					if (cost_to_u <= dist[u]) {
 						for ( int j=0;j<adj[u].size();j++ ) {
-							 float Duv = adj_dist[u][j]; 
-							 int v=adj[u][j];
+							int v=adj[u][j];
+							 float Duv = adj_dist[u][v]; // Change here if edge is weighted
 							float new_cost = cost_to_u + Duv;
 							if (new_cost<dist[v]) {
 								dist[v]=new_cost;
@@ -387,6 +389,20 @@ vector< vector<int> > get_path(int S, int T, vector< map<int,int> > prev) {
 			}
 			cout<<v;			
 	 }
+
+float dist_path(vector<int> path,vector< std::map<int,float> > adj_dist) {
+		float len=0.0f;
+		
+		if (path.size()<1) return Inf;
+		// any duplicate and path contains one k nodes
+		int src=path[0];
+		for (int i=1; i<path.size();i++) {
+			int dest=path[i];
+			len+=(int)adj_dist[src][dest];
+			src=dest;
+		}
+	return len;
+}	 
 	 
 bool good_path(vector<int> path, int S, int T) {
 		bool found=false;
@@ -501,8 +517,18 @@ if (directed) total_path*=2;
 
 vector<int> path;
 if (random) {
+	//Calculate total node in g2 found in g1 
+	float total_g2_g1=0;
+	for (int i=0; i<total_n_g1;i++) {
+		if (node_id_g2.count(i)>0&&Nsu[i]) total_g2_g1++;
+	}
+	
+	total_g2_g1=(total_g2_g1*(total_g2_g1-1))/2;
+	if (directed) total_g2_g1*=2;
+	
 	//Now calculate the size of the random path 
 	std::map<std::pair<int,int>, int> created;
+	if (size>total_g2_g1) size=total_g2_g1;
 	while (created.size()<size) {
 		int s=randomInt(0,total_n_g1);
 		int t=randomInt(0,total_n_g1);
@@ -575,9 +601,9 @@ vector<int> brides(int group) {
 			 random_path.push_back(random_paths[i]);
 		 }
 	 }	 
-	iter_n=(random_path.size()/2);		 
-	#if defined(_OPENMP)
-	 #pragma omp parallel for reduction(+:B,R,I,D,E,S,total,total_time) shared (random_path)
+	iter_n=(random_path.size()/2);		 	 
+	 #if defined(_OPENMP)
+	 #pragma omp parallel for reduction(+:B,R,I,D,E,S,total,total_time) shared (random_path,statistics)
 	 #endif
 	 for (int ii=0;ii<iter_n;ii++) {
 		 int i=random_path[2*ii];
@@ -588,7 +614,16 @@ vector<int> brides(int group) {
 		 vector<float> dist_g2(total_n);
 		 dijkstra(i,undirected_adjlist_g2,undirected_adjlist_g2_dist, dist_g2, prev_g2);
 		 bool more=true; // we have more path to process?
-		 
+		 // Min-Max path to k - Not good since we don't process all i (i>j for undirected)		 
+		// if (param.verbose) {		
+			// for (int l=0; l<total_n;l++) {
+				// if (Nsb[l]) cout<<node_name[i]<<" "<<node_name[l]<<" "<<dist_g2[l]<<endl;
+				// if (dist_g2[l]<Inf&&l!=i&&Nsb[l]&&dist_g2[l]<statistics[i][7]) statistics[i][7]=dist_g2[l];
+				// if (dist_g2[l]<Inf&&l!=i&&Nsb[l]&&dist_g2[l]>statistics[i][8]) {
+					// statistics[i][8]=dist_g2[l];
+				// }
+			 // }
+		// }
 		 std::clock_t start_time = std::clock();
 		 while (more) {
 			int  j=random_path[2*ii+1];  
@@ -726,12 +761,12 @@ vector<int> brides(int group) {
 									} //--End no deadend	 
 								} //--End for each node
 								if (nodeadend) {
-									if ((gp.size()-1)==dist_g1[j]) {
-										real_dist_g2=(gp.size()-1);
-											
+									//--We need the good dist here in real_dist_g2
+									real_dist_g2=dist_path(gp,undirected_adjlist_g2_dist);
+									//real_dist_g2=gp.size()-1;
+									if (real_dist_g2==dist_g1[j]) {
 										path_type=c_equal;
 									} else {
-										real_dist_g2=(gp.size()-1);
 										path_type=c_detour;
 									}									
 								} else {
@@ -964,7 +999,12 @@ int main(int nargc, char** argv) {
 			FileOutput<<"Name (NK)\tB\tR\tI\tD\tE\tS\tInside\tAttribute"<<endl;
 			for (int i=0; i<total_n;i++) {
 				if (Nsu[i]&&!Nsb[i]) {
-					FileOutput<<node_name[i]<<"\t"<<statistics[i][0]<<"\t"<<statistics[i][1]<<"\t"<<statistics[i][2]<<"\t"<<statistics[i][3]<<"\t"<<statistics[i][4]<<"\t"<<statistics[i][5]<<"\t"<<statistics[i][6]<<"\t"<<attributes[i]<<endl;
+					 // string min1=SSTR(statistics[i][7]);
+					 // string max1=SSTR(statistics[i][8]);
+					 // // if (statistics[i][7]>=Inf) min1="Inf";
+					 // if (statistics[i][8]>=Inf) max1="Inf";
+					 // if (statistics[i][8]==-1) max1="Inf";
+					 FileOutput<<node_name[i]<<"\t"<<statistics[i][0]<<"\t"<<statistics[i][1]<<"\t"<<statistics[i][2]<<"\t"<<statistics[i][3]<<"\t"<<statistics[i][4]<<"\t"<<statistics[i][5]<<"\t"<<statistics[i][6]<<"\t"<<attributes[i]<<endl;
 				}
 			}
 			FileOutput<<endl<<"Name (K)\tInside\tAttribute"<<endl;
@@ -1034,10 +1074,11 @@ void build_adjacency_list() {
 	for (int j=0; j<total_n; j++) {
 			vector<int> tmp;
 			vector<float> tmp2;
+			std::map<int,float> tmp3;
 			undirected_adjlist_g1.push_back(tmp);
 			undirected_adjlist_g2.push_back(tmp);
-			undirected_adjlist_g1_dist.push_back(tmp2);
-			undirected_adjlist_g2_dist.push_back(tmp2);
+			undirected_adjlist_g1_dist.push_back(tmp3);
+			undirected_adjlist_g2_dist.push_back(tmp3);
 		}
 
 	for (int i=0; i<edge_list_g1.size();i++) {
@@ -1045,10 +1086,15 @@ void build_adjacency_list() {
 		edge e=edge_list_g1[i];		
 		if (e.to!=-1&&!Nsb[e.to]&&!Nsb[e.from]&&Nsu[e.to]&&Nsu[e.from]) {
 			undirected_adjlist_g1[e.from].push_back(e.to);
-			undirected_adjlist_g1_dist[e.from].push_back(e.dist);
+			//cout<<node_name[e.from]<<" "<<node_name[e.to]<<" "<<e.dist<<endl;
+			float dist=e.dist;
+			if (param.inv_dist) dist=1/dist;
+			if (!param.use_dist) dist=1.0f;
+			
+			undirected_adjlist_g1_dist[e.from].insert(std::pair<int,float>(e.to,dist));
 			if (!param.directed) {
 				undirected_adjlist_g1[e.to].push_back(e.from);
-				undirected_adjlist_g1_dist[e.to].push_back(e.dist);
+				undirected_adjlist_g1_dist[e.to].insert(std::pair<int,float>(e.from,dist));
 			}
 		} 		
 	}
@@ -1056,12 +1102,16 @@ void build_adjacency_list() {
 		edge e=edge_list_g2[i];
 		if (e.to!=-1) {
 			undirected_adjlist_g2[e.from].push_back(e.to);
-			undirected_adjlist_g2_dist[e.from].push_back(e.dist);
+			float dist=e.dist;
+			if (param.inv_dist) dist=1/dist;
+			if (!param.use_dist) dist=1.0f;
+			undirected_adjlist_g2_dist[e.from].insert(std::pair<int,float>(e.to,dist));
+			//cout<<node_name[e.from]<<" "<<node_name[e.to]<<" "<<e.dist<<endl;
 			if (!param.directed) {
 				undirected_adjlist_g2[e.to].push_back(e.from);
-				undirected_adjlist_g2_dist[e.to].push_back(e.dist);
+				undirected_adjlist_g2_dist[e.to].insert(std::pair<int,float>(e.from,dist));
 			}
-		}		
+		}  		
 	}
 	if (attributes.empty()) {
 		for (int i=0;i<total_n;i++) {
@@ -1071,9 +1121,10 @@ void build_adjacency_list() {
 		}
 	}
 	for (int i=0; i<total_n;i++) {
-		vector<float> tmp(8,0.0f);
-		statistics.push_back(tmp);
-		
+		vector<float> tmp(10,0.0f);
+		statistics.push_back(tmp);		
+		statistics[i][7]=Inf;
+		statistics[i][8]=-1.0f;
 	}
 	
 }
@@ -1182,7 +1233,7 @@ std::map<int,int> load_edge(char* filename, std::vector<edge> &edge_list) {
 				}
 				dist=1.0f;
                 if (tokens.size()>2) dist=atoi(tokens[2].c_str());
-				if (dist<0) dist=0; //--Don't permit negative distance
+				if (dist<0) dist=0.0f; //--Don't permit negative distance
                  edge t;             
                  t.from=add_node(from);
                  t.to=add_node(to);
@@ -1191,11 +1242,11 @@ std::map<int,int> load_edge(char* filename, std::vector<edge> &edge_list) {
 				 local_node.insert ( std::pair<int,int>(t.from,0));
 				 if (t.to!=-1) local_node.insert ( std::pair<int,int>(t.to,0));
 				 
-				 
                  if (t.to!=t.from) edge_list.push_back(t);
             }
         }
    } catch(const std::exception& e) {}   
+   cout<<"Done loading "<<filename<<"..."<<endl;
    file.close();
   return(local_node);
 } 
@@ -1249,6 +1300,13 @@ void output_header(char** argv) {
 	  } else {
 	  cout<<"Running mode     : normal"<<endl;
 	  }
+	  if (param.use_dist&&param.inv_dist) {
+		cout<<"Edge distance    : Inverse distance"<<endl;      	  
+	  } else if (param.use_dist) {
+		cout<<"Edge distance    : Edge distance"<<endl;    
+	  } else {
+		cout<<"Edge distance    : Topological"<<endl;     
+	  }
 	  cout<<"Group size       : "<<param.size<<endl;      
 	  cout<<"Number of groups : "<<total_group<<endl;      
 	  cout<<"First group      : "<<param.first<<endl;      
@@ -1299,10 +1357,34 @@ void output_header(char** argv) {
       
 			  //--Running parameters
 			  FileOutput<<"\n-=[Run parameters]=-"<<endl;
+			  if (param.random!=-1) {		
+				FileOutput<<"Running mode     : random"<<endl;  
+				if (param.random<1.0) {
+					FileOutput<<"Investigated     : "<<(param.random*100)<<"% ("<<(int)(total_paths*param.random)<<")"<<endl; 
+				} else {
+					FileOutput<<"Investigated     : "<<param.random<<endl;  
+				}
+			  } else {
+			    FileOutput<<"Running mode     : normal"<<endl;
+			  }
+			  if (param.use_dist&&param.inv_dist) {
+				FileOutput<<"Edge distance    : Inverse distance"<<endl;      	  
+			  } else if (param.use_dist) {
+				FileOutput<<"Edge distance    : Edge distance"<<endl;    
+			  } else {
+				FileOutput<<"Edge distance    : Topological"<<endl;     
+			  }
 			  FileOutput<<"Group size       : "<<param.size<<endl;      
 			  FileOutput<<"Number of groups : "<<total_group<<endl;      
 			  FileOutput<<"First group      : "<<param.first<<endl;      
 			  FileOutput<<"Last group       : "<<param.last<<endl;
+			  if (param.use_dist&&param.inv_dist) {
+				FileOutput<<"Edge distance    : Inverse distance"<<endl;      	  
+			  } else if (param.use_dist) {
+				FileOutput<<"Edge distance    : Edge distance"<<endl;    
+			  } else {
+				FileOutput<<"Edge distance    : Topological"<<endl;     
+			  }
 			  FileOutput<<"Maxdistance      : "<<param.maxdistance<<endl;       
 			  FileOutput<<"Maxnode          : "<<param.maxnode<<endl;       	  
 			  FileOutput<<"Maxtime (s)      : "<<(param.maxtime/1000)<<endl;      
@@ -1331,6 +1413,8 @@ void help(){
         printf("\n-X=file           [filename for network X]");
         printf("\n-Y=file           [filename for network Y]");
 		printf("\n-attributes=file  [filename for node attributes]");
+		printf("\n-usedist          [Use edge distances found in network files]");
+		printf("\n-invdist          [Use the inverse of edge distances found in network files]");
 		printf("\nK=B               [attributes to considers as K separated by comma e.g. A,B,C]");
         printf("\nNK=A              [attributes to considers as non-K]");
 		printf("\n-random=XXX       [sample XXX random pathways]");
@@ -1415,6 +1499,8 @@ int readParameters(Parameters *param, char **argv, int nargc){
 		 (*param).found_g1=false;
          (*param).found_g2=false;
          (*param).found_attributes=false;
+		 (*param).use_dist=false;
+		 (*param).inv_dist=false;
          //(*param).use_g2=false;
          //sprintf((*param).outputfile,"%s","output.txt");
 		/*(*param).distance_method=0;  //default cosine distance
@@ -1470,22 +1556,30 @@ int readParameters(Parameters *param, char **argv, int nargc){
              std::string token;
                 while(std::getline(linestream, token, ',')) (*param).nonK.push_back(token); 
 			}
-            //======= random path ==============       
-               else if(strcmp("random",champs) == 0){
+             //======= usedist ==============       
+            else if(strcmp("usedist",champs) == 0){                                
+                              (*param).use_dist = true;
+			}
+			 //======= invdist ==============       
+            else if(strcmp("invdist",champs) == 0){                                
+                              (*param).inv_dist = true;
+							  (*param).use_dist = true;
+			}
+			//======= random path ==============       
+            else if(strcmp("random",champs) == 0){
 				(*param).random = atoi(contenu);
 				if (strstr( contenu, "%" )!=NULL) (*param).random/=100;
-				cout<<(*param).random<<endl;
 			}
 			 //======= SEED ==============       
-                         else if(strcmp("seed",champs) == 0){                                
+            else if(strcmp("seed",champs) == 0){                                
                               (*param).seed = atoi(contenu);
 			}
 			 //======= MAXTIME ==============       
-                         else if(strcmp("maxtime",champs) == 0){                                
+            else if(strcmp("maxtime",champs) == 0){                                
                               (*param).maxtime = atoi(contenu)*1000;
 			}
 			//======= MAXPATH ==============       
-                         else if(strcmp("maxpath",champs) == 0){                                
+            else if(strcmp("maxpath",champs) == 0){                                
                               (*param).max_individual_path = atoi(contenu);
 			}
 			//======== input file ==============
