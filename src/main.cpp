@@ -983,7 +983,6 @@ int main(int nargc, char** argv) {
 		cout<<"(E) qual        : pathway of same length in networks X and Y.\n";
 		cout<<"(S) hortcut     : pathway longer in network X than in network Y.\n";
 		cout<<"\n================================ RESULTS ======================================\n";
-		cout<<"\n================================ RESULTS ======================================\n";
 		cout<<"\tB\tR\tI\tD\tE\tS\tTotal\tTime (s)"<<endl;	
 		cout<<"\t"<<B<<"\t"<<R<<"\t"<<I<<"\t"<<D<<"\t"<<E<<"\t"<<S<<"\t"<<total<<"\t"<<ttime<<endl;
 		cout<<"===============================================================================\n";	
@@ -1088,7 +1087,7 @@ void build_adjacency_list() {
 			undirected_adjlist_g1[e.from].push_back(e.to);
 			//cout<<node_name[e.from]<<" "<<node_name[e.to]<<" "<<e.dist<<endl;
 			float dist=e.dist;
-			if (param.inv_dist) dist=1/dist;
+			if (param.inv_dist) dist=1.0f/dist;
 			if (!param.use_dist) dist=1.0f;
 			
 			undirected_adjlist_g1_dist[e.from].insert(std::pair<int,float>(e.to,dist));
@@ -1103,7 +1102,7 @@ void build_adjacency_list() {
 		if (e.to!=-1) {
 			undirected_adjlist_g2[e.from].push_back(e.to);
 			float dist=e.dist;
-			if (param.inv_dist) dist=1/dist;
+			if (param.inv_dist) dist=1.0f/dist;
 			if (!param.use_dist) dist=1.0f;
 			undirected_adjlist_g2_dist[e.from].insert(std::pair<int,float>(e.to,dist));
 			//cout<<node_name[e.from]<<" "<<node_name[e.to]<<" "<<e.dist<<endl;
@@ -1301,11 +1300,11 @@ void output_header(char** argv) {
 	  cout<<"Running mode     : normal"<<endl;
 	  }
 	  if (param.use_dist&&param.inv_dist) {
-		cout<<"Edge distance    : inverse distance"<<endl;      	  
+		cout<<"Edge distance    : inverse weights"<<endl;      	  
 	  } else if (param.use_dist) {
-		cout<<"Edge distance    : edge distance"<<endl;    
+		cout<<"Edge distance    : edge weights"<<endl;    
 	  } else {
-		cout<<"Edge distance    : topological"<<endl;     
+		cout<<"Edge distance    : no weights used"<<endl;     
 	  }
 	  cout<<"Group size       : "<<param.size<<endl;      
 	  cout<<"Number of groups : "<<total_group<<endl;      
@@ -1368,23 +1367,16 @@ void output_header(char** argv) {
 			    FileOutput<<"Running mode     : normal"<<endl;
 			  }
 			  if (param.use_dist&&param.inv_dist) {
-				FileOutput<<"Edge distance    : inverse distance"<<endl;      	  
+				FileOutput<<"Edge distance    : inverse weights"<<endl;      	  
 			  } else if (param.use_dist) {
-				FileOutput<<"Edge distance    : edge distance"<<endl;    
+				FileOutput<<"Edge distance    : edge weights"<<endl;    
 			  } else {
-				FileOutput<<"Edge distance    : topological"<<endl;     
+				FileOutput<<"Edge distance    : no weights used"<<endl;     
 			  }
 			  FileOutput<<"Group size       : "<<param.size<<endl;      
 			  FileOutput<<"Number of groups : "<<total_group<<endl;      
 			  FileOutput<<"First group      : "<<param.first<<endl;      
 			  FileOutput<<"Last group       : "<<param.last<<endl;
-			  if (param.use_dist&&param.inv_dist) {
-				FileOutput<<"Edge distance    : Inverse distance"<<endl;      	  
-			  } else if (param.use_dist) {
-				FileOutput<<"Edge distance    : Edge distance"<<endl;    
-			  } else {
-				FileOutput<<"Edge distance    : Topological"<<endl;     
-			  }
 			  FileOutput<<"Maxdistance      : "<<param.maxdistance<<endl;       
 			  FileOutput<<"Maxnode          : "<<param.maxnode<<endl;       	  
 			  FileOutput<<"Maxtime (s)      : "<<(param.maxtime/1000)<<endl;      
@@ -1414,7 +1406,7 @@ void help(){
         printf("\n-Y=file           [filename for network Y]");
 		printf("\n-attributes=file  [filename for node attributes]");
 		printf("\n-usedist          [Use edge distances found in network files]");
-		printf("\n-invdist          [Use the inverse of edge distances found in network files]");
+		//printf("\n-invdist          [Use the inverse of edge distances found in network files]");
 		printf("\nK=B               [attributes to considers as K separated by comma e.g. A,B,C]");
         printf("\nNK=A              [attributes to considers as non-K]");
 		printf("\n-random=XXX       [sample XXX random pathways]");
