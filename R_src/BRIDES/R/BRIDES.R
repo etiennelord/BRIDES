@@ -27,7 +27,98 @@ library(igraph)
 		}
 		
 
+random_network<-function(original_node=25, additional_node=5, ngroup=1, edge_ratio=0.0, total_edge=0, model='erdos',directed=FALSE,weighted=FALSE) {
+	#require(igraph);	
+	type=model;
+	total_node_in_g2=original_node+additional_node;
+	if (edge_ratio==0) edge_ratio<-sample(1:5, 1);
+	if (type=='erdos') {
+		g2 <- erdos.renyi.game(total_node_in_g2,edge_ratio*total_node_in_g2, type="gnm",directed=directed);
+	} else if (type=='barabasi'){
+		g2<-barabasi.game(total_node_in_g2, m=edge_ratio, power=1.2, zero.appeal=1.3, directed=directed);
+	} else if (type=='watts') {
+		g2=watts.strogatz.game(1, total_node_in_g2, nei=1, p=0.2)
+	} else {
+		#Fixed type (only undirected at the moment)
+		adj=array(0,c(total_node_in_g2, total_node_in_g2));
+		avail=numeric();
+		for(i in 1:total_node_in_g2){
+			for(j in 1:total_node_in_g2){
+				if(j>i&&j!=i){
+					avail=c(avail,(((j-1)*total_node_in_g2)+i));
+				}
+			}
+		}  
+		#Random seed
+		set.seed(sample(1:100000,1));
+		if (total_edge==0) total_edge=edge_ratio*total_node_in_g2;
+		#place edge
+		if (total_edge>0.5*((total_node_in_g2*total_node_in_g2)-total_node_in_g2)) total_edge=0.5*((total_node_in_g2*total_node_in_g2)-total_node_in_g2);
+		if (total_edge!=0) 
+		for (i in 1:total_edge) {
+			if (length(avail)==1) {
+				pos=as.numeric(avail);
+			} else {
+				pos=sample(avail, 1);
+				avail=avail[! avail %in% pos]
+			}	
+			y = ceiling(pos / (total_node_in_g2))
+			x= pos-((y-1)*total_node_in_g2)     
+		adj[x,y]=1
+		}
+		g2 <- graph.adjacency(adj, mode="undirected")
+	}
+	
+	V(g2)$name=paste("x",c(1:total_node_in_g2),sep="");
+	E(g2)$weight=1.0;
+	#Add random weight
+	if (weighted) E(g2)$weight=sample(1:10,length(E(g2)),replace=TRUE)
+	to_remove=sample(1:total_node_in_g2,(total_node_in_g2-original_node), replace = FALSE);
+	V(g2)$tax='1';
+	i=1;
+	for (vn in to_remove) {
+		if (i<=ngroup) {
+			V(g2)[vn]$tax=paste('',i+1,sep=""); #ensure that we have at least a vertex of each groups
+		} else {
+			V(g2)[vn]$tax=paste('',1+sample(1:ngroup,1),sep="");
+		}
+		i=i+1;
+	}
+	g1 <- delete.vertices(g2,to_remove);
+	V(g1)$tax=paste('',1,sep="");
+	##info_network(g1,g2);
+	return (list("g1"=g1,"g2"=g2, "total_nodes"=length(V(g2)), "total_edges"=length(E(g2)), "total_original_nodes"=length(V(g1))));
+}
 
+		load_network<-function(filename_or_df, filename_tax_or_df='', edge_weight='equal',directed=FALSE) {	
+	if (!is.data.frame(filename_or_df)) {
+		dS=read.table(filename_or_df,sep='\t');
+	} else {
+		dS=filename_or_df;
+	}
+	gS=graph.data.frame(dS,directed=directed);
+	if (filename_tax_or_df!='') {
+		if (!is.data.frame(filename_tax_or_df)) {
+			dS2=read.table(filename_tax_or_df,sep='\t',row.names=1);
+		} else {
+			dS2=filename_tax_or_df;
+		}
+		V(gS)$tax=as.character(dS2[V(gS)$name,1]) 
+	}
+	#equal, proportional, or inverse
+	if (edge_weight=='equal') E(gS)$weight=1.0;
+	if (edge_weight==''||edge_weight=='proportional') {
+		E(gS)$weight=dS[,3];		
+	}
+	if (edge_weight=='inverse') {
+		E(gS)$weight=dS[,3];	
+		E(gS)$weight=1/E(gS)$weight;
+	}
+	return (gS);
+}
+
+
+		
 #NEW, this is the compute function 
 pathBRIDES<-function(g1,g2_without_k,g1names,g2_unique_names_primed,g2_unique_number_primed,node1_number,node2_number,no_new_node,maxdistance,maxtime,maxnode,t0) {
 	#options(warn=-1); #disable warnings since some vertex could become unreachable
