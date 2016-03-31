@@ -1,52 +1,54 @@
 library(igraph)
+
+
+paraBRIDES(g1,g2,npath) {
+cl <- makeCluster(multicore(maxcores))
+	registerDoParallel(cl=cl);
+	sample_paths=c();
+	if (length(sample_paths)<1) sample_paths=sample_path(npath, length(V(g1)))
+	s<-foreach(hi=1:npath, .combine=cfun) %dopar% {
 	
 	
-	###################################################
-	#function split_sample
-	#Split a sample x into equals parts of maxsize
-	split_sample<-function(x, maxsize=1000) {
-		#note: since we want both node, we multiply by 2
-		maxsize<-maxsize*2;
-		return (split(x, ceiling(seq_along(x)/maxsize)));
 	}
 	
-	create_sample_path <- function(total_n, offset, size,directed=FALSE){
-			.C("createSamplePath", as.integer(total_n), as.integer(offset), as.integer(size), path = integer(size*2), as.integer(directed))$path;
-		}
-
-	###################################################
-	#function multicore	
-		multicore<- function(nc=0) {
-			cores <- if (.Platform$OS.type == "windows")
-				1
-			else
-				min(8L, ceiling(detectCores()/2))
-			getOption("mc.cores", cores)
-			if (nc!=0) return (nc);
-			return (cores)
-		}
+}
+# New version Feb 2016
+# This version record the different pattern of path
+# e.g. Euk->Pla->Pla->Vir->Euk
+BRIDES<-function(g1,g2=NULL,node1="default", node2="default",taxnames='default',maxdistance=0, maxtime=3600,maxnode=0,maxcores=1) 
+{
+	##################################################
+	## Implement 
+	if (node1=="default"||node2=="default") {
+		# CALL the parallel function to examine all path
 		
+	}
+	if ((is.directed(g1)&&!is.directed(g2))||(is.directed(g2)&&!is.directed(g1))) {
+	  warning("Both networks must be either directed or undirected.\n");
+	  return (NULL);
+	}	
+	directed=is.directed(g1);
 
-
-#NEW, this is the compute function 
-pathBRIDES<-function(g1,g2_without_k,g1names,g2_unique_names_primed,g2_unique_number_primed,node1_number,node2_number,no_new_node,maxdistance,maxtime,maxnode,t0) {
-	#options(warn=-1); #disable warnings since some vertex could become unreachable
+	options(warn=-1); #disable warnings since some vertex could become unreachable
 	
-	###################################################
-    ## Flags
-		verbose<-FALSE;
-	trace<-TRUE;
+	g1names<-V(g1)$name;    #list of vertex taxnames in g1
+	g2names<-V(g2)$name;    #list of vertex taxnames in g2
+	node1_number=0;		    #A single vertex from
+	node2_number=0;		    #A single vertex to
+	no_new_node=FALSE;       #Flag, if true, we only report the changed network topology changes.						
+	
 	
 	###################################################
     ## constant 
   
-	c_equal=5;
-	c_shortcut=6;
-	c_detour=4;
-	c_roadblock=2;
-	c_impasse=3;
-	c_breakthrough=1;
-	#c_dead_end_or_detour=99;
+	c_equal=1;
+	c_shortcut=2;
+	c_detour=3;
+	
+	c_roadblock=4;
+	c_impasse=5;
+	c_breakthrough=6;
+	c_dead_end_or_detour=99;
 	
 	###################################################
     ## Trace type
@@ -57,6 +59,218 @@ pathBRIDES<-function(g1,g2_without_k,g1names,g2_unique_names_primed,g2_unique_nu
 	trace_type=c(); #taxnames 
 	trace_path_type=0; #
 	
+	###################################################
+	#Any good path
+	good_path2<-function(g,node1,node2, additional_node) {
+		path<-get.all.shortest.paths(g,node1,node2, mode="out")$res;	
+		for (p in path) {
+			if (length(p)<3) return (FALSE);
+			if (length(unique(p))!=length(p)) return (FALSE);			
+			if (any((p[2:(length(p)-1)]) %in% additional_node)) return (TRUE);  
+		}
+		return (FALSE);
+	}	
+	
+	###################################################
+	#function split_sample
+	#Split a sample x into equals parts of maxsize
+	split_sample<-function(x, maxsize=1000) {
+		#note: since we want both node, we multiply by 2
+		maxsize<-maxsize*2;
+		return (split(x, ceiling(seq_along(x)/maxsize)));
+	}
+
+	
+		create_sample_path <- function(total_n, offset, size){
+			.C("createSamplePath", as.integer(total_n), as.integer(offset), as.integer(size), path = integer(size*2))$path;
+		}
+	
+	
+	###################################################
+    ## Flags
+    
+	verbose<-FALSE;
+	trace<-TRUE;
+	
+	
+	
+	#Test if all names in g1 are also in g2
+	if (all(g1names %in% g2names)!=TRUE) {
+		#cat("! Warning ! Not all nodes in network g1 are in g2.\n");
+		if (verbose) cat("! Warning ! Not all nodes in network g1 are in g2\n", file=file, append=TRUE);	
+		#Remove node of g1 not in g2.
+		len_remove=length(g1names[!g1names %in% g2names]);
+		#cat("The following nodes (",len_remove," total) of g1 will be removed:\n");		
+		#cat("A number of nodes  (",len_remove," total) of g1 will be removed:\n");
+		#print(g1names[!g1names %in% g2names]);
+		g1=delete.vertices(g1,g1names[!g1names %in% g2names]);	
+		g1names<-V(g1)$name;		
+	}
+	
+	
+	################################################
+	## Selection of the k node in the augmented graph
+	if (taxnames=='default') {
+		#we take all the node node in graph1			
+		g2_unique_names<-V(g2)[!(V(g2)$name %in% V(g1)$name)]$name;		
+	
+	} else {
+		g2_unique_names=V(g2)[V(g2)$tax==as.factor(taxnames)]$name;		
+	}
+	
+	# Handle taxnames if not found
+	if (is.null(V(g2)$tax)) {
+		V(g2)$tax=1;
+		V(g2)[!(V(g2)$name %in% V(g1)$name)]$tax=2;
+	}
+	
+################################################
+	## If we have a node1, we only take this node1
+	
+	if (is.numeric(node1)) {
+		node1_number=node1;
+	} else if (node1!='default'){
+		if (length(V(g1)[V(g1)$name==as.factor(node1)]$name)>0) {
+			node1_number=match(node1, V(g1)$name)
+		} else {
+			cat("Node with name :",node1," not found in g1!\n");
+			if (verbose) cat("Node with name :",node1," not found in g1!\n", file=file, append=TRUE);
+			 return(c());
+		}	
+	}
+	###################################################
+	## Look if node2 is specified
+	if (is.numeric(node2)) {
+		node2_number=node2;
+	} else if (node2!='default'){
+		if (length(V(g1)[V(g1)$name==as.factor(node2)]$name)>0) {
+			node2_number=match(node2, V(g1)$name)
+		} else {
+			cat("Node with name :",node2," not found in g1!\n");
+			if (verbose) cat("Node with name :",node2," not found in g1!\n", file=file, append=TRUE);
+			 return(c());
+		}	
+	}
+	if (node2_number!=0&&(node2_number==node1_number)) {
+		#cat("Warning! Same number of nodes in network g1 and network g2\n");
+		if (verbose) cat("Warning! Same number of nodes in network g1 and network g2\n", file=file, append=TRUE);
+		#return(c());
+	}
+	
+	if (node2_number==0||node1_number==0) {
+		cat("Warning! you need to specify both node1 and node2\n");
+		#if (verbose) cat("Warning! you need to specify both node1 and node2\n", file=filename, append=TRUE);
+		return(c());
+	}
+
+	
+	#################################################
+	## Start of calculations
+	##
+	t0 <- proc.time()
+	g2_degree_one=c()
+	g2_unique_names_primed=c()  #Name of unique vertex in g2 without the degree one
+	g2_unique_number_primed=c()  #Number of unique vertex
+	# First prime not connected k
+	#cat("Priming unconnected k node ...\n");
+	for (name in g2_unique_names) {
+	
+		if(degree(g2,name)==1) {
+			g2_degree_one=c(g2_degree_one, name)
+		} else {
+			iso_g3short=shortest.paths(g2, v=name, algorithm="dijkstra");
+			# Are we connected to any non k node 
+			if(any(is.finite(iso_g3short[name,V(g1)$name]))) {
+				g2_unique_names_primed=c(g2_unique_names_primed,name)	
+			} else {
+				g2_degree_one=c(g2_degree_one, name)
+			}	
+		}
+	}	
+	
+	if (length(g2_degree_one)>0) {
+		g2_without_k=delete.vertices(g2,which(V(g2)$name %in% g2_degree_one))
+	} else {
+		g2_without_k=g2;
+	}
+	g2_unique_number_primed=as.numeric(V(g2_without_k)[g2_unique_names_primed]);	
+#Test si tous les noms dans g1 sont aussi dans g3
+if (all(g1names %in% g2names)!=TRUE) {
+	#cat("! Warning ! Not all name in g2 are in g1.\n");
+	#if (verbose) cat("! Warning ! Not all name in g2 are in g1", file=filename, append=TRUE);	
+	return(c());
+}
+
+if (length(g2_unique_names_primed)==0) {
+			#cat("! Warning ! No new nodes accessibles in g2 from g1.\n");
+			if (verbose) cat("! Warning ! No new nodes accessibles in g2 from g1.\n", file=file, append=TRUE);
+			# We call the new s
+			no_new_node=TRUE;
+			#return(c());
+		}
+	#if (verbose) cat("====================================\n", file=filename, append=TRUE);
+	#if (verbose) cat("Source","Destination","Type","Length",sep="\t", file=filename, append=TRUE);
+	rac=0;
+	inf=0;	
+	detour=0;
+	egal=0;
+	dead=0;
+	error=0;
+	deadend_or_detour=0;
+	#d_g1=dim(g1short)[1]
+	#d_g3=dim(g3short)[1]
+	#total_to_find<-(d_g1*(d_g1-1))/2;	
+	
+	#####################################
+	## Calculate function
+	##
+	cfun<-function(i, j) {
+		rac=i[1]+j[1];
+		inf=i[2]+j[2];	
+		detour=i[3]+j[3];
+		egal=i[4]+j[4];
+		dead=i[5]+j[5];
+		error=i[6]+j[6];	
+		total=i[7]+j[7];
+		deadend_or_detour=i[8]+j[8];
+		c(rac,inf,detour,egal,dead,error, total,deadend_or_detour);
+	}
+	
+	#######################################
+	## Main function to call 
+	##
+	## ai=starting i (default 1)
+	## bi=ending i   (default length(V(g1))
+	## aj=starting j (default 1)
+	## bj= ending j  (default length(V(g1))
+	
+	ai=1;
+	bi=length(V(g1));
+	aj=1;
+	bj=length(V(g1));
+	
+	
+	if (node1_number!=0) {
+		if (node1_number>bi) {
+			cat("Warning! Invalid node1 number:",node1_number,"\n");
+			return(c());
+		}
+		ai=node1_number;
+		bi=node1_number;
+	}
+	
+	if (node2_number!=0) {
+		if (node2_number>bj) {
+			cat("Warning! Invalid node2 number:",node2_number,"\n");
+			return(c());
+		}
+		aj=node2_number;
+		bj=node2_number;
+		maxdistance=0;
+		trace=TRUE; 
+	}
+	
+	#cat(ai, bi, aj, bj, node1_number, node2_number);
 	i=node1_number;
 	j=node2_number;
 		
@@ -71,12 +285,11 @@ pathBRIDES<-function(g1,g2_without_k,g1names,g2_unique_names_primed,g2_unique_nu
 			total_done=0;
 			brk=0;
 			deadend_or_detour=0;
-				
+			if (i>j||(node1_number!=0&&i!=j)||(directed&&i!=j)) {
+			
 				#shortest.paths(l$g2, V(l$g1)[1], V(l$g1)[2])[1]
 				iso_g3short_ij=shortest.paths(g2_without_k, V(g2_without_k)[g1names[i]], V(g2_without_k)[g1names[j]], algorithm = "dijkstra", mode="out");
-				g1short_ij=shortest.paths(g1, V(g1)[g1names[i]],V(g1)[g1names[j]],algorithm = "dijkstra", mode="out")
-				
-				#cat(i,j, g1names[i], g1names[j],g1short_ij,iso_g3short_ij,"\n")
+				g1short_ij=shortest.paths(g1, V(g1)[i], V(g1)[j],algorithm = "dijkstra", mode="out")
 				gp=good_path2(g2_without_k,g1names[i],g1names[j],g2_unique_number_primed);
 				# Original len
 				trace_len_origin=g1short_ij;
@@ -318,7 +531,7 @@ pathBRIDES<-function(g1,g2_without_k,g1names,g2_unique_names_primed,g2_unique_nu
 									
 									if (deadend) {
 										#Check for maxtime.
-										if (maxtime!=0) {
+										if (maxtime!=3600) {
 											tp1<-(proc.time()-tp0)[[3]];
 											if (tp1>maxtime) break;
 										}	 
@@ -424,8 +637,7 @@ pathBRIDES<-function(g1,g2_without_k,g1names,g2_unique_names_primed,g2_unique_nu
 									} else {
 										dead=dead+1;
 										deadend_or_detour=deadend_or_detour+1;
-										#trace_path_type=c_dead_end_or_detour;
-										trace_path_type=c_roadblock;
+										trace_path_type=c_dead_end_or_detour;
 										#if (verbose) {
 										#	str=paste("Dead end or detour (maxdistance>",maxdistance,")\n");
 											#cat(g1names[i],g1names[j],str, sep="\t", file=filename, append=TRUE);
@@ -437,10 +649,11 @@ pathBRIDES<-function(g1,g2_without_k,g1names,g2_unique_names_primed,g2_unique_nu
 						}
 					}
 				}	
+			}
 			total_done=total_done+1;
 		#c(rac,inf,detour,egal,dead,error, total_done,deadend_or_detour);
 	
-	 #options(warn=0)
+	 options(warn=0)
  temps1<-proc.time()-t0
  
  #if (verbose) cat("====================================\n", file=filename, append=TRUE);
@@ -487,267 +700,10 @@ if (trace_path_type==c_detour) ptype="Detour";
 if (trace_path_type==c_roadblock) ptype="Roadblock";
 if (trace_path_type==c_impasse) ptype="Impasse";
 if (trace_path_type==c_breakthrough) ptype="Breakthrough";
-#if (trace_path_type==c_dead_end_or_detour) ptype="Dead end or Detour";
+if (trace_path_type==c_dead_end_or_detour) ptype="Dead end or Detour";
 if (trace_path_type==0) ptype="Undefined";
 
 # Return a list
-result<-list("from"=g1names[i], "to"=g1names[j], "path_type"=ptype,"path_type0"=trace_path_type,"original_path_length"=as.numeric(trace_len_origin), "augmented_path_length"=as.numeric(trace_len), "path"=trace_path, "path_visited_taxa"=trace_type);
+result<-list("from"=g1names[i], "to"=g1names[j], "path_type"=ptype,"path_type0"=treace_path_type,"original_path_length"=as.numeric(trace_len_origin), "augmented_path_length"=as.numeric(trace_len), "path"=trace_path, "path_visited_taxa"=trace_type);
 return(result)
 }
-
-# New version Feb 2016
-# This version record the different pattern of path
-# e.g. Euk->Pla->Pla->Vir->Euk
-BRIDES<-function(g1,g2=NULL,node1="default", node2="default",taxnames='default',npath=0, maxdistance=100, maxtime=10,maxnode=100,maxcores=1, outfile="",randomize=F, size=1000, first=0, last=0, sample_paths=c()) 
-{
-    #####################################################
-	## Wrapper
-	
-	if (!is.null(g1$g1)) {
-	 g2=g1$g2
-	 g1=g1$g1
-	}
-	if (is.null(g2)&&taxnames=="default") {
-		print(is.null(g2))
-		print(taxnames=="default")
-		warning("No augmented network set. Either supply two networks or supply one network with some taxnames arguments.\n");
-	   return (NULL);
-	}
-	if (is.null(g2)) {
-		g2=g1;
-	}
-	if ((is.directed(g1)&&!is.directed(g2))||(is.directed(g2)&&!is.directed(g1))) {
-	  warning("Both networks must be either directed or undirected.\n");
-	  return (NULL);
-	}	
-	
-	######################################################
-	## LOCAL VARIABLES
-	directed=is.directed(g1);
-	g1names<-V(g1)$name;    #list of vertex taxnames in g1
-	g2names<-V(g2)$name;    #list of vertex taxnames in g2
-	node1_number=0;		    #A single vertex from
-	node2_number=0;		    #A single vertex to
-	no_new_node=FALSE;       #Flag, if true, we only report the changed network topology changes.						
-	
-	#Test if all names in g1 are also in g2
-	if (all(g1names %in% g2names)!=TRUE) {
-		warning("! Warning ! Not all nodes in network g1 are in g2\n");	
-		len_remove=length(g1names[!g1names %in% g2names]);
-		g1=delete.vertices(g1,g1names[!g1names %in% g2names]);	
-		g1names<-V(g1)$name;
-	}
-	#Replace edges with NA weight with 1
-	E(g1)[is.na(weight)]$weight=1
-	E(g2)[is.na(weight)]$weight=1
-	
-	################################################
-	## Selection of the k node in the augmented graph
-	if (taxnames=='default') {
-		#we take all the node node in graph1			
-		g2_unique_names<-V(g2)[!(V(g2)$name %in% V(g1)$name)]$name;		
-	} else {
-		g2_unique_names=V(g2)[V(g2)$tax==as.factor(taxnames)]$name;		
-	}
-	
-	# Handle taxnames if not found
-	if (is.null(V(g1)$tax)) V(g1)$tax=1;
-	if (is.null(V(g2)$tax)) {
-		V(g2)$tax=1;
-		V(g2)[!(V(g2)$name %in% V(g1)$name)]$tax=2;
-	}
-	
-################################################
-	## If we have a node1, we only take this node1
-	
-	if (is.numeric(node1)) {
-		node1_number=node1;
-	} else if (node1!='default'){
-		if (length(V(g1)[V(g1)$name==as.factor(node1)]$name)>0) {
-			node1_number=match(node1, V(g1)$name)
-		} else {
-			warning(paste("Node with name :",node1," not found in g1!\n"));
-			return(c());
-		}
-	}
-	###################################################
-	## Look if node2 is specified
-	if (is.numeric(node2)) {
-		node2_number=node2;
-	} else if (node2!='default'){
-		if (length(V(g1)[V(g1)$name==as.factor(node2)]$name)>0) {
-			node2_number=match(node2, V(g1)$name)
-		} else {
-			warning(paste("Node with name :",node2," not found in g1!\n"));
-			return(c());
-		}	
-	}
-	if (node2_number!=0&&(node2_number==node1_number)) {
-		#cat("Warning! Same number of nodes in network g1 and network g2\n");
-		warning("Warning! Same number of nodes in network g1 and network g2\n");
-		#return(c());
-	}
-	
-	
-
-	
-	#################################################
-	## Start of calculations
-	##
-	t0 <- proc.time()
-	g2_degree_one=c()
-	g2_unique_names_primed=c()  #Name of unique vertex in g2 without the degree one
-	g2_unique_number_primed=c()  #Number of unique vertex
-	# First prime not connected k
-	cat("Priming unconnected nodes...\n");
-	for (name in g2_unique_names) {
-	
-		if(degree(g2,name)==1) {
-			g2_degree_one=c(g2_degree_one, name)
-		} else {
-			iso_g3short=shortest.paths(g2, v=name, algorithm="dijkstra");
-			# Are we connected to any non k node 
-			if(any(is.finite(iso_g3short[name,V(g1)$name]))) {
-				g2_unique_names_primed=c(g2_unique_names_primed,name)	
-			} else {
-				g2_degree_one=c(g2_degree_one, name)
-			}	
-		}
-	}	
-	
-	if (length(g2_degree_one)>0) {
-		g2_without_k=delete.vertices(g2,which(V(g2)$name %in% g2_degree_one))
-	} else {
-		g2_without_k=g2;
-	}
-	g2_unique_number_primed=as.numeric(V(g2_without_k)[g2_unique_names_primed]);	
-	#Test si tous les noms dans g1 sont aussi dans g3
-	if (all(g1names %in% g2names)!=TRUE) {
-		#cat("! Warning ! Not all name in g2 are in g1.\n");
-		#if (verbose) cat("! Warning ! Not all name in g2 are in g1", file=filename, append=TRUE);	
-		return(c());
-	}
-
-	if (length(g2_unique_names_primed)==0) {
-			#cat("! Warning ! No new nodes accessibles in g2 from g1.\n");
-			if (verbose) cat("! Warning ! No new nodes accessibles in g2 from g1.\n", file=file, append=TRUE);
-			# We call the new s
-			no_new_node=TRUE;
-			#return(c());
-		}
-	###################################################
-	## Variables for dispatching to the different functions
-	total_n=length(V(g1));
-	
-	total_paths=(total_n*(total_n-1))/2;
-	if (npath!=0&&npath<size) size=npath;
-	if (directed)  total_paths=total_n*(total_n-1);
-	if (npath!=0&&npath<total_paths) total_paths=npath;
-	total_group=as.integer(total_paths/size)+1;
-	if (total_paths %% size==0) total_group=total_group-1; #Correct for limit case
-	if (last==0||last>total_group) last=total_group;
-	if (first==0||first<1) first=1;
-	
-	
-	####################################################
-	## MAIN COMPUTING FUNCTION CALLS
-	
-	if (node2_number==0||node1_number==0||npath!=0) {
-	##################################################
-	## Implemented in a different function 
-	cat("==========================================================\n");
-	cat("Total",total_paths,"pathways to evaluated divided into", total_group, "groups.\n"); 
-	cat("==========================================================\n");
-	cat("Run parameters  :\n");
-	cat("Taxnames        :",taxnames,"\n");
-	cat("Randomize paths :",randomize,"\n");
-	cat("Total nodes     :",total_n,"\n");
-	cat("Group size      :",size,"\n");
-	cat("Start group     :",first,"\n");
-	cat("End group       :",last,"\n");
-	cat("Maxdistance     :",maxdistance,"\n");
-	cat("Maxtime (s)     :",maxtime,"\n");
-	cat("Maxnode         :",maxnode,"\n");
-	cat("Maxcores        :",maxcores,"\n");  
-	cat("==========================================================\n");
-	if (outfile!="") write("# node1\tnode\toriginal_len\taugmented_len\ttype\tpathway\ttaxa_type\n",outfile)
-		if (npath==0) {
-			npath=(length(V(g1))*(length(V(g1))-1))/2;
-			if (directed) npath=length(V(g1))*2;
-		}
-		# if (outfile!="") {
-			# cl <- makeCluster(multicore(maxcores), outfile=outfile)
-		# } else {
-			# 
-		# }
-		cl <- makeCluster(multicore(maxcores))
-			registerDoParallel(cl=cl);
-			
-		total_s=array(0,8);
-		cat("#  ","B","R","I","D","E","S","(utime","stime)","\n", sep="\t")
-		
-		for (p in first:last) {
-			
-			cat(p,"");
-			
-			pathways=c();
-			if (!directed) {
-				sample_paths=create_sample_path(total_n, p, size);
-			} else {
-				sample_paths=create_sample_path(total_n, p, size,TRUE);
-			}
-			sample_paths=sample_paths[sample_paths != 0] #Trim the sample_path of zero (0) indice
-			npath=length(sample_paths)/2;
-			total=0
-			t0=proc.time();
-			s<-foreach(hi=1:npath, .combine=function(i,j, .export=c("pathways")) { return(i+j)}) %dopar% {
-				i=sample_paths[(hi-1)*2+1];
-				j=sample_paths[(hi-1)*2+2];
-				cat(i,j)
-				b=pathBRIDES(g1,g2_without_k,g1names,g2_unique_names_primed,g2_unique_number_primed,i,j,no_new_node,maxdistance,maxtime,maxnode,proc.time());
-				a=array(0,6)
-				a[b$path_type0]=1;
-				pathways=c(pathways,b);
-				cat(g1names[i],g1names[j],b$original_path_length,b$augmented_path_length,b$path_type,b$path,b$path_visited_taxa,"\n",sep="\t",file=outfile, append=T);
-				a
-			}
-			ttime=(proc.time()-t0)
-			s=c(s,as.numeric(ttime[1]),as.numeric(ttime[3]))
-			
-			total_s = total_s +s
-			#names(s)<-c("B","R","I","D","E","S","(utime","stime)")
-			cat("",s[1],s[2],s[3],s[4],s[5],s[6],s[7],s[8],"\n",sep="\t");
-		##cat("Warning! you need to specify both node1 and node2\n");
-		#if (verbose) cat("Warning! you need to specify both node1 and node2\n", file=filename, append=TRUE);
-		##return(c());
-		} # End first to last group 
-		cat("====================== RESULTS ===========================\n");
-		names(total_s)<-c("B","R","I","D","E","S","(utime","stime)")
-		return(total_s)
-	# CASE 2. We have one sample 
-	} else {
-		pathBRIDES(g1,g2_without_k,g1names,g2_unique_names_primed,g2_unique_number_primed,node1_number,node2_number,no_new_node,maxdistance,maxtime,maxnode,proc.time());
-	}
-	
-}
-
-###################################################
-	#Any good path
-	good_path2<-function(g,node1,node2, additional_node) {
-		path<-get.all.shortest.paths(g,node1,node2, mode="out")$res;	
-		for (p in path) {
-			if (length(p)<3) return (FALSE);
-			if (length(unique(p))!=length(p)) return (FALSE);			
-			if (any((p[2:(length(p)-1)]) %in% additional_node)) return (TRUE);  
-		}
-		return (FALSE);
-	}	
-	
-	
-# B R I D E S
-# 0 2 0 6 2 0
-# B R I D E S
-# 0 0 0 6 3 1
-# B R I D E S
-# 0 0 0 4 4 2
-	

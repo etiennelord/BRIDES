@@ -1,0 +1,11 @@
+Package: BRIDES
+Type: Package
+Depends: R (>= 3.0), igraph (>= 1.0.0), doParallel, foreach, iterators, parallel
+Title: BRIDES Indentification of Path Types in Networks
+Version: 0.9.0
+Date: 2016-02-14
+Author: Etienne Lord, Margaux Le Cam, Eric Bapteste, Vladimir Makarenkov and Francois-Joseph Lapointe
+Maintainer: Etienne Lord <m.etienne.lord@gmail.com>
+Description: Compares the evolution of an original network X to an augmented network Y by counting if different path types present or not in the networks. 
+License: GPL-3
+LazyLoad: yes
