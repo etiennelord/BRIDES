@@ -1,0 +1,1845 @@
+Thermococcus kodakarensis KOD1	Thermococcus sp. AM4	
+Sulfolobus islandicus L.S.2.15	Sulfolobus islandicus REY15A	
+Anaerolinea thermophila UNI-1	Melioribacter roseus P3M-2	
+Bifidobacterium longum subsp. longum JDM301	Kytococcus sedentarius DSM 20547	
+Oscillibacter valericigenes Sjm18-20	Paenibacillus polymyxa M1	
+Aeromonas hydrophila subsp. hydrophila ATCC 7966	Idiomarina loihiensis GSL 199	
+Pelagibacterium halotolerans B2	Starkeya novella DSM 506	
+Pyrobaculum calidifontis JCM 11548	Thermoproteus uzoniensis 768-20	
+Brachybacterium faecium DSM 4810	Jonesia denitrificans DSM 20603	
+Methanobrevibacter ruminantium M1	Methanothermobacter thermautotrophicus str. Delta H	
+Acidianus hospitalis W1	Sulfolobus acidocaldarius N8	
+Haloferax mediterranei ATCC 33500	Natronobacterium gregoryi SP2	
+Solibacillus silvestris StLB046	Staphylococcus aureus subsp. aureus JKD6159	
+Halothiobacillus neapolitanus c2	Herbaspirillum seropedicae SmR1	
+Thermococcus barophilus MP	Thermococcus gammatolerans EJ3	
+Pyrococcus furiosus DSM 3638	Thermococcus sp. CL1	
+Methanococcus maripaludis S2	Methanococcus maripaludis X1	
+Mesoplasma florum L1	Spiroplasma diminutum CUAS-1	
+Halorubrum lacusprofundi ATCC 49239	Natronomonas moolapensis 8.8.11	
+Aromatoleum aromaticum EbN1	Methylobacillus flagellatus KT	
+Halorhabdus utahensis DSM 12940	halophilic archaeon DL31	
+Conexibacter woesei DSM 14684	Streptosporangium roseum DSM 43021	
+Owenweeksia hongkongensis DSM 17368	Riemerella anatipestifer ATCC 11845 = DSM 15868	
+Herbaspirillum seropedicae SmR1	Nitrosomonas sp. AL212	
+Halobacterium sp. NRC-1	Natrialba magadii ATCC 43099	
+Nakamurella multipartita DSM 44233	Sanguibacter keddieii DSM 10542	
+Amycolatopsis mediterranei RB	Cellvibrio gilvus ATCC 13127	
+Heliobacterium modesticaldum Ice1	Thermoanaerobacter italicus Ab9	
+Stackebrandtia nassauensis DSM 44728	Streptosporangium roseum DSM 43021	
+Sulfolobus islandicus LAL14/1	Sulfolobus islandicus M.14.25	
+Cellvibrio gilvus ATCC 13127	Clavibacter michiganensis subsp. michiganensis NCPPB 382	
+Anaerolinea thermophila UNI-1	Caldilinea aerophila DSM 14535 = NBRC 104270	
+Cellvibrio gilvus ATCC 13127	Segniliparus rotundus DSM 44985	
+Ilumatobacter coccineus YM16-304	Streptomyces fulvissimus DSM 40593	
+Methanoculleus bourgensis MS2	Methanoregula boonei 6A8	
+Frankia sp. EAN1pec	Mycobacterium sp. KMS	
+Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111	Streptosporangium roseum DSM 43021	
+Acidothermus cellulolyticus 11B	Propionibacterium acnes KPA171202	
+Mverticillata	Ptetraurelia	
+Halogeometricum borinquense DSM 11551	Natrinema pellirubrum DSM 15624	
+Clostridium botulinum F str. 230613	Syntrophomonas wolfei subsp. wolfei str. Goettingen	
+Alcanivorax borkumensis SK2	Idiomarina loihiensis GSL 199	
+Methanococcus vannielii SB	Methanothermococcus okinawensis IH1	
+Frankia sp. EAN1pec	Jonesia denitrificans DSM 20603	
+Alteromonas macleodii str. Ionian Sea U4	Marinomonas posidonica IVIA-Po-181	
+Corynebacterium diphtheriae HC03	Gordonia bronchialis DSM 43247	
+Amycolatopsis mediterranei RB	Geodermatophilus obscurus DSM 43160	
+Metallosphaera cuprina Ar-4	Sulfolobus acidocaldarius DSM 639	
+Jonesia denitrificans DSM 20603	Kineococcus radiotolerans SRS30216	
+Methanocaldococcus sp. FS406-22	Methanotorris igneus Kol 5	
+Pyrobaculum islandicum DSM 4184	Pyrobaculum neutrophilum V24Sta	
+Jonesia denitrificans DSM 20603	Beutenbergia cavernae DSM 12333	
+Srosetta	Ttrahens	
+Pyrococcus furiosus DSM 3638	Thermococcus sp. AM4	
+Haloterrigena turkmenica DSM 5511	Natrinema pellirubrum DSM 15624	
+Kineococcus radiotolerans SRS30216	Mycobacterium sp. KMS	
+Acetobacter pasteurianus IFO 3283-32	Methylocella silvestris BL2	
+Sulfolobus islandicus L.S.2.15	Sulfolobus islandicus Y.N.15.51	
+Halobacterium salinarum R1	Natronomonas pharaonis DSM 2160	
+Halorhabdus utahensis DSM 12940	Natronomonas moolapensis 8.8.11	
+Methanosalsum zhilinae DSM 4017	Methanosarcina barkeri str. Fusaro	
+Halogeometricum borinquense DSM 11551	Natronobacterium gregoryi SP2	
+Nakamurella multipartita DSM 44233	Geodermatophilus obscurus DSM 43160	
+Pyrobaculum oguniense TE7	Thermoproteus uzoniensis 768-20	
+Haloferax volcanii DS2	Haloquadratum walsbyi DSM 16790	
+Paenibacillus polymyxa M1	Thermoanaerobacter italicus Ab9	
+Ngruberi	Ppallidum	
+Hahella chejuensis KCTC 2396	Psychromonas sp. CNPT3	
+Bradyrhizobium japonicum USDA 6	Methylobacterium nodulans ORS 2060	
+Cellvibrio gilvus ATCC 13127	Tsukamurella paurometabola DSM 20162	
+Halogeometricum borinquense DSM 11551	Natronococcus occultus SP4	
+Micromonospora sp. L5	Propionibacterium acnes KPA171202	
+Sulfolobus islandicus REY15A	Sulfolobus islandicus Y.G.57.14	
+Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111	Micromonospora sp. L5	
+Desulfobacca acetoxidans DSM 11109	Methanocella paludicola SANAE	
+Oscillibacter valericigenes Sjm18-20	Listeria monocytogenes SLCC5850	
+Methanoculleus marisnigri JR1	Methanosphaerula palustris E1-9c	
+Oscillibacter valericigenes Sjm18-20	Thermosediminibacter oceani DSM 16646	
+Beutenbergia cavernae DSM 12333	Sanguibacter keddieii DSM 10542	
+Halorhabdus utahensis DSM 12940	Halovivax ruber XH-70	
+Gordonia bronchialis DSM 43247	Mycobacterium sp. KMS	
+Natronomonas pharaonis DSM 2160	Salinarchaeum sp. Harcht-Bsk1	
+Nitrosococcus oceani ATCC 19707	Pseudoalteromonas atlantica T6c	
+Mverticillata	Ddiscoideum	
+Amacrogynus	Scerevisiae	
+Methanosaeta concilii GP6	Methanosaeta harundinacea 6Ac	
+Haloterrigena turkmenica DSM 5511	Natrialba magadii ATCC 43099	
+Methanocella conradii HZ254	Methanocella paludicola SANAE	
+Sulfolobus islandicus REY15A	Sulfolobus solfataricus P2	
+Catenulispora acidiphila DSM 44928	Xylanimonas cellulosilytica DSM 15894	
+Halogeometricum borinquense DSM 11551	Haloferax volcanii DS2	
+Methylobacterium nodulans ORS 2060	Starkeya novella DSM 506	
+Haloferax volcanii DS2	Haloquadratum walsbyi C23	
+Thermococcus barophilus MP	Thermococcus sp. CL1	
+Nocardioides sp. JS614	Xylanimonas cellulosilytica DSM 15894	
+Natronomonas pharaonis DSM 2160	Halovivax ruber XH-70	
+Thermococcus litoralis DSM 5473	Thermococcus sp. AM4	
+Staphylothermus hellenicus DSM 12710	Thermogladius cellulolyticus 1633	
+Natronobacterium gregoryi SP2	Salinarchaeum sp. Harcht-Bsk1	
+Methanobrevibacter sp. AbM4	Methanothermobacter marburgensis str. Marburg	
+Aeropyrum camini SY1 = JCM 12091	Hyperthermus butylicus DSM 5456	
+Halopiger xanaduensis SH-6	Natrinema sp. J7-2	
+Falba	Spunctatus	
+Haloferax volcanii DS2	Haloarcula hispanica ATCC 33960	
+Methanocaldococcus fervens AG86	Methanocaldococcus infernus ME	
+Mverticillata	Scerevisiae	
+Candidatus Nitrospira defluvii	Methylobacillus flagellatus KT	
+Desulfitobacterium dehalogenans ATCC 51507	Symbiobacterium thermophilum IAM 14863	
+Thermococcus gammatolerans EJ3	Thermococcus sp. AM4	
+Thermococcus litoralis DSM 5473	Thermococcus sibiricus MM 739	
+Mverticillata	Falba	
+Haloarcula hispanica ATCC 33960	Salinarchaeum sp. Harcht-Bsk1	
+Corynebacterium diphtheriae HC03	Thermomonospora curvata DSM 43183	
+Nakamurella multipartita DSM 44233	Corynebacterium diphtheriae HC03	
+Ngruberi	Sarctica	
+Listeria monocytogenes SLCC5850	Bacillus sp. JS	
+Stackebrandtia nassauensis DSM 44728	Frankia sp. EAN1pec	
+Mverticillata	Ngruberi	
+Mesorhizobium australicum WSM2073	Methylocella silvestris BL2	
+Halovivax ruber XH-70	Haloarcula marismortui ATCC 43049	
+Acidothermus cellulolyticus 11B	Segniliparus rotundus DSM 44985	
+Halorubrum lacusprofundi ATCC 49239	Natrinema pellirubrum DSM 15624	
+Kytococcus sedentarius DSM 20547	Streptosporangium roseum DSM 43021	
+Pyrococcus furiosus DSM 3638	Pyrococcus sp. ST04	
+Pyrobaculum oguniense TE7	Pyrobaculum sp. 1860	
+Amycolatopsis mediterranei RB	Beutenbergia cavernae DSM 12333	
+Sulfolobus acidocaldarius Ron12/I	Sulfolobus islandicus L.D.8.5	
+Haloferax mediterranei ATCC 33500	Haloarcula hispanica ATCC 33960	
+Mbrevicollis	Tthermophila	
+Pseudoalteromonas atlantica T6c	Shewanella halifaxensis HAW-EB4	
+Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111	Acidothermus cellulolyticus 11B	
+Methylomonas methanica MC09	Spiribacter salinus M19-40	
+Paenibacillus polymyxa M1	Thermosediminibacter oceani DSM 16646	
+Haloterrigena turkmenica DSM 5511	Halobacterium salinarum R1	
+Jonesia denitrificans DSM 20603	Streptomyces fulvissimus DSM 40593	
+Methanobacterium sp. SWAN-1	Methanosphaera stadtmanae DSM 3091	
+Methanosarcina barkeri str. Fusaro	Methanosarcina mazei Tuc01	
+Natronomonas pharaonis DSM 2160	Natronococcus occultus SP4	
+Halobacterium salinarum R1	Natronomonas moolapensis 8.8.11	
+Haloarcula marismortui ATCC 43049	Natronococcus occultus SP4	
+Acidianus hospitalis W1	Sulfolobus islandicus M.16.27	
+Acinetobacter oleivorans DR1	Colwellia psychrerythraea 34H	
+Methanococcus maripaludis C5	Methanococcus maripaludis X1	
+Hahella chejuensis KCTC 2396	Methylophaga sp. JAM7	
+Nakamurella multipartita DSM 44233	Thermomonospora curvata DSM 43183	
+Methanoregula boonei 6A8	Methanosphaerula palustris E1-9c	
+Amycolatopsis mediterranei RB	Kytococcus sedentarius DSM 20547	
+Thermococcus litoralis DSM 5473	Thermococcus gammatolerans EJ3	
+Paenibacillus polymyxa M1	Staphylococcus aureus subsp. aureus JKD6159	
+Sulfolobus islandicus L.S.2.15	Sulfolobus islandicus Y.G.57.14	
+Amacrogynus	Acastellanii	
+Acidothermus cellulolyticus 11B	Jonesia denitrificans DSM 20603	
+Sulfolobus islandicus M.16.27	Sulfolobus solfataricus 98/2	
+Stackebrandtia nassauensis DSM 44728	Thermomonospora curvata DSM 43183	
+Halorubrum lacusprofundi ATCC 49239	Haloterrigena turkmenica DSM 5511	
+Acidianus hospitalis W1	Metallosphaera sedula DSM 5348	
+Natrinema pellirubrum DSM 15624	Natrinema sp. J7-2	
+Pyrobaculum aerophilum str. IM2	Thermoproteus uzoniensis 768-20	
+Bradyrhizobium japonicum USDA 6	Mesorhizobium australicum WSM2073	
+Haloferax mediterranei ATCC 33500	Halobacterium sp. NRC-1	
+Thermococcus sibiricus MM 739	Thermococcus sp. 4557	
+Bifidobacterium longum subsp. longum JDM301	Jonesia denitrificans DSM 20603	
+Candidatus Nitrosopumilus sp. AR2	Nitrosopumilus maritimus SCM1	
+Halobacterium sp. NRC-1	Halalkalicoccus jeotgali B3	
+Candidatus Nitrososphaera gargensis Ga9.2	Nitrosopumilus maritimus SCM1	
+Cellvibrio gilvus ATCC 13127	Kytococcus sedentarius DSM 20547	
+Sulfolobus acidocaldarius Ron12/I	Sulfolobus islandicus Y.N.15.51	
+Corynebacterium diphtheriae HC03	Tsukamurella paurometabola DSM 20162	
+Archaeoglobus sulfaticallidus PM70-1	Archaeoglobus veneficus SNP6	
+Caldivirga maquilingensis IC-167	Vulcanisaeta moutnovskia 768-28	
+Frankia sp. EAN1pec	Geodermatophilus obscurus DSM 43160	
+Halorhabdus utahensis DSM 12940	Halobacterium salinarum R1	
+Desulfitobacterium dehalogenans ATCC 51507	Bacillus sp. JS	
+Thermococcus barophilus MP	Ferroglobus placidus DSM 10642	
+Aromatoleum aromaticum EbN1	Sulfuricella denitrificans skB26	
+Sulfolobus acidocaldarius DSM 639	Sulfolobus islandicus L.D.8.5	
+Brachybacterium faecium DSM 4810	Thermomonospora curvata DSM 43183	
+Sulfolobus islandicus LAL14/1	Sulfolobus solfataricus P2	
+Falba	Cowczarzaki	
+Halobacterium sp. NRC-1	Natrinema sp. J7-2	
+Methanocaldococcus jannaschii DSM 2661	Methanotorris igneus Kol 5	
+Pyrobaculum neutrophilum V24Sta	Thermoproteus uzoniensis 768-20	
+Halobacterium sp. NRC-1	Halobacterium salinarum R1	
+Pyrococcus sp. ST04	Thermococcus sp. 4557	
+Gordonia bronchialis DSM 43247	Nocardioides sp. JS614	
+Frankia sp. EAN1pec	Sanguibacter keddieii DSM 10542	
+Methanoplanus petrolearius DSM 11571	Methanoregula formicica SMSP	
+Thermomonospora curvata DSM 43183	Tsukamurella paurometabola DSM 20162	
+Methanobacterium sp. AL-21	Methanothermobacter marburgensis str. Marburg	
+Acidithiobacillus caldus SM-1	Sulfuricella denitrificans skB26	
+Archaeoglobus sulfaticallidus PM70-1	Thermococcus onnurineus NA1	
+Metallosphaera sedula DSM 5348	Sulfolobus islandicus M.14.25	
+Natrinema pellirubrum DSM 15624	Haloquadratum walsbyi DSM 16790	
+Mesorhizobium australicum WSM2073	Liberibacter crescens BT-1	
+Metallosphaera sedula DSM 5348	Sulfolobus islandicus Y.N.15.51	
+Bacillus sp. JS	Halanaerobium praevalens DSM 2228	
+Methanobacterium sp. AL-21	Methanobrevibacter smithii ATCC 35061	
+Acidithiobacillus caldus SM-1	Prochlorococcus marinus str. MIT 9211	
+Cowczarzaki	Ttrahens	
+Pyrococcus horikoshii OT3	Thermococcus sp. 4557	
+Methanocaldococcus sp. FS406-22	Methanothermococcus okinawensis IH1	
+Sanguibacter keddieii DSM 10542	Segniliparus rotundus DSM 44985	
+Halothiobacillus neapolitanus c2	Prochlorococcus marinus str. MIT 9211	
+Amacrogynus	Mbrevicollis	
+Thermococcus litoralis DSM 5473	Pyrococcus furiosus COM1	
+Lactobacillus rhamnosus LOCK908	Leuconostoc sp. C2	
+Acidaminococcus fermentans DSM 20731	Staphylococcus aureus subsp. aureus JKD6159	
+Haloferax mediterranei ATCC 33500	Haloquadratum walsbyi C23	
+Methanoculleus marisnigri JR1	Methanoplanus petrolearius DSM 11571	
+Methanoplanus petrolearius DSM 11571	Methanosphaerula palustris E1-9c	
+Hahella chejuensis KCTC 2396	Klebsiella pneumoniae subsp. rhinoscleromatis SB3432	
+Catenulispora acidiphila DSM 44928	Streptosporangium roseum DSM 43021	
+Archaeoglobus fulgidus DSM 4304	Archaeoglobus profundus DSM 5631	
+Brachybacterium faecium DSM 4810	Streptomyces fulvissimus DSM 40593	
+Jonesia denitrificans DSM 20603	Nocardioides sp. JS614	
+Geodermatophilus obscurus DSM 43160	Thermomonospora curvata DSM 43183	
+Haloferax mediterranei ATCC 33500	Halopiger xanaduensis SH-6	
+Pyrococcus sp. NA2	Thermococcus sp. AM4	
+Catenulispora acidiphila DSM 44928	Segniliparus rotundus DSM 44985	
+Halorhabdus utahensis DSM 12940	Natronobacterium gregoryi SP2	
+Ferroglobus placidus DSM 10642	Archaeoglobus fulgidus DSM 4304	
+Sulfolobus islandicus M.14.25	Sulfolobus islandicus Y.G.57.14	
+Methanocorpusculum labreanum Z	Methanosphaerula palustris E1-9c	
+Methanococcus maripaludis C7	Methanococcus maripaludis X1	
+Hippea maritima DSM 10411	Thermovibrio ammonificans HB-1	
+Gallionella capsiferriformans ES-2	Nitrosomonas sp. AL212	
+Brachybacterium faecium DSM 4810	Xylanimonas cellulosilytica DSM 15894	
+Halogeometricum borinquense DSM 11551	Halovivax ruber XH-70	
+Halomicrobium mukohataei DSM 12286	Salinarchaeum sp. Harcht-Bsk1	
+Pyrococcus sp. ST04	Thermococcus sp. AM4	
+Micromonospora sp. L5	Gordonia bronchialis DSM 43247	
+Gordonia bronchialis DSM 43247	Propionibacterium acnes KPA171202	
+Sulfolobus islandicus Y.N.15.51	Sulfolobus solfataricus 98/2	
+Haloferax volcanii DS2	Natronomonas pharaonis DSM 2160	
+Methanoregula boonei 6A8	Methanocorpusculum labreanum Z	
+Catenulispora acidiphila DSM 44928	Renibacterium salmoninarum ATCC 33209	
+Thermococcus kodakarensis KOD1	Archaeoglobus sulfaticallidus PM70-1	
+Hahella chejuensis KCTC 2396	Marinomonas posidonica IVIA-Po-181	
+Bifidobacterium longum subsp. longum JDM301	Clavibacter michiganensis subsp. michiganensis NCPPB 382	
+Sulfolobus islandicus REY15A	Sulfolobus islandicus L.D.8.5	
+Micromonospora sp. L5	Intrasporangium calvum DSM 43043	
+Halovivax ruber XH-70	Natronococcus occultus SP4	
+Sulfolobus islandicus L.S.2.15	Sulfolobus islandicus M.14.25	
+Methanococcus vannielii SB	Methanocaldococcus fervens AG86	
+Methanolobus psychrophilus R15	Methanosarcina mazei Go1	
+Halorubrum lacusprofundi ATCC 49239	halophilic archaeon DL31	
+Arcanobacterium haemolyticum DSM 20595	Streptomyces fulvissimus DSM 40593	
+Amacrogynus	Ttrahens	
+Bacillus sp. JS	Enterococcus faecalis D32	
+Aromatoleum aromaticum EbN1	Burkholderia rhizoxinica HKI 454	
+Kineococcus radiotolerans SRS30216	Clavibacter michiganensis subsp. michiganensis NCPPB 382	
+Haemophilus influenzae PittEE	Psychromonas sp. CNPT3	
+Methanobrevibacter sp. AbM4	Methanobacterium sp. AL-21	
+Brachybacterium faecium DSM 4810	Nocardioides sp. JS614	
+Nakamurella multipartita DSM 44233	Acidothermus cellulolyticus 11B	
+Aromatoleum aromaticum EbN1	Acidovorax citrulli AAC00-1	
+Gordonia bronchialis DSM 43247	Kytococcus sedentarius DSM 20547	
+Mbrevicollis	Scerevisiae	
+Azotobacter vinelandii DJ	Dichelobacter nodosus VCS1703A	
+Halothiobacillus neapolitanus c2	Acidithiobacillus caldus SM-1	
+Amycolatopsis mediterranei RB	Segniliparus rotundus DSM 44985	
+Halothiobacillus neapolitanus c2	Klebsiella pneumoniae subsp. rhinoscleromatis SB3432	
+Gordonia bronchialis DSM 43247	Xylanimonas cellulosilytica DSM 15894	
+Haloferax volcanii DS2	Natronomonas moolapensis 8.8.11	
+Methanococcus vannielii SB	Methanococcus voltae A3	
+Sanguibacter keddieii DSM 10542	Renibacterium salmoninarum ATCC 33209	
+Stackebrandtia nassauensis DSM 44728	Corynebacterium diphtheriae HC03	
+Thermococcus gammatolerans EJ3	Pyrococcus sp. NA2	
+Francisella sp. TX077308	Methylophaga sp. JAM7	
+Brachybacterium faecium DSM 4810	Renibacterium salmoninarum ATCC 33209	
+Halogeometricum borinquense DSM 11551	Natrinema sp. J7-2	
+Halothiobacillus neapolitanus c2	Idiomarina loihiensis GSL 199	
+Halorubrum lacusprofundi ATCC 49239	Halopiger xanaduensis SH-6	
+Haemophilus influenzae PittEE	Shewanella halifaxensis HAW-EB4	
+Pyrobaculum calidifontis JCM 11548	Pyrobaculum aerophilum str. IM2	
+Methanoculleus bourgensis MS2	Methanoculleus marisnigri JR1	
+Stackebrandtia nassauensis DSM 44728	Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111	
+Halorhabdus utahensis DSM 12940	Natronococcus occultus SP4	
+Sulfolobus acidocaldarius Ron12/I	Sulfolobus islandicus M.16.4	
+Halorhabdus utahensis DSM 12940	Natrinema pellirubrum DSM 15624	
+Mbrevicollis	Bsaltans	
+Pyrobaculum calidifontis JCM 11548	Pyrobaculum neutrophilum V24Sta	
+Azotobacter vinelandii DJ	Xanthomonas campestris pv. campestris str. 8004	
+Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111	Mycobacterium sp. KMS	
+Thermococcus litoralis DSM 5473	Pyrococcus yayanosii CH1	
+Salinarchaeum sp. Harcht-Bsk1	halophilic archaeon DL31	
+Sulfolobus islandicus L.S.2.15	Sulfolobus solfataricus 98/2	
+Jonesia denitrificans DSM 20603	Kytococcus sedentarius DSM 20547	
+Pedobacter heparinus DSM 2366	Runella slithyformis DSM 19594	
+Alteromonas macleodii str. Ionian Sea U4	Hirschia baltica ATCC 49814	
+Sulfolobus islandicus M.16.4	Sulfolobus tokodaii str. 7	
+Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111	Streptomyces fulvissimus DSM 40593	
+Mesorhizobium australicum WSM2073	Methylocystis sp. SC2	
+Natronomonas pharaonis DSM 2160	halophilic archaeon DL31	
+Natronobacterium gregoryi SP2	Natrialba magadii ATCC 43099	
+Haemophilus influenzae PittEE	Methylophaga sp. JAM7	
+Aeromonas hydrophila subsp. hydrophila ATCC 7966	Azotobacter vinelandii DJ	
+Pyrobaculum islandicum DSM 4184	Pyrobaculum oguniense TE7	
+Aerococcus urinae ACS-120-V-Col10a	Enterococcus faecalis D32	
+Methanosarcina acetivorans C2A	Methanosarcina mazei Go1	
+Methanocaldococcus vulcanius M7	Methanothermococcus okinawensis IH1	
+Srosetta	Scerevisiae	
+Sulfolobus islandicus M.16.27	Sulfolobus islandicus M.16.4	
+Jonesia denitrificans DSM 20603	Propionibacterium acnes KPA171202	
+Kineococcus radiotolerans SRS30216	Thermomonospora curvata DSM 43183	
+Paenibacillus polymyxa M1	Listeria monocytogenes SLCC5850	
+Halorubrum lacusprofundi ATCC 49239	Natronomonas pharaonis DSM 2160	
+Staphylothermus hellenicus DSM 12710	Desulfurococcus fermentans DSM 16532	
+Methanocaldococcus fervens AG86	Methanotorris igneus Kol 5	
+Alteromonas macleodii str. Ionian Sea U4	Idiomarina loihiensis GSL 199	
+Haloterrigena turkmenica DSM 5511	Salinarchaeum sp. Harcht-Bsk1	
+Sulfolobus acidocaldarius Ron12/I	Sulfolobus acidocaldarius DSM 639	
+Methanoculleus bourgensis MS2	Methanosphaerula palustris E1-9c	
+Imultifiliis	Tthermophila	
+Fervidicoccus fontis Kam940	Ignicoccus hospitalis KIN4/I	
+Cyclobacterium marinum DSM 745	Marivirga tractuosa DSM 4126	
+Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111	Thermomonospora curvata DSM 43183	
+Kineococcus radiotolerans SRS30216	Geodermatophilus obscurus DSM 43160	
+Thermoanaerobacter italicus Ab9	Thermosediminibacter oceani DSM 16646	
+Haloferax volcanii DS2	Halalkalicoccus jeotgali B3	
+Staphylothermus hellenicus DSM 12710	Desulfurococcus mucosus DSM 2162	
+Parvibaculum lavamentivorans DS-1	Xanthomonas campestris pv. campestris str. 8004	
+Sulfolobus islandicus LAL14/1	Sulfolobus islandicus HVE10/4	
+Mverticillata	Srosetta	
+Halobacterium sp. NRC-1	Salinarchaeum sp. Harcht-Bsk1	
+Archaeoglobus sulfaticallidus PM70-1	Thermococcus sp. 4557	
+Sulfolobus islandicus LAL14/1	Sulfolobus acidocaldarius DSM 639	
+Ppallidum	Tthermophila	
+Thermococcus sibiricus MM 739	Thermococcus onnurineus NA1	
+Pyrococcus furiosus DSM 3638	Thermococcus sibiricus MM 739	
+Sulfolobus acidocaldarius DSM 639	Sulfolobus islandicus HVE10/4	
+Erythrobacter litoralis HTCC2594	Idiomarina loihiensis GSL 199	
+Stackebrandtia nassauensis DSM 44728	Catenulispora acidiphila DSM 44928	
+Segniliparus rotundus DSM 44985	Streptosporangium roseum DSM 43021	
+Methanothermococcus okinawensis IH1	Methanotorris igneus Kol 5	
+Ferrimonas balearica DSM 9799	Vibrio vulnificus MO6-24/O	
+Mverticillata	Ttrahens	
+Methanomethylovorans hollandica DSM 15978	Methanosarcina mazei Tuc01	
+Sanguibacter keddieii DSM 10542	Streptosporangium roseum DSM 43021	
+Methylobacterium nodulans ORS 2060	Methylocystis sp. SC2	
+Sulfolobus islandicus LAL14/1	Sulfolobus solfataricus 98/2	
+Halobacterium salinarum R1	Natrialba magadii ATCC 43099	
+Methanococcus maripaludis C7	Methanococcus maripaludis C6	
+Pyrobaculum aerophilum str. IM2	Pyrobaculum sp. 1860	
+Amacrogynus	Tthermophila	
+Methylophaga sp. JAM7	Rhodospirillum rubrum ATCC 11170	
+Haloarcula hispanica ATCC 33960	Haloarcula marismortui ATCC 43049	
+Caulobacter sp. K31	Hirschia baltica ATCC 49814	
+Sulfolobus islandicus L.S.2.15	Metallosphaera cuprina Ar-4	
+Sulfolobus acidocaldarius N8	Sulfolobus tokodaii str. 7	
+Halorubrum lacusprofundi ATCC 49239	Halalkalicoccus jeotgali B3	
+Pyrobaculum calidifontis JCM 11548	Pyrobaculum sp. 1860	
+Amycolatopsis mediterranei RB	Sanguibacter keddieii DSM 10542	
+Aeromonas hydrophila subsp. hydrophila ATCC 7966	Psychromonas sp. CNPT3	
+Methanobrevibacter ruminantium M1	Methanosphaera stadtmanae DSM 3091	
+Beutenbergia cavernae DSM 12333	Streptomyces fulvissimus DSM 40593	
+Thermococcus sibiricus MM 739	Pyrococcus furiosus COM1	
+Geodermatophilus obscurus DSM 43160	Clavibacter michiganensis subsp. michiganensis NCPPB 382	
+Sulfolobus islandicus L.S.2.15	Sulfolobus acidocaldarius Ron12/I	
+Sulfolobus islandicus M.16.4	Sulfolobus islandicus HVE10/4	
+Salinarchaeum sp. Harcht-Bsk1	Natrialba magadii ATCC 43099	
+Natronomonas pharaonis DSM 2160	Haloquadratum walsbyi C23	
+Sulfolobus islandicus M.16.27	Sulfolobus islandicus L.D.8.5	
+Halobacterium sp. NRC-1	Halogeometricum borinquense DSM 11551	
+Methanococcus aeolicus Nankai-3	Methanotorris igneus Kol 5	
+Jonesia denitrificans DSM 20603	Nocardia cyriacigeorgica GUH-2	
+Enterococcus faecalis D32	Staphylococcus aureus subsp. aureus JKD6159	
+Natrinema pellirubrum DSM 15624	Halalkalicoccus jeotgali B3	
+Aeropyrum camini SY1 = JCM 12091	Aeropyrum pernix K1	
+Catenulispora acidiphila DSM 44928	Kytococcus sedentarius DSM 20547	
+Staphylococcus aureus subsp. aureus JKD6159	Symbiobacterium thermophilum IAM 14863	
+Geodermatophilus obscurus DSM 43160	Sanguibacter keddieii DSM 10542	
+Amycolatopsis mediterranei RB	Mycobacterium sp. KMS	
+Halorubrum lacusprofundi ATCC 49239	Salinarchaeum sp. Harcht-Bsk1	
+Alteromonas macleodii str. Ionian Sea U4	Klebsiella pneumoniae subsp. rhinoscleromatis SB3432	
+Methanosarcina acetivorans C2A	Methanococcoides burtonii DSM 6242	
+Alcanivorax borkumensis SK2	Pseudoalteromonas atlantica T6c	
+Scerevisiae	Ppallidum	
+Carnobacterium sp. WN1359	Streptococcus gallolyticus subsp. gallolyticus ATCC 43143	
+Sulfolobus islandicus REY15A	Sulfolobus islandicus M.16.4	
+Natronomonas pharaonis DSM 2160	Halalkalicoccus jeotgali B3	
+Mycobacterium sp. KMS	Xylanimonas cellulosilytica DSM 15894	
+Bifidobacterium longum subsp. longum JDM301	Xylanimonas cellulosilytica DSM 15894	
+Intrasporangium calvum DSM 43043	Xylanimonas cellulosilytica DSM 15894	
+Methanococcus vannielii SB	Methanococcus maripaludis C7	
+Halogeometricum borinquense DSM 11551	Natronomonas moolapensis 8.8.11	
+Ppallidum	Sarctica	
+Haloterrigena turkmenica DSM 5511	Haloarcula marismortui ATCC 43049	
+Methanosarcina barkeri str. Fusaro	Methanohalobium evestigatum Z-7303	
+Neisseria meningitidis M01-240149	Nitrosomonas sp. AL212	
+Natronomonas pharaonis DSM 2160	Natrinema pellirubrum DSM 15624	
+Halobacterium salinarum R1	Halopiger xanaduensis SH-6	
+Heliobacterium modesticaldum Ice1	Symbiobacterium thermophilum IAM 14863	
+Pedobacter heparinus DSM 2366	Cyclobacterium marinum DSM 745	
+Thermomonospora curvata DSM 43183	Streptomyces fulvissimus DSM 40593	
+Clostridium botulinum F str. 230613	Bacillus sp. JS	
+Pelagibacterium halotolerans B2	Parvularcula bermudensis HTCC2503	
+Mycobacterium sp. KMS	Segniliparus rotundus DSM 44985	
+Methanococcus maripaludis S2	Methanococcus maripaludis C6	
+Pelagibacterium halotolerans B2	Caulobacter sp. K31	
+Nocardia cyriacigeorgica GUH-2	Propionibacterium acnes KPA171202	
+Amycolatopsis mediterranei RB	Xylanimonas cellulosilytica DSM 15894	
+Listeria monocytogenes SLCC5850	Staphylococcus aureus subsp. aureus JKD6159	
+Acidothermus cellulolyticus 11B	Methylacidiphilum infernorum V4	
+Ignavibacterium album JCM 16511	Melioribacter roseus P3M-2	
+Desulfobacca acetoxidans DSM 11109	Methanocella conradii HZ254	
+Sulfolobus islandicus Y.N.15.51	Sulfolobus islandicus L.D.8.5	
+Ddiscoideum	Sarctica	
+Bsaltans	Sarctica	
+Clostridium botulinum F str. 230613	Clostridium lentocellum DSM 5427	
+Beutenbergia cavernae DSM 12333	Segniliparus rotundus DSM 44985	
+Mverticillata	Ppallidum	
+Pyrococcus sp. ST04	Pyrococcus furiosus COM1	
+Acidothermus cellulolyticus 11B	Micromonospora sp. L5	
+Halogeometricum borinquense DSM 11551	Halopiger xanaduensis SH-6	
+Geodermatophilus obscurus DSM 43160	Intrasporangium calvum DSM 43043	
+Halobacterium sp. NRC-1	Halovivax ruber XH-70	
+Caulobacter sp. K31	Starkeya novella DSM 506	
+Nakamurella multipartita DSM 44233	Streptosporangium roseum DSM 43021	
+Methanoregula boonei 6A8	Methanospirillum hungatei JF-1	
+Corynebacterium diphtheriae HC03	Micromonospora sp. L5	
+Bartonella quintana str. Toulouse	Rhodospirillum rubrum ATCC 11170	
+Frankia sp. EAN1pec	Nocardioides sp. JS614	
+Sulfolobus islandicus HVE10/4	Sulfolobus solfataricus P2	
+Archaeoglobus sulfaticallidus PM70-1	Thermococcus sp. CL1	
+Pyrococcus furiosus COM1	Pyrococcus sp. NA2	
+Methanobrevibacter ruminantium M1	Methanobrevibacter sp. AbM4	
+Mbrevicollis	Ptetraurelia	
+Thermococcus kodakarensis KOD1	Pyrococcus furiosus COM1	
+Acidothermus cellulolyticus 11B	Thermomonospora curvata DSM 43183	
+Geodermatophilus obscurus DSM 43160	Catenulispora acidiphila DSM 44928	
+Ngruberi	Amacrogynus	
+Propionibacterium acnes KPA171202	Streptosporangium roseum DSM 43021	
+Haloterrigena turkmenica DSM 5511	Haloferax volcanii DS2	
+Beutenbergia cavernae DSM 12333	Kineococcus radiotolerans SRS30216	
+Metallosphaera cuprina Ar-4	Sulfolobus solfataricus 98/2	
+Bifidobacterium longum subsp. longum JDM301	Beutenbergia cavernae DSM 12333	
+Imultifiliis	Sarctica	
+Nakamurella multipartita DSM 44233	Renibacterium salmoninarum ATCC 33209	
+Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111	Nocardioides sp. JS614	
+Kineococcus radiotolerans SRS30216	Propionibacterium acnes KPA171202	
+Acidianus hospitalis W1	Sulfolobus islandicus M.16.4	
+Cellvibrio gilvus ATCC 13127	Renibacterium salmoninarum ATCC 33209	
+Acidaminococcus fermentans DSM 20731	Thermosediminibacter oceani DSM 16646	
+Micromonospora sp. L5	Clavibacter michiganensis subsp. michiganensis NCPPB 382	
+Methylophaga sp. JAM7	Idiomarina loihiensis GSL 199	
+Archaeoglobus veneficus SNP6	Thermococcus sp. CL1	
+Methylobacterium nodulans ORS 2060	Mesorhizobium australicum WSM2073	
+Amacrogynus	Cowczarzaki	
+Methanothermococcus okinawensis IH1	Methanococcus maripaludis X1	
+Desulfohalobium retbaense DSM 5692	Desulfovibrio gigas DSM 1382 = ATCC 19364	
+Methylobacillus flagellatus KT	Sulfuricella denitrificans skB26	
+Pyrococcus yayanosii CH1	Thermococcus sp. AM4	
+Methanosarcina acetivorans C2A	Methanohalobium evestigatum Z-7303	
+Desulfurococcus kamchatkensis 1221n	Thermosphaera aggregans DSM 11486	
+Sanguibacter keddieii DSM 10542	Streptomyces fulvissimus DSM 40593	
+Kytococcus sedentarius DSM 20547	Intrasporangium calvum DSM 43043	
+Methanocaldococcus jannaschii DSM 2661	Methanocaldococcus vulcanius M7	
+Pyrococcus furiosus DSM 3638	Thermococcus onnurineus NA1	
+Cyclobacterium marinum DSM 745	Runella slithyformis DSM 19594	
+Cellvibrio gilvus ATCC 13127	Nocardia cyriacigeorgica GUH-2	
+Mbrevicollis	Sarctica	
+Haloarcula marismortui ATCC 43049	Halalkalicoccus jeotgali B3	
+Acidovorax citrulli AAC00-1	Azotobacter vinelandii DJ	
+Sulfolobus acidocaldarius Ron12/I	Sulfolobus islandicus M.16.27	
+Natrinema sp. J7-2	Natronomonas moolapensis 8.8.11	
+Natronomonas pharaonis DSM 2160	Natronomonas moolapensis 8.8.11	
+Haloferax volcanii DS2	Halomicrobium mukohataei DSM 12286	
+Methylobacterium nodulans ORS 2060	Brucella melitensis ATCC 23457	
+Methylomonas methanica MC09	Methylophaga sp. JAM7	
+Ddiscoideum	Acastellanii	
+Sulfolobus islandicus HVE10/4	Sulfolobus acidocaldarius N8	
+Thermococcus sibiricus MM 739	Pyrococcus sp. NA2	
+Streptomyces fulvissimus DSM 40593	Nocardia cyriacigeorgica GUH-2	
+Halovivax ruber XH-70	Natrinema pellirubrum DSM 15624	
+Pseudoalteromonas atlantica T6c	Idiomarina loihiensis GSL 199	
+Haloferax volcanii DS2	Natronococcus occultus SP4	
+Thermococcus litoralis DSM 5473	Pyrococcus sp. NA2	
+Archaeoglobus fulgidus DSM 4304	Archaeoglobus veneficus SNP6	
+Acidithiobacillus caldus SM-1	Azotobacter vinelandii DJ	
+Pyrococcus furiosus DSM 3638	Pyrococcus horikoshii OT3	
+Acidianus hospitalis W1	Sulfolobus solfataricus P2	
+Acastellanii	Scerevisiae	
+Natrinema pellirubrum DSM 15624	Natrialba magadii ATCC 43099	
+Micromonospora sp. L5	Nocardioides sp. JS614	
+Acidianus hospitalis W1	Sulfolobus islandicus Y.N.15.51	
+Kineococcus radiotolerans SRS30216	Nocardioides sp. JS614	
+Oscillibacter valericigenes Sjm18-20	Staphylococcus aureus subsp. aureus JKD6159	
+Marinomonas posidonica IVIA-Po-181	Shewanella halifaxensis HAW-EB4	
+Methanobrevibacter sp. AbM4	Methanosphaera stadtmanae DSM 3091	
+Thermococcus gammatolerans EJ3	Thermococcus sp. 4557	
+Metallosphaera sedula DSM 5348	Thermoplasma volcanium GSS1	
+Methanobrevibacter smithii ATCC 35061	Methanothermobacter marburgensis str. Marburg	
+Paenibacillus polymyxa M1	Bacillus sp. JS	
+Kineococcus radiotolerans SRS30216	Kytococcus sedentarius DSM 20547	
+Ngruberi	Bsaltans	
+Pseudoalteromonas atlantica T6c	Azotobacter vinelandii DJ	
+Candidatus Nitrosopumilus koreensis AR1	Nitrosopumilus maritimus SCM1	
+Solibacillus silvestris StLB046	Bacillus sp. JS	
+Methanocaldococcus fervens AG86	Methanocaldococcus vulcanius M7	
+Methanococcus maripaludis C6	Methanococcus aeolicus Nankai-3	
+Methanococcus maripaludis C7	Methanococcus aeolicus Nankai-3	
+Methanococcus maripaludis C5	Methanococcus aeolicus Nankai-3	
+Heliobacterium modesticaldum Ice1	Desulfitobacterium dehalogenans ATCC 51507	
+Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111	Beutenbergia cavernae DSM 12333	
+Mycobacterium sp. KMS	Streptosporangium roseum DSM 43021	
+Acidothermus cellulolyticus 11B	Sanguibacter keddieii DSM 10542	
+Haemophilus influenzae PittEE	Colwellia psychrerythraea 34H	
+Pelagibacterium halotolerans B2	Methylocella silvestris BL2	
+Sulfolobus islandicus M.16.27	Caldivirga maquilingensis IC-167	
+Sulfolobus islandicus Y.G.57.14	Sulfolobus solfataricus P2	
+Desulfohalobium retbaense DSM 5692	Desulfomicrobium baculatum DSM 4028	
+Haloferax volcanii DS2	halophilic archaeon DL31	
+Haloferax mediterranei ATCC 33500	Haloterrigena turkmenica DSM 5511	
+Halovivax ruber XH-70	halophilic archaeon DL31	
+Thermococcus sibiricus MM 739	Pyrococcus sp. ST04	
+Sulfolobus acidocaldarius DSM 639	Sulfolobus islandicus M.14.25	
+Dichelobacter nodosus VCS1703A	Syntrophobacter fumaroxidans MPOB	
+Methanothermococcus okinawensis IH1	Methanococcus voltae A3	
+Archaeoglobus sulfaticallidus PM70-1	Archaeoglobus profundus DSM 5631	
+Acidianus hospitalis W1	Sulfolobus acidocaldarius Ron12/I	
+Halorubrum lacusprofundi ATCC 49239	Halorhabdus utahensis DSM 12940	
+Methanosalsum zhilinae DSM 4017	Methanohalobium evestigatum Z-7303	
+Cellvibrio gilvus ATCC 13127	Thermomonospora curvata DSM 43183	
+Nakamurella multipartita DSM 44233	Kineococcus radiotolerans SRS30216	
+Falba	Ttrahens	
+Renibacterium salmoninarum ATCC 33209	Streptosporangium roseum DSM 43021	
+Cellvibrio gilvus ATCC 13127	Nocardioides sp. JS614	
+Cellvibrio gilvus ATCC 13127	Jonesia denitrificans DSM 20603	
+Cellvibrio gilvus ATCC 13127	Acidothermus cellulolyticus 11B	
+Sulfolobus islandicus LAL14/1	Sulfolobus islandicus L.D.8.5	
+Sulfolobus islandicus LAL14/1	Metallosphaera sedula DSM 5348	
+Halobacterium sp. NRC-1	Natronococcus occultus SP4	
+Thermococcus sp. AM4	Thermococcus sp. CL1	
+Kytococcus sedentarius DSM 20547	Tsukamurella paurometabola DSM 20162	
+Pseudoalteromonas atlantica T6c	Colwellia psychrerythraea 34H	
+Ddiscoideum	Tthermophila	
+Brachybacterium faecium DSM 4810	Arcanobacterium haemolyticum DSM 20595	
+Methylophaga sp. JAM7	Xanthomonas campestris pv. campestris str. 8004	
+Staphylothermus marinus F1	Thermogladius cellulolyticus 1633	
+Haloferax mediterranei ATCC 33500	halophilic archaeon DL31	
+Nocardioides sp. JS614	Streptomyces fulvissimus DSM 40593	
+Ddiscoideum	Ppallidum	
+Halorhabdus utahensis DSM 12940	Halobacterium sp. NRC-1	
+Pyrococcus yayanosii CH1	Thermococcus sp. CL1	
+Haloterrigena turkmenica DSM 5511	Halalkalicoccus jeotgali B3	
+Natronococcus occultus SP4	Haloquadratum walsbyi DSM 16790	
+Methanosalsum zhilinae DSM 4017	Methanosarcina mazei Go1	
+Klebsiella pneumoniae subsp. rhinoscleromatis SB3432	Vibrio vulnificus MO6-24/O	
+Methanococcus vannielii SB	Methanococcus aeolicus Nankai-3	
+Brachybacterium faecium DSM 4810	Kytococcus sedentarius DSM 20547	
+Frankia sp. EAN1pec	Acidothermus cellulolyticus 11B	
+Parvibaculum lavamentivorans DS-1	Rhodospirillum rubrum ATCC 11170	
+Nitrosococcus oceani ATCC 19707	Psychromonas sp. CNPT3	
+Solibacillus silvestris StLB046	Enterococcus faecalis D32	
+Cowczarzaki	Sarctica	
+Bartonella quintana str. Toulouse	Brucella melitensis ATCC 23457	
+Desulfurococcus mucosus DSM 2162	Staphylothermus marinus F1	
+Acastellanii	Spunctatus	
+Halogeometricum borinquense DSM 11551	Haloarcula hispanica ATCC 33960	
+Thermoanaerobacter italicus Ab9	Mahella australiensis 50-1 BON	
+Ilumatobacter coccineus YM16-304	Nocardioides sp. JS614	
+Natrialba magadii ATCC 43099	halophilic archaeon DL31	
+Halovivax ruber XH-70	Halopiger xanaduensis SH-6	
+Aeromonas hydrophila subsp. hydrophila ATCC 7966	Pseudoalteromonas atlantica T6c	
+Caldivirga maquilingensis IC-167	Sulfolobus islandicus Y.N.15.51	
+Pseudoalteromonas atlantica T6c	Vibrio vulnificus MO6-24/O	
+Pyrococcus sp. ST04	Pyrococcus yayanosii CH1	
+Erythrobacter litoralis HTCC2594	Sphingobium sp. SYK-6	
+Pyrococcus horikoshii OT3	Pyrococcus yayanosii CH1	
+Methanococcus maripaludis S2	Methanococcus aeolicus Nankai-3	
+Natronobacterium gregoryi SP2	Natronococcus occultus SP4	
+Acidaminococcus fermentans DSM 20731	Veillonella parvula DSM 2008	
+Desulfobacca acetoxidans DSM 11109	Alicyclobacillus acidocaldarius subsp. acidocaldarius Tc-4-1	
+Methylocella silvestris BL2	Hirschia baltica ATCC 49814	
+Jonesia denitrificans DSM 20603	Segniliparus rotundus DSM 44985	
+Natronococcus occultus SP4	halophilic archaeon DL31	
+Sulfolobus islandicus L.D.8.5	Sulfolobus acidocaldarius N8	
+Halobacterium salinarum R1	Haloquadratum walsbyi DSM 16790	
+Thermococcus kodakarensis KOD1	Pyrococcus sp. ST04	
+Methanoculleus marisnigri JR1	Methanocella paludicola SANAE	
+Methanoregula boonei 6A8	Methanoregula formicica SMSP	
+Natronobacterium gregoryi SP2	Halomicrobium mukohataei DSM 12286	
+Metallosphaera sedula DSM 5348	Sulfolobus acidocaldarius N8	
+Thermococcus gammatolerans EJ3	Pyrococcus yayanosii CH1	
+Thermomonospora curvata DSM 43183	Propionibacterium acnes KPA171202	
+Campylobacter jejuni subsp. jejuni NCTC 11168-BN148	Helicobacter pylori F16	
+Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111	Intrasporangium calvum DSM 43043	
+Sulfolobus islandicus LAL14/1	Sulfolobus acidocaldarius Ron12/I	
+Nakamurella multipartita DSM 44233	Stackebrandtia nassauensis DSM 44728	
+Myxococcus fulvus HW-1	Stigmatella aurantiaca DW4/3-1	
+Pyrobaculum islandicum DSM 4184	Thermoproteus uzoniensis 768-20	
+Metallosphaera cuprina Ar-4	Sulfolobus islandicus M.14.25	
+Ddiscoideum	Amacrogynus	
+Kineococcus radiotolerans SRS30216	Nocardia cyriacigeorgica GUH-2	
+Methanocorpusculum labreanum Z	Methanoregula formicica SMSP	
+Intrasporangium calvum DSM 43043	Streptomyces fulvissimus DSM 40593	
+Carnobacterium sp. WN1359	Halobacteroides halobius DSM 5150	
+Sphaerobacter thermophilus DSM 20745	Thermomicrobium roseum DSM 5159	
+Acidianus hospitalis W1	Sulfolobus tokodaii str. 7	
+Sulfolobus islandicus M.16.27	Sulfolobus acidocaldarius DSM 639	
+Ppallidum	Spunctatus	
+Thermococcus barophilus MP	Archaeoglobus veneficus SNP6	
+Ngruberi	Cowczarzaki	
+Bacillus sp. JS	Syntrophomonas wolfei subsp. wolfei str. Goettingen	
+Kytococcus sedentarius DSM 20547	Sanguibacter keddieii DSM 10542	
+Methanocaldococcus jannaschii DSM 2661	Methanocaldococcus infernus ME	
+Nakamurella multipartita DSM 44233	Mycobacterium sp. KMS	
+Desulfurococcus mucosus DSM 2162	Desulfurococcus kamchatkensis 1221n	
+Haloferax mediterranei ATCC 33500	Haloarcula marismortui ATCC 43049	
+Halobacterium sp. NRC-1	Haloarcula marismortui ATCC 43049	
+Kytococcus sedentarius DSM 20547	Streptomyces fulvissimus DSM 40593	
+Salinarchaeum sp. Harcht-Bsk1	Haloquadratum walsbyi C23	
+Clostridium botulinum F str. 230613	Desulfitobacterium dehalogenans ATCC 51507	
+Thermomonospora curvata DSM 43183	Nocardia cyriacigeorgica GUH-2	
+Natronobacterium gregoryi SP2	Natronomonas moolapensis 8.8.11	
+Sulfolobus islandicus L.S.2.15	Sulfolobus acidocaldarius DSM 639	
+Corynebacterium diphtheriae HC03	Catenulispora acidiphila DSM 44928	
+Methanobacterium sp. AL-21	Methanosphaera stadtmanae DSM 3091	
+Methanococcus maripaludis S2	Methanococcus vannielii SB	
+Halogeometricum borinquense DSM 11551	Salinarchaeum sp. Harcht-Bsk1	
+Methanomethylovorans hollandica DSM 15978	Methanosarcina mazei Go1	
+Sulfolobus islandicus LAL14/1	Sulfolobus acidocaldarius N8	
+Halorubrum lacusprofundi ATCC 49239	Haloquadratum walsbyi DSM 16790	
+Halanaerobium praevalens DSM 2228	Halobacteroides halobius DSM 5150	
+Methanocaldococcus sp. FS406-22	Methanocaldococcus jannaschii DSM 2661	
+Sulfolobus islandicus LAL14/1	Sulfolobus islandicus M.16.4	
+Parvibaculum lavamentivorans DS-1	Caulobacter sp. K31	
+Clostridium botulinum F str. 230613	Thermoanaerobacter italicus Ab9	
+Natronococcus occultus SP4	Natrinema sp. J7-2	
+Methanosarcina barkeri str. Fusaro	Methanosarcina mazei Go1	
+Halomicrobium mukohataei DSM 12286	Haloquadratum walsbyi C23	
+Methanococcus maripaludis C7	Methanococcus voltae A3	
+Bifidobacterium longum subsp. longum JDM301	Renibacterium salmoninarum ATCC 33209	
+Halothiobacillus neapolitanus c2	Spiribacter salinus M19-40	
+Thermococcus barophilus MP	Thermococcus onnurineus NA1	
+Pyrococcus sp. ST04	Thermococcus onnurineus NA1	
+Bradyrhizobium japonicum USDA 6	Starkeya novella DSM 506	
+Halorhabdus utahensis DSM 12940	Natrialba magadii ATCC 43099	
+Nocardioides sp. JS614	Renibacterium salmoninarum ATCC 33209	
+Stackebrandtia nassauensis DSM 44728	Micromonospora sp. L5	
+Halovivax ruber XH-70	Natrialba magadii ATCC 43099	
+Sulfolobus islandicus REY15A	Sulfolobus acidocaldarius DSM 639	
+Stackebrandtia nassauensis DSM 44728	Nocardia cyriacigeorgica GUH-2	
+Pseudoalteromonas atlantica T6c	Ferrimonas balearica DSM 9799	
+Ferroglobus placidus DSM 10642	Archaeoglobus profundus DSM 5631	
+Natrinema pellirubrum DSM 15624	Natronomonas moolapensis 8.8.11	
+Mycobacterium sp. KMS	Tsukamurella paurometabola DSM 20162	
+Acidothermus cellulolyticus 11B	Nocardia cyriacigeorgica GUH-2	
+Ngruberi	Ddiscoideum	
+Halobacterium salinarum R1	halophilic archaeon DL31	
+Kineococcus radiotolerans SRS30216	Streptosporangium roseum DSM 43021	
+Methanococcoides burtonii DSM 6242	Methanohalophilus mahii DSM 5219	
+Methanomethylovorans hollandica DSM 15978	Methanohalophilus mahii DSM 5219	
+Catenulispora acidiphila DSM 44928	Sanguibacter keddieii DSM 10542	
+Srosetta	Cowczarzaki	
+Bacillus sp. JS	Alicyclobacillus acidocaldarius subsp. acidocaldarius Tc-4-1	
+Sulfolobus islandicus M.16.4	Sulfolobus solfataricus P2	
+Oscillibacter valericigenes Sjm18-20	Bacillus sp. JS	
+Arcanobacterium haemolyticum DSM 20595	Propionibacterium acnes KPA171202	
+Sulfolobus islandicus L.D.8.5	Sulfolobus tokodaii str. 7	
+Sulfolobus islandicus M.16.4	Sulfolobus islandicus Y.G.57.14	
+Kineococcus radiotolerans SRS30216	Gordonia bronchialis DSM 43247	
+Mesorhizobium australicum WSM2073	Candidatus Solibacter usitatus Ellin6076	
+Pyrococcus furiosus COM1	Thermococcus onnurineus NA1	
+Methanobacterium sp. SWAN-1	Methanobacterium sp. AL-21	
+Catenulispora acidiphila DSM 44928	Tsukamurella paurometabola DSM 20162	
+Methanobrevibacter ruminantium M1	Methanothermobacter marburgensis str. Marburg	
+Salinarchaeum sp. Harcht-Bsk1	Natronomonas moolapensis 8.8.11	
+Haloterrigena turkmenica DSM 5511	Halomicrobium mukohataei DSM 12286	
+Nakamurella multipartita DSM 44233	Nocardioides sp. JS614	
+Calothrix sp. PCC 6303	Nostoc sp. PCC 7107	
+Oscillibacter valericigenes Sjm18-20	Ruminococcus bromii L2-63	
+Methanococcus maripaludis S2	Methanococcus maripaludis C5	
+Azotobacter vinelandii DJ	Ferrimonas balearica DSM 9799	
+Sulfolobus acidocaldarius DSM 639	Sulfolobus tokodaii str. 7	
+Haloarcula marismortui ATCC 43049	Natrinema pellirubrum DSM 15624	
+Halalkalicoccus jeotgali B3	Natronomonas moolapensis 8.8.11	
+Halovivax ruber XH-70	Salinarchaeum sp. Harcht-Bsk1	
+Sulfolobus islandicus LAL14/1	Sulfolobus islandicus REY15A	
+Methanoplanus petrolearius DSM 11571	Methanocorpusculum labreanum Z	
+Amycolatopsis mediterranei RB	Intrasporangium calvum DSM 43043	
+Acinetobacter oleivorans DR1	Idiomarina loihiensis GSL 199	
+Propionibacterium acnes KPA171202	Xylanimonas cellulosilytica DSM 15894	
+Mesorhizobium australicum WSM2073	Acastellanii	
+Methanococcus maripaludis C6	Methanococcus voltae A3	
+Desulfurococcus fermentans DSM 16532	Desulfurococcus kamchatkensis 1221n	
+Idiomarina loihiensis GSL 199	Xanthomonas campestris pv. campestris str. 8004	
+Thermococcus kodakarensis KOD1	Thermococcus litoralis DSM 5473	
+Haloferax mediterranei ATCC 33500	Halalkalicoccus jeotgali B3	
+Sulfurihydrogenibium azorense Az-Fu1	Thermovibrio ammonificans HB-1	
+Cowczarzaki	Scerevisiae	
+Sulfolobus islandicus L.S.2.15	Sulfolobus solfataricus P2	
+Sulfolobus islandicus Y.N.15.51	Sulfolobus acidocaldarius N8	
+Sulfolobus islandicus Y.N.15.51	Sulfolobus solfataricus P2	
+Corynebacterium diphtheriae HC03	Geodermatophilus obscurus DSM 43160	
+Alcanivorax borkumensis SK2	Psychromonas sp. CNPT3	
+Sulfolobus acidocaldarius Ron12/I	Sulfolobus solfataricus P2	
+Azotobacter vinelandii DJ	Methylophaga sp. JAM7	
+Pyrobaculum sp. 1860	Thermoproteus uzoniensis 768-20	
+Halorubrum lacusprofundi ATCC 49239	Natronococcus occultus SP4	
+Sulfolobus islandicus Y.N.15.51	Sulfolobus islandicus Y.G.57.14	
+Alistipes finegoldii DSM 17242	Bacteroides helcogenes P 36-108	
+Methylophaga sp. JAM7	Colwellia psychrerythraea 34H	
+Halorubrum lacusprofundi ATCC 49239	Haloferax volcanii DS2	
+Amycolatopsis mediterranei RB	Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111	
+Sulfolobus acidocaldarius N8	Sulfolobus solfataricus P2	
+Methanolobus psychrophilus R15	Methanomethylovorans hollandica DSM 15978	
+Natronobacterium gregoryi SP2	Haloarcula hispanica ATCC 33960	
+Desulfurococcus mucosus DSM 2162	Thermosphaera aggregans DSM 11486	
+Beutenbergia cavernae DSM 12333	Intrasporangium calvum DSM 43043	
+Nakamurella multipartita DSM 44233	Micromonospora sp. L5	
+Sarctica	Ttrahens	
+Alcanivorax borkumensis SK2	Haemophilus influenzae PittEE	
+Methanococcus maripaludis C7	Methanotorris igneus Kol 5	
+Halorhabdus utahensis DSM 12940	Haloarcula marismortui ATCC 43049	
+Frankia sp. EAN1pec	Intrasporangium calvum DSM 43043	
+Haloquadratum walsbyi C23	Natronomonas moolapensis 8.8.11	
+Methanococcus maripaludis S2	Methanococcus voltae A3	
+Sulfolobus acidocaldarius Ron12/I	Metallosphaera sedula DSM 5348	
+Srosetta	Amacrogynus	
+Scerevisiae	Ttrahens	
+Enterococcus faecalis D32	Streptococcus gallolyticus subsp. gallolyticus ATCC 43143	
+Halalkalicoccus jeotgali B3	Natrinema sp. J7-2	
+Thermococcus sibiricus MM 739	Pyrococcus horikoshii OT3	
+Nakamurella multipartita DSM 44233	Jonesia denitrificans DSM 20603	
+Scerevisiae	Spunctatus	
+Pyrococcus sp. ST04	Pyrococcus sp. NA2	
+Sulfolobus islandicus Y.N.15.51	Sulfolobus islandicus M.16.4	
+Mycobacterium sp. KMS	Propionibacterium acnes KPA171202	
+Methanococcus maripaludis C5	Methanococcus maripaludis C7	
+Pelagibacterium halotolerans B2	Rhodospirillum rubrum ATCC 11170	
+Thermococcus barophilus MP	Thermococcus sibiricus MM 739	
+Halomicrobium mukohataei DSM 12286	Natronomonas moolapensis 8.8.11	
+Nakamurella multipartita DSM 44233	Ilumatobacter coccineus YM16-304	
+Halogeometricum borinquense DSM 11551	Halobacterium salinarum R1	
+Bacteroides helcogenes P 36-108	Marivirga tractuosa DSM 4126	
+Tsukamurella paurometabola DSM 20162	Xylanimonas cellulosilytica DSM 15894	
+Idiomarina loihiensis GSL 199	Desulfurispirillum indicum S5	
+Parvibaculum lavamentivorans DS-1	Methylocystis sp. SC2	
+Methanocaldococcus infernus ME	Methanotorris igneus Kol 5	
+Haloarcula marismortui ATCC 43049	Haloquadratum walsbyi C23	
+Natrialba magadii ATCC 43099	Natronomonas moolapensis 8.8.11	
+Frankia sp. EAN1pec	Xylanimonas cellulosilytica DSM 15894	
+Halovivax ruber XH-70	Haloarcula hispanica ATCC 33960	
+Brucella melitensis ATCC 23457	Methylocystis sp. SC2	
+Micromonospora sp. L5	Streptosporangium roseum DSM 43021	
+Sulfolobus acidocaldarius N8	Sulfolobus solfataricus 98/2	
+Methanohalobium evestigatum Z-7303	Methanosarcina mazei Tuc01	
+Halorubrum lacusprofundi ATCC 49239	Halovivax ruber XH-70	
+Intrasporangium calvum DSM 43043	Tsukamurella paurometabola DSM 20162	
+Cowczarzaki	Spunctatus	
+Thermococcus kodakarensis KOD1	Thermococcus onnurineus NA1	
+Thermococcus barophilus MP	Pyrococcus furiosus DSM 3638	
+Thermococcus kodakarensis KOD1	Pyrococcus sp. NA2	
+Ddiscoideum	Ptetraurelia	
+Ngruberi	Acastellanii	
+Sulfolobus islandicus L.S.2.15	Sulfolobus islandicus HVE10/4	
+Halobacterium salinarum R1	Haloquadratum walsbyi C23	
+Marinomonas posidonica IVIA-Po-181	Colwellia psychrerythraea 34H	
+Halogeometricum borinquense DSM 11551	Halalkalicoccus jeotgali B3	
+Methanoculleus marisnigri JR1	Methanocella conradii HZ254	
+Haloarcula marismortui ATCC 43049	Natrialba magadii ATCC 43099	
+Srosetta	Ptetraurelia	
+Conexibacter woesei DSM 14684	Streptomyces fulvissimus DSM 40593	
+Imultifiliis	Ttrahens	
+Natronomonas pharaonis DSM 2160	Natrialba magadii ATCC 43099	
+Kineococcus radiotolerans SRS30216	Sanguibacter keddieii DSM 10542	
+Halopiger xanaduensis SH-6	Salinarchaeum sp. Harcht-Bsk1	
+Intrasporangium calvum DSM 43043	Nocardia cyriacigeorgica GUH-2	
+Jonesia denitrificans DSM 20603	Thermomonospora curvata DSM 43183	
+Micromonospora sp. L5	Mycobacterium sp. KMS	
+Oscillibacter valericigenes Sjm18-20	Alicyclobacillus acidocaldarius subsp. acidocaldarius Tc-4-1	
+Haloferax mediterranei ATCC 33500	Natrialba magadii ATCC 43099	
+Herbaspirillum seropedicae SmR1	Acidovorax citrulli AAC00-1	
+Methylobacillus flagellatus KT	Nitrosomonas sp. AL212	
+Halovivax ruber XH-70	Natronobacterium gregoryi SP2	
+Nocardioides sp. JS614	Streptosporangium roseum DSM 43021	
+Gordonia bronchialis DSM 43247	Streptomyces fulvissimus DSM 40593	
+Thermococcus kodakarensis KOD1	Pyrococcus yayanosii CH1	
+Pyrobaculum calidifontis JCM 11548	Pyrobaculum oguniense TE7	
+Halobacterium sp. NRC-1	Haloquadratum walsbyi DSM 16790	
+Herbaspirillum seropedicae SmR1	Gallionella capsiferriformans ES-2	
+Brachybacterium faecium DSM 4810	Beutenbergia cavernae DSM 12333	
+Alcanivorax borkumensis SK2	Ferrimonas balearica DSM 9799	
+Bradyrhizobium japonicum USDA 6	Bartonella quintana str. Toulouse	
+Halopiger xanaduensis SH-6	Halomicrobium mukohataei DSM 12286	
+Pyrococcus horikoshii OT3	Thermococcus sp. AM4	
+Cellvibrio gilvus ATCC 13127	Mycobacterium sp. KMS	
+Methanococcus maripaludis X1	Methanococcus voltae A3	
+Sulfolobus islandicus L.S.2.15	Sulfolobus islandicus M.16.27	
+Staphylococcus aureus subsp. aureus JKD6159	Thermosediminibacter oceani DSM 16646	
+Ngruberi	Scerevisiae	
+Halobacterium salinarum R1	Halalkalicoccus jeotgali B3	
+Halobacterium sp. NRC-1	Natronomonas moolapensis 8.8.11	
+Haloterrigena turkmenica DSM 5511	Natronomonas pharaonis DSM 2160	
+Amycolatopsis mediterranei RB	Micromonospora sp. L5	
+Bacillus sp. JS	Thermoanaerobacter italicus Ab9	
+Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111	Sanguibacter keddieii DSM 10542	
+Acastellanii	Cowczarzaki	
+Haloquadratum walsbyi DSM 16790	Haloquadratum walsbyi C23	
+Corynebacterium diphtheriae HC03	Kineococcus radiotolerans SRS30216	
+Thermococcus gammatolerans EJ3	Pyrococcus sp. ST04	
+Sanguibacter keddieii DSM 10542	Clavibacter michiganensis subsp. michiganensis NCPPB 382	
+Nakamurella multipartita DSM 44233	Propionibacterium acnes KPA171202	
+Thermococcus gammatolerans EJ3	Thermococcus sp. CL1	
+Metallosphaera cuprina Ar-4	Sulfolobus islandicus REY15A	
+Halorubrum lacusprofundi ATCC 49239	Natronobacterium gregoryi SP2	
+Beutenbergia cavernae DSM 12333	Nocardioides sp. JS614	
+Mesorhizobium australicum WSM2073	Caulobacter sp. K31	
+Gallionella capsiferriformans ES-2	Methylobacillus flagellatus KT	
+Methanobrevibacter smithii ATCC 35061	Methanosphaera stadtmanae DSM 3091	
+Haloterrigena turkmenica DSM 5511	Natronomonas moolapensis 8.8.11	
+Thermomonospora curvata DSM 43183	Mycobacterium sp. KMS	
+Thermococcus sp. 4557	Thermococcus sp. CL1	
+Pyrobaculum calidifontis JCM 11548	Pyrobaculum arsenaticum DSM 13514	
+Thermococcus litoralis DSM 5473	Pyrococcus sp. ST04	
+Halorhabdus utahensis DSM 12940	Haloquadratum walsbyi DSM 16790	
+Neisseria meningitidis M01-240149	Sulfuricella denitrificans skB26	
+Nitrosococcus oceani ATCC 19707	Nitrosomonas sp. AL212	
+Pyrococcus sp. ST04	Thermococcus sp. CL1	
+Halorhabdus utahensis DSM 12940	Haloarcula hispanica ATCC 33960	
+Segniliparus rotundus DSM 44985	Streptomyces fulvissimus DSM 40593	
+Thermococcus litoralis DSM 5473	Thermococcus onnurineus NA1	
+Natronobacterium gregoryi SP2	Natrinema sp. J7-2	
+Imultifiliis	Ptetraurelia	
+Natronobacterium gregoryi SP2	Haloquadratum walsbyi C23	
+Sulfolobus islandicus Y.G.57.14	Sulfolobus solfataricus 98/2	
+Methanosphaera stadtmanae DSM 3091	Methanothermobacter thermautotrophicus str. Delta H	
+Staphylococcus aureus subsp. aureus JKD6159	Syntrophomonas wolfei subsp. wolfei str. Goettingen	
+Natrinema pellirubrum DSM 15624	Haloquadratum walsbyi C23	
+Sanguibacter keddieii DSM 10542	Nocardia cyriacigeorgica GUH-2	
+Mycobacterium sp. KMS	Nocardia cyriacigeorgica GUH-2	
+Sulfolobus islandicus M.14.25	Sulfolobus islandicus L.D.8.5	
+Caulobacter sp. K31	Parvularcula bermudensis HTCC2503	
+Caulobacter sp. K31	Brucella melitensis ATCC 23457	
+Halorhabdus utahensis DSM 12940	Halomicrobium mukohataei DSM 12286	
+Halobacterium salinarum R1	Natrinema pellirubrum DSM 15624	
+Halomicrobium mukohataei DSM 12286	Natrinema sp. J7-2	
+Kineococcus radiotolerans SRS30216	Catenulispora acidiphila DSM 44928	
+Pyrobaculum islandicum DSM 4184	Pyrobaculum arsenaticum DSM 13514	
+Haloarcula hispanica ATCC 33960	Halalkalicoccus jeotgali B3	
+Geodermatophilus obscurus DSM 43160	Xylanimonas cellulosilytica DSM 15894	
+Ferrimonas balearica DSM 9799	Colwellia psychrerythraea 34H	
+Streptomyces fulvissimus DSM 40593	Tsukamurella paurometabola DSM 20162	
+Haloarcula marismortui ATCC 43049	Salinarchaeum sp. Harcht-Bsk1	
+Fusobacterium nucleatum subsp. vincentii 3_1_36A2	Sebaldella termitidis ATCC 33386	
+Nakamurella multipartita DSM 44233	Intrasporangium calvum DSM 43043	
+Sulfolobus islandicus L.D.8.5	Sulfolobus islandicus M.16.4	
+Azotobacter vinelandii DJ	Idiomarina loihiensis GSL 199	
+Pyrococcus furiosus DSM 3638	Thermococcus sp. 4557	
+Halorubrum lacusprofundi ATCC 49239	Halomicrobium mukohataei DSM 12286	
+Sulfolobus islandicus M.14.25	Sulfolobus acidocaldarius N8	
+Haloarcula hispanica ATCC 33960	Natronococcus occultus SP4	
+Acidaminococcus fermentans DSM 20731	Clostridium lentocellum DSM 5427	
+Stackebrandtia nassauensis DSM 44728	Intrasporangium calvum DSM 43043	
+Aeromonas hydrophila subsp. hydrophila ATCC 7966	Shewanella halifaxensis HAW-EB4	
+Beutenbergia cavernae DSM 12333	Clavibacter michiganensis subsp. michiganensis NCPPB 382	
+Herbaspirillum seropedicae SmR1	Advenella kashmirensis WT001	
+Nocardioides sp. JS614	Nocardia cyriacigeorgica GUH-2	
+Candidatus Nitrosopumilus sp. AR2	Candidatus Nitrososphaera gargensis Ga9.2	
+Staphylothermus hellenicus DSM 12710	Pyrolobus fumarii 1A	
+Methanosalsum zhilinae DSM 4017	Methanosarcina mazei Tuc01	
+Methanocaldococcus fervens AG86	Methanothermococcus okinawensis IH1	
+Sulfolobus islandicus L.D.8.5	Sulfolobus islandicus HVE10/4	
+Halorubrum lacusprofundi ATCC 49239	Haloarcula hispanica ATCC 33960	
+Acidianus hospitalis W1	Sulfolobus acidocaldarius DSM 639	
+Metallosphaera sedula DSM 5348	Sulfolobus islandicus L.D.8.5	
+Nostoc sp. PCC 7107	Prochlorococcus marinus str. MIT 9211	
+Methanosalsum zhilinae DSM 4017	Methanomethylovorans hollandica DSM 15978	
+Solibacillus silvestris StLB046	Paenibacillus polymyxa M1	
+Intrasporangium calvum DSM 43043	Streptosporangium roseum DSM 43021	
+Conexibacter woesei DSM 14684	Beutenbergia cavernae DSM 12333	
+Haemophilus influenzae PittEE	Idiomarina loihiensis GSL 199	
+Alcanivorax borkumensis SK2	Marinomonas posidonica IVIA-Po-181	
+Halovivax ruber XH-70	Natronomonas moolapensis 8.8.11	
+Candidatus Solibacter usitatus Ellin6076	Chthonomonas calidirosea T49	
+Nakamurella multipartita DSM 44233	Amycolatopsis mediterranei RB	
+Pseudoalteromonas atlantica T6c	Psychromonas sp. CNPT3	
+Staphylococcus aureus subsp. aureus JKD6159	Carnobacterium sp. WN1359	
+Acidothermus cellulolyticus 11B	Kytococcus sedentarius DSM 20547	
+Nitrosococcus oceani ATCC 19707	Gallionella capsiferriformans ES-2	
+Mesorhizobium australicum WSM2073	Rhodospirillum rubrum ATCC 11170	
+Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111	Jonesia denitrificans DSM 20603	
+Sanguibacter keddieii DSM 10542	Tsukamurella paurometabola DSM 20162	
+Renibacterium salmoninarum ATCC 33209	Mycobacterium sp. KMS	
+Staphylococcus aureus subsp. aureus JKD6159	Halanaerobium praevalens DSM 2228	
+Halalkalicoccus jeotgali B3	Haloquadratum walsbyi C23	
+Catenulispora acidiphila DSM 44928	Propionibacterium acnes KPA171202	
+Ngruberi	Ptetraurelia	
+Corynebacterium diphtheriae HC03	Nocardia cyriacigeorgica GUH-2	
+Halorubrum lacusprofundi ATCC 49239	Halobacterium sp. NRC-1	
+Mesorhizobium australicum WSM2073	Brucella melitensis ATCC 23457	
+Frankia sp. EAN1pec	Catenulispora acidiphila DSM 44928	
+Ngruberi	Mbrevicollis	
+Pyrobaculum sp. 1860	Pyrobaculum arsenaticum DSM 13514	
+Tbrucei	Ttrahens	
+Sulfolobus islandicus LAL14/1	Sulfolobus tokodaii str. 7	
+Haloferax mediterranei ATCC 33500	Halogeometricum borinquense DSM 11551	
+Aromatoleum aromaticum EbN1	Pelobacter propionicus DSM 2379	
+Natrialba magadii ATCC 43099	Haloquadratum walsbyi C23	
+Clavibacter michiganensis subsp. michiganensis NCPPB 382	Tsukamurella paurometabola DSM 20162	
+Ddiscoideum	Mbrevicollis	
+Micromonospora sp. L5	Segniliparus rotundus DSM 44985	
+Psychromonas sp. CNPT3	Vibrio vulnificus MO6-24/O	
+Cellvibrio gilvus ATCC 13127	Geodermatophilus obscurus DSM 43160	
+Bifidobacterium longum subsp. longum JDM301	Cellvibrio gilvus ATCC 13127	
+Jonesia denitrificans DSM 20603	Catenulispora acidiphila DSM 44928	
+Beutenbergia cavernae DSM 12333	Mycobacterium sp. KMS	
+Pedobacter heparinus DSM 2366	Bacteroides helcogenes P 36-108	
+Thermococcus barophilus MP	Thermococcus sp. AM4	
+Halothiobacillus neapolitanus c2	Burkholderia rhizoxinica HKI 454	
+Ferrimonas balearica DSM 9799	Shewanella halifaxensis HAW-EB4	
+Frankia sp. EAN1pec	Micromonospora sp. L5	
+Haloarcula hispanica ATCC 33960	Haloquadratum walsbyi C23	
+Acidovorax citrulli AAC00-1	Advenella kashmirensis WT001	
+Thermococcus gammatolerans EJ3	Pyrococcus horikoshii OT3	
+Halorhabdus utahensis DSM 12940	Salinarchaeum sp. Harcht-Bsk1	
+Methylocella silvestris BL2	Starkeya novella DSM 506	
+Pedobacter heparinus DSM 2366	Riemerella anatipestifer ATCC 11845 = DSM 15868	
+Halorubrum lacusprofundi ATCC 49239	Halogeometricum borinquense DSM 11551	
+Aeromonas hydrophila subsp. hydrophila ATCC 7966	Ferrimonas balearica DSM 9799	
+Clostridium botulinum F str. 230613	Symbiobacterium thermophilum IAM 14863	
+Cowczarzaki	Tthermophila	
+Natronobacterium gregoryi SP2	Haloquadratum walsbyi DSM 16790	
+Nocardioides sp. JS614	Thermomonospora curvata DSM 43183	
+Methanococcus maripaludis C5	Methanococcus maripaludis C6	
+Halobacterium sp. NRC-1	Haloarcula hispanica ATCC 33960	
+Haloquadratum walsbyi DSM 16790	Natrialba magadii ATCC 43099	
+Sulfolobus islandicus REY15A	Sulfolobus acidocaldarius N8	
+Aeromonas hydrophila subsp. hydrophila ATCC 7966	Alteromonas macleodii str. Ionian Sea U4	
+Amycolatopsis mediterranei RB	Stackebrandtia nassauensis DSM 44728	
+Methylobacterium nodulans ORS 2060	Bartonella quintana str. Toulouse	
+Nakamurella multipartita DSM 44233	Xylanimonas cellulosilytica DSM 15894	
+Stackebrandtia nassauensis DSM 44728	Tsukamurella paurometabola DSM 20162	
+Brachybacterium faecium DSM 4810	Sanguibacter keddieii DSM 10542	
+Acidianus hospitalis W1	Metallosphaera cuprina Ar-4	
+Falba	Mbrevicollis	
+Methanococcus maripaludis C6	Methanococcus maripaludis X1	
+Falba	Ppallidum	
+Amycolatopsis mediterranei RB	Propionibacterium acnes KPA171202	
+Natronococcus occultus SP4	Salinarchaeum sp. Harcht-Bsk1	
+Alcanivorax borkumensis SK2	Erythrobacter litoralis HTCC2594	
+Archaeoglobus veneficus SNP6	Archaeoglobus profundus DSM 5631	
+Pyrococcus horikoshii OT3	Thermococcus sp. CL1	
+Archaeoglobus sulfaticallidus PM70-1	Archaeoglobus fulgidus DSM 4304	
+Segniliparus rotundus DSM 44985	Nocardia cyriacigeorgica GUH-2	
+Gallionella capsiferriformans ES-2	Advenella kashmirensis WT001	
+Marivirga tractuosa DSM 4126	Runella slithyformis DSM 19594	
+Gordonia bronchialis DSM 43247	Streptosporangium roseum DSM 43021	
+Frankia sp. EAN1pec	Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111	
+Klebsiella pneumoniae subsp. rhinoscleromatis SB3432	Shewanella halifaxensis HAW-EB4	
+Acidianus hospitalis W1	Sulfolobus islandicus M.14.25	
+Aromatoleum aromaticum EbN1	Parvibaculum lavamentivorans DS-1	
+Ddiscoideum	Cowczarzaki	
+Bacteroides helcogenes P 36-108	Paludibacter propionicigenes WB4	
+Methylobacillus flagellatus KT	Burkholderia rhizoxinica HKI 454	
+Thermococcus kodakarensis KOD1	Thermococcus sp. CL1	
+Natrinema pellirubrum DSM 15624	Salinarchaeum sp. Harcht-Bsk1	
+Natronomonas pharaonis DSM 2160	Halomicrobium mukohataei DSM 12286	
+Stackebrandtia nassauensis DSM 44728	Cellvibrio gilvus ATCC 13127	
+Methanococcus maripaludis X1	Methanotorris igneus Kol 5	
+Sulfolobus islandicus Y.G.57.14	Sulfolobus tokodaii str. 7	
+Desulfarculus baarsii DSM 2075	Stigmatella aurantiaca DW4/3-1	
+Alcanivorax borkumensis SK2	Alteromonas macleodii str. Ionian Sea U4	
+Halopiger xanaduensis SH-6	Haloquadratum walsbyi C23	
+Pelagibacterium halotolerans B2	Mesorhizobium australicum WSM2073	
+Acidianus hospitalis W1	Sulfolobus islandicus Y.G.57.14	
+Halobacterium sp. NRC-1	halophilic archaeon DL31	
+Methanobrevibacter ruminantium M1	Methanobacterium sp. AL-21	
+Candidatus Protochlamydia amoebophila UWE25	Simkania negevensis Z	
+Haloferax volcanii DS2	Haloarcula marismortui ATCC 43049	
+Halothiobacillus neapolitanus c2	Aromatoleum aromaticum EbN1	
+Sulfolobus islandicus M.16.4	Sulfolobus solfataricus 98/2	
+Parvibaculum lavamentivorans DS-1	Parvularcula bermudensis HTCC2503	
+Azotobacter vinelandii DJ	Klebsiella pneumoniae subsp. rhinoscleromatis SB3432	
+Methanosarcina barkeri str. Fusaro	Methanococcoides burtonii DSM 6242	
+Pyrobaculum islandicum DSM 4184	Pyrobaculum sp. 1860	
+Mverticillata	Imultifiliis	
+Acinetobacter oleivorans DR1	Neisseria meningitidis M01-240149	
+Jonesia denitrificans DSM 20603	Arcanobacterium haemolyticum DSM 20595	
+Ddiscoideum	Imultifiliis	
+Clostridium botulinum F str. 230613	Mahella australiensis 50-1 BON	
+Pyrococcus horikoshii OT3	Thermococcus onnurineus NA1	
+Methylocella silvestris BL2	Candidatus Solibacter usitatus Ellin6076	
+Sulfolobus acidocaldarius Ron12/I	Sulfolobus acidocaldarius N8	
+Halogeometricum borinquense DSM 11551	Haloterrigena turkmenica DSM 5511	
+Thermomonospora curvata DSM 43183	Sanguibacter keddieii DSM 10542	
+Methanococcus maripaludis C7	Methanothermococcus okinawensis IH1	
+Simkania negevensis Z	Waddlia chondrophila WSU 86-1044	
+Micromonospora sp. L5	Thermomonospora curvata DSM 43183	
+Burkholderia rhizoxinica HKI 454	Nitrosomonas sp. AL212	
+Halorhabdus utahensis DSM 12940	Halopiger xanaduensis SH-6	
+Stackebrandtia nassauensis DSM 44728	Nocardioides sp. JS614	
+Pyrococcus sp. NA2	Thermococcus onnurineus NA1	
+Acidianus hospitalis W1	Sulfolobus islandicus L.D.8.5	
+Srosetta	Ddiscoideum	
+Shewanella halifaxensis HAW-EB4	Xanthomonas campestris pv. campestris str. 8004	
+Pyrococcus sp. NA2	Thermococcus sp. CL1	
+Intrasporangium calvum DSM 43043	Clavibacter michiganensis subsp. michiganensis NCPPB 382	
+Paludibacter propionicigenes WB4	Prevotella intermedia 17	
+Alteromonas macleodii str. Ionian Sea U4	Pseudoalteromonas atlantica T6c	
+Hahella chejuensis KCTC 2396	Idiomarina loihiensis GSL 199	
+Nocardioides sp. JS614	Sanguibacter keddieii DSM 10542	
+Methanobrevibacter smithii ATCC 35061	Methanothermobacter thermautotrophicus str. Delta H	
+Intrasporangium calvum DSM 43043	Propionibacterium acnes KPA171202	
+Kineococcus radiotolerans SRS30216	Tsukamurella paurometabola DSM 20162	
+Streptomyces fulvissimus DSM 40593	Streptosporangium roseum DSM 43021	
+Paenibacillus polymyxa M1	Symbiobacterium thermophilum IAM 14863	
+Metallosphaera cuprina Ar-4	Sulfolobus tokodaii str. 7	
+Renibacterium salmoninarum ATCC 33209	Segniliparus rotundus DSM 44985	
+Methanococcus maripaludis C5	Methanothermococcus okinawensis IH1	
+Propionibacterium acnes KPA171202	Tsukamurella paurometabola DSM 20162	
+Kytococcus sedentarius DSM 20547	Clavibacter michiganensis subsp. michiganensis NCPPB 382	
+Bacteroides helcogenes P 36-108	Prevotella intermedia 17	
+Amacrogynus	Sarctica	
+Ferroplasma acidarmanus fer1	Picrophilus torridus DSM 9790	
+Jonesia denitrificans DSM 20603	Xylanimonas cellulosilytica DSM 15894	
+Methanosarcina barkeri str. Fusaro	Methanohalophilus mahii DSM 5219	
+Geodermatophilus obscurus DSM 43160	Nocardioides sp. JS614	
+Aromatoleum aromaticum EbN1	Herbaspirillum seropedicae SmR1	
+Intrasporangium calvum DSM 43043	Renibacterium salmoninarum ATCC 33209	
+Candidatus Protochlamydia amoebophila UWE25	Waddlia chondrophila WSU 86-1044	
+Pyrobaculum arsenaticum DSM 13514	Thermoproteus uzoniensis 768-20	
+Pyrococcus sp. ST04	Pyrococcus horikoshii OT3	
+Thermococcus barophilus MP	Pyrococcus yayanosii CH1	
+Nitrosococcus oceani ATCC 19707	Methylophaga sp. JAM7	
+Sarctica	Spunctatus	
+Halobacterium sp. NRC-1	Natronobacterium gregoryi SP2	
+Haloterrigena turkmenica DSM 5511	Natronococcus occultus SP4	
+Haloterrigena turkmenica DSM 5511	Natronobacterium gregoryi SP2	
+Caldivirga maquilingensis IC-167	Sulfolobus islandicus Y.G.57.14	
+Aminobacterium colombiense DSM 12261	Desulfobacterium autotrophicum HRM2	
+Staphylothermus hellenicus DSM 12710	Staphylothermus marinus F1	
+Pyrococcus horikoshii OT3	Pyrococcus sp. NA2	
+Halogeometricum borinquense DSM 11551	Haloquadratum walsbyi DSM 16790	
+Desulfobacca acetoxidans DSM 11109	Geobacter sulfurreducens KN400	
+Alteromonas macleodii str. Ionian Sea U4	Shewanella halifaxensis HAW-EB4	
+Acidianus hospitalis W1	Sulfolobus islandicus HVE10/4	
+Halobacterium sp. NRC-1	Haloterrigena turkmenica DSM 5511	
+Mbrevicollis	Ppallidum	
+Sulfolobus acidocaldarius DSM 639	Sulfolobus islandicus Y.N.15.51	
+Methanobrevibacter sp. AbM4	Methanobrevibacter smithii ATCC 35061	
+Bacillus sp. JS	Staphylococcus aureus subsp. aureus JKD6159	
+Tsukamurella paurometabola DSM 20162	Streptosporangium roseum DSM 43021	
+Halopiger xanaduensis SH-6	halophilic archaeon DL31	
+Pyrococcus sp. NA2	Pyrococcus yayanosii CH1	
+Halorhabdus utahensis DSM 12940	Natrinema sp. J7-2	
+Aeromonas hydrophila subsp. hydrophila ATCC 7966	Alcanivorax borkumensis SK2	
+Haloterrigena turkmenica DSM 5511	halophilic archaeon DL31	
+Hahella chejuensis KCTC 2396	Azotobacter vinelandii DJ	
+Frankia sp. EAN1pec	Propionibacterium acnes KPA171202	
+Frankia sp. EAN1pec	Nocardia cyriacigeorgica GUH-2	
+Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111	Kytococcus sedentarius DSM 20547	
+Ngruberi	Spunctatus	
+Methanocaldococcus sp. FS406-22	Methanocaldococcus vulcanius M7	
+Halopiger xanaduensis SH-6	Haloquadratum walsbyi DSM 16790	
+Bradyrhizobium japonicum USDA 6	Methylocystis sp. SC2	
+Picrophilus torridus DSM 9790	Thermoplasma volcanium GSS1	
+Beutenbergia cavernae DSM 12333	Streptosporangium roseum DSM 43021	
+Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111	Geodermatophilus obscurus DSM 43160	
+Parvibaculum lavamentivorans DS-1	Starkeya novella DSM 506	
+Alteromonas macleodii str. Ionian Sea U4	Haemophilus influenzae PittEE	
+Kineococcus radiotolerans SRS30216	Intrasporangium calvum DSM 43043	
+Metallosphaera cuprina Ar-4	Sulfolobus islandicus M.16.27	
+Pelagibacterium halotolerans B2	Methylocystis sp. SC2	
+Thermococcus kodakarensis KOD1	Pyrococcus furiosus DSM 3638	
+Alicyclobacillus acidocaldarius subsp. acidocaldarius Tc-4-1	Sulfobacillus acidophilus TPY	
+Thermococcus kodakarensis KOD1	Thermococcus sibiricus MM 739	
+Bifidobacterium longum subsp. longum JDM301	Intrasporangium calvum DSM 43043	
+Methanococcus maripaludis C5	Methanococcus voltae A3	
+Haloferax mediterranei ATCC 33500	Natronomonas pharaonis DSM 2160	
+Amacrogynus	Spunctatus	
+Halopiger xanaduensis SH-6	Haloarcula marismortui ATCC 43049	
+Natronobacterium gregoryi SP2	Halalkalicoccus jeotgali B3	
+Pyrococcus furiosus DSM 3638	Pyrococcus yayanosii CH1	
+Ilumatobacter coccineus YM16-304	Frankia sp. EAN1pec	
+Scerevisiae	Imultifiliis	
+Ferrimonas balearica DSM 9799	Marinomonas posidonica IVIA-Po-181	
+Gordonia bronchialis DSM 43247	Segniliparus rotundus DSM 44985	
+Heliobacterium modesticaldum Ice1	Paenibacillus polymyxa M1	
+Stackebrandtia nassauensis DSM 44728	Xylanimonas cellulosilytica DSM 15894	
+Thermococcus gammatolerans EJ3	Thermococcus sibiricus MM 739	
+Salinarchaeum sp. Harcht-Bsk1	Natrinema sp. J7-2	
+Haemophilus influenzae PittEE	Ferrimonas balearica DSM 9799	
+Natronococcus occultus SP4	Halalkalicoccus jeotgali B3	
+Nakamurella multipartita DSM 44233	Beutenbergia cavernae DSM 12333	
+Cellvibrio gilvus ATCC 13127	Sanguibacter keddieii DSM 10542	
+Aeromonas hydrophila subsp. hydrophila ATCC 7966	Vibrio vulnificus MO6-24/O	
+Ppallidum	Ttrahens	
+Ddiscoideum	Scerevisiae	
+Acidothermus cellulolyticus 11B	Xylanimonas cellulosilytica DSM 15894	
+Streptomyces fulvissimus DSM 40593	Propionibacterium acnes KPA171202	
+Oscillibacter valericigenes Sjm18-20	Clostridium botulinum F str. 230613	
+Acinetobacter oleivorans DR1	Advenella kashmirensis WT001	
+Hahella chejuensis KCTC 2396	Legionella pneumophila subsp. pneumophila LPE509	
+Caulobacter sp. K31	Rhodospirillum rubrum ATCC 11170	
+Methanoregula boonei 6A8	Methanoplanus petrolearius DSM 11571	
+Sarctica	Ptetraurelia	
+Sulfolobus solfataricus 98/2	Sulfolobus tokodaii str. 7	
+Ferrimonas balearica DSM 9799	Idiomarina loihiensis GSL 199	
+Bsaltans	Tbrucei	
+Bradyrhizobium japonicum USDA 6	Parvibaculum lavamentivorans DS-1	
+Amycolatopsis mediterranei RB	Thermomonospora curvata DSM 43183	
+Clavibacter michiganensis subsp. michiganensis NCPPB 382	Xylanimonas cellulosilytica DSM 15894	
+Kytococcus sedentarius DSM 20547	Arcanobacterium haemolyticum DSM 20595	
+Halobacterium sp. NRC-1	Halopiger xanaduensis SH-6	
+Cellvibrio gilvus ATCC 13127	Beutenbergia cavernae DSM 12333	
+Caulobacter sp. K31	Methylocystis sp. SC2	
+Pyrococcus furiosus COM1	Thermococcus sp. 4557	
+Sulfolobus islandicus M.16.27	Sulfolobus islandicus M.14.25	
+Cellvibrio gilvus ATCC 13127	Micromonospora sp. L5	
+Methanococcus maripaludis C5	Methanotorris igneus Kol 5	
+Thermococcus sibiricus MM 739	Pyrococcus yayanosii CH1	
+Methylobacterium nodulans ORS 2060	Rhodospirillum rubrum ATCC 11170	
+Haloterrigena turkmenica DSM 5511	Haloarcula hispanica ATCC 33960	
+Nocardioides sp. JS614	Tsukamurella paurometabola DSM 20162	
+Stackebrandtia nassauensis DSM 44728	Sanguibacter keddieii DSM 10542	
+Micromonospora sp. L5	Nocardia cyriacigeorgica GUH-2	
+Beutenbergia cavernae DSM 12333	Xylanimonas cellulosilytica DSM 15894	
+Methanocaldococcus fervens AG86	Methanococcus maripaludis C5	
+Methanocaldococcus fervens AG86	Methanococcus maripaludis C7	
+Methanocaldococcus fervens AG86	Methanococcus maripaludis C6	
+Methanocaldococcus vulcanius M7	Methanotorris igneus Kol 5	
+Alcanivorax borkumensis SK2	Klebsiella pneumoniae subsp. rhinoscleromatis SB3432	
+Jonesia denitrificans DSM 20603	Clavibacter michiganensis subsp. michiganensis NCPPB 382	
+Cellvibrio gilvus ATCC 13127	Intrasporangium calvum DSM 43043	
+Sulfolobus acidocaldarius Ron12/I	Sulfolobus islandicus Y.G.57.14	
+Thermococcus barophilus MP	Thermococcus sp. 4557	
+Nakamurella multipartita DSM 44233	Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111	
+Sulfolobus islandicus LAL14/1	Metallosphaera cuprina Ar-4	
+Methanocaldococcus sp. FS406-22	Methanocaldococcus fervens AG86	
+Jonesia denitrificans DSM 20603	Renibacterium salmoninarum ATCC 33209	
+Natronobacterium gregoryi SP2	Haloarcula marismortui ATCC 43049	
+Methanoculleus bourgensis MS2	Methanoregula formicica SMSP	
+Halopiger xanaduensis SH-6	Natronomonas moolapensis 8.8.11	
+Metallosphaera sedula DSM 5348	Sulfolobus solfataricus 98/2	
+Methanobacterium sp. SWAN-1	Methanothermobacter thermautotrophicus str. Delta H	
+Haloarcula hispanica ATCC 33960	Natrinema sp. J7-2	
+Methanohalophilus mahii DSM 5219	Methanosarcina mazei Go1	
+Halorhabdus utahensis DSM 12940	Natronomonas pharaonis DSM 2160	
+Kineococcus radiotolerans SRS30216	Streptomyces fulvissimus DSM 40593	
+Streptomyces fulvissimus DSM 40593	Xylanimonas cellulosilytica DSM 15894	
+Sulfolobus islandicus M.16.27	Sulfolobus islandicus Y.N.15.51	
+Desulfurococcus fermentans DSM 16532	Desulfurococcus mucosus DSM 2162	
+Natrinema pellirubrum DSM 15624	Halomicrobium mukohataei DSM 12286	
+Clostridium botulinum F str. 230613	Staphylococcus aureus subsp. aureus JKD6159	
+Nakamurella multipartita DSM 44233	Tsukamurella paurometabola DSM 20162	
+Methanosarcina acetivorans C2A	Methanohalophilus mahii DSM 5219	
+Metallosphaera cuprina Ar-4	Sulfolobus islandicus HVE10/4	
+Idiomarina loihiensis GSL 199	Psychromonas sp. CNPT3	
+Methanosarcina barkeri str. Fusaro	Methanosarcina acetivorans C2A	
+Geodermatophilus obscurus DSM 43160	Kytococcus sedentarius DSM 20547	
+Desulfurococcus kamchatkensis 1221n	Staphylothermus marinus F1	
+Erythrobacter litoralis HTCC2594	Desulfurispirillum indicum S5	
+Metallosphaera cuprina Ar-4	Sulfolobus solfataricus P2	
+Haloferax mediterranei ATCC 33500	Natrinema sp. J7-2	
+Pyrobaculum oguniense TE7	Pyrobaculum neutrophilum V24Sta	
+Sulfolobus islandicus Y.N.15.51	Sulfolobus islandicus HVE10/4	
+Gordonia bronchialis DSM 43247	Nocardia cyriacigeorgica GUH-2	
+Clostridium botulinum F str. 230613	Listeria monocytogenes SLCC5850	
+Mahella australiensis 50-1 BON	Symbiobacterium thermophilum IAM 14863	
+Thermofilum pendens Hrk 5	Thermofilum sp. 1910b	
+Sulfolobus islandicus L.S.2.15	Metallosphaera sedula DSM 5348	
+Staphylothermus marinus F1	Ignicoccus hospitalis KIN4/I	
+Carnobacterium sp. WN1359	Halanaerobium praevalens DSM 2228	
+Haloferax mediterranei ATCC 33500	Haloferax volcanii DS2	
+Advenella kashmirensis WT001	Burkholderia rhizoxinica HKI 454	
+Sulfolobus islandicus REY15A	Sulfolobus solfataricus 98/2	
+Pyrococcus furiosus COM1	Thermococcus sp. AM4	
+Srosetta	Ppallidum	
+Thermoanaerobacter italicus Ab9	Staphylococcus aureus subsp. aureus JKD6159	
+Listeria monocytogenes SLCC5850	Mahella australiensis 50-1 BON	
+Srosetta	Falba	
+Acastellanii	Ptetraurelia	
+Sulfolobus islandicus L.S.2.15	Sulfolobus islandicus L.D.8.5	
+Ptetraurelia	Tthermophila	
+Brachybacterium faecium DSM 4810	Intrasporangium calvum DSM 43043	
+Haemophilus influenzae PittEE	Neisseria meningitidis M01-240149	
+Jonesia denitrificans DSM 20603	Micromonospora sp. L5	
+Thermococcus barophilus MP	Thermococcus litoralis DSM 5473	
+Thermococcus litoralis DSM 5473	Pyrococcus horikoshii OT3	
+Alteromonas macleodii str. Ionian Sea U4	Ferrimonas balearica DSM 9799	
+Aeromonas hydrophila subsp. hydrophila ATCC 7966	Hahella chejuensis KCTC 2396	
+Stackebrandtia nassauensis DSM 44728	Segniliparus rotundus DSM 44985	
+Ngruberi	Tthermophila	
+Gallionella capsiferriformans ES-2	Sulfuricella denitrificans skB26	
+Geobacter sulfurreducens KN400	Pelobacter propionicus DSM 2379	
+Methanosalsum zhilinae DSM 4017	Methanococcoides burtonii DSM 6242	
+Metallosphaera sedula DSM 5348	Sulfolobus islandicus HVE10/4	
+Methanolobus psychrophilus R15	Methanosarcina mazei Tuc01	
+Clostridium sticklandii	Syntrophomonas wolfei subsp. wolfei str. Goettingen	
+Haloquadratum walsbyi C23	Natrinema sp. J7-2	
+Amycolatopsis mediterranei RB	Gordonia bronchialis DSM 43247	
+Cyclobacterium marinum DSM 745	Bacteroides helcogenes P 36-108	
+Geodermatophilus obscurus DSM 43160	Segniliparus rotundus DSM 44985	
+Halovivax ruber XH-70	Halomicrobium mukohataei DSM 12286	
+Nocardioides sp. JS614	Clavibacter michiganensis subsp. michiganensis NCPPB 382	
+Mverticillata	Acastellanii	
+Sulfolobus islandicus L.D.8.5	Sulfolobus solfataricus P2	
+Mbrevicollis	Acastellanii	
+Herbaspirillum seropedicae SmR1	Burkholderia rhizoxinica HKI 454	
+Idiomarina loihiensis GSL 199	Colwellia psychrerythraea 34H	
+Acidothermus cellulolyticus 11B	Beutenbergia cavernae DSM 12333	
+Kineococcus radiotolerans SRS30216	Renibacterium salmoninarum ATCC 33209	
+Idiomarina loihiensis GSL 199	Shewanella halifaxensis HAW-EB4	
+Haloarcula marismortui ATCC 43049	Natronomonas moolapensis 8.8.11	
+Thermococcus litoralis DSM 5473	Thermococcus sp. 4557	
+Desulfurococcus mucosus DSM 2162	Thermogladius cellulolyticus 1633	
+Methanobacterium sp. SWAN-1	Methanobrevibacter smithii ATCC 35061	
+Mahella australiensis 50-1 BON	Alicyclobacillus acidocaldarius subsp. acidocaldarius Tc-4-1	
+Marivirga tractuosa DSM 4126	Paludibacter propionicigenes WB4	
+Mesorhizobium australicum WSM2073	Parvibaculum lavamentivorans DS-1	
+Bsaltans	Ptetraurelia	
+Acidothermus cellulolyticus 11B	Gordonia bronchialis DSM 43247	
+Halalkalicoccus jeotgali B3	Halomicrobium mukohataei DSM 12286	
+Carnobacterium sp. WN1359	Thermosediminibacter oceani DSM 16646	
+Frankia sp. EAN1pec	Streptomyces fulvissimus DSM 40593	
+Natronomonas pharaonis DSM 2160	Haloquadratum walsbyi DSM 16790	
+Cellvibrio gilvus ATCC 13127	Streptosporangium roseum DSM 43021	
+Arcanobacterium haemolyticum DSM 20595	Xylanimonas cellulosilytica DSM 15894	
+Halomicrobium mukohataei DSM 12286	Natrialba magadii ATCC 43099	
+Pelagibacterium halotolerans B2	Brucella melitensis ATCC 23457	
+Methanococcus vannielii SB	Methanococcus maripaludis C6	
+Sulfolobus islandicus M.14.25	Sulfolobus islandicus HVE10/4	
+Jonesia denitrificans DSM 20603	Geodermatophilus obscurus DSM 43160	
+Thermococcus onnurineus NA1	Thermococcus sp. 4557	
+Methanobacterium sp. SWAN-1	Methanothermobacter marburgensis str. Marburg	
+Sulfolobus solfataricus 98/2	Sulfolobus solfataricus P2	
+Stackebrandtia nassauensis DSM 44728	Streptomyces fulvissimus DSM 40593	
+Nocardioides sp. JS614	Intrasporangium calvum DSM 43043	
+Alcanivorax borkumensis SK2	Hahella chejuensis KCTC 2396	
+Mverticillata	Cowczarzaki	
+Natronomonas moolapensis 8.8.11	halophilic archaeon DL31	
+Clostridium lentocellum DSM 5427	Thermosediminibacter oceani DSM 16646	
+Owenweeksia hongkongensis DSM 17368	Marivirga tractuosa DSM 4126	
+Ngruberi	Tbrucei	
+Cellvibrio gilvus ATCC 13127	Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111	
+Conexibacter woesei DSM 14684	Catenulispora acidiphila DSM 44928	
+Desulfarculus baarsii DSM 2075	Desulfobacterium autotrophicum HRM2	
+Methylocystis sp. SC2	Rhodospirillum rubrum ATCC 11170	
+Sulfolobus islandicus L.D.8.5	Sulfolobus solfataricus 98/2	
+Thermoanaerobacter italicus Ab9	Symbiobacterium thermophilum IAM 14863	
+Methanocaldococcus fervens AG86	Methanococcus maripaludis X1	
+Halobacterium sp. NRC-1	Halomicrobium mukohataei DSM 12286	
+Haloterrigena turkmenica DSM 5511	Haloquadratum walsbyi DSM 16790	
+Thermococcus gammatolerans EJ3	Pyrococcus furiosus COM1	
+Halobacterium salinarum R1	Salinarchaeum sp. Harcht-Bsk1	
+Imultifiliis	Ppallidum	
+Halorhabdus utahensis DSM 12940	Haloferax volcanii DS2	
+Methylocystis sp. SC2	Starkeya novella DSM 506	
+Clostridium botulinum F str. 230613	Paenibacillus polymyxa M1	
+Chlamydia trachomatis Sweden2	Waddlia chondrophila WSU 86-1044	
+Haloferax mediterranei ATCC 33500	Salinarchaeum sp. Harcht-Bsk1	
+Halobacterium salinarum R1	Natrinema sp. J7-2	
+Ilumatobacter coccineus YM16-304	Jonesia denitrificans DSM 20603	
+Methanothermococcus okinawensis IH1	Methanococcus aeolicus Nankai-3	
+Ptetraurelia	Spunctatus	
+Pyrobaculum neutrophilum V24Sta	Pyrobaculum sp. 1860	
+Paenibacillus polymyxa M1	Alicyclobacillus acidocaldarius subsp. acidocaldarius Tc-4-1	
+Methanothermococcus okinawensis IH1	Methanococcus maripaludis C6	
+Frankia sp. EAN1pec	Renibacterium salmoninarum ATCC 33209	
+Nakamurella multipartita DSM 44233	Streptomyces fulvissimus DSM 40593	
+Hahella chejuensis KCTC 2396	Francisella sp. TX077308	
+Staphylothermus marinus F1	Thermosphaera aggregans DSM 11486	
+Natronococcus occultus SP4	Natrialba magadii ATCC 43099	
+Acidothermus cellulolyticus 11B	Catenulispora acidiphila DSM 44928	
+Hahella chejuensis KCTC 2396	Haemophilus influenzae PittEE	
+Natronococcus occultus SP4	Natronomonas moolapensis 8.8.11	
+Amycolatopsis mediterranei RB	Frankia sp. EAN1pec	
+Gordonia bronchialis DSM 43247	Thermomonospora curvata DSM 43183	
+Halovivax ruber XH-70	Natrinema sp. J7-2	
+Methanolobus psychrophilus R15	Methanococcoides burtonii DSM 6242	
+Halobacterium salinarum R1	Halovivax ruber XH-70	
+Bartonella quintana str. Toulouse	Methylocella silvestris BL2	
+Methanothermobacter marburgensis str. Marburg	Methanothermobacter thermautotrophicus str. Delta H	
+Haloarcula hispanica ATCC 33960	halophilic archaeon DL31	
+Thermococcus barophilus MP	Pyrococcus horikoshii OT3	
+Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111	Xylanimonas cellulosilytica DSM 15894	
+Myxococcus fulvus HW-1	Desulfarculus baarsii DSM 2075	
+Bradyrhizobium japonicum USDA 6	Caulobacter sp. K31	
+Methanoculleus bourgensis MS2	Methanoplanus petrolearius DSM 11571	
+Frankia sp. EAN1pec	Streptosporangium roseum DSM 43021	
+Halorubrum lacusprofundi ATCC 49239	Natrinema sp. J7-2	
+Alteromonas macleodii str. Ionian Sea U4	Methylophaga sp. JAM7	
+Desulfurococcus fermentans DSM 16532	Thermogladius cellulolyticus 1633	
+Methanoculleus bourgensis MS2	Methanospirillum hungatei JF-1	
+Renibacterium salmoninarum ATCC 33209	Tsukamurella paurometabola DSM 20162	
+Methanosarcina barkeri str. Fusaro	Methanomethylovorans hollandica DSM 15978	
+Klebsiella pneumoniae subsp. rhinoscleromatis SB3432	Psychromonas sp. CNPT3	
+Cellvibrio gilvus ATCC 13127	Propionibacterium acnes KPA171202	
+Sulfolobus islandicus M.16.27	Sulfolobus islandicus Y.G.57.14	
+Falba	Sarctica	
+Aeromonas hydrophila subsp. hydrophila ATCC 7966	Klebsiella pneumoniae subsp. rhinoscleromatis SB3432	
+Methanocella conradii HZ254	Methanocella arvoryzae MRE50	
+Halorubrum lacusprofundi ATCC 49239	Natrialba magadii ATCC 43099	
+Renibacterium salmoninarum ATCC 33209	Streptomyces fulvissimus DSM 40593	
+Micromonospora sp. L5	Xylanimonas cellulosilytica DSM 15894	
+Sulfolobus islandicus L.S.2.15	Sulfolobus tokodaii str. 7	
+Cellvibrio gilvus ATCC 13127	Kineococcus radiotolerans SRS30216	
+Haloferax mediterranei ATCC 33500	Haloquadratum walsbyi DSM 16790	
+Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111	Renibacterium salmoninarum ATCC 33209	
+Sulfolobus islandicus REY15A	Sulfolobus islandicus HVE10/4	
+Halobacterium sp. NRC-1	Haloquadratum walsbyi C23	
+Haloquadratum walsbyi DSM 16790	Salinarchaeum sp. Harcht-Bsk1	
+Sulfolobus acidocaldarius Ron12/I	Sulfolobus tokodaii str. 7	
+Sanguibacter keddieii DSM 10542	Intrasporangium calvum DSM 43043	
+Acidithiobacillus caldus SM-1	Methylobacillus flagellatus KT	
+Pyrococcus furiosus COM1	Pyrococcus yayanosii CH1	
+Alteromonas macleodii str. Ionian Sea U4	Hahella chejuensis KCTC 2396	
+Runella slithyformis DSM 19594	Saprospira grandis str. Lewin	
+Natronomonas pharaonis DSM 2160	Haloarcula marismortui ATCC 43049	
+Deinococcus geothermalis DSM 11300	Truepera radiovictrix DSM 17093	
+Sarctica	Tthermophila	
+Micromonospora sp. L5	Streptomyces fulvissimus DSM 40593	
+Colwellia psychrerythraea 34H	Shewanella halifaxensis HAW-EB4	
+Methanolobus psychrophilus R15	Methanohalophilus mahii DSM 5219	
+Jonesia denitrificans DSM 20603	Mycobacterium sp. KMS	
+Halobacterium salinarum R1	Natronococcus occultus SP4	
+Bsaltans	Spunctatus	
+Nocardioides sp. JS614	Mycobacterium sp. KMS	
+Sulfolobus islandicus M.16.27	Sulfolobus solfataricus P2	
+Bradyrhizobium japonicum USDA 6	Rhodospirillum rubrum ATCC 11170	
+Metallosphaera cuprina Ar-4	Sulfolobus acidocaldarius N8	
+Pyrobaculum islandicum DSM 4184	Pyrobaculum aerophilum str. IM2	
+Halopiger xanaduensis SH-6	Halalkalicoccus jeotgali B3	
+Corynebacterium diphtheriae HC03	Propionibacterium acnes KPA171202	
+Parvibaculum lavamentivorans DS-1	Brucella melitensis ATCC 23457	
+Sulfolobus islandicus HVE10/4	Sulfolobus tokodaii str. 7	
+Sulfolobus islandicus M.14.25	Sulfolobus tokodaii str. 7	
+Campylobacter jejuni subsp. jejuni NCTC 11168-BN148	Sorangium cellulosum So0157-2	
+Sulfolobus islandicus M.16.27	Sulfolobus acidocaldarius N8	
+Halalkalicoccus jeotgali B3	halophilic archaeon DL31	
+Sulfolobus islandicus M.14.25	Sulfolobus islandicus Y.N.15.51	
+Aeromonas hydrophila subsp. hydrophila ATCC 7966	Haemophilus influenzae PittEE	
+Archaeoglobus sulfaticallidus PM70-1	Ferroglobus placidus DSM 10642	
+Catenulispora acidiphila DSM 44928	Thermomonospora curvata DSM 43183	
+Bacillus sp. JS	Symbiobacterium thermophilum IAM 14863	
+Segniliparus rotundus DSM 44985	Tsukamurella paurometabola DSM 20162	
+Imultifiliis	Spunctatus	
+Acidianus hospitalis W1	Sulfolobus islandicus LAL14/1	
+Brachybacterium faecium DSM 4810	Clavibacter michiganensis subsp. michiganensis NCPPB 382	
+Intrasporangium calvum DSM 43043	Segniliparus rotundus DSM 44985	
+Methanomethylovorans hollandica DSM 15978	Methanococcoides burtonii DSM 6242	
+Acidovorax citrulli AAC00-1	Methylobacillus flagellatus KT	
+Metallosphaera cuprina Ar-4	Sulfolobus islandicus M.16.4	
+Halobacterium salinarum R1	Haloarcula hispanica ATCC 33960	
+Methanosarcina mazei Go1	Methanosarcina mazei Tuc01	
+Sulfolobus islandicus M.14.25	Sulfolobus solfataricus 98/2	
+Haloarcula hispanica ATCC 33960	Natrinema pellirubrum DSM 15624	
+Metallosphaera sedula DSM 5348	Sulfolobus tokodaii str. 7	
+Ddiscoideum	Spunctatus	
+Ngruberi	Ttrahens	
+Pyrococcus yayanosii CH1	Thermococcus sp. 4557	
+Alteromonas macleodii str. Ionian Sea U4	Psychromonas sp. CNPT3	
+Methylomonas methanica MC09	Nitrosomonas sp. AL212	
+Haloferax mediterranei ATCC 33500	Halorubrum lacusprofundi ATCC 49239	
+Frankia sp. EAN1pec	Beutenbergia cavernae DSM 12333	
+Halobacterium sp. NRC-1	Natronomonas pharaonis DSM 2160	
+Thermococcus sibiricus MM 739	Thermococcus sp. AM4	
+Metallosphaera sedula DSM 5348	Sulfolobus islandicus Y.G.57.14	
+Azotobacter vinelandii DJ	Marinomonas posidonica IVIA-Po-181	
+Fervidicoccus fontis Kam940	Acidilobus saccharovorans 345-15	
+Pseudoalteromonas atlantica T6c	Haemophilus influenzae PittEE	
+Thermogladius cellulolyticus 1633	Thermosphaera aggregans DSM 11486	
+Pyrolobus fumarii 1A	Hyperthermus butylicus DSM 5456	
+Bifidobacterium longum subsp. longum JDM301	Sanguibacter keddieii DSM 10542	
+Sulfolobus acidocaldarius DSM 639	Sulfolobus solfataricus 98/2	
+Geodermatophilus obscurus DSM 43160	Micromonospora sp. L5	
+Methanococcus aeolicus Nankai-3	Methanocaldococcus infernus ME	
+Pyrobaculum aerophilum str. IM2	Pyrobaculum arsenaticum DSM 13514	
+Methanosarcina acetivorans C2A	Methanomethylovorans hollandica DSM 15978	
+Kytococcus sedentarius DSM 20547	Propionibacterium acnes KPA171202	
+Halorubrum lacusprofundi ATCC 49239	Haloquadratum walsbyi C23	
+Segniliparus rotundus DSM 44985	Xylanimonas cellulosilytica DSM 15894	
+Desulfitobacterium dehalogenans ATCC 51507	Thermoanaerobacter italicus Ab9	
+Oscillibacter valericigenes Sjm18-20	Mahella australiensis 50-1 BON	
+Alcanivorax borkumensis SK2	Shewanella halifaxensis HAW-EB4	
+Kytococcus sedentarius DSM 20547	Segniliparus rotundus DSM 44985	
+Amycolatopsis mediterranei RB	Nocardioides sp. JS614	
+Alistipes finegoldii DSM 17242	Paludibacter propionicigenes WB4	
+Catenulispora acidiphila DSM 44928	Nocardioides sp. JS614	
+Heliobacterium modesticaldum Ice1	Bacillus sp. JS	
+Haloferax volcanii DS2	Salinarchaeum sp. Harcht-Bsk1	
+Eubacterium rectale ATCC 33656	Ruminococcus bromii L2-63	
+Caldilinea aerophila DSM 14535 = NBRC 104270	Chloroflexus aurantiacus J-10-fl	
+Sulfolobus islandicus LAL14/1	Sulfolobus islandicus M.16.27	
+Sulfolobus islandicus L.S.2.15	Sulfolobus islandicus M.16.4	
+Alteromonas macleodii str. Ionian Sea U4	Vibrio vulnificus MO6-24/O	
+Amycolatopsis mediterranei RB	Catenulispora acidiphila DSM 44928	
+Haloferax volcanii DS2	Natrinema sp. J7-2	
+Pyrococcus horikoshii OT3	Pyrococcus furiosus COM1	
+Mverticillata	Spunctatus	
+Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111	Propionibacterium acnes KPA171202	
+Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111	Catenulispora acidiphila DSM 44928	
+Sulfolobus islandicus REY15A	Metallosphaera sedula DSM 5348	
+Alcanivorax borkumensis SK2	Azotobacter vinelandii DJ	
+Brachybacterium faecium DSM 4810	Cellvibrio gilvus ATCC 13127	
+Jonesia denitrificans DSM 20603	Tsukamurella paurometabola DSM 20162	
+Nitrosococcus oceani ATCC 19707	Dichelobacter nodosus VCS1703A	
+Owenweeksia hongkongensis DSM 17368	Cyclobacterium marinum DSM 745	
+Colwellia psychrerythraea 34H	Vibrio vulnificus MO6-24/O	
+Geodermatophilus obscurus DSM 43160	Streptomyces fulvissimus DSM 40593	
+Sanguibacter keddieii DSM 10542	Propionibacterium acnes KPA171202	
+Desulfurococcus fermentans DSM 16532	Staphylothermus marinus F1	
+Aromatoleum aromaticum EbN1	Nitrosomonas sp. AL212	
+Ferrimonas balearica DSM 9799	Klebsiella pneumoniae subsp. rhinoscleromatis SB3432	
+Desulfarculus baarsii DSM 2075	Syntrophobacter fumaroxidans MPOB	
+Geodermatophilus obscurus DSM 43160	Nocardia cyriacigeorgica GUH-2	
+Acastellanii	Tthermophila	
+Clostridium botulinum F str. 230613	Natranaerobius thermophilus JW/NM-WN-LF	
+Acidothermus cellulolyticus 11B	Streptomyces fulvissimus DSM 40593	
+Halogeometricum borinquense DSM 11551	Haloarcula marismortui ATCC 43049	
+Arcanobacterium haemolyticum DSM 20595	Streptosporangium roseum DSM 43021	
+Sulfolobus islandicus L.S.2.15	Caldivirga maquilingensis IC-167	
+Thermococcus barophilus MP	Pyrococcus sp. ST04	
+Mverticillata	Tthermophila	
+Natronococcus occultus SP4	Natrinema pellirubrum DSM 15624	
+Listeria monocytogenes SLCC5850	Enterococcus faecalis D32	
+Vulcanisaeta distributa DSM 14429	Vulcanisaeta moutnovskia 768-28	
+Oscillibacter valericigenes Sjm18-20	Carnobacterium sp. WN1359	
+Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111	Kineococcus radiotolerans SRS30216	
+Ngruberi	Imultifiliis	
+Halorhabdus utahensis DSM 12940	Halogeometricum borinquense DSM 11551	
+Methanohalobium evestigatum Z-7303	Methanosarcina mazei Go1	
+Haloquadratum walsbyi DSM 16790	Natronomonas moolapensis 8.8.11	
+Halogeometricum borinquense DSM 11551	Haloquadratum walsbyi C23	
+Halobacterium salinarum R1	Halomicrobium mukohataei DSM 12286	
+Methanoculleus marisnigri JR1	Methanoregula formicica SMSP	
+Neisseria meningitidis M01-240149	Methylobacillus flagellatus KT	
+Halothiobacillus neapolitanus c2	Methylophaga sp. JAM7	
+Thermococcus onnurineus NA1	Thermococcus sp. AM4	
+Natronococcus occultus SP4	Haloquadratum walsbyi C23	
+Methylobacterium nodulans ORS 2060	Methylocella silvestris BL2	
+Thermococcus gammatolerans EJ3	Thermococcus onnurineus NA1	
+Haemophilus influenzae PittEE	Azotobacter vinelandii DJ	
+Bifidobacterium longum subsp. longum JDM301	Brachybacterium faecium DSM 4810	
+Segniliparus rotundus DSM 44985	Propionibacterium acnes KPA171202	
+Natronomonas pharaonis DSM 2160	Haloarcula hispanica ATCC 33960	
+Sulfolobus islandicus M.14.25	Sulfolobus solfataricus P2	
+Nakamurella multipartita DSM 44233	Segniliparus rotundus DSM 44985	
+Brucella melitensis ATCC 23457	Rhodospirillum rubrum ATCC 11170	
+Cowczarzaki	Cowczarzaki	
+Micromonospora sp. L5	Catenulispora acidiphila DSM 44928	
+Sulfolobus acidocaldarius DSM 639	Metallosphaera sedula DSM 5348	
+Sulfolobus islandicus L.S.2.15	Sulfolobus acidocaldarius N8	
+Aromatoleum aromaticum EbN1	Advenella kashmirensis WT001	
+Halobacterium sp. NRC-1	Haloferax volcanii DS2	
+Staphylococcus aureus subsp. aureus JKD6159	Mahella australiensis 50-1 BON	
+Halalkalicoccus jeotgali B3	Haloquadratum walsbyi DSM 16790	
+Stackebrandtia nassauensis DSM 44728	Kineococcus radiotolerans SRS30216	
+Nocardioides sp. JS614	Segniliparus rotundus DSM 44985	
+Acidothermus cellulolyticus 11B	Nocardioides sp. JS614	
+Bacteroides helcogenes P 36-108	Akkermansia muciniphila ATCC BAA-835	
+Clostridium botulinum F str. 230613	Halanaerobium praevalens DSM 2228	
+Parvularcula bermudensis HTCC2503	Octadecabacter antarcticus 307	
+Gordonia bronchialis DSM 43247	Sanguibacter keddieii DSM 10542	
+Sanguibacter keddieii DSM 10542	Mycobacterium sp. KMS	
+Methanobrevibacter sp. AbM4	Methanothermobacter thermautotrophicus str. Delta H	
+Scerevisiae	Sarctica	
+Beutenbergia cavernae DSM 12333	Renibacterium salmoninarum ATCC 33209	
+Metallosphaera cuprina Ar-4	Sulfolobus islandicus Y.G.57.14	
+Klebsiella pneumoniae subsp. rhinoscleromatis SB3432	Xanthomonas campestris pv. campestris str. 8004	
+Sulfolobus islandicus REY15A	Sulfolobus acidocaldarius Ron12/I	
+Natronomonas pharaonis DSM 2160	Natrinema sp. J7-2	
+Psychromonas sp. CNPT3	Shewanella halifaxensis HAW-EB4	
+Natronococcus occultus SP4	Halomicrobium mukohataei DSM 12286	
+Haloarcula hispanica ATCC 33960	Haloquadratum walsbyi DSM 16790	
+Gordonia bronchialis DSM 43247	Intrasporangium calvum DSM 43043	
+Pyrobaculum oguniense TE7	Pyrobaculum aerophilum str. IM2	
+Amycolatopsis mediterranei RB	Jonesia denitrificans DSM 20603	
+Acidithiobacillus caldus SM-1	Marinomonas posidonica IVIA-Po-181	
+Desulfurococcus kamchatkensis 1221n	Thermogladius cellulolyticus 1633	
+Methanococcus maripaludis C6	Methanotorris igneus Kol 5	
+Amycolatopsis mediterranei RB	Acidothermus cellulolyticus 11B	
+Staphylothermus hellenicus DSM 12710	Hyperthermus butylicus DSM 5456	
+Thermococcus barophilus MP	Pyrococcus sp. NA2	
+Candidatus Nitrososphaera gargensis Ga9.2	Candidatus Nitrosopumilus koreensis AR1	
+Methanoculleus marisnigri JR1	Methanocorpusculum labreanum Z	
+Halalkalicoccus jeotgali B3	Natrialba magadii ATCC 43099	
+Methanomethylovorans hollandica DSM 15978	Methanohalobium evestigatum Z-7303	
+Stackebrandtia nassauensis DSM 44728	Jonesia denitrificans DSM 20603	
+Brachybacterium faecium DSM 4810	Kineococcus radiotolerans SRS30216	
+Methanococcus maripaludis S2	Methanotorris igneus Kol 5	
+Thermococcus kodakarensis KOD1	Thermococcus barophilus MP	
+Sulfolobus islandicus HVE10/4	Sulfolobus solfataricus 98/2	
+Methanolobus psychrophilus R15	Methanosarcina acetivorans C2A	
+Amacrogynus	Ppallidum	
+Haloferax volcanii DS2	Natrialba magadii ATCC 43099	
+Gordonia bronchialis DSM 43247	Tsukamurella paurometabola DSM 20162	
+Hahella chejuensis KCTC 2396	Methylomonas methanica MC09	
+Halothiobacillus neapolitanus c2	Psychromonas sp. CNPT3	
+Haloterrigena turkmenica DSM 5511	Haloquadratum walsbyi C23	
+Colwellia psychrerythraea 34H	Psychromonas sp. CNPT3	
+Srosetta	Sarctica	
+Halorubrum lacusprofundi ATCC 49239	Haloarcula marismortui ATCC 43049	
+Methanocaldococcus vulcanius M7	Methanocaldococcus infernus ME	
+Listeria monocytogenes SLCC5850	Thermoanaerobacter italicus Ab9	
+Acidovorax citrulli AAC00-1	Xanthomonas campestris pv. campestris str. 8004	
+Sulfolobus acidocaldarius DSM 639	Sulfolobus islandicus Y.G.57.14	
+Cellvibrio gilvus ATCC 13127	Catenulispora acidiphila DSM 44928	
+Methanobrevibacter ruminantium M1	Methanobrevibacter smithii ATCC 35061	
+Halovivax ruber XH-70	Haloquadratum walsbyi C23	
+Methanosaeta concilii GP6	Methanosaeta thermophila PT	
+Acastellanii	Sarctica	
+Mbrevicollis	Ttrahens	
+Methanosalsum zhilinae DSM 4017	Methanosarcina acetivorans C2A	
+Mverticillata	Amacrogynus	
+Methylocella silvestris BL2	Rhodospirillum rubrum ATCC 11170	
+Paenibacillus polymyxa M1	Desulfitobacterium dehalogenans ATCC 51507	
+Pyrococcus furiosus COM1	Thermococcus sp. CL1	
+Sulfolobus islandicus L.S.2.15	Acidianus hospitalis W1	
+Methanobrevibacter sp. AbM4	Methanobacterium sp. SWAN-1	
+Amycolatopsis mediterranei RB	Kineococcus radiotolerans SRS30216	
+Methanosalsum zhilinae DSM 4017	Methanolobus psychrophilus R15	
+Thermococcus barophilus MP	Pyrococcus furiosus COM1	
+Halothiobacillus neapolitanus c2	Nitrosomonas sp. AL212	
+Idiomarina loihiensis GSL 199	Klebsiella pneumoniae subsp. rhinoscleromatis SB3432	
+Pseudoalteromonas atlantica T6c	Klebsiella pneumoniae subsp. rhinoscleromatis SB3432	
+Halopiger xanaduensis SH-6	Natronococcus occultus SP4	
+Haloarcula marismortui ATCC 43049	Halomicrobium mukohataei DSM 12286	
+Mverticillata	Sarctica	
+Pyrococcus yayanosii CH1	Thermococcus onnurineus NA1	
+Halorhabdus utahensis DSM 12940	Halalkalicoccus jeotgali B3	
+Srosetta	Tthermophila	
+Ddiscoideum	Ttrahens	
+Amacrogynus	Imultifiliis	
+Cowczarzaki	Bsaltans	
+Methanoregula formicica SMSP	Methanospirillum hungatei JF-1	
+Corynebacterium diphtheriae HC03	Arcanobacterium haemolyticum DSM 20595	
+Acidothermus cellulolyticus 11B	Kineococcus radiotolerans SRS30216	
+Methanosphaerula palustris E1-9c	Methanospirillum hungatei JF-1	
+Ilumatobacter coccineus YM16-304	Gordonia bronchialis DSM 43247	
+Amycolatopsis mediterranei RB	Corynebacterium diphtheriae HC03	
+Catenulispora acidiphila DSM 44928	Intrasporangium calvum DSM 43043	
+Haemophilus influenzae PittEE	Klebsiella pneumoniae subsp. rhinoscleromatis SB3432	
+Jonesia denitrificans DSM 20603	Streptosporangium roseum DSM 43021	
+Haloquadratum walsbyi DSM 16790	halophilic archaeon DL31	
+Acidianus hospitalis W1	Sulfolobus solfataricus 98/2	
+Nakamurella multipartita DSM 44233	Gordonia bronchialis DSM 43247	
+Halobacterium sp. NRC-1	Natrinema pellirubrum DSM 15624	
+Methylobacillus flagellatus KT	Xanthomonas campestris pv. campestris str. 8004	
+Halogeometricum borinquense DSM 11551	Natronomonas pharaonis DSM 2160	
+Spunctatus	Tthermophila	
+Methanococcus vannielii SB	Methanococcus maripaludis X1	
+Haloferax mediterranei ATCC 33500	Natronococcus occultus SP4	
+Srosetta	Spunctatus	
+Methanosarcina barkeri str. Fusaro	Methanolobus psychrophilus R15	
+Haemophilus influenzae PittEE	Vibrio vulnificus MO6-24/O	
+Thermococcus sibiricus MM 739	Thermococcus sp. CL1	
+Shewanella halifaxensis HAW-EB4	Vibrio vulnificus MO6-24/O	
+Ddiscoideum	Falba	
+Geodermatophilus obscurus DSM 43160	Tsukamurella paurometabola DSM 20162	
+Clostridium lentocellum DSM 5427	Veillonella parvula DSM 2008	
+Pyrobaculum calidifontis JCM 11548	Pyrobaculum islandicum DSM 4184	
+Nakamurella multipartita DSM 44233	Nocardia cyriacigeorgica GUH-2	
+Caldivirga maquilingensis IC-167	Vulcanisaeta distributa DSM 14429	
+Desulfomicrobium baculatum DSM 4028	Desulfovibrio gigas DSM 1382 = ATCC 19364	
+Haloferax mediterranei ATCC 33500	Natrinema pellirubrum DSM 15624	
+Listeria monocytogenes SLCC5850	Clostridium lentocellum DSM 5427	
+Falba	Acastellanii	
+Amycolatopsis mediterranei RB	Nocardia cyriacigeorgica GUH-2	
+Sulfolobus acidocaldarius DSM 639	Sulfolobus solfataricus P2	
+Haloarcula marismortui ATCC 43049	Natrinema sp. J7-2	
+Natronomonas pharaonis DSM 2160	Halopiger xanaduensis SH-6	
+Acidothermus cellulolyticus 11B	Intrasporangium calvum DSM 43043	
+Pedobacter heparinus DSM 2366	Marivirga tractuosa DSM 4126	
+Pyrococcus furiosus DSM 3638	Pyrococcus sp. NA2	
+Spunctatus	Ttrahens	
+Staphylothermus hellenicus DSM 12710	Desulfurococcus kamchatkensis 1221n	
+Haloferax mediterranei ATCC 33500	Halomicrobium mukohataei DSM 12286	
+Pyrococcus furiosus DSM 3638	Thermococcus gammatolerans EJ3	
+Amycolatopsis mediterranei RB	Streptosporangium roseum DSM 43021	
+Ferroglobus placidus DSM 10642	Archaeoglobus veneficus SNP6	
+Halothiobacillus neapolitanus c2	Methylobacillus flagellatus KT	
+Mycobacterium sp. KMS	Streptomyces fulvissimus DSM 40593	
+Brachybacterium faecium DSM 4810	Segniliparus rotundus DSM 44985	
+Micromonospora sp. L5	Sanguibacter keddieii DSM 10542	
+Jonesia denitrificans DSM 20603	Intrasporangium calvum DSM 43043	
+Sulfolobus acidocaldarius DSM 639	Sulfolobus islandicus M.16.4	
+Acastellanii	Bsaltans	
+Staphylococcus aureus subsp. aureus JKD6159	Alicyclobacillus acidocaldarius subsp. acidocaldarius Tc-4-1	
+Acastellanii	Ppallidum	
+Stackebrandtia nassauensis DSM 44728	Geodermatophilus obscurus DSM 43160	
+Stackebrandtia nassauensis DSM 44728	Acidothermus cellulolyticus 11B	
+Alteromonas macleodii str. Ionian Sea U4	Colwellia psychrerythraea 34H	
+Mbrevicollis	Spunctatus	
+Halovivax ruber XH-70	Haloquadratum walsbyi DSM 16790	
+Cellvibrio gilvus ATCC 13127	Gordonia bronchialis DSM 43247	
+Srosetta	Mbrevicollis	
+Methylocella silvestris BL2	Methylocystis sp. SC2	
+Sulfolobus islandicus M.16.27	Metallosphaera sedula DSM 5348	
+Brucella melitensis ATCC 23457	Methylocella silvestris BL2	
+Metallosphaera sedula DSM 5348	Sulfolobus solfataricus P2	
+Clavibacter michiganensis subsp. michiganensis NCPPB 382	Renibacterium salmoninarum ATCC 33209	
+Sulfolobus islandicus L.S.2.15	Sulfolobus islandicus LAL14/1	
+Methanococcoides burtonii DSM 6242	Methanosarcina mazei Tuc01	
+Natronobacterium gregoryi SP2	halophilic archaeon DL31	
+Corynebacterium diphtheriae HC03	Streptomyces fulvissimus DSM 40593	
+Pyrococcus sp. NA2	Thermococcus sp. 4557	
+Enterococcus faecalis D32	Carnobacterium sp. WN1359	
+Listeria monocytogenes SLCC5850	Streptococcus gallolyticus subsp. gallolyticus ATCC 43143	
+Haloferax volcanii DS2	Natronobacterium gregoryi SP2	
+Metallosphaera cuprina Ar-4	Metallosphaera sedula DSM 5348	
+Nocardioides sp. JS614	Propionibacterium acnes KPA171202	
+Sulfolobus islandicus LAL14/1	Sulfolobus islandicus Y.N.15.51	
+Thermococcus litoralis DSM 5473	Thermococcus sp. CL1	
+Methanococcus maripaludis S2	Methanothermococcus okinawensis IH1	
+Acidothermus cellulolyticus 11B	Renibacterium salmoninarum ATCC 33209	
+Haloferax volcanii DS2	Halopiger xanaduensis SH-6	
+Amacrogynus	Bsaltans	
+Nitrosococcus oceani ATCC 19707	Idiomarina loihiensis GSL 199	
+Methanocaldococcus sp. FS406-22	Methanocaldococcus infernus ME	
+Pyrococcus furiosus DSM 3638	Pyrococcus furiosus COM1	
+Tthermophila	Ttrahens	
+Sulfolobus islandicus Y.N.15.51	Sulfolobus tokodaii str. 7	
+Thermococcus onnurineus NA1	Thermococcus sp. CL1	
+Heliobacterium modesticaldum Ice1	Mahella australiensis 50-1 BON	
+Stackebrandtia nassauensis DSM 44728	Propionibacterium acnes KPA171202	
+Sulfolobus islandicus L.D.8.5	Sulfolobus islandicus Y.G.57.14	
+Sulfolobus islandicus REY15A	Sulfolobus islandicus M.16.27	
+Bartonella quintana str. Toulouse	Methylocystis sp. SC2	
+Nitrosococcus oceani ATCC 19707	Colwellia psychrerythraea 34H	
+Amacrogynus	Ptetraurelia	
+Halorhabdus utahensis DSM 12940	Haloterrigena turkmenica DSM 5511	
+Acidothermus cellulolyticus 11B	Geodermatophilus obscurus DSM 43160	
+Frankia sp. EAN1pec	Segniliparus rotundus DSM 44985	
+Listeria monocytogenes SLCC5850	Alicyclobacillus acidocaldarius subsp. acidocaldarius Tc-4-1	
+Methanohalobium evestigatum Z-7303	Methanohalophilus mahii DSM 5219	
+Methanocaldococcus fervens AG86	Methanocaldococcus jannaschii DSM 2661	
+Kytococcus sedentarius DSM 20547	Xylanimonas cellulosilytica DSM 15894	
+Metallosphaera cuprina Ar-4	Sulfolobus islandicus L.D.8.5	
+Haloquadratum walsbyi DSM 16790	Halomicrobium mukohataei DSM 12286	
+Sulfolobus islandicus HVE10/4	Sulfolobus islandicus Y.G.57.14	
+Calothrix sp. PCC 6303	Prochlorococcus marinus str. MIT 9211	
+Catenulispora acidiphila DSM 44928	Streptomyces fulvissimus DSM 40593	
+Kineococcus radiotolerans SRS30216	Segniliparus rotundus DSM 44985	
+Methanosalsum zhilinae DSM 4017	Methanohalophilus mahii DSM 5219	
+Sulfolobus islandicus M.16.27	Sulfolobus tokodaii str. 7	
+Halovivax ruber XH-70	Halalkalicoccus jeotgali B3	
+Haloterrigena turkmenica DSM 5511	Halopiger xanaduensis SH-6	
+Haloterrigena turkmenica DSM 5511	Halovivax ruber XH-70	
+Stackebrandtia nassauensis DSM 44728	Mycobacterium sp. KMS	
+Methanosarcina acetivorans C2A	Methanosarcina mazei Tuc01	
+Caulobacter sp. K31	Methylocella silvestris BL2	
+Methanococcus maripaludis S2	Methanococcus maripaludis C7	
+Haloferax mediterranei ATCC 33500	Halobacterium salinarum R1	
+Methanohalophilus mahii DSM 5219	Methanosarcina mazei Tuc01	
+Methanosphaera stadtmanae DSM 3091	Methanothermobacter marburgensis str. Marburg	
+Sulfolobus acidocaldarius Ron12/I	Sulfolobus islandicus HVE10/4	
+Mesorhizobium australicum WSM2073	Starkeya novella DSM 506	
+Methanococcus vannielii SB	Methanococcus maripaludis C5	
+Amacrogynus	Falba	
+Aromatoleum aromaticum EbN1	Gallionella capsiferriformans ES-2	
+Bradyrhizobium japonicum USDA 6	Brucella melitensis ATCC 23457	
+Desulfarculus baarsii DSM 2075	Aminobacterium colombiense DSM 12261	
+Imultifiliis	Tthermophila	
+Nakamurella multipartita DSM 44233	Catenulispora acidiphila DSM 44928	
+Haloarcula marismortui ATCC 43049	halophilic archaeon DL31	
+Haloferax mediterranei ATCC 33500	Halovivax ruber XH-70	
+Sulfolobus islandicus REY15A	Sulfolobus islandicus Y.N.15.51	
+Candidatus Nitrosopumilus sp. AR2	Candidatus Nitrosopumilus koreensis AR1	
+Streptosporangium roseum DSM 43021	Xylanimonas cellulosilytica DSM 15894	
+Sulfolobus islandicus REY15A	Sulfolobus islandicus M.14.25	
+Thermomonospora curvata DSM 43183	Renibacterium salmoninarum ATCC 33209	
+Hyperthermus butylicus DSM 5456	Aeropyrum pernix K1	
+Thermosediminibacter oceani DSM 16646	Veillonella parvula DSM 2008	
+Renibacterium salmoninarum ATCC 33209	Xylanimonas cellulosilytica DSM 15894	
+Advenella kashmirensis WT001	Sulfuricella denitrificans skB26	
+Halopiger xanaduensis SH-6	Haloarcula hispanica ATCC 33960	
+Metallosphaera sedula DSM 5348	Sulfolobus islandicus M.16.4	
+Metallosphaera cuprina Ar-4	Sulfolobus islandicus Y.N.15.51	
+Halobacterium salinarum R1	Haloferax volcanii DS2	
+Nitrosococcus oceani ATCC 19707	Azotobacter vinelandii DJ	
+Natronomonas pharaonis DSM 2160	Natronobacterium gregoryi SP2	
+Thermomonospora curvata DSM 43183	Intrasporangium calvum DSM 43043	
+Methanococcoides burtonii DSM 6242	Methanohalobium evestigatum Z-7303	
+Methanosaeta harundinacea 6Ac	Methanosaeta thermophila PT	
+Kytococcus sedentarius DSM 20547	Nocardia cyriacigeorgica GUH-2	
+Fibrobacter succinogenes subsp. succinogenes S85	Ruminococcus bromii L2-63	
+Acidothermus cellulolyticus 11B	Streptosporangium roseum DSM 43021	
+Beutenbergia cavernae DSM 12333	Kytococcus sedentarius DSM 20547	
+Beutenbergia cavernae DSM 12333	Catenulispora acidiphila DSM 44928	
+Frankia sp. EAN1pec	Kineococcus radiotolerans SRS30216	
+Brachybacterium faecium DSM 4810	Acidothermus cellulolyticus 11B	
+Sanguibacter keddieii DSM 10542	Xylanimonas cellulosilytica DSM 15894	
+Haloferax mediterranei ATCC 33500	Natronomonas moolapensis 8.8.11	
+Srosetta	Ngruberi	
+Aromatoleum aromaticum EbN1	Neisseria meningitidis M01-240149	
+Colwellia psychrerythraea 34H	Klebsiella pneumoniae subsp. rhinoscleromatis SB3432	
+Srosetta	Acastellanii	
+Thermomonospora curvata DSM 43183	Streptosporangium roseum DSM 43021	
+Aeromonas hydrophila subsp. hydrophila ATCC 7966	Methylomonas methanica MC09	
+Nitrosomonas sp. AL212	Sulfuricella denitrificans skB26	
+Methanolobus psychrophilus R15	Methanohalobium evestigatum Z-7303	
+Haloarcula hispanica ATCC 33960	Natronomonas moolapensis 8.8.11	
+Halogeometricum borinquense DSM 11551	Natrialba magadii ATCC 43099	
+Acidothermus cellulolyticus 11B	Tsukamurella paurometabola DSM 20162	
+Halorubrum lacusprofundi ATCC 49239	Halobacterium salinarum R1	
+Corynebacterium diphtheriae HC03	Mycobacterium sp. KMS	
+Cowczarzaki	Ptetraurelia	
+Acidovorax citrulli AAC00-1	Burkholderia rhizoxinica HKI 454	
+Corynebacterium diphtheriae HC03	Segniliparus rotundus DSM 44985	
+Methanococcus maripaludis S2	Methanocaldococcus fervens AG86	
+Bacillus sp. JS	Carnobacterium sp. WN1359	
+Ptetraurelia	Ttrahens	
+Nocardioides sp. JS614	Kytococcus sedentarius DSM 20547	
+Nocardioides sp. JS614	Arcanobacterium haemolyticum DSM 20595	
+Nakamurella multipartita DSM 44233	Cellvibrio gilvus ATCC 13127	
+Solibacillus silvestris StLB046	Carnobacterium sp. WN1359	
+Mesorhizobium australicum WSM2073	Bartonella quintana str. Toulouse	
+Thermococcus kodakarensis KOD1	Pyrococcus horikoshii OT3	
+Natronobacterium gregoryi SP2	Halopiger xanaduensis SH-6	
+Lactobacillus rhamnosus LOCK908	Enterococcus faecalis D32	
+Bacillus sp. JS	Streptococcus gallolyticus subsp. gallolyticus ATCC 43143	
+Sorangium cellulosum So0157-2	Stigmatella aurantiaca DW4/3-1	
+Sulfolobus islandicus REY15A	Sulfolobus tokodaii str. 7	
+Brachybacterium faecium DSM 4810	Nakamurella multipartita DSM 44233	
+Amycolatopsis mediterranei RB	Clavibacter michiganensis subsp. michiganensis NCPPB 382	
+Halorhabdus utahensis DSM 12940	Haloquadratum walsbyi C23	
+Halalkalicoccus jeotgali B3	Salinarchaeum sp. Harcht-Bsk1	
+Sulfolobus islandicus M.16.27	Sulfolobus islandicus HVE10/4	
+Geodermatophilus obscurus DSM 43160	Streptosporangium roseum DSM 43021	
+Heliobacterium modesticaldum Ice1	Thermosediminibacter oceani DSM 16646	
+Haloarcula hispanica ATCC 33960	Natrialba magadii ATCC 43099	
+Methanoculleus marisnigri JR1	Methanospirillum hungatei JF-1	
+Methanobacterium sp. AL-21	Methanothermobacter thermautotrophicus str. Delta H	
+Sulfolobus islandicus LAL14/1	Sulfolobus islandicus Y.G.57.14	
+Kytococcus sedentarius DSM 20547	Renibacterium salmoninarum ATCC 33209	
+Parvibaculum lavamentivorans DS-1	Methylocella silvestris BL2	
+Kineococcus radiotolerans SRS30216	Xylanimonas cellulosilytica DSM 15894	
+Beutenbergia cavernae DSM 12333	Nocardia cyriacigeorgica GUH-2	
+Staphylothermus hellenicus DSM 12710	Thermosphaera aggregans DSM 11486	
+Thermococcus barophilus MP	Archaeoglobus sulfaticallidus PM70-1	
+Micromonospora sp. L5	Tsukamurella paurometabola DSM 20162	
+Thermococcus sp. AM4	Thermococcus sp. 4557	
+Cowczarzaki	Ppallidum	
+Alcanivorax borkumensis SK2	Desulfurispirillum indicum S5	
+Metallosphaera cuprina Ar-4	Sulfolobus acidocaldarius Ron12/I	
+Aeromonas hydrophila subsp. hydrophila ATCC 7966	Colwellia psychrerythraea 34H	
+Methanoregula formicica SMSP	Methanosphaerula palustris E1-9c	
+Alcanivorax borkumensis SK2	Xanthomonas campestris pv. campestris str. 8004	
+Bradyrhizobium japonicum USDA 6	Methylocella silvestris BL2	
+Sulfolobus acidocaldarius N8	Sulfolobus islandicus Y.G.57.14	
+Natronobacterium gregoryi SP2	Natrinema pellirubrum DSM 15624	
+Mbrevicollis	Cowczarzaki	
+Halopiger xanaduensis SH-6	Natrialba magadii ATCC 43099	
+Ilumatobacter coccineus YM16-304	Sanguibacter keddieii DSM 10542	
+Gallionella capsiferriformans ES-2	Burkholderia rhizoxinica HKI 454	
+Geodermatophilus obscurus DSM 43160	Gordonia bronchialis DSM 43247	
+Natrinema sp. J7-2	halophilic archaeon DL31	
+Frankia sp. EAN1pec	Tsukamurella paurometabola DSM 20162	
+Thermococcus kodakarensis KOD1	Thermococcus gammatolerans EJ3	
+Halogeometricum borinquense DSM 11551	halophilic archaeon DL31	
+Cellvibrio gilvus ATCC 13127	Frankia sp. EAN1pec	
+Mverticillata	Mbrevicollis	
+Bartonella quintana str. Toulouse	Starkeya novella DSM 506	
+Rhodospirillum rubrum ATCC 11170	Starkeya novella DSM 506	
+Methanoculleus marisnigri JR1	Methanoregula boonei 6A8	
+Ferroplasma acidarmanus fer1	Thermoplasma volcanium GSS1	
+Haemophilus influenzae PittEE	Marinomonas posidonica IVIA-Po-181	
+Pyrobaculum oguniense TE7	Pyrobaculum arsenaticum DSM 13514	
+Geodermatophilus obscurus DSM 43160	Mycobacterium sp. KMS	
+Nocardia cyriacigeorgica GUH-2	Tsukamurella paurometabola DSM 20162	
+Calditerrivibrio nitroreducens DSM 19672	Haliangium ochraceum DSM 14365	
+Ferrimonas balearica DSM 9799	Psychromonas sp. CNPT3	
+Halobacterium salinarum R1	Haloarcula marismortui ATCC 43049	
+Catenulispora acidiphila DSM 44928	Nocardia cyriacigeorgica GUH-2	
+Methanococcus vannielii SB	Methanotorris igneus Kol 5	
+Anaerolinea thermophila UNI-1	Nocardioides sp. JS614	
+Nocardia cyriacigeorgica GUH-2	Xylanimonas cellulosilytica DSM 15894	
+Halogeometricum borinquense DSM 11551	Halomicrobium mukohataei DSM 12286	
+Pelagibacterium halotolerans B2	Parvibaculum lavamentivorans DS-1	
+Pelagibacterium halotolerans B2	Methylobacterium nodulans ORS 2060	
+Oscillibacter valericigenes Sjm18-20	Dehalococcoides mccartyi BTF08	
+Clostridium botulinum F str. 230613	Alicyclobacillus acidocaldarius subsp. acidocaldarius Tc-4-1	
+Haloquadratum walsbyi C23	halophilic archaeon DL31	
+Sanguibacter keddieii DSM 10542	Arcanobacterium haemolyticum DSM 20595	
+Methanobrevibacter ruminantium M1	Methanobacterium sp. SWAN-1	
+Deinococcus geothermalis DSM 11300	Thermus oshimai JL-2	
+Geodermatophilus obscurus DSM 43160	Propionibacterium acnes KPA171202	
+Nakamurella multipartita DSM 44233	Frankia sp. EAN1pec	
+Sulfolobus acidocaldarius Ron12/I	Sulfolobus islandicus M.14.25	
+Kineococcus radiotolerans SRS30216	Micromonospora sp. L5	
+Cellvibrio gilvus ATCC 13127	Streptomyces fulvissimus DSM 40593	
+Srosetta	Imultifiliis	
+Beutenbergia cavernae DSM 12333	Gordonia bronchialis DSM 43247	
+Natrialba magadii ATCC 43099	Natrinema sp. J7-2	
+Thermomonospora curvata DSM 43183	Xylanimonas cellulosilytica DSM 15894	
+Haloferax mediterranei ATCC 33500	Halorhabdus utahensis DSM 12940	
+Thermococcus kodakarensis KOD1	Thermococcus sp. 4557	
+Hirschia baltica ATCC 49814	Methylocystis sp. SC2	
+Brucella melitensis ATCC 23457	Starkeya novella DSM 506	
+Hahella chejuensis KCTC 2396	Ferrimonas balearica DSM 9799	
+Haloferax volcanii DS2	Halovivax ruber XH-70	
+Haloterrigena turkmenica DSM 5511	Natrinema sp. J7-2	
+Haloarcula marismortui ATCC 43049	Haloquadratum walsbyi DSM 16790	
+Haloarcula hispanica ATCC 33960	Halomicrobium mukohataei DSM 12286	
+Caldivirga maquilingensis IC-167	Sulfolobus islandicus M.16.4	
+Sulfolobus acidocaldarius Ron12/I	Sulfolobus solfataricus 98/2	
+Halothiobacillus neapolitanus c2	Nitrosococcus oceani ATCC 19707	
+Solibacillus silvestris StLB046	Listeria monocytogenes SLCC5850	
+Methanocaldococcus fervens AG86	Methanococcus aeolicus Nankai-3	
+Jonesia denitrificans DSM 20603	Sanguibacter keddieii DSM 10542	
+Pelagibacterium halotolerans B2	Bradyrhizobium japonicum USDA 6	
+Listeria monocytogenes SLCC5850	Carnobacterium sp. WN1359	
+Methanococcoides burtonii DSM 6242	Methanosarcina mazei Go1	
+Cellvibrio gilvus ATCC 13127	Xylanimonas cellulosilytica DSM 15894	
+Amycolatopsis mediterranei RB	Tsukamurella paurometabola DSM 20162	
+Haloferax volcanii DS2	Natrinema pellirubrum DSM 15624	
+Haloquadratum walsbyi DSM 16790	Natrinema sp. J7-2	
+Desulfurococcus fermentans DSM 16532	Thermosphaera aggregans DSM 11486	
+Nakamurella multipartita DSM 44233	Kytococcus sedentarius DSM 20547	
+Acidovorax citrulli AAC00-1	Methylophaga sp. JAM7	
+Sulfolobus islandicus M.14.25	Sulfolobus islandicus M.16.4	
+Sulfolobus acidocaldarius DSM 639	Sulfolobus acidocaldarius N8	
+Mbrevicollis	Imultifiliis	
+Scerevisiae	Tthermophila	
+Halobacterium salinarum R1	Natronobacterium gregoryi SP2	
+Halomicrobium mukohataei DSM 12286	halophilic archaeon DL31	
+Methanocella paludicola SANAE	Methanocella arvoryzae MRE50	
+Methylobacterium nodulans ORS 2060	Parvibaculum lavamentivorans DS-1	
+Idiomarina loihiensis GSL 199	Vibrio vulnificus MO6-24/O	
+Cellvibrio gilvus ATCC 13127	Arcanobacterium haemolyticum DSM 20595	
+Methanocaldococcus jannaschii DSM 2661	Methanothermococcus okinawensis IH1	
+Marinomonas posidonica IVIA-Po-181	Klebsiella pneumoniae subsp. rhinoscleromatis SB3432	
+Parvibaculum lavamentivorans DS-1	Hirschia baltica ATCC 49814	
+Pyrobaculum aerophilum str. IM2	Pyrobaculum neutrophilum V24Sta	
+Acidianus hospitalis W1	Sulfolobus islandicus REY15A	
+Thermoanaerobacter italicus Ab9	Syntrophomonas wolfei subsp. wolfei str. Goettingen	
+Aeromonas hydrophila subsp. hydrophila ATCC 7966	Xanthomonas campestris pv. campestris str. 8004	
+Sulfolobus islandicus M.16.4	Sulfolobus acidocaldarius N8	
+Methanococcus aeolicus Nankai-3	Methanococcus maripaludis X1	
+Methanoplanus petrolearius DSM 11571	Methanospirillum hungatei JF-1	
+Natrinema pellirubrum DSM 15624	halophilic archaeon DL31	
+Sulfolobus solfataricus P2	Sulfolobus tokodaii str. 7	
+Halopiger xanaduensis SH-6	Natrinema pellirubrum DSM 15624	
+Pyrobaculum neutrophilum V24Sta	Pyrobaculum arsenaticum DSM 13514	
+Frankia sp. EAN1pec	Thermomonospora curvata DSM 43183	
+Beutenbergia cavernae DSM 12333	Micromonospora sp. L5	
+Amycolatopsis mediterranei RB	Streptomyces fulvissimus DSM 40593	
+Herbaspirillum seropedicae SmR1	Sulfuricella denitrificans skB26	
+Pyrococcus furiosus DSM 3638	Thermococcus litoralis DSM 5473	
+Herbaspirillum seropedicae SmR1	Methylobacillus flagellatus KT	
+Acastellanii	Ttrahens	
