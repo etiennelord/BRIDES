@@ -683,7 +683,6 @@ vector<int> brides(int group) {
 								for (int l=0; l<k_nodes.size();l++) {
 									int elapsed = ((std::clock() - start_time) / (double) (CLOCKS_PER_SEC / 1000));
 									if (elapsed>param.maxtime) {
-										path_type=c_roadblock;
 										break;
 									}
 									int k=k_nodes[l];
@@ -715,8 +714,7 @@ vector<int> brides(int group) {
 										gp.clear();
 										for (int pi=0; pi<path_ik.size();pi++) {
 												int elapsed = ((std::clock() - start_time) / (double) (CLOCKS_PER_SEC / 1000));
-												if (elapsed>param.maxtime) {
-													path_type=c_roadblock;
+												if (elapsed>param.maxtime) {																										
 													break;
 												}
 												for (int pj=0;pj<path_jk.size();pj++) {											 
