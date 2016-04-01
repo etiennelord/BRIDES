@@ -218,7 +218,6 @@ void dijkstra (int S, int T,vector< vector<int> > adj, vector< std::map<int,floa
 					float cost_to_u=(*it).first;
 					pq.erase(it);
 					if (u==T) break;
-					//if (dist[u]>=1e14) break;
 					if (cost_to_u <= dist[u]) {
 						for ( int j=0;j<adj[u].size();j++ ) { 
 							 int v=adj[u][j];
@@ -227,9 +226,7 @@ void dijkstra (int S, int T,vector< vector<int> > adj, vector< std::map<int,floa
 								float new_cost = cost_to_u + Duv;
 								if (new_cost<dist[v]) {
 									dist[v]=new_cost;
-									//cout<<v<<" "<<dist[v]<<endl;
 									prev[v].clear();
-									//prev[v].reserve(10);
 									prev[v].insert(std::pair<int,int>(u,u));
 									pq.insert(multimap<float,int>::value_type(dist[v],v));
 								} else if (new_cost==dist[v]) {
@@ -298,7 +295,6 @@ void dijkstra (int S, vector< vector<int> > adj, vector< std::map<int,float> > a
 					int u=(*it).second;					
 					float cost_to_u=(*it).first;
 					pq.erase(it);			
-					//if (dist[u]>=1e14) break;
 					if (cost_to_u <= dist[u]) {
 						for ( int j=0;j<adj[u].size();j++ ) {
 							int v=adj[u][j];
@@ -306,9 +302,7 @@ void dijkstra (int S, vector< vector<int> > adj, vector< std::map<int,float> > a
 							float new_cost = cost_to_u + Duv;
 							if (new_cost<dist[v]) {
 								dist[v]=new_cost;
-								//cout<<v<<" "<<dist[v]<<endl;
 								prev[v].clear();
-								//prev[v].reserve(10);
 								prev[v].insert(std::pair<int,int>(u,u));
 								pq.insert(multimap<float,int>::value_type(dist[v],v));
 							} else if (new_cost==dist[v]) {
@@ -329,9 +323,6 @@ void dijkstra (int S, vector< vector<int> > adj, vector< std::map<int,float> > a
 			vector<int> tmp=path;
 			paths.push_back(tmp);			
 			return;
-			//if (paths.size()>max_individual_path) return;
-			//cout<<path<<endl;
-            //numberOfPaths++;
         } 
 		  for(map<int,int>::iterator it = prev[t].begin(); it != prev[t].end(); ++it) {
 			 int w=(*it).first; 	
@@ -349,9 +340,6 @@ void dijkstra (int S, vector< vector<int> > adj, vector< std::map<int,float> > a
 
 //--This will output only the first path
 vector< vector<int> > get_path(int S, int T, vector< map<int,int> > prev) {
-	//cout<<node_name[S]<<" "<<node_name[T]<<"***"<<endl;
-	//cout<<node_name<<endl;
-	//cout_map(prev);
 	vector< vector<int> > paths;
 	vector<bool> onPath(prev.size(), false);
 	onPath[T]=true;
@@ -363,7 +351,6 @@ vector< vector<int> > get_path(int S, int T, vector< map<int,int> > prev) {
 		std::reverse(paths[i].begin(), paths[i].end());
 	}
 	if (paths.size()==1&&paths[0].size()==0) paths.clear();
-	//if (paths.size()>max_individual_path) cout<<" "<<paths.size()<<" ";
 	return paths;
 }
 	 
@@ -373,7 +360,6 @@ vector< vector<int> > get_path(int S, int T, vector< map<int,int> > prev) {
 			 vector<int> v;
 			 for(map<int,int>::iterator it = p[i].begin(); it != p[i].end(); ++it) {
 			  v.push_back(it->first);
-			  //cout << it->first << "\n";
 			}
 			cout<<v;
 			if (i!=p.size()-1) cout<<", ";
@@ -385,7 +371,6 @@ vector< vector<int> > get_path(int S, int T, vector< map<int,int> > prev) {
 		 vector<int> v;
 			 for(map<int,int>::iterator it = p.begin(); it != p.end(); ++it) {
 			  v.push_back(it->first);
-			  //cout << it->first << "\n";
 			}
 			cout<<v;			
 	 }
@@ -546,7 +531,6 @@ if (random) {
 } else if (!directed) {
 	 for(j = 0; j < total_n_g1; j++) {
 		for(i = j+1; i < total_n_g1; i++){
-			//cout<<(t/size)<<endl;
 			if (i>j&&node_id_g2.count(i)>0&&node_id_g2.count(j)>0&&!Nsb[i]&&!Nsb[j]&&Nsu[i]&&Nsu[j]) {			
 				if ((int)((t/size))+1==soffset) {			
 					path.push_back(i);
