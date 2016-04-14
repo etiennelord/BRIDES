@@ -2024,7 +2024,7 @@ void help(){
          printf("\nParameters :");
         printf("\n-X=file           [filename for network X]");
         printf("\n-Y=file           [filename for network Y]");
-		printf("\n-attributes=file  [filename for node attributes]");
+		printf("\n-A=file           [filename for node attributes]");
 		printf("\n-usedist          [Use edge distances found in network files]");
 		//printf("\n-invdist          [Use the inverse of edge distances found in network files]");
 		printf("\n-K=B,C            [attributes to considers as K separated by comma e.g. A,B,C]");
@@ -2041,7 +2041,7 @@ void help(){
         printf("\n-output=file      [output to file each path information: taxa, distance, etc.]");
 		printf("\n-seed=999         [set the random seed generator to a specific seed]");
 		printf("\n-strategy=1       [set the K nodes ordering strategy: (1) maxdist.,(2) sum.]");
-		printf("\n-heuristic=1      [1-BRIDES (default), 2-BRIDES_YEN, 3-BRIDES_YC, 4-BRIDES_EC]");
+		printf("\n-heuristic=1      [1-BRIDES, 2-BRIDES_Y, 3-BRIDES_YC, 4-BRIDES_EC,5-DFS]");
 		printf("\n\nExample : \n: ./BRIDES -X=sample_g1.txt -Y=sample_g2.txt\n\n");
 }
 
