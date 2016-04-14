@@ -1,28 +1,11 @@
-#OPTFLAG  = -O3 -DNDEBUG
-#LDFLAGS 	= -O3 -DNDEBUG -lm 
-
-OPTFLAG  = -O3 -fopenmp
-LDFLAGS 	= -O3 -fopenmp
-
-
 COMPILER    = g++ ${OPTFLAG}
 LINKER      = g++ ${LDFLAGS}
-
-# Directory for the Boost library
-BOOST_INCLUDE   = C:/boost_1_60_0
-#BOOST_LIB       = boost_1_60_0/boost/boost/lib 
-
-
 
 all: clean BRIDES
 
 BRIDES: main.cpp
-	g++ -O3 main.cpp -o brides.exe -fopenmp -DNDEBUG -lm 
-
-test:
-	brides.exe -g1=data/cas1.txt -g2=data/cas2.txt
+	g++ -O3 main.cpp -o brides.exe -fopenmp -lm 
 	
 clean:
 	rm -rf *.o
-	rm -rf brides
 	rm -rf brides.exe

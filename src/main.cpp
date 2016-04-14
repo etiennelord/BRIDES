@@ -24,6 +24,8 @@
    #define omp_get_thread_num() 0
    #define omp_get_max_threads() 0
    #define omp_get_num_procs() 0
+   #define omp_set_dynamic(int i) 
+   #define omp_set_num_threads(int i)
 #endif
 using namespace std;
 
@@ -47,10 +49,10 @@ const char *description = "=====================================================
                           "| Program : BRIDES 2016                                                       |\n"
                           "| Authors : Etienne Lord,Vladimir Makarenkov (Universite du Quebec a Montreal)|\n"
                           "|           and Francois-Joseph Lapointe     (Universite de Montreal)         |\n"
-                          "| This program computes the similarities in path between two related networks.|\n"
+                          "| This program computes the similarities in paths between related networks.   |\n"
                           "===============================================================================\n";
 
-const char *startMessage = "BRIDES V.1.0 - (2015) by Etienne Lord and Francois-Joseph Lapointe\n"; 
+const char *startMessage = "BRIDES V.1.0 - (2016) by Etienne Lord, V. Makarenkov, F-J. Lapointe\n"; 
 
 /////////////////////////////////////////////////////////////////////////////////////
 //--Structure definition
@@ -75,46 +77,56 @@ struct edge
     float dist;
         
     edge() {dist=1.0f;}
-    
+    edge(int f, int t) {dist=1.0f;from=f;to=t;}
+	
     bool operator<(const edge& rhs) const
     {
         return dist < rhs.dist;
     }
+	
+	
 };
    
 struct Parameters {
-	char graph1[1024];     // filename g1, X
-	char graph2[1024];     // filename g2,Y
-	char attributes[1024]; // filename attributes
-	char graphinfo[1024];  // Node appartenance
-	char outputfile[1024]; //outputfile	
-	char debugfile[1024]; //outputfile	
-	vector<std::string> K;//attributes to use for K nodes
-	vector<std::string> nonK;//attributes to use for non K nodes 
-	
-        bool found_g1;//-found g1 file?
-        bool found_g2;//-found g2 file?
-        bool found_attributes; //--Annotations
-        bool info;
-		bool use_dist; //by default false, (dist set to 1)
-		bool inv_dist; // use the inverse of the distance
-		
-        bool directed;
-		int seed;  //--seed
-		float random; //--number of random path
-		int size;
-        int first; //-- start group
-        int last;   //--End verte
-        float maxdistance; // default search length (default=20);		
-		int maxtime;
-        float maxnode;
-		bool verbose; 
-	
-	int max_individual_path; 	
-	int weight_method; //All weight as equal, inverse, default
-		
-	
-	bool use_multiple_color; // do we required multiple color?
+		char graph1[1024];       // filename g1, X
+	char graph2[1024];       // filename g2,Y
+	char attributes[1024];   // filename attributes
+	char graphinfo[1024];    // Node appartenance
+	char outputfile[1024];   // outputfile	
+	char debugfile[1024];    // debugfile
+	vector<std::string> K;   // attributes (string)to use for K nodes
+	vector<std::string> nonK;// attributes (string) to use for non K nodes 
+
+
+		bool found_g1;         //-- found g1 (networkX)file?
+        bool found_g2;         //-- found g2 (networkY) file?
+        bool found_attributes; //-- found Annotations file?
+        bool info;             //-- Output debug information
+
+		bool use_dist;   //--by default false, (dist set to 1, unweighted)
+		bool inv_dist;  //-- use the inverse of the distance
+        bool directed;  //-- Network are directed 
+
+		int seed;       //-- Random seed
+		float random;   //-- Number of random path to classify
+		int size;       //-- Size of group 
+
+        int first;      //-- Start group of vertex (defined by size)
+        int last;       //-- End group of vertex
+		int strategy;   //-- K Node ordering startegy (either 1- max(d(i,k), d(j,k)) or 2- (d(i,k)+d(j,k)))
+
+        float maxdistance;       //--default search length (default=100);		
+		int maxtime;             //--Max time to search for Detour or Equal path (default=10 s)
+        float maxnode;           //--Max k node to investigate (default=100)
+
+
+		int max_individual_path; //--Max path number (default=100)
+		int maxthread;           //--Default: system 
+		bool verbose;            //-- Output more result to file              
+
+		int heuristic; //--BRIDES =1, BRIDES_YEN=2, BRIDES_YC=3, BRIDES_EC=4
+		int weight_method; //All weight as equal, inverse, default
+		bool use_multiple_color; // do
       
 };
 
@@ -128,6 +140,7 @@ void destructor();
 void dijkstra (int S, vector< vector<int> > adj,vector< vector<float> > adj_dist, vector<float> &dist, vector< map<int,int> > &prev);
 void dijkstra (int S, vector< vector<int> > adj,vector< vector<float> > adj_dist, vector<float> &dist, vector< map<int,int> > &prev, int ignored_nodes);
 void dijkstra (int S, int T,vector< vector<int> > adj,vector< vector<float> > adj_dist, vector<float> &dist, vector< map<int,int> > &prev, map<int,int> ignored_nodes);
+void dijkstra (int S, vector< vector<int> > adj, vector< std::map<int,float> > adj_dist,vector<float> &dist, vector< map<int,int> > &prev,  map<int,int> ignored_nodes, map<edge,int> ignored_edges);
 
 /////////////////////////////////////////////////////////////////////////////////////
 //--Other functions
@@ -143,6 +156,7 @@ std::map<int,int> load_edge(char *filename, std::vector<edge> &edge_list);
 int add_node(std::string name);
 void cout_map(vector< map<int, int> > p);
 int randomInt (int min, int max);
+bool good_path(vector<int> path, int S, int T);
 
 /////////////////////////////////////////////////////////////////////////////////////
 //--Variables
@@ -164,6 +178,7 @@ vector< std::map<int,float> > undirected_adjlist_g1_dist;
 vector< std::map<int,float> > undirected_adjlist_g2_dist; 
 vector< vector<float> > statistics; //statistics for each nodes
 vector<int> random_paths; // unique random paths 
+map<int,int> intersect2(vector<int> v1, vector<int> v2);
 
 bool* node_graph1; //Node in node_name in graph1  
 bool* node_graph2; //Node in node_name in graph2 // 
@@ -194,10 +209,53 @@ void add_statistics(int src_id,int dest_id,int path_type, vector <int> path) {
 	
 }
 
+std::istream& getline(std::istream& is, std::string& t)
+{
+    t.clear();
+    std::istream::sentry se(is, true);
+    std::streambuf* sb = is.rdbuf();
+    for(;;) {
+        int a = sb->sbumpc();
+        switch (a) {
+        case '\n':
+            return is;
+        case '\r':
+            if(sb->sgetc() == '\n')
+                sb->sbumpc();
+            return is;
+        case EOF:         
+            if(t.empty())
+                is.setstate(std::ios::eofbit);
+            return is;
+        default:
+            t += (char)a;
+        }
+    }
+}
+
 void debug_info() {
+	// Calculate some informations
+	// Link type 
+	cout<<"name\tid\tgroup\tattr\tnode1_cnt\tnode2_cnt"<<endl;
 	for (int i=0; i<total_n;i++) {
-		cout<<node_name[i]<<" "<<Nsb[i]<<" "<<attributes[i]<<" "<<node_id_g1.count(i)<<" "<<node_id_g2.count(i)<<endl;
-	}	
+		cout<<node_name[i]<<"\t"<<i<<" \t"<<Nsb[i]<<"\t"<<attributes[i]<<"\t"<<node_id_g1.count(i)<<"\t"<<node_id_g2.count(i)<<endl;
+	}
+	cout<<"NetworkX:"<<endl;
+	for (int i=0; i<edge_list_g1.size();i++) {
+			if (edge_list_g1[i].to!=-1) {
+				cout<<"|"<<node_name[edge_list_g1[i].from]<<"|-|"<<node_name[edge_list_g1[i].to]<<"|"<<endl;
+			} else {
+				cout<<"|"<<node_name[edge_list_g1[i].from]<<"|- "<<endl;
+			}
+	}
+	cout<<"NetworkY:"<<endl;
+	for (int i=0; i<edge_list_g2.size();i++) {
+			if (edge_list_g2[i].to!=-1) {
+				cout<<"|"<<node_name[edge_list_g2[i].from]<<"|-|"<<node_name[edge_list_g2[i].to]<<"|"<<endl;
+			} else {
+				cout<<"|"<<node_name[edge_list_g2[i].from]<<"|- "<<endl;
+			}
+	}
 }
 
 void dijkstra (int S, int T,vector< vector<int> > adj, vector< std::map<int,float> > adj_dist,vector<float> &dist, vector< map<int,int> > &prev, map<int,int> ignored_nodes) {			
@@ -276,6 +334,60 @@ void dijkstra (int S, vector< vector<int> > adj, vector< std::map<int,float> > a
 					
 			}		
 	 }	 
+bool found_edges(int S, int T, map<edge,int> edges) {
+	
+	for (std::multimap<edge,int>::iterator it=edges.begin(); it!=edges.end();++it) {
+		if (((*it).first.from==S&&(*it).first.to==T)||(!param.directed&&(*it).first.to==T&&(*it).first.from==S)) return true;
+	}
+	return false;
+}
+ 
+void dijkstra (int S, vector< vector<int> > adj, vector< std::map<int,float> > adj_dist,vector<float> &dist, vector< map<int,int> > &prev,  map<int,int> ignored_nodes, map<edge,int> ignored_edges) {
+			int len=adj.size();
+			prev.clear();			
+			for (int i=0; i<len; i++) {
+				map<int,int> tmp;
+				prev.push_back(tmp);
+			}
+			std::fill(dist.begin(), dist.end(), 1e14);
+		    dist[S]=0.0f;
+			multimap<float,int> pq;
+			multimap<float,int>::iterator it;			
+			pq.insert(multimap<float,int>::value_type(0.0,S));
+			while (!pq.empty()) {
+					it = pq.begin();								
+					int u=(*it).second;					
+					float cost_to_u=(*it).first;			
+					pq.erase(it);		
+					if (cost_to_u <= dist[u]) {
+						for ( int j=0;j<adj[u].size();j++ ) {
+							int v=adj[u][j];
+							 //cout<<u<<"-"<<v<<endl;
+							 
+							 if (found_edges(u,v,ignored_edges)) {
+								continue;
+								
+							 }
+							 float Duv = adj_dist[u][v]; // Change here if edge is weighted
+							if (ignored_nodes.count(v)==0) {
+								float new_cost = cost_to_u + Duv;
+								if (new_cost<dist[v]) {
+									dist[v]=new_cost;									
+									prev[v].clear();									
+									prev[v].insert(std::pair<int,int>(u,u));
+									pq.insert(multimap<float,int>::value_type(dist[v],v));
+								} else if (new_cost==dist[v]) {
+									prev[v].insert(std::pair<int,int>(u,u));
+								}
+							}
+						}					
+					}
+					
+			}		
+	 }	 
+	 	 
+
+		 
 	 
  void dijkstra (int S, vector< vector<int> > adj,vector< std::map<int,float> > adj_dist, vector<float> &dist, vector< map<int,int> > &prev) {
 			int len=adj.size();
@@ -314,8 +426,50 @@ void dijkstra (int S, vector< vector<int> > adj, vector< std::map<int,float> > a
 			}			
 	 }
 
+ // use DFS to get BRIDES
+     void dfs_BRIDES(int s, int t, vector< vector<int> > adj, vector< vector<int> > &paths, vector<int> &path, vector<bool> &onPath ) {		         
+		if (paths.size()>0&&path.size()>paths[0].size()) return;
+		if (path.size()>param.maxdistance) return;
+	
+		// found path from s to t
+        if (s == t) {    			
+			vector<int> tmp=path;
+			if (good_path(path,path[0],t)) {			
+				//We kept only the smaller one...
+				if (paths.size()>0&&tmp.size()<paths[0].size()) {
+					paths.clear();
+				}	
+				paths.push_back(tmp);			
+			}
+			return;
+        } 
+		  for(int i=0; i< adj[s].size();i++) {
+			 int w=adj[s][i]; 	
+			vector<int> tmp=path;			 
+			if (!onPath[w]) {
+				path.push_back(w);
+				onPath[w] = true;
+				dfs_BRIDES(w,t,adj, paths, path, onPath);
+				path.pop_back();
+				onPath[w] = false; 
+			}
+		  }		           	
+    }
 
- // use DFS
+	
+vector<int> get_path_dfs_BRIDES(int S, int T, vector< vector<int> > adj) {
+	vector< vector<int> > paths;
+	vector<bool> onPath(adj.size(), false);
+	vector<int> path;
+	path.push_back(S);
+	onPath[S] = true;
+	dfs_BRIDES(S,T,adj,paths, path,onPath);		
+	if (paths.size()>0) return paths[0];
+	path.clear();
+	return path;
+}	
+	 
+ // use DFS to get Path from the Dijkstra prev matrix
      void dfs_path(int s, int t, vector< map<int,int> > prev, vector< vector<int> > &paths, vector<int> &path, vector<bool> &onPath ) {		 
         if (paths.size()>param.max_individual_path) return;
 		// found path from s to t
@@ -337,8 +491,44 @@ void dijkstra (int S, vector< vector<int> > adj, vector< std::map<int,float> > a
 		  }		           	
     }
 
+ // use DFS for YEN
+     void dfs_pathYEN(int s, int t,vector< map<int,int> > prev, vector< vector<int> > &paths, vector<int> &path, vector<bool> &onPath ) {		 
+        if (paths.size()>1) return;
+		// found path from s to t
+        if (s == t) {    			
+			vector<int> tmp=path;
+			paths.push_back(tmp);			
+			return;
+        } 
+		  for(map<int,int>::iterator it = prev[t].begin(); it != prev[t].end(); ++it) {
+			 int w=(*it).first; 	
+			vector<int> tmp=path;			 
+			if (!onPath[w]) {
+				path.push_back(w);
+				onPath[w] = true;
+				  dfs_pathYEN(s, w, prev,paths, path, onPath);
+				  path.pop_back();
+				onPath[w] = false; 
+			}
+		  }		           	
+    }
 
-//--This will output only the first path
+//--This will output the path for the Dijkstra version of YenSPK
+vector<int> get_pathYen(int S, int T, vector< map<int,int> > prev) {
+	vector< vector<int> > paths;	
+	vector<bool> onPath(prev.size(), false);
+	onPath[T]=true;
+	vector<int> path;	
+	path.push_back(T);
+	dfs_pathYEN(S,T, prev,paths, path,onPath);		
+	
+	for (int i=0; i<paths.size();i++ ) {
+		std::reverse(paths[i].begin(), paths[i].end());
+	}	
+	if (paths.size()>0) return paths[0];
+	path.clear();
+	return path;
+}
 vector< vector<int> > get_path(int S, int T, vector< map<int,int> > prev) {
 	vector< vector<int> > paths;
 	vector<bool> onPath(prev.size(), false);
@@ -419,6 +609,16 @@ vector<int> good_path2(vector< vector<int> > paths, int S, int T) {
 	return tmp;
 }
 
+//--Verify that a path doesn't contains the excluded node
+bool good_path3(vector< vector<int> > paths, int exclude_node) {
+	vector<int> tmp;
+	for (int i=0; i<paths.size();i++) {
+		for (int j=0; j<paths[i].size();j++) {
+		 if (paths[i][j]==exclude_node) return false; 
+		}
+	}
+	return true;
+}
 void cout_paths(vector<int> path) {
 		for (int j=0; j<path.size();j++) {
 			cout<<node_name[path[j]];
@@ -440,7 +640,6 @@ void fout_paths(vector<int> path) {
 			if (j<path.size()-1) FileOutput<<",";
 		}
 		FileOutput<<"\t";
-		//TO DO, attribute here
 		for (int j=0; j<path.size();j++) {
 			FileOutput<<attributes[path[j]];
 			if (j<path.size()-1) FileOutput<<",";
@@ -457,27 +656,252 @@ vector<int> join(vector<int> v1, vector<int> v2) {
 	return tmp;
 }
 
+vector<int> join2(vector<int> v1, vector<int> v2) {
+	vector<int> tmp;
+		
+	for (int i=0; i<v1.size();i++) tmp.push_back(v1[i]);
+	for (int i=1; i<v2.size();i++) tmp.push_back(v2[i]);
+	return tmp;
+}
 map<int,int> intersect(vector<int> v1, vector<int> v2,int k,int i2) {
 	map<int,int> tmp;
-	vector<int> to_erase;
-	for (int i=1;i<v1.size();i++) {
-		tmp.insert ( std::pair<int,int>(v1[i],0));
-		tmp[v1[i]]++;
+	map<int,int> found;
+	for (int i=0;i<v1.size();i++) {
+		if (v1[i]!=k&&v1[i]!=i2) found.insert(std::pair<int,int>(v1[i],1));
 	}
-	for (int i=1;i<v2.size();i++) {
-		if (tmp[v2[i]]>0) {
-			tmp[v2[i]]++;
-			to_erase.push_back(v2[i]);
-		} else {
-			tmp.insert ( std::pair<int,int>(v2[i],0));
-		}
+	for (int i=0;i<v2.size();i++) {
+		if (found[v2[i]]>0) {			
+		     tmp.insert(std::pair<int,int>(v2[i],1));
+		} 
 	}
-	tmp.erase(k);
-	for (int i=0;i<to_erase.size();i++) tmp.erase(to_erase[i]);
-	tmp.insert ( std::pair<int,int>(i2,0)); ///--becase we want to find a path from k to j 
 	return tmp;
 }
 
+map<int,int> intersect2(vector<int> v1, vector<int> v2) {
+	map<int,int> tmp;
+	map<int,int> found;
+	for (int i=0;i<v1.size();i++) {
+		found.insert(std::pair<int,int>(v1[i],1));
+	}
+	for (int i=0;i<v2.size();i++) {
+		if (found[v2[i]]>0) {			
+		     tmp.insert(std::pair<int,int>(v2[i],1));
+		} 
+	}
+	return tmp;
+}
+
+vector<int> extract(vector<int> path, int idx1, int idx2) {
+	vector<int> tmp;
+	for (int i=idx1; i<=idx2;i++)  tmp.push_back(path[i]);
+	return tmp;
+}
+
+bool equal_vector(vector<int> path1, vector<int> path2) {
+	if (path1.size()!=path2.size()) return false;
+	return std::equal ( path1.begin(), path1.end(), path2.begin() );
+}
+
+
+vector< vector<int> > YenKSP(int S, int T,int K,vector< vector<int> > adj, vector< std::map<int,float> > adj_dist, vector<float> &dist) {
+
+		    int len=adj.size();
+			
+			vector< map<int,int> > prev(len);
+			vector<float> tmp_dist(len);
+			prev.clear();			
+			for (int i=0; i<len; i++) {
+				map<int,int> tmp;
+				prev.push_back(tmp);
+			}
+			std::fill(tmp_dist.begin(), tmp_dist.end(), 1e14);
+		   
+			dijkstra(S,adj,adj_dist,tmp_dist,prev);
+			multimap<float,vector<int> > B;
+			
+			vector< vector<int> > A;
+			vector<float> A_dist;
+			A_dist.push_back(tmp_dist[T]);
+			if (tmp_dist[T]>=Inf) {
+				dist=A_dist;
+				return A;
+			}
+			A.push_back(get_pathYen(S,T,prev));
+			if (A.size()==0) { 
+				
+				dist.clear();
+				dist.push_back(Inf);
+				return A;
+			}
+			int k=1;
+			
+			while (k<=K) {
+				map<edge,int> ignored_edges;
+				map<int,int> ignored_nodes;
+				for (int i=0; i<A[k-1].size()-1;i++) {
+					int spurNode=A[k-1][i];
+					vector<int> rootPath=extract(A[k-1],0,i);
+					 ignored_edges.clear();
+					 ignored_nodes.clear();
+					 //--Remove edges
+					for (int pi=0; pi<A.size();pi++) {
+						//A[pi].size()>i
+						if (A[pi].size()>i&&equal_vector(rootPath,extract(A[pi],0,i))) {
+							edge e(A[pi][i],A[pi][i+1]);
+							ignored_edges.insert(std::pair<edge,int>(e,1));
+						}
+					}
+					//--Remove node
+					for (int i=0; i<rootPath.size();i++) {
+						int node=rootPath[i];
+						if (node!=spurNode) ignored_nodes.insert(std::pair<int,int>(node,1));
+					}
+					//--Calculate the new spurPath
+					prev.clear();			
+					for (int i=0; i<len; i++) {
+						map<int,int> tmp;
+						prev.push_back(tmp);
+					}
+					vector<float> tmp_dist2(len);
+					 std::fill(tmp_dist2.begin(), tmp_dist2.end(), 1e14);
+					dijkstra(spurNode,adj,adj_dist,tmp_dist2,prev,ignored_nodes, ignored_edges);
+					
+					vector<int> spurPath=get_pathYen(spurNode,T,prev);
+					if (intersect2(rootPath,spurPath).size()==1) {
+						
+						vector<int> newpath=join2(rootPath,spurPath);
+						
+						float newdist=tmp_dist[spurNode]+tmp_dist2[T];
+						bool found=false;
+						for (int i=0;i<A.size();i++) {
+							if (equal_vector(A[i], newpath)) found=true;
+						}
+						for (std::multimap<float,vector <int> >::iterator it=B.begin(); it!=B.end(); ++it) {
+							if (equal_vector((*it).second, newpath)) {
+								found=true; 
+							}
+						}
+						if (!found) B.insert(multimap< float,vector<int> >::value_type(newdist, newpath));
+					}
+				}
+				
+				if (B.size()==0) break;
+				if ((B.begin())->second.size()>0) {
+					A.push_back((B.begin())->second);
+					A_dist.push_back((B.begin())->first);
+					B.erase(B.begin());
+				}
+				
+				k++;
+				
+				
+						
+			}
+			dist=A_dist;
+	return A;
+
+}
+
+vector< vector<int> > YenKSP_Stop(int S, int T,vector< vector<int> > adj, vector< std::map<int,float> > adj_dist, vector<float> &dist) {
+
+		    int len=adj.size();
+			int K=param.max_individual_path;
+			vector< map<int,int> > prev(len);
+			vector<float> tmp_dist(len);
+			prev.clear();			
+			for (int i=0; i<len; i++) {
+				map<int,int> tmp;
+				prev.push_back(tmp);
+			}
+			std::fill(tmp_dist.begin(), tmp_dist.end(), 1e14);
+		   
+			dijkstra(S,adj,adj_dist,tmp_dist,prev);
+			multimap<float,vector<int> > B;
+			
+			vector< vector<int> > A;
+			vector<float> A_dist;
+			A_dist.push_back(tmp_dist[T]);
+			if (tmp_dist[T]>=Inf) {
+				dist=A_dist;
+				return A;
+			}
+			A.push_back(get_pathYen(S,T,prev));
+			if (A.size()==0) { 				
+				dist.clear();
+				dist.push_back(Inf);
+				return A;
+			}
+			int k=1;
+			
+			while (k<=K) {
+				map<edge,int> ignored_edges;
+				map<int,int> ignored_nodes;
+				for (int i=0; i<A[k-1].size()-1;i++) {
+					int spurNode=A[k-1][i];
+					vector<int> rootPath=extract(A[k-1],0,i);
+					 ignored_edges.clear();
+					 ignored_nodes.clear();
+					 //--Remove edges
+					for (int pi=0; pi<A.size();pi++) {
+						if (A[pi].size()>i&&equal_vector(rootPath,extract(A[pi],0,i))) {
+							edge e(A[pi][i],A[pi][i+1]);
+							ignored_edges.insert(std::pair<edge,int>(e,1));
+						}
+					}
+					//--Remove node
+					for (int i=0; i<rootPath.size();i++) {
+						int node=rootPath[i];
+						if (node!=spurNode) ignored_nodes.insert(std::pair<int,int>(node,1));
+					}
+					//--Calculate the new spurPath
+					prev.clear();			
+					for (int i=0; i<len; i++) {
+						map<int,int> tmp;
+						prev.push_back(tmp);
+					}
+					vector<float> tmp_dist2(len);
+					 std::fill(tmp_dist2.begin(), tmp_dist2.end(), 1e14);
+					dijkstra(spurNode,adj,adj_dist,tmp_dist2,prev,ignored_nodes, ignored_edges);
+					
+					vector<int> spurPath=get_pathYen(spurNode,T,prev);
+					if (intersect2(rootPath,spurPath).size()==1) {
+						
+						vector<int> newpath=join2(rootPath,spurPath);
+						
+						float newdist=tmp_dist[spurNode]+tmp_dist2[T];
+						bool found=false;
+						for (int i=0;i<A.size();i++) {
+							if (equal_vector(A[i], newpath)) found=true;
+						}
+						for (std::multimap<float,vector <int> >::iterator it=B.begin(); it!=B.end(); ++it) {
+							if (equal_vector((*it).second, newpath)) {
+								found=true; 
+							}
+						}
+						if (!found) B.insert(multimap< float,vector<int> >::value_type(newdist, newpath));
+					}
+				}
+				
+				if (B.size()==0) break;
+				if ((B.begin())->second.size()>0) {
+					A.push_back((B.begin())->second);
+					A_dist.push_back((B.begin())->first);
+					//STOP if we have a knodes
+					if (good_path(A[k],S,T)) {
+						return A;
+					}
+					B.erase(B.begin());
+				}
+				
+				k++;
+				
+				
+						
+			}
+			dist=A_dist;
+	return A;
+
+}
 // Function createSamplePath
 // This function return an array of paired node number 
 // of size (size). The array returned is the one 
@@ -568,6 +992,8 @@ vector<int> brides(int group) {
 	 int D=0;
 	 int E=0;
 	 int S=0;
+	 int XE=0; //--Number with elapsed time
+	 int XD=0; //--Number with suppl. dijkstra
 	 int total_time=0;
 	int total_to_find=(total_nonk_node*(total_nonk_node-1))/2;
 	 int last_p=0;
@@ -598,22 +1024,15 @@ vector<int> brides(int group) {
 		 vector<float> dist_g2(total_n);
 		 dijkstra(i,undirected_adjlist_g2,undirected_adjlist_g2_dist, dist_g2, prev_g2);
 		 bool more=true; // we have more path to process?
-		 // Min-Max path to k - Not good since we don't process all i (i>j for undirected)		 
-		// if (param.verbose) {		
-			// for (int l=0; l<total_n;l++) {
-				// if (Nsb[l]) cout<<node_name[i]<<" "<<node_name[l]<<" "<<dist_g2[l]<<endl;
-				// if (dist_g2[l]<Inf&&l!=i&&Nsb[l]&&dist_g2[l]<statistics[i][7]) statistics[i][7]=dist_g2[l];
-				// if (dist_g2[l]<Inf&&l!=i&&Nsb[l]&&dist_g2[l]>statistics[i][8]) {
-					// statistics[i][8]=dist_g2[l];
-				// }
-			 // }
-		// }
-		 std::clock_t start_time = std::clock();
+		 
 		 while (more) {
+			std::clock_t start_time = std::clock();
+			bool el=false; //--Elapsed?
+			 bool xd=false; //--Extra Dijkstra
 			int  j=random_path[2*ii+1];  
 			 int path_type=-1;
 			 float real_dist_g2=0.0f;
- 			
+ 			//--Distance to j from i (directed or not)
 			 vector< vector<int> > path=get_path(i,j,prev_g2);
 			 vector<int> gp=good_path2(path,i,j); 
 			 real_dist_g2=dist_g2[j];
@@ -634,7 +1053,11 @@ vector<int> brides(int group) {
 					path_type=c_detour;
 				} else if (dist_g1[j]==dist_g2[j]&&gp.size()>0) { 
 					path_type=c_equal;
-				} else {
+				} else if (param.heuristic==1||param.heuristic==4) {
+					
+					
+					
+					
 					// Main big loop
 					// test for k accessible nodes
 					vector < map<int,int> > prev_g2_w_j(0); //--Reserve 10 ;
@@ -649,7 +1072,11 @@ vector<int> brides(int group) {
 					// TO DO here, test for distance and order the k by this distance
 						multimap<float,int> k_nodes_dist;
 						for (int l=0; l<total_n;l++) {
-							if (dist_g2_w_j[l]<Inf&&dist_g2_w_i[l]<Inf&&Nsb[l]) k_nodes_dist.insert(multimap<float,int>::value_type(std::max(dist_g2_w_j[l],dist_g2_w_i[l]),l));
+							if (Nsb[l]) {
+								float mdist=std::max(dist_g2_w_i[l],dist_g2_w_j[l]);
+								float sdist=dist_g2_w_i[l]+dist_g2_w_j[l];
+								if (dist_g2_w_i[l]<Inf&&dist_g2_w_j[l]<Inf&&mdist<=param.maxdistance) k_nodes_dist.insert(multimap<float,int>::value_type((param.strategy==1?mdist:sdist),l));
+							}
 						}
 				
 												
@@ -657,7 +1084,7 @@ vector<int> brides(int group) {
 						float last_distance=0.0f;					
 						for (std::multimap<float,int>::iterator it=k_nodes_dist.begin(); it!=k_nodes_dist.end(); ++it)
 						{															
-							if ((*it).first<param.maxdistance&&knodes_size<param.maxnode) {								
+							if (knodes_size<param.maxnode) {								
 								k_nodes.push_back((*it).second);
 								last_distance=(*it).first;
 								knodes_size++;
@@ -681,11 +1108,13 @@ vector<int> brides(int group) {
 								// 1. We try with only the path found for i to k and j to k
 								//cout<<knodes_size;
 								for (int l=0; l<k_nodes.size();l++) {
-									int elapsed = ((std::clock() - start_time) / (double) (CLOCKS_PER_SEC / 1000));
-									if (elapsed>param.maxtime) {
+									int k=k_nodes[l];
+									int elapsed = ((std::clock() - start_time) / (double) (CLOCKS_PER_SEC / 1000));									
+									if (param.heuristic!=4&&(elapsed>param.maxtime)) {
+										if (elapsed>param.maxtime) el=true;
 										break;
 									}
-									int k=k_nodes[l];
+									
 									
 									//cout<<k<<" [k_nodes.size():"<<k_nodes.size()<<"]\n";
 									vector< vector<int> > path_ik=get_path(i,k,prev_g2_w_j);
@@ -697,11 +1126,13 @@ vector<int> brides(int group) {
 										for (int pj=0;pj<path_jk.size();pj++) {											 
 											 vector<int> tmp=join(path_ik[pi],path_jk[pj]);
 											 if (good_path(tmp,i,j)) {
+												 
+												 
 												 if (gp.size()==0||gp.size()>tmp.size()) {
 													 //gp.clear();
 													 //for (int m=0; m<tmp.size();m++) gp.push_back(tmp[m]);
 													 gp=tmp; 
-													 //cout<<gp2<<endl;
+													
 												 }
 												 nodeadend=true;												
 											 } 
@@ -710,19 +1141,22 @@ vector<int> brides(int group) {
 										//if(nodeadend) break;
 									}									
 									//--2. Try again with opt. but costly when we remove nodes duplicated in path i to k and j to k
-									if (!nodeadend) {
-										gp.clear();
+									if (!nodeadend||param.heuristic==4){
+										//gp.clear();
 										for (int pi=0; pi<path_ik.size();pi++) {
-												int elapsed = ((std::clock() - start_time) / (double) (CLOCKS_PER_SEC / 1000));
-												if (elapsed>param.maxtime) {																										
+												int elapsed2 = ((std::clock() - start_time) / (double) (CLOCKS_PER_SEC / 1000));
+												if (elapsed2>param.maxtime&&param.heuristic!=4) {																										
+													el=true;
 													break;
 												}
 												for (int pj=0;pj<path_jk.size();pj++) {											 
 													 map<int,int> bad_nodes=intersect(path_ik[pi], path_jk[pj],k,i);
-													 if (bad_nodes.size()>2) {														
+													 // cout<<"** "<<bad_nodes.size()<<" "<<endl;
+													 // cout_map(bad_nodes);
+													 if (bad_nodes.size()>0) {														
 														 vector < map<int,int> > prev_g2_w_i2(total_n); //--Reserve 10 ;	
-														 vector<float> dist_g2_w_j2(total_n);														 
-														 dijkstra(j,k,undirected_adjlist_g2,undirected_adjlist_g2_dist, dist_g2_w_j2, prev_g2_w_i2,bad_nodes);														 
+														 vector<float> dist_g2_w_i2(total_n);														 
+														 dijkstra(j,k,undirected_adjlist_g2,undirected_adjlist_g2_dist, dist_g2_w_i2, prev_g2_w_i2,bad_nodes);														 
 														 vector< vector<int> > path_jk2=get_path(j,k,prev_g2_w_i2);													
 														  //cout<<node_name[j]<<"-"<<node_name[k]<<"|\n";cout_paths(path_jk2);
 														 for (int pk=0; pk<path_jk2.size();pk++) {
@@ -732,13 +1166,34 @@ vector<int> brides(int group) {
 																	gp=tmp2;																	
 																}
 																 nodeadend=true;
-																 break;
+																 if (param.heuristic!=4) break;
 															 } 
-														 } //--End for 	pk													 
+														 } //--End for 	pk	
+														 elapsed2 = ((std::clock() - start_time) / (double) (CLOCKS_PER_SEC / 1000));
+														 if (elapsed2>param.maxtime&&param.heuristic!=4) {																										
+															el=true;
+															break;
+														}
+															vector < map<int,int> > prev_g2_w_j2(total_n); //--Reserve 10 ;	
+															 vector<float> dist_g2_w_j2(total_n);														 
+															 dijkstra(i,k,undirected_adjlist_g2,undirected_adjlist_g2_dist, dist_g2_w_j2, prev_g2_w_j2,bad_nodes);														 
+															 vector< vector<int> > path_ik2=get_path(j,k,prev_g2_w_j2);													
+															  //cout<<node_name[j]<<"-"<<node_name[k]<<"|\n";cout_paths(path_jk2);
+															 for (int pk=0; pk<path_ik2.size();pk++) {
+																 vector<int> tmp2=join(path_ik2[pk],path_jk[pj]);													 
+																 if (good_path(tmp2,i,j)) {
+																	if (gp.size()==0||gp.size()>tmp2.size()) {
+																		gp=tmp2;																	
+																	}
+																	 nodeadend=true;
+																	 if (param.heuristic!=4) break;
+																 } 
+															 } //--End for 	pk	
+														 
 													 } //--Endif badnodes
-													 if(nodeadend) break;													
+													if(nodeadend&&param.heuristic!=4) break;													
 												} //--End for pj	
-												if(nodeadend) break;
+												if(nodeadend&&param.heuristic!=4) break;
 										} //--End for pi
 									} //--End no deadend	 
 								} //--End for each node
@@ -753,17 +1208,133 @@ vector<int> brides(int group) {
 									}									
 								} else {
 									path_type=c_roadblock;
+									//cout<<gp.size()<<endl;
 								}
 								
 											
 					}
-				} 
+				} else if (param.heuristic==2) {					
+					//BRIDES_Y
+					vector<float> dist_yen(total_n);			
+					
+					vector< vector<int> > yen_paths=YenKSP_Stop(i,j,undirected_adjlist_g2,undirected_adjlist_g2_dist, dist_yen);					
+					bool found=false;
+					for (int pi=0; pi<yen_paths.size();pi++) {
+						real_dist_g2=dist_yen[pi];
+						if (good_path(yen_paths[pi],i,j)) {
+							gp=yen_paths[pi];
+							found=true;
+							break;
+						}
+					}
+					if (found&&real_dist_g2==dist_g1[j]) {
+						path_type=c_equal;
+					} else if (found) {
+						path_type=c_detour;
+					} else {
+						path_type=c_roadblock;
+					}
+				} else if (param.heuristic==3) {
+					//BRIDES_YC
+					   std::vector<int> k_nodes;     //--K nodes (that we need to include in path)
+					   map<int, vector< vector<int> > >Pik;
+					   map<int, vector< vector<int> > >Pjk;
+					   // Order the K using Dijkstra to ik and jk 
+						vector < map<int,int> > prev_g2_j(0); //--Reserve 10 ;
+						vector<float> dist_g2_j(total_n);					
+						dijkstra(j,undirected_adjlist_g2,undirected_adjlist_g2_dist, dist_g2_j, prev_g2_j);
+						multimap<float,int> k_nodes_dist;
+						for (int l=0; l<total_n;l++) {
+							if (Nsb[l]) {
+								int k=l;
+								float ik_dist=dist_g2[k];
+								float jk_dist=dist_g2_j[k];
+								float mdist=std::max(ik_dist,jk_dist);
+								float sdist=ik_dist+jk_dist;
+								if (ik_dist<Inf&&jk_dist<Inf&&mdist<=param.maxdistance) {
+									k_nodes_dist.insert(multimap<float,int>::value_type((param.strategy==1?mdist:sdist),l));
+								}
+							}
+						}
+						int knodes_size=0;
+						float last_distance=0;
+						for (std::multimap<float,int>::iterator it=k_nodes_dist.begin(); it!=k_nodes_dist.end(); ++it)
+						{															
+							if (knodes_size<param.maxnode) {								
+								k_nodes.push_back((*it).second);
+								last_distance=(*it).first;
+								knodes_size++;
+							}
+							if (last_distance>param.maxdistance||knodes_size>param.maxnode) break;
+						}
+						
+					  if (k_nodes.size()==0) {
+						path_type=c_roadblock;	
+					  } else {
+						 int ms = (std::clock() - start_time) / (double) (CLOCKS_PER_SEC / 1000);
+								bool nodeadend=false;
+								gp.clear();
+								for (int l=0; l<k_nodes.size();l++) {
+									int k=k_nodes[l];
+									int elapsed = ((std::clock() - start_time) / (double) (CLOCKS_PER_SEC / 1000));
+									if (param.heuristic!=4&&(elapsed>param.maxtime)) {
+										if (elapsed>param.maxtime) el=true;
+										break;
+									}
+									vector<float> dist_yen_i(total_n);
+									vector<float> dist_yen_j(total_n);
+									vector< vector<int> > Pik=YenKSP(i,k,param.max_individual_path,undirected_adjlist_g2,undirected_adjlist_g2_dist, dist_yen_i);
+									vector< vector<int> > Pjk=YenKSP(j,k,param.max_individual_path,undirected_adjlist_g2,undirected_adjlist_g2_dist, dist_yen_j);
+									for (int pi=0; pi<Pik.size();pi++) {
+										for (int pj=0;pj<Pjk.size();pj++) {											 
+											 vector<int> tmp=join(Pik[pi],Pjk[pj]);
+											 if (good_path(tmp,i,j)) {
+												 if (gp.size()==0||gp.size()>tmp.size()) {
+													 gp=tmp; 
+												 }
+												 nodeadend=true;
+											 } 
+										}	
+									}
+									if(nodeadend) break;
+							   }
+							   if (nodeadend) {
+									real_dist_g2=dist_path(gp,undirected_adjlist_g2_dist);
+									if (real_dist_g2==dist_g1[j]) {
+										path_type=c_equal;
+									} else {
+										path_type=c_detour;
+									}
+								} else {
+									path_type=c_roadblock;
+								} 
+					}
+				} else if (param.heuristic==5) {
+					//heuristic DFS
+					gp=get_path_dfs_BRIDES(i,j,undirected_adjlist_g2);
+					
+					if (good_path(gp,i,j)) {
+						real_dist_g2=gp.size()-1; //Not the real distance
+						if (real_dist_g2==dist_g1[j]) {
+								path_type=c_equal;
+							} else {
+								path_type=c_detour;
+							}					
+					} else {
+						path_type=c_roadblock;
+					}
+				}
 			 } //--End else
+			#pragma omp atomic
+			XE+=(el?1:0);
+			#pragma omp atomic
+			XD+=(xd?1:0);
 			#pragma omp atomic
 			total++;			 		
 			int elapsed = ((std::clock() - start_time) / (double) (CLOCKS_PER_SEC / 1000));
 			#pragma omp atomic
 			total_time+=elapsed;
+			add_statistics(i,j,path_type,gp);
 			if (verbose) {
 				#pragma omp critical 
 				{
@@ -789,7 +1360,7 @@ vector<int> brides(int group) {
 					case c_equal:  FileOutput<<"E"; break;
 					case c_shortcut:  FileOutput<<"S"; break;
 					}
-					add_statistics(i,j,path_type,gp);
+					
 					FileOutput<<"\t"<<elapsed<<"\t";
 					// cout<<"\t"; 
 					  fout_paths(gp);				
@@ -823,6 +1394,8 @@ vector<int> brides(int group) {
 	results.push_back(S);
 	results.push_back(total);
 	results.push_back(total_time);
+	results.push_back(XE);
+	results.push_back(XD);
 	return results;
 }
 	 
@@ -916,7 +1489,23 @@ int main(int nargc, char** argv) {
 	if (param.first==0||param.first<1) param.first=1;	
 	output_header(argv);	
 	 if (param.info) {
-		//debug_info(); //--for debug
+		debug_info(); //--for debug
+		
+		vector<float> A;
+		
+		for (int i=0; i<total_n;i++) {
+			for (int j=0;j<total_n;j++) {
+				if (i<j) {
+					cout<<"["<<node_name[i]<<"-"<<node_name[j]<<"]"<<endl;
+					//vector< vector<int> > pa=YenKSP(i,j,undirected_adjlist_g2,undirected_adjlist_g2_dist, A);		
+					vector<int> pa=get_path_dfs_BRIDES(i,j,undirected_adjlist_g2);
+					//for (int p=0; p<pa.size();p++) {
+						cout_paths(pa);
+					//}
+				}
+			}
+		}
+		
 		destructor();
 		exit(0);
 	}
@@ -929,6 +1518,8 @@ int main(int nargc, char** argv) {
 	int S=0;
 	int total=0;
 	int total_time=0;
+	int XE=0;
+	int XD=0;
 	cout<<"\n============================ PARTIAL RESULTS ==================================\n";	
 	cout<<"Group\tB\tR\tI\tD\tE\tS\tTotal\tCPU time (ms)"<<endl;
 	if (param.verbose) {
@@ -948,6 +1539,8 @@ int main(int nargc, char** argv) {
 		S+=r[5];
 		total+=r[6];
 		total_time+=r[7];
+		XE+=r[8];
+		XD+=r[9];
 		#pragma omp critical 
 		{		
 			cout<<grp<<"\t"<<r[0]<<"\t"<<r[1]<<"\t"<<r[2]<<"\t"<<r[3]<<"\t"<<r[4]<<"\t"<<r[5]<<"\t"<<r[6]<<"\t"<<r[7]<<"\t"<<endl;		
@@ -964,9 +1557,24 @@ int main(int nargc, char** argv) {
 		cout<<"(D) etour       : pathway shorter in network X than in network Y.\n";
 		cout<<"(E) qual        : pathway of same length in networks X and Y.\n";
 		cout<<"(S) hortcut     : pathway longer in network X than in network Y.\n";
+		// cout<<"\n============================== STATISTICS ====================================\n";
+		// cout<<"NK\tB\tR\tI\tD\tE\tS\tInside\tAttribute"<<endl;
+		// for (int i=0; i<total_n;i++) {
+				// if (Nsu[i]&&!Nsb[i]) {
+					 // cout<<node_name[i]<<"\t"<<statistics[i][0]<<"\t"<<statistics[i][1]<<"\t"<<statistics[i][2]<<"\t"<<statistics[i][3]<<"\t"<<statistics[i][4]<<"\t"<<statistics[i][5]<<"\t"<<statistics[i][6]<<"\t"<<attributes[i]<<endl;
+				// }
+			// }
+			// cout<<endl<<"K\tInside\tAttribute"<<endl;
+			
+			// for (int i=0; i<total_n;i++) {
+				// if (Nsb[i]) {
+					// cout<<node_name[i]<<"\t"<<statistics[i][6]<<"\t"<<attributes[i]<<endl;
+				// }
+			// }
 		cout<<"\n================================ RESULTS ======================================\n";
 		cout<<"\tB\tR\tI\tD\tE\tS\tTotal\tTime (s)"<<endl;	
 		cout<<"\t"<<B<<"\t"<<R<<"\t"<<I<<"\t"<<D<<"\t"<<E<<"\t"<<S<<"\t"<<total<<"\t"<<ttime<<endl;
+	   if (XE>0) cout<<"Notice: "<<XE<<" pathway(s) classification took more than "<<(param.maxtime/1000)<<" seconds (maxtime).\n        Consider increasing the maxtime parameter."<<endl;
 		cout<<"===============================================================================\n";	
 		if (param.verbose) {
 		    FileOutput<<"\n================================= INFO =======================================\n";
@@ -997,6 +1605,7 @@ int main(int nargc, char** argv) {
 			}
 			FileOutput<<"*Inside: number of time a node is inside another path;K: K nodes;NK: non-K nodes\n";
 			FileOutput<<"\n================================ RESULTS ======================================\n";
+			if (XE>0) FileOutput<<"Notice: "<<XE<<" pathway(s) classification took more than "<<(param.maxtime/1000)<<" seconds (maxtime).\n        Consider increasing the maxtime parameter."<<endl;
 			FileOutput<<"\tB\tR\tI\tD\tE\tS\tTotal\tTime (s)"<<endl;
 			FileOutput<<"\t"<<B<<"\t"<<R<<"\t"<<I<<"\t"<<D<<"\t"<<E<<"\t"<<S<<"\t"<<total<<"\t"<<ttime<<endl;
 		}
@@ -1121,7 +1730,7 @@ void load_attributes(char* filename) {
      int count=0;
 	 attributes.clear();
    try {
-        while(std::getline(file, line))
+        while(getline(file, line))
         {
 			if (line.find("#")!=0&&line.find("%")!=0&&line.length()>0) {
 				std::stringstream   linestream(line);
@@ -1190,16 +1799,18 @@ std::map<int,int> load_edge(char* filename, std::vector<edge> &edge_list) {
         std::string                 from;
         std::string                 to;
         int dist;
-
+	float total_line=0;
    try {
-        while(std::getline(file, line))
+        while(getline(file, line))
         {
             std::stringstream   linestream(line);
             // std::getline(linestream, data, '\t');
             std::vector<std::string> tokens;
             std::string token;
-            if (line.find("#")!=0&&line.find("%")!=0&&line.length()>0) {
-                while(std::getline(linestream, token, '\t')) tokens.push_back(token); 
+			//line.erase(line.find_last_not_of(" \n\r\t")+1);
+            if (line.find("#")!=0&&line.find("%")!=0&&!line.empty()) {
+                total_line++;
+				while(std::getline(linestream, token, '\t')) tokens.push_back(token); 
                 //CASE 1. WE have space
 				from="";
 				to="";
@@ -1216,18 +1827,18 @@ std::map<int,int> load_edge(char* filename, std::vector<edge> &edge_list) {
                 if (tokens.size()>2) dist=atoi(tokens[2].c_str());
 				if (dist<=0.0f) dist=1.0f; //--Don't permit negative distance
                  edge t;             
-                 t.from=add_node(from);
-                 t.to=add_node(to);
+				 t.from=add_node(from);
+				 t.to=add_node(to);
 				 t.dist=dist; 
 				 
 				 local_node.insert ( std::pair<int,int>(t.from,0));
 				 if (t.to!=-1) local_node.insert ( std::pair<int,int>(t.to,0));
 				 
-                 if (t.to!=t.from) edge_list.push_back(t);
+                 if (t.to!=t.from)  edge_list.push_back(t);
             }
         }
    } catch(const std::exception& e) {}   
-   cout<<"Done loading "<<filename<<"..."<<endl;
+   cout<<"Done loading "<<filename<<"... ("<<local_node.size()<<" nodes, "<<total_line<<" edges)"<<endl;
    file.close();
   return(local_node);
 } 
@@ -1260,6 +1871,9 @@ void output_header(char** argv) {
       if (param.found_attributes) cout<<"Attributes       : "<<param.attributes<<endl; 
 	  cout<<"Nodes in networkX: "<<total_nonk_node<<endl;   
       cout<<"Nodes in networkY: "<<total_n_g2<<endl; 
+	  //cout<<"Edges in networkX: "<<edge_list_g1.size()<<endl;   
+      //cout<<"Edges in networkY: "<<edge_list_g2.size()<<endl; 
+	  
       if (param.found_attributes)  {
 		  cout<<"Attributes|count : "<<uniques_attributes.size()<<endl;   
 		  for(map<string,int>::iterator it = uniques_attributes.begin(); it != uniques_attributes.end(); ++it) {
@@ -1295,14 +1909,26 @@ void output_header(char** argv) {
       cout<<"Maxdistance      : "<<param.maxdistance<<endl;       
       cout<<"Maxnode          : "<<param.maxnode<<endl;       	  
 	  cout<<"Maxtime (s)      : "<<(param.maxtime/1000)<<endl;    
-	  if (param.max_individual_path!=100) cout<<"Maxpath          : "<<param.max_individual_path<<endl; 
-	  
+	  cout<<"Maxpathnumber    : "<<param.max_individual_path<<endl; 	                                             
 	  cout<<"\n-=[Miscellaneous]=-"<<endl;
  	  if (param.seed<0) {
 		  cout<<"Seed             : clock time"<<endl;      
 	  } else {
 		  cout<<"Seed             : "<<param.seed<<endl;      
 	  }  
+	 cout<<"K nodes ordering : strategy "<<param.strategy<<endl;      
+	  switch(param.heuristic) {
+		  case 1:cout<<"Heuristic        : BRIDES     (1)"<<endl;break;
+		  case 2:cout<<"Heuristic        : BRIDES_YEN (2)"<<endl;break;
+		  case 3:cout<<"Heuristic        : BRIDES_YC  (3)"<<endl;break;
+		  case 4:cout<<"Heuristic        : BRIDES_EC  (4)"<<endl;break;
+		  case 5:cout<<"Heuristic        : DFS        (5)"<<endl;break;
+	  }
+	  
+	  
+	  if (param.maxthread!=0) {
+		  cout<<"Maxthread        : "<<param.maxthread<<endl;      
+	  }
 	  if (param.verbose) 
 		  cout<<"Output file      : "<<param.outputfile<<endl;      
 	  cout<<"\n===============================================================================\n";	
@@ -1341,9 +1967,9 @@ void output_header(char** argv) {
 			  if (param.random!=-1) {		
 				FileOutput<<"Running mode     : random"<<endl;  
 				if (param.random<1.0) {
-					FileOutput<<"Investigated     : "<<(param.random*100)<<"% ("<<(int)(total_paths*param.random)<<")"<<endl; 
+					FileOutput<<"Investigated path: "<<(param.random*100)<<"% ("<<(int)(total_paths*param.random)<<")"<<endl; 
 				} else {
-					FileOutput<<"Investigated     : "<<param.random<<endl;  
+					FileOutput<<"Investigated path: "<<param.random<<endl;  
 				}
 			  } else {
 			    FileOutput<<"Running mode     : normal"<<endl;
@@ -1362,13 +1988,25 @@ void output_header(char** argv) {
 			  FileOutput<<"Maxdistance      : "<<param.maxdistance<<endl;       
 			  FileOutput<<"Maxnode          : "<<param.maxnode<<endl;       	  
 			  FileOutput<<"Maxtime (s)      : "<<(param.maxtime/1000)<<endl;      
-			  if (param.max_individual_path!=100) FileOutput<<"Maxpath          : "<<param.max_individual_path<<endl; 
+			  FileOutput<<"Maxpathnumber    : "<<param.max_individual_path<<endl; 	                                             
+			  
 			  FileOutput<<"\n-=[Miscellaneous]=-"<<endl;
 			  if (param.seed<0) {
 				  FileOutput<<"Seed            : clock time"<<endl;      
 			  } else {
 				  FileOutput<<"Seed             : "<<param.seed<<endl;      
 			  }  
+			FileOutput<<"K nodes ordering : strategy "<<param.strategy<<endl;      
+			  switch(param.heuristic) {
+				  case 1:FileOutput<<"Heuristic        : BRIDES     (1)"<<endl;break;
+				  case 2:FileOutput<<"Heuristic        : BRIDES_YEN (2)"<<endl;break;
+				  case 3:FileOutput<<"Heuristic        : BRIDES_YC  (3)"<<endl;break;
+				  case 4:FileOutput<<"Heuristic        : BRIDES_EC  (4)"<<endl;break;
+				  case 5:FileOutput<<"Heuristic        : DFS        (5)"<<endl;break;
+			  }
+			  if (param.maxthread!=0) {
+				  FileOutput<<"Maxthread        : "<<param.maxthread<<endl;      
+			  }
 			  if (param.verbose) 
 				  FileOutput<<"verbose          : "<<param.outputfile<<endl;  
 			  FileOutput<<"\n===============================================================================\n";	
@@ -1389,21 +2027,25 @@ void help(){
 		printf("\n-attributes=file  [filename for node attributes]");
 		printf("\n-usedist          [Use edge distances found in network files]");
 		//printf("\n-invdist          [Use the inverse of edge distances found in network files]");
-		printf("\nK=B               [attributes to considers as K separated by comma e.g. A,B,C]");
-        printf("\nNK=A              [attributes to considers as non-K]");
+		printf("\n-K=B,C            [attributes to considers as K separated by comma e.g. A,B,C]");
+        printf("\n-NK=A             [attributes to considers as non-K]");
 		printf("\n-random=XXX       [sample XXX random pathways]");
 		printf("\n-first=1          [first group of path to process]");
         printf("\n-last=n           [last group of path to process]");
 		printf("\n-size=1000        [group size, default                         : 1000]");      
         printf("\n-maxdistance=100  [maximum path length to search, default      : 100]");
 		printf("\n-maxnodes=100     [maximum augmented node (K) to search,default: 100]");
-		printf("\n-maxtime=1        [maximum time for each path search, default  : 1 second]");
+		printf("\n-maxtime=10       [maximum time for each path search, default  : 10 second]");
+		printf("\n-maxpathnumber=100[maximum shortest-path return by Dijkstra    : 100]");
+		printf("\n-maxthread=XXX    [maximum number of OpenMP threads to use, default unlimited]");
         printf("\n-output=file      [output to file each path information: taxa, distance, etc.]");
 		printf("\n-seed=999         [set the random seed generator to a specific seed]");
+		printf("\n-strategy=1       [set the K nodes ordering strategy: (1) maxdist.,(2) sum.]");
+		printf("\n-heuristic=1      [1-BRIDES (default), 2-BRIDES_YEN, 3-BRIDES_YC, 4-BRIDES_EC]");
 		printf("\n\nExample : \n: ./BRIDES -X=sample_g1.txt -Y=sample_g2.txt\n\n");
 }
 
-
+//--Get each parameters
 int ExtraireDonnees(const char * chaine, char *champs, char * contenu){
 
 	int cpt=0,i;
@@ -1456,6 +2098,7 @@ int readParameters(Parameters *param, char **argv, int nargc){
 		(*param).maxtime=10000; //--Maxtime in millsecond (10s per path)
 		(*param).size=1000; //-- default group size
 		(*param).max_individual_path=100; //Since we keep all shortest path, this is the number of shortest path investigated for each path
+		(*param).maxthread=0; 
         (*param).seed=-1;
 		(*param).first=0;
 		(*param).last=0;
@@ -1467,7 +2110,9 @@ int readParameters(Parameters *param, char **argv, int nargc){
 		 sprintf((*param).attributes,"%s","");
          sprintf((*param).outputfile,"%s","");		 
 		 sprintf((*param).debugfile,"%s","");
-         (*param).info=false;
+         (*param).heuristic=1;
+		 (*param).strategy=1;
+		 (*param).info=false;
 		 (*param).directed=false;         
 		 (*param).verbose=false;         
 		 (*param).found_g1=false;
@@ -1553,35 +2198,31 @@ int readParameters(Parameters *param, char **argv, int nargc){
                               (*param).maxtime = atoi(contenu)*1000;
 			}
 			//======= MAXPATH ==============       
-            else if(strcmp("maxpath",champs) == 0){                                
+            else if(strcmp("maxpathnumber",champs) == 0){                                
                               (*param).max_individual_path = atoi(contenu);
 			}
 			//======== input file ==============
 			else if(strcmp("g1",champs) == 0||strcmp("X",champs) == 0||strcmp("x",champs) == 0){
                                 sprintf((*param).graph1,"%s",contenu);	
                                 FILE *Input1;
-                                if ((Input1 = fopen((*param).graph1,"r"))!=0) {(*param).found_g1=true;}
-                                fclose(Input1);
+                                if ((Input1 = fopen((*param).graph1,"r"))!=0) {(*param).found_g1=true;fclose(Input1);}
 			}
             else if(strcmp("g2",champs) == 0||strcmp("Y",champs) == 0||strcmp("y",champs) == 0){
                                 sprintf((*param).graph2,"%s",contenu);	
                                // (*param).use_g2=true;
                                  FILE *Input1;
-                                if ((Input1 = fopen((*param).graph2,"r"))!=0) {(*param).found_g2=true;}
-                                fclose(Input1);
-			}
+                                if ((Input1 = fopen((*param).graph2,"r"))!=0) {(*param).found_g2=true;fclose(Input1);}
+             }
 			 else if(strcmp("attributes",champs) == 0||strcmp("attr",champs) == 0||strcmp("A",champs) == 0){
                                 sprintf((*param).attributes,"%s",contenu);	
                                // (*param).use_g2=true;
                                  FILE *Input1;
-                                if ((Input1 = fopen((*param).attributes,"r"))!=0) {(*param).found_attributes=true;}
-                                fclose(Input1);
+                                if ((Input1 = fopen((*param).attributes,"r"))!=0) {(*param).found_attributes=true;fclose(Input1);}
 			}
-           //======== input file ==============
-			/*else if(strcmp("weight",champs) == 0){
-                            sprintf((*param).inputweightfile,"%s",contenu);				
-                                (*param).use_weight=true;
-			}*/
+           //======== heuristic ================
+			else if(strcmp("heuristic",champs) == 0){
+                  (*param).heuristic = atoi(contenu);
+			}
 			//============ output file ===============
 			// else if(strcmp("outputfile",champs) == 0){
 				// sprintf((*param).outputfile,"%s",contenu);	
@@ -1591,9 +2232,19 @@ int readParameters(Parameters *param, char **argv, int nargc){
 			else if(strcmp("directed",champs) == 0){
 					(*param).directed = true;
 			}
+			 //======== heuristic ================
+			else if(strcmp("strategy",champs) == 0){
+                  (*param).strategy = atoi(contenu);
+			}
 			//============= info   ===============
-			else if(strcmp("info",champs) == 0){
+			else if(strcmp("info",champs) == 0||strcmp("debug",champs) == 0){
 					(*param).info = true;
+			}
+			//============= thread   ===============
+			else if(strcmp("maxthread",champs) == 0){
+					(*param).maxthread =  atoi(contenu);
+					omp_set_dynamic(0);     
+					omp_set_num_threads((*param).maxthread); 
 			}
 			//============= version ===============
 			else if(strcmp("version",champs) == 0){
