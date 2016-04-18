@@ -106,7 +106,8 @@ struct Parameters {
 		bool use_dist;   //--by default false, (dist set to 1, unweighted)
 		bool inv_dist;  //-- use the inverse of the distance
         bool directed;  //-- Network are directed 
-
+		bool removeK_from_X; //Remove k node from networkX
+		
 		int seed;       //-- Random seed
 		float random;   //-- Number of random path to classify
 		int size;       //-- Size of group 
@@ -1583,12 +1584,12 @@ int main(int nargc, char** argv) {
 		time_t endtime = time(0);
 		double ttime=difftime(endtime, starttime);
 		cout<<"\n================================= INFO =======================================\n";
-		cout<<" (B) Breakthrough : pathway impossible in network X but possible in network Y.\n";
-		cout<<" (R) Roadblock    : pathway possible in network X but impossible in network Y.\n";
-		cout<<" (I) Impasse      : pathway impossible in both X and Y networks.\n";
-		cout<<" (D) Detour       : pathway shorter in network X than in network Y.\n";
-		cout<<" (E) Equal        : pathway of same length in networks X and Y.\n";
-		cout<<" (S) Shortcut     : pathway longer in network X than in network Y.\n";
+		cout<<" (B) Breakthrough : pathway impossible in network X but possible in network Y\n";
+		cout<<" (R) Roadblock    : pathway possible in network X but impossible in network Y\n";
+		cout<<" (I) Impasse      : pathway impossible in both networks, X and Y\n";
+		cout<<" (D) Detour       : pathway shorter in network X than in network Y\n";
+		cout<<" (E) Equal        : pathway of same length in networks X and Y\n";
+		cout<<" (S) Shortcut     : pathway longer in network X than in network Y\n";
 		// cout<<"\n============================== STATISTICS ====================================\n";
 		// cout<<"NK\tB\tR\tI\tD\tE\tS\tInside\tAttribute"<<endl;
 		// for (int i=0; i<total_n;i++) {
@@ -1609,12 +1610,12 @@ int main(int nargc, char** argv) {
 		cout<<"===============================================================================\n";	
 		if (param.verbose) {
 		    FileOutput<<"\n================================= INFO =======================================\n";
-			FileOutput<<" (B) Breakthrough : pathway impossible in network X but possible in network Y.\n";
-			FileOutput<<" (R) Roadblock    : pathway possible in network X but impossible in network Y.\n";
-			FileOutput<<" (I) Impasse      : pathway impossible in both X and Y networks.\n";
-			FileOutput<<" (D) Detour       : pathway shorter in network X than in network Y.\n";
-			FileOutput<<" (E) Equal        : pathway of same length in networks X and Y.\n";
-			FileOutput<<" (S) Shortcut     : pathway longer in network X than in network Y.\n";
+			FileOutput<<" (B) Breakthrough : pathway impossible in network X but possible in network Y\n";
+			FileOutput<<" (R) Roadblock    : pathway possible in network X but impossible in network Y\n";
+			FileOutput<<" (I) Impasse      : pathway impossible in both networks, X and Y\n";
+			FileOutput<<" (D) Detour       : pathway shorter in network X than in network Y\n";
+			FileOutput<<" (E) Equal        : pathway of same length in networks X and Y\n";
+			FileOutput<<" (S) Shortcut     : pathway longer in network X than in network Y\n";
 			FileOutput<<"\n============================== STATISTICS ====================================\n";
 			FileOutput<<"Name (NK)\tB\tR\tI\tD\tE\tS\tInside\tAttribute"<<endl;
 			for (int i=0; i<total_n;i++) {
@@ -1707,17 +1708,18 @@ void build_adjacency_list() {
 		edge e=edge_list_g1[i];		
 		//DO we allow colored nod in networkX?
 		//if (e.to!=-1&&!Nsb[e.to]&&!Nsb[e.from]&&Nsu[e.to]&&Nsu[e.from])
+		
 		if (e.to!=-1&&Nsu[e.to]&&Nsu[e.from]) {
-			undirected_adjlist_g1[e.from].push_back(e.to);
-			float dist=e.dist;
-			if (param.inv_dist) dist=1.0f/dist;
-			if (!param.use_dist) dist=1.0f;
-			
-			undirected_adjlist_g1_dist[e.from].insert(std::pair<int,float>(e.to,dist));
-			if (!param.directed) {
-				undirected_adjlist_g1[e.to].push_back(e.from);
-				undirected_adjlist_g1_dist[e.to].insert(std::pair<int,float>(e.from,dist));
-			}
+				undirected_adjlist_g1[e.from].push_back(e.to);
+				float dist=e.dist;
+				if (param.inv_dist) dist=1.0f/dist;
+				if (!param.use_dist) dist=1.0f;
+				
+				undirected_adjlist_g1_dist[e.from].insert(std::pair<int,float>(e.to,dist));
+				if (!param.directed) {
+					undirected_adjlist_g1[e.to].push_back(e.from);
+					undirected_adjlist_g1_dist[e.to].insert(std::pair<int,float>(e.from,dist));
+				}
 		} 		
 	}
 	for (int i=0; i<edge_list_g2.size();i++) {
@@ -2043,31 +2045,31 @@ void output_header(char** argv) {
 
 void help(){
 	printf("\n%s",description);	
-	printf("\nUsage :\nBRIDES -X=[filename] -Y=[filename] -output=[filename]\n");
+	printf("\nUsage :\nBRIDES -X=[filename] -Y=[filename] -outfile=[filename]\n");
 	printf("       -maxdistance=[1..n-1] -maxnodes=[1..n-1]\n");
          printf("\nParameters :");
-        printf("\n-X=file           [filename for network X]");
-        printf("\n-Y=file           [filename for network Y]");
+        printf("\n-X=file           [filename for original network X]");
+        printf("\n-Y=file           [filename for augmented network Y]");
 		printf("\n-A=file           [filename for node attributes]");
 		printf("\n-usedist          [use edge distances found in network files]");
-		printf("\n-invdist          [use the inverse of edge distances found in network files]");
-		printf("\n-removeK_from_X   [remove added nodes (K) from networkX if ]");
-		printf("\n-K=B,C            [attributes to considers as added node (K) separated by comma]");
-        printf("\n-NK=A             [attributes to considers as non-added node (NK)]");
-		printf("\n-random=XXX       [sample XXX random pathways]");
+		printf("\n-invdist          [use the inverse of edge distances]");
+		printf("\n-directed         [specifies that the networks are directed]")
+		printf("\n-K=B,C            [attributes to consider as added nodes (K), e.g. B,C]");
+        printf("\n-NK=A             [attributes to considers as original nodes (NK), e.g. A]");
+		printf("\n-random=XX        [sample XX random pathways]");
 		printf("\n-first=1          [first group of path to process]");
         printf("\n-last=n           [last group of path to process]");
-		printf("\n-size=1000        [group size, default                         : 1000]");      
-        printf("\n-maxdistance=100  [maximum path length to search, default      : 100]");
-		printf("\n-maxnodes=100     [maximum added node (K) to search,default    : 100]");
-		printf("\n-maxtime=10       [maximum time for each path search, default  : 10 second]");
-		printf("\n-maxpathnumber=100[maximum shortest-path return by Dijkstra    : 100]");
+		printf("\n-size=1000        [group size, default: 1000]");      
+        printf("\n-maxdistance=100  [maximum distance to an added node (K), default: 100]");
+		printf("\n-maxnodes=100     [maximum number of added nodes to examine, default: 100]");
+		printf("\n-maxtime=10       [maximum time for each path search, default: 10 second]");
+		printf("\n-maxpathnumber=100[maximum number of shortest-path return by Dijkstra: 100]");
 		printf("\n-maxthread=XXX    [maximum number of OpenMP threads to use, default unlimited]");
-        printf("\n-output=file      [output to file each path information: taxa, distance, etc.]");
+        printf("\n-outfile=file      [output path information into file: taxa, distance, etc.]");
 		printf("\n-seed=999         [set the random seed generator to a specific seed]");
 		printf("\n-strategy=1       [set the K nodes ordering strategy: (1) maxdist.,(2) sum.]");
 		printf("\n-heuristic=1      [1-BRIDES, 2-BRIDES_Y, 3-BRIDES_YC, 4-BRIDES_EC,5-DFS]");
-		printf("\n\nExample : \n: ./BRIDES -X=sample_g1.txt -Y=sample_g2.txt\n\n");
+		printf("\n\nExample : \n: ./BRIDES -X=networkX.txt -Y=networkY.txt\n\n");
 }
 
 //--Get each parameters
@@ -2145,6 +2147,7 @@ int readParameters(Parameters *param, char **argv, int nargc){
          (*param).found_attributes=false;
 		 (*param).use_dist=false;
 		 (*param).inv_dist=false;
+		 (*param).removeK_from_X=false;
          //(*param).use_g2=false;
          //sprintf((*param).outputfile,"%s","output.txt");
 		/*(*param).distance_method=0;  //default cosine distance
@@ -2164,7 +2167,7 @@ int readParameters(Parameters *param, char **argv, int nargc){
                             return -1;
             }
 			//======== debug ==============
-			else if(strcmp("verbose",champs) == 0||strcmp("output",champs) == 0){
+			else if(strcmp("verbose",champs) == 0||strcmp("output",champs) == 0||strcmp("outfile",champs) == 0){
 							sprintf((*param).outputfile,"%s",contenu);
 							(*param).verbose=true;							
             }  
@@ -2253,6 +2256,9 @@ int readParameters(Parameters *param, char **argv, int nargc){
 				// sprintf((*param).outputfile,"%s",contenu);	
                                 // //printf("%s\n",(*param).outputfile );
 			// }
+			else if(strcmp("removeK_from_X",champs) == 0){
+					(*param).removeK_from_X = true;
+			}
 			//============= version ===============
 			else if(strcmp("directed",champs) == 0){
 					(*param).directed = true;
