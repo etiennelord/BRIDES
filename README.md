@@ -1,5 +1,5 @@
 # BRIDES
-Compares the evolution of an original network X to an augmented network Y by counting the number of Breakthroughs, Roadblocks, Impasses, Detours, Equals, Shortcuts (BRIDES) paths. 
+Compares the evolution of an original network X to an augmented network Y by counting the number of Breakthroughs, Roadblocks, Impasses, Detours, Equal paths, and Shortcuts (BRIDES). 
 
 ## About
 
@@ -60,7 +60,7 @@ Where the Makefile.VERSION is either Makefile.Linux, Makefile.MacOSX, Makefile.M
 
 ## Usage 
 
-Refer to the manual in the ** doc ** directory.
+Refer to the manual in the ** Manual ** directory.
 
 A) Using the R version
 
