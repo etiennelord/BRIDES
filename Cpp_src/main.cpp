@@ -2053,7 +2053,7 @@ void help(){
 		printf("\n-A=file           [filename for node attributes]");
 		printf("\n-usedist          [use edge distances found in network files]");
 		printf("\n-invdist          [use the inverse of edge distances]");
-		printf("\n-directed         [specifies that the networks are directed]")
+		printf("\n-directed         [specifies that the networks are directed]");
 		printf("\n-K=B,C            [attributes to consider as added nodes (K), e.g. B,C]");
         printf("\n-NK=A             [attributes to considers as original nodes (NK), e.g. A]");
 		printf("\n-random=XX        [sample XX random pathways]");
