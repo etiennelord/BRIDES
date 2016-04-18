@@ -1635,7 +1635,7 @@ int main(int nargc, char** argv) {
 					FileOutput<<node_name[i]<<"\t"<<statistics[i][6]<<"\t"<<attributes[i]<<endl;
 				}
 			}
-			FileOutput<<"*Inside: number of time a node is inside another path;K: K nodes;NK: non-K nodes\n";
+			FileOutput<<"*Inside: number of time a node belongs to another path;\n K: added nodes;NK: original nodes\n";
 			FileOutput<<"\n================================ RESULTS ======================================\n";
 			if (XE>0) FileOutput<<"Notice: "<<XE<<" pathway(s) classification took more than "<<(param.maxtime/1000)<<" seconds (maxtime).\n        Consider increasing the maxtime parameter."<<endl;
 			FileOutput<<"\tB\tR\tI\tD\tE\tS\tTotal\tTime (s)"<<endl;
@@ -1909,7 +1909,7 @@ void output_header(char** argv) {
 		  }
 	  }	   
       if (!param.nonK.empty()) cout<<"non-K nodes attr.: "<<param.nonK<<endl;
-	  cout<<"Total K nodes    : "<<total_k_node<<endl; 
+	  cout<<"Total added nodes: "<<total_k_node<<endl; 
 	  if (!param.K.empty()) cout<<"K nodes attr.    : "<<param.K<<endl;
 	  cout<<"Total paths      : "<<total_paths<<endl; 
       cout<<"\n-=[Run parameters]=-"<<endl;
@@ -1986,7 +1986,7 @@ void output_header(char** argv) {
 			  
 			  
 			  if (!param.nonK.empty()) FileOutput<<"non-K nodes attr.: "<<param.nonK<<endl;
-			  FileOutput<<"Total K nodes    : "<<total_k_node<<endl; 
+			  FileOutput<<"Total added nodes: "<<total_k_node<<endl; 
 			  if (!param.K.empty()) FileOutput<<"K nodes attr.    : "<<param.K<<endl;
 			  FileOutput<<"Total paths      : "<<total_paths<<endl; 
       
@@ -2036,7 +2036,7 @@ void output_header(char** argv) {
 				  FileOutput<<"Maxthread        : "<<param.maxthread<<endl;      
 			  }
 			  if (param.verbose) 
-				  FileOutput<<"verbose          : "<<param.outputfile<<endl;  
+				  FileOutput<<"Output file      : "<<param.outputfile<<endl;  
 			  FileOutput<<"\n===============================================================================\n";	
 	  }
 			
