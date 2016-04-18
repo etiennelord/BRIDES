@@ -1,0 +1,11 @@
+all: clean BRIDES test
+
+BRIDES: main.cpp
+	g++ main.cpp -o brides -fopenmp -L/usr/local/Cellar/gcc/5.3.0/lib/gcc/5
+	
+test:
+	./brides -X=sample/t0.txt -Y=sample/t1.txt
+	
+clean:
+	rm -rf *.o
+	rm -rf brides

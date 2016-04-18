@@ -1,0 +1,111 @@
+===============================================================================
+| Program : BRIDES 2016                                                       |
+| Authors : Etienne Lord,Vladimir Makarenkov (Universite du Quebec a Montreal)|
+|           and Francois-Joseph Lapointe     (Universite de Montreal)         |
+| This program computes the similarities in path between two related networks.|
+===============================================================================
+
+Done loading euk_nonphoto1b.txt...
+Done loading euk_nonphoto2b.txt...
+
+=============================== PARAMETERS ====================================
+
+-=[Multicores support]=-
+Maximum threads  : 48
+Number of cores  : 48
+
+-=[Input files]=-
+Networks         : undirected
+NetworkX         : euk_nonphoto1b.txt
+NetworkY         : euk_nonphoto2b.txt
+Nodes in networkX: 326
+Nodes in networkY: 345
+Total K nodes    : 19
+Total paths      : 52975
+
+-=[Run parameters]=-
+Running mode     : normal
+Edge distance    : unweighted
+Group size       : 1000
+Number of groups : 53
+First group      : 1
+Last group       : 53
+Maxdistance      : 100
+Maxnode          : 100
+Maxtime (s)      : 10
+
+-=[Miscellaneous]=-
+Seed             : clock time
+
+===============================================================================
+
+============================ PARTIAL RESULTS ==================================
+Group	B	R	I	D	E	S	Total	CPU time (ms)
+41	0	27	973	0	0	0	1000	9000	
+27	0	52	948	0	0	0	1000	13540	
+35	0	34	966	0	0	0	1000	12640	
+7	0	63	937	0	0	0	1000	13330	
+11	0	23	977	0	0	0	1000	9170	
+18	0	95	905	0	0	0	1000	21650	
+34	0	51	949	0	0	0	1000	11450	
+25	0	29	971	0	0	0	1000	8500	
+24	0	67	933	0	0	0	1000	16180	
+1	0	63	937	0	0	0	1000	36970	
+20	0	97	903	0	0	0	1000	178690	
+2	0	120	880	0	0	0	1000	23150	
+14	0	79	921	0	0	0	1000	269820	
+21	0	106	894	0	0	0	1000	442220	
+16	0	139	861	0	0	0	1000	546820	
+33	0	121	879	0	0	0	1000	712740	
+15	0	147	853	0	0	0	1000	907570	
+12	0	166	834	0	0	0	1000	963440	
+45	0	114	886	0	0	0	1000	1035030	
+42	0	126	874	0	0	0	1000	995430	
+13	0	162	838	0	0	0	1000	1109780	
+28	0	122	878	0	0	0	1000	1063930	
+3	0	206	794	0	0	0	1000	1166780	
+30	0	212	788	0	0	0	1000	1241830	
+38	0	141	859	0	0	0	1000	1235010	
+46	0	150	850	0	0	0	1000	1347960	
+53	0	181	794	0	0	0	975	1351390	
+37	0	237	763	0	0	0	1000	1365550	
+48	0	177	823	0	0	0	1000	1483750	
+26	0	218	782	0	0	0	1000	1548000	
+51	0	194	806	0	0	0	1000	1660150	
+19	0	229	771	0	0	0	1000	1637750	
+17	0	212	788	0	0	0	1000	1705560	
+5	0	191	809	0	0	0	1000	1751150	
+8	0	197	803	0	0	0	1000	1560950	
+6	0	79	921	0	0	0	1000	3640	
+36	0	192	808	0	0	0	1000	1729410	
+39	0	163	837	0	0	0	1000	1821840	
+50	0	223	777	0	0	0	1000	2075560	
+32	0	174	826	0	0	0	1000	2132670	
+40	0	217	783	0	0	0	1000	2204350	
+49	0	215	785	0	0	0	1000	2209270	
+22	0	264	736	0	0	0	1000	2478910	
+52	0	326	674	0	0	0	1000	2470580	
+29	0	293	707	0	0	0	1000	2490140	
+44	0	282	718	0	0	0	1000	2512970	
+23	0	224	776	0	0	0	1000	2565450	
+31	0	341	659	0	0	0	1000	2656630	
+9	0	291	709	0	0	0	1000	2683470	
+10	0	50	950	0	0	0	1000	620	
+43	0	315	685	0	0	0	1000	2747140	
+47	0	351	649	0	0	0	1000	3049860	
+4	0	357	643	0	0	0	1000	1988940	
+
+================================= INFO =======================================
+(B) reakthrough : pathway impossible in network X but possible in network Y.
+(R) oadblock    : pathway possible in network X but impossible in network Y.
+(I) mpasse      : pathway impossible in both X and Y networks.
+(D) etour       : pathway shorter in network X than in network Y.
+(E) qual        : pathway of same length in networks X and Y.
+(S) hortcut     : pathway longer in network X than in network Y.
+
+================================ RESULTS ======================================
+
+================================ RESULTS ======================================
+	B	R	I	D	E	S	Total	Time (s)
+	0	8905	44070	0	0	0	52975	511
+===============================================================================

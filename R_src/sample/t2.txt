@@ -1,0 +1,12 @@
+x1	x2
+x2	x4
+x4	x5
+x4	x3
+x2	y6
+x3	y6
+x3	y7
+x4	y7
+x1	y8
+x4	y8
+x5	y8
+x6	
