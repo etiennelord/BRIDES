@@ -1,53 +1,51 @@
 # BRIDES
-Compares the evolution of an original network X to an augmented network Y by counting the number of Breakthroughs, Roadblocks, Impasses, Detours, Equal paths, and Shortcuts (BRIDES). 
-
+This program allows the user to follow the evolution of an original network X into an augmented network Y by counting the number of Breakthroughs, Roadblocks, Impasses, Detours, Equal paths and Shortcuts (BRIDES) in the network Y. 
 ## About
 
-This is the R and C++ source code, some sample networks and some genome similarity networks for the BRIDES software.
+This repository includes the R and C++ source codes of BRIDES, examples of simple evolving networks and examples of real genome similarity networks which can be given as input of our program
 
-The BRIDES software, given and  original network X  its augmented network Y (with additional nodes and edges) calculates the number of Breakthroughs, Roadblocks, Impasses, Detours, Equal paths and Shortcuts (BRIDES) characterizing the evolution of X into Y.
+Given an original network X and its augmented network Y (with additional nodes and edges), the BRIDES program calculates the number of Breakthroughs, Roadblocks, Impasses, Detours, Equal paths and Shortcuts characterizing the evolution of X into Y.
 
-Six types of paths are thus possibles:
+Six types of paths are thus possible:
 
-1. Breakthrough: pathway that is impossible in network X but possible in network Y. 
-2. Roadblock: pathway that is possible in network X but impossible in network Y.
-3. Impasse: pathway that is impossible in both networks, X and Y.
-4. Detour: pathway that is shorter in network X than in network Y.
-5. Equal: pathway that has the same length in networks X and Y.
-6. Shortcut: pathway that is longer in network X than in network Y.
+1.	Breakthrough: a path that is impossible in network X, but is possible in network Y. 
+2.	Roadblock: a path that is possible in network X, but is impossible in network Y.
+3.	Impasse: a path that is impossible in both networks, X and Y.
+4.	Detour: a path that is shorter in network X than in network Y.
+5.	Equal: a path that has the same length in networks X and Y.
+6.	Shortcut: a path that is longer in network X than in network Y.
 
-The R version is suitable for small networks (less than 1,000 nodes) while the C++ version can handle millions of nodes.
+The R version of BRIDES is suitable for small networks (with less than 1,000 nodes), while the C++ version can handle millions of nodes.
 
 ## Installation
 
-1. clone the git repository to your computer or download the zip file
+1. Clone the git repository to your computer or download the corresponding zip file
 
 ```
 git clone https://github.com/etiennelord/COMPONENT-GRAPHER.git
 ```
 
-2. Follow the appropriate step for the R or C++ version
+2. Follow the following steps (depending of the BRIDES version):
 
 A) For the R version
 
-From the R_src directory, entre the R shell
+From the R_src directory, enter the R shell. Then execute: 
 
 ```
-install.packages("igraph")
 install.packages("SDDE")
 source("BRIDES.R")
 ```
 
 B) For the C++ version
 
-This version requires **gcc version 4.5** or higher. 
-On MacOSX, to use OpenMP, that likely required the installation of [Homebrew](http://brew.sh/) then running the command:
+This version requires the use of **gcc version 4.5** or higher for the C++ compiler. 
+On MacOSX, the use of OpenMP will require the installation of [Homebrew](http://brew.sh/) and the execution of:
 
 ```
 brew install gcc --without-multilib
 ```
 
-- From the Cpp_src directory
+- From the Cpp_src directory, execute:
 
 ```C
 // Using a Makefile
@@ -56,13 +54,13 @@ make -f Makefile.VERSION
 // Manual compilation
 g++ -O3 main.cpp -o bride -fopenmp
 ```
-Where the Makefile.VERSION is either Makefile.Linux, Makefile.MacOSX, Makefile.MACOSX_wo_OPENMP or Makefile.Windows . 
+where the Makefile.VERSION is either Makefile.Linux, or Makefile.MacOSX, or Makefile.MACOSX_wo_OPENMP, or Makefile.Windows . 
 
 ## Usage 
 
-Refer to the manual in the ** Manual ** directory.
+Also see the program manual in the **Manual** directory.
 
-A) Using the R version
+A) Using the R version:
 
 ```R
 ## Load the functions and dependencies
@@ -80,13 +78,13 @@ BRIDES(t0,t1)
 BRIDES(u0, A="2")
 ```
 
-B) Using the C++
+B) Using the C++ version: 
 
 ```
 ## Execute BRIDES on networks t0 and t1
 ./brides -X=sample/t0.txt -Y=sample/t1.txt
 
-## Execute BRIDES on directed networks U0 with an attribute file
+## Execute BRIDES on directed network U0 with an attribute file
 ./brides -X=sample/U0.txt -A=sample/U0.attr.txt -K=2 -directed
 ```
 
@@ -95,12 +93,12 @@ B) Using the C++
 The R version of BRIDES depends on the following R libraries:
 
 ##### [SDDE](https://cran.r-project.org/web/packages/SDDE/index.html)  
-Wrapper to some function of the igraph library and doParallel package.
+Wrapper to some useful graph manipulation functions of the 'igraph' library and the 'doParallel' R package.
 ##### [igraph](http://igraph.org/r/)
-A collection of network analysis tools including shortest-path analysis.   
+A collection of network handling tools including shortest-path analysis.   
 ##### [doParallel](https://cran.r-project.org/web/packages/doParallel/index.html)
-Foreach Parallel adaptor for the 'parallel' package.
+For-each parallel adaptor for the 'parallel' R package.
 
-The C++ version is optimize to use OpenMP for dispatching tasks to different threads.
+The C++ version of the program is optimized for the use of OpenMP and dispatching tasks to different threads.
 ##### [OpenMP](http://openmp.org/wp/)  
 
