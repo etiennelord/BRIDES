@@ -49,9 +49,11 @@ const char *description = "=====================================================
                           "| Program : BRIDES 2016                                                       |\n"
                           "| Authors : Etienne Lord,Vladimir Makarenkov (Universite du Quebec a Montreal)|\n"
                           "|           and Francois-Joseph Lapointe     (Universite de Montreal)         |\n"
-                          "| This program computes the similarities in paths between related networks.   |\n"
+                          "| This program implements a fast algorithm for characterizing evolving        |\n"
+						  "| similarity networks using Breakthroughs, Roadblocks, Impasses, Detours,     |\n"
+						  "| Equals and Shortcuts.                                                       |\n"
                           "===============================================================================\n";
-
+		
 const char *startMessage = "BRIDES V.1.0 - (2016) by Etienne Lord, V. Makarenkov, F-J. Lapointe\n"; 
 
 /////////////////////////////////////////////////////////////////////////////////////
@@ -241,7 +243,7 @@ void debug_info() {
 	for (int i=0; i<total_n;i++) {
 		cout<<node_name[i]<<"\t"<<i<<" \t"<<Nsb[i]<<"\t"<<attributes[i]<<"\t"<<node_id_g1.count(i)<<"\t"<<node_id_g2.count(i)<<endl;
 	}
-	cout<<"NetworkX:"<<endl;
+	cout<<" NetworkX:"<<endl;
 	for (int i=0; i<edge_list_g1.size();i++) {
 			if (edge_list_g1[i].to!=-1) {
 				cout<<"|"<<node_name[edge_list_g1[i].from]<<"|-|"<<node_name[edge_list_g1[i].to]<<"|"<<endl;
@@ -249,7 +251,7 @@ void debug_info() {
 				cout<<"|"<<node_name[edge_list_g1[i].from]<<"|- "<<endl;
 			}
 	}
-	cout<<"NetworkY:"<<endl;
+	cout<<" NetworkY:"<<endl;
 	for (int i=0; i<edge_list_g2.size();i++) {
 			if (edge_list_g2[i].to!=-1) {
 				cout<<"|"<<node_name[edge_list_g2[i].from]<<"|-|"<<node_name[edge_list_g2[i].to]<<"|"<<endl;
@@ -1554,7 +1556,7 @@ int main(int nargc, char** argv) {
 	int XE=0;
 	int XD=0;
 	cout<<"\n============================ PARTIAL RESULTS ==================================\n";	
-	cout<<"Group\tB\tR\tI\tD\tE\tS\tTotal\tCPU time (ms)"<<endl;
+	cout<<" Group\tB\tR\tI\tD\tE\tS\tTotal\tCPU time (ms)"<<endl;
 	if (param.verbose) {
 		  FileOutput<<"\n============================ PARTIAL RESULTS ==================================\n";	
 		  FileOutput<<"src\tdest\tDist_X\tDist_Y\tBRIDES\tCPU time (ms)\tPath\tTaxa"<<endl;
@@ -1576,7 +1578,7 @@ int main(int nargc, char** argv) {
 		XD+=r[9];
 		#pragma omp critical 
 		{		
-			cout<<grp<<"\t"<<r[0]<<"\t"<<r[1]<<"\t"<<r[2]<<"\t"<<r[3]<<"\t"<<r[4]<<"\t"<<r[5]<<"\t"<<r[6]<<"\t"<<r[7]<<"\t"<<endl;		
+			cout<<" "<<grp<<"\t"<<r[0]<<"\t"<<r[1]<<"\t"<<r[2]<<"\t"<<r[3]<<"\t"<<r[4]<<"\t"<<r[5]<<"\t"<<r[6]<<"\t"<<r[7]<<"\t"<<endl;		
 		}
 	}
 	#pragma omp critical 
@@ -1584,12 +1586,12 @@ int main(int nargc, char** argv) {
 		time_t endtime = time(0);
 		double ttime=difftime(endtime, starttime);
 		cout<<"\n================================= INFO =======================================\n";
-		cout<<" (B) Breakthrough : pathway impossible in network X but possible in network Y\n";
-		cout<<" (R) Roadblock    : pathway possible in network X but impossible in network Y\n";
-		cout<<" (I) Impasse      : pathway impossible in both networks, X and Y\n";
-		cout<<" (D) Detour       : pathway shorter in network X than in network Y\n";
-		cout<<" (E) Equal        : pathway of same length in networks X and Y\n";
-		cout<<" (S) Shortcut     : pathway longer in network X than in network Y\n";
+		cout<<" (B) Breakthrough : path impossible in network X but possible in network Y\n";
+		cout<<" (R) Roadblock    : path possible in network X but impossible in network Y\n";
+		cout<<" (I) Impasse      : path impossible in both networks, X and Y\n";
+		cout<<" (D) Detour       : path shorter in network X than in network Y\n";
+		cout<<" (E) Equal        : path of same length in networks X and Y\n";
+		cout<<" (S) Shortcut     : path longer in network X than in network Y\n";
 		// cout<<"\n============================== STATISTICS ====================================\n";
 		// cout<<"NK\tB\tR\tI\tD\tE\tS\tInside\tAttribute"<<endl;
 		// for (int i=0; i<total_n;i++) {
@@ -1610,12 +1612,12 @@ int main(int nargc, char** argv) {
 		cout<<"===============================================================================\n";	
 		if (param.verbose) {
 		    FileOutput<<"\n================================= INFO =======================================\n";
-			FileOutput<<" (B) Breakthrough : pathway impossible in network X but possible in network Y\n";
-			FileOutput<<" (R) Roadblock    : pathway possible in network X but impossible in network Y\n";
-			FileOutput<<" (I) Impasse      : pathway impossible in both networks, X and Y\n";
-			FileOutput<<" (D) Detour       : pathway shorter in network X than in network Y\n";
-			FileOutput<<" (E) Equal        : pathway of same length in networks X and Y\n";
-			FileOutput<<" (S) Shortcut     : pathway longer in network X than in network Y\n";
+			FileOutput<<" (B) Breakthrough : path impossible in network X but possible in network Y\n";
+			FileOutput<<" (R) Roadblock    : path possible in network X but impossible in network Y\n";
+			FileOutput<<" (I) Impasse      : path impossible in both networks, X and Y\n";
+			FileOutput<<" (D) Detour       : path shorter in network X than in network Y\n";
+			FileOutput<<" (E) Equal        : path of same length in networks X and Y\n";
+			FileOutput<<" (S) Shortcut     : path longer in network X than in network Y\n";
 			FileOutput<<"\n============================== STATISTICS ====================================\n";
 			FileOutput<<"Name (NK)\tB\tR\tI\tD\tE\tS\tInside\tAttribute"<<endl;
 			for (int i=0; i<total_n;i++) {
@@ -1887,156 +1889,174 @@ void output_header(char** argv) {
 	cout<<"\n=============================== PARAMETERS ====================================\n";		
 	
 	//-- OpenMP
-	  cout<<"\n-=[Multicores support]=-"<<endl;
-	  cout<<"Maximum threads  : "<<omp_get_max_threads()<<endl;
-	  cout<<"Number of cores  : "<<omp_get_num_procs()<<endl;
+	  cout<<"\n -=[Multicores support]=-"<<endl;
+	  
+	  cout<<" Maximum threads               : "<<omp_get_max_threads()<<endl;
+	  cout<<" Number of cores               : "<<omp_get_num_procs()<<endl;
 	 //--Loaded network 
-	  cout<<"\n-=[Input files]=-"<<endl;
-	  if (param.directed) cout<<"Networks         : directed"<<endl;      
-	  if (!param.directed) cout<<"Networks         : undirected"<<endl;      
-	  cout<<"NetworkX         : "<<param.graph1<<endl;
-      if (param.found_g2) cout<<"NetworkY         : "<<param.graph2<<endl;
-      if (param.found_attributes) cout<<"Attributes       : "<<param.attributes<<endl; 
-	  cout<<"Nodes in networkX: "<<total_nonk_node<<endl;   
-      cout<<"Nodes in networkY: "<<total_n_g2<<endl; 
+	  cout<<"\n -=[Input files]=-"<<endl;
+	                       					  
+	  if (param.directed) cout<<" Networks                      : directed"<<endl;      
+	  if (!param.directed) cout<<" Networks                      : undirected"<<endl;      
+	  
+	  cout<<" Network X                     : "<<param.graph1<<endl;
+						  					  
+	  if (param.found_g2) cout<<" Network Y                     : "<<param.graph2<<endl;
+							      
+	 
+	  cout<<" Nodes in network X            : "<<total_nonk_node<<endl;   
+      cout<<" Nodes in network Y            : "<<total_n_g2<<endl; 
 	  //cout<<"Edges in networkX: "<<edge_list_g1.size()<<endl;   
       //cout<<"Edges in networkY: "<<edge_list_g2.size()<<endl; 
 	  
       if (param.found_attributes)  {
-		  cout<<"Attributes|count : "<<uniques_attributes.size()<<endl;   
+		 
+		  cout<<" Node's attributes|count       : "<<uniques_attributes.size()<<endl;   
 		  for(map<string,int>::iterator it = uniques_attributes.begin(); it != uniques_attributes.end(); ++it) {
 			  cout<<"\t"<<it->first<<"|"<<it->second<<endl;
 		  }
 	  }	   
-      if (!param.nonK.empty()) cout<<"non-K nodes attr.: "<<param.nonK<<endl;
-	  cout<<"Total added nodes: "<<total_k_node<<endl; 
-	  if (!param.K.empty()) cout<<"K nodes attr.    : "<<param.K<<endl;
-	  cout<<"Total paths      : "<<total_paths<<endl; 
-      cout<<"\n-=[Run parameters]=-"<<endl;
+    	                       
+	  if (!param.nonK.empty()) cout<<" Original nodes (NK) attributes: "<<param.nonK<<endl;
+	  cout<<" Total of added nodes          : "<<total_k_node<<endl; 
+	  if (!param.K.empty()) cout<<" Added nodes (K) attributes    : "<<param.K<<endl;
+	  
+	  
+	  cout<<" Total paths                   : "<<total_paths<<endl; 
+      cout<<"\n -=[Run parameters]=-"<<endl;
 	  if (param.random!=-1) {		
-		cout<<"Running mode     : random"<<endl;  
+	      
+		cout<<" Running mode                  : random"<<endl;  
 		if (param.random<1.0) {
-			cout<<"Investigated     : "<<(param.random*100)<<"% ("<<(int)(total_paths*param.random)<<")"<<endl; 
+			cout<<" Number of investigated paths  : "<<(param.random*100)<<"% ("<<(int)(total_paths*param.random)<<")"<<endl; 
 		} else {
-			cout<<"Investigated     : "<<param.random<<endl;  
+			cout<<" Number of investigated paths  : "<<param.random<<endl;  
 		}
 	  } else {
-	  cout<<"Running mode     : normal"<<endl;
+	      cout<<" Running mode                  : normal"<<endl;
 	  }
 	  if (param.use_dist&&param.inv_dist) {
-		cout<<"Edge distance    : inverse weights"<<endl;      	  
+		cout<<" Edge distance                 : inverse weights"<<endl;      	  
 	  } else if (param.use_dist) {
-		cout<<"Edge distance    : edge weights"<<endl;    
+		cout<<" Edge distance                 : edge weights"<<endl;    
 	  } else {
-		cout<<"Edge distance    : unweighted"<<endl;     
+		cout<<" Edge distance                 : unweighted"<<endl;     
 	  }
-	  cout<<"Group size       : "<<param.size<<endl;      
-	  cout<<"Number of groups : "<<total_group<<endl;      
-	  cout<<"First group      : "<<param.first<<endl;      
-      cout<<"Last group       : "<<param.last<<endl;
-      cout<<"Maxdistance      : "<<param.maxdistance<<endl;       
-      cout<<"Maxnode          : "<<param.maxnode<<endl;       	  
-	  cout<<"Maxtime (s)      : "<<(param.maxtime/1000)<<endl;    
-	  cout<<"Maxpathnumber    : "<<param.max_individual_path<<endl; 	                                             
-	  cout<<"\n-=[Miscellaneous]=-"<<endl;
+	  
+	  cout<<" Group size                    : "<<param.size<<endl;      
+	  cout<<" Number of groups              : "<<total_group<<endl;      
+	  cout<<" First group                   : "<<param.first<<endl;      
+      cout<<" Last group                    : "<<param.last<<endl;
+      cout<<" Maxdistanc                    : "<<param.maxdistance<<endl;       
+      cout<<" Maxnode                       : "<<param.maxnode<<endl;       	  
+	  cout<<" Maxtime (s)                   : "<<(param.maxtime/1000)<<endl;    
+	  cout<<" Maxpathnumber                 : "<<param.max_individual_path<<endl; 	                                             
+	  cout<<"\n -=[Miscellaneous]=-"<<endl;
  	  if (param.seed<0) {
-		  cout<<"Seed             : clock time"<<endl;      
+		 
+		  cout<<" Seed                          : clock time"<<endl;      
 	  } else {
-		  cout<<"Seed             : "<<param.seed<<endl;      
+		  cout<<" Seed                          : "<<param.seed<<endl;      
 	  }  
-	 cout<<"K nodes ordering : strategy "<<param.strategy<<endl;      
+	      cout<<" Added nodes ordering          : strategy "<<param.strategy<<endl;      
 	  switch(param.heuristic) {
-		  case 1:cout<<"Heuristic        : BRIDES     (1)"<<endl;break;
-		  case 2:cout<<"Heuristic        : BRIDES_Y   (2)"<<endl;break;
-		  case 3:cout<<"Heuristic        : BRIDES_YC  (3)"<<endl;break;
-		  case 4:cout<<"Heuristic        : BRIDES_EC  (4)"<<endl;break;
-		  case 5:cout<<"Heuristic        : DFS        (5)"<<endl;break;
+		  case 1:cout<<" Algorithm                     : BRIDES     (1)"<<endl;break;
+		  case 2:cout<<" Algorithm                     : BRIDES_Y   (2)"<<endl;break;
+		  case 3:cout<<" Algorithm                     : BRIDES_YC  (3)"<<endl;break;
+		  case 4:cout<<" Algorithm                     : BRIDES_EC  (4)"<<endl;break;
+		  case 5:cout<<" Algorithm                     : DFS        (5)"<<endl;break;
 	  }
 	  
 	  
 	  if (param.maxthread!=0) {
-		  cout<<"Maxthread        : "<<param.maxthread<<endl;      
+		  cout<<" Maxthread                     : "<<param.maxthread<<endl;      
 	  }
 	  if (param.verbose) 
-		  cout<<"Output file      : "<<param.outputfile<<endl;      
+		  cout<<" Output file                   : "<<param.outputfile<<endl;      
 	  cout<<"\n===============================================================================\n";	
       
 	  if (param.verbose) {
 		  FileOutput<<"\n=============================== PARAMETERS ====================================\n";		
 	
 			//-- OpenMP
-			  FileOutput<<"\n-=[Multicores support]=-"<<endl;
-			  FileOutput<<"Maximum threads  : "<<omp_get_max_threads()<<endl;
-			  FileOutput<<"Number of cores  : "<<omp_get_num_procs()<<endl;
+			  FileOutput<<"\n -=[Multicores support]=-"<<endl;			 
+			  FileOutput<<" Maximum threads               : "<<omp_get_max_threads()<<endl;
+			  FileOutput<<" Number of cores               : "<<omp_get_num_procs()<<endl;
 			 //--Loaded network 
-			  FileOutput<<"\n-=[Input files]=-"<<endl;
-			  if (param.directed) FileOutput<<"Networks         : directed"<<endl;      
-			  if (!param.directed) FileOutput<<"Networks         : undirected"<<endl;      
-			  FileOutput<<"NetworkX         : "<<param.graph1<<endl;
-			  if (param.found_g2) FileOutput<<"NetworkY         : "<<param.graph2<<endl;
-			  FileOutput<<"Nodes in networkX: "<<total_nonk_node<<endl;   
-			  FileOutput<<"Nodes in networkY: "<<total_n_g2<<endl; 			  
+			  FileOutput<<"\n -=[Input files]=-"<<endl;
+			  if (param.directed)  FileOutput<<" Networks                      : directed"<<endl;      
+			  if (!param.directed) FileOutput<<" Networks                      : undirected"<<endl;      
+			  	    
+			  FileOutput<<" Network X                     : "<<param.graph1<<endl;
+			                            
+			  if (param.found_g2) FileOutput<<" Network Y                     : "<<param.graph2<<endl;
+			           
+			  FileOutput<<" Nodes in network X            : "<<total_nonk_node<<endl;   
+			  FileOutput<<" Nodes in network Y            : "<<total_n_g2<<endl; 			  
 			  if (param.found_attributes)  {
-				  FileOutput<<"Attributes|count : "<<uniques_attributes.size()<<endl;   
+				        
+				  FileOutput<<" Node's attributes|count       : "<<uniques_attributes.size()<<endl;   
 				  for(map<string,int>::iterator it = uniques_attributes.begin(); it != uniques_attributes.end(); ++it) {
 					  FileOutput<<"\t"<<it->first<<"|"<<it->second<<endl;
 				  }
 			  }	   
-			 
-			  
-			  
-			  if (!param.nonK.empty()) FileOutput<<"non-K nodes attr.: "<<param.nonK<<endl;
-			  FileOutput<<"Total added nodes: "<<total_k_node<<endl; 
-			  if (!param.K.empty()) FileOutput<<"K nodes attr.    : "<<param.K<<endl;
-			  FileOutput<<"Total paths      : "<<total_paths<<endl; 
+											 
+			  if (!param.nonK.empty()) FileOutput<<" Non-added nodes(NK) attributes: "<<param.nonK<<endl;
+         			
+			  FileOutput<<" Total of added nodes          : "<<total_k_node<<endl; 
+			  if (!param.K.empty()) FileOutput<<" Added nodes (K) attributes    : "<<param.K<<endl;
+			  FileOutput<<" Total paths                   : "<<total_paths<<endl; 
       
 			  //--Running parameters
-			  FileOutput<<"\n-=[Run parameters]=-"<<endl;
+			  FileOutput<<"\n -=[Run parameters]=-"<<endl;
 			  if (param.random!=-1) {		
-				FileOutput<<"Running mode     : random"<<endl;  
+			    
+				FileOutput<<" Running mode                  : random"<<endl;  
 				if (param.random<1.0) {
-					FileOutput<<"Investigated path: "<<(param.random*100)<<"% ("<<(int)(total_paths*param.random)<<")"<<endl; 
+					FileOutput<<" Number of investigated paths  : "<<(param.random*100)<<"% ("<<(int)(total_paths*param.random)<<")"<<endl; 
 				} else {
-					FileOutput<<"Investigated path: "<<param.random<<endl;  
+					FileOutput<<" Number of investigated paths  : "<<param.random<<endl;  
 				}
-			  } else {
-			    FileOutput<<"Running mode     : normal"<<endl;
+			  } else { 
+			   
+			    FileOutput<<" Running mode                  : normal"<<endl;
 			  }
 			  if (param.use_dist&&param.inv_dist) {
-				FileOutput<<"Edge distance    : inverse weights"<<endl;      	  
+				FileOutput<<" Edge distance                 : inverse weights"<<endl;      	  
 			  } else if (param.use_dist) {
-				FileOutput<<"Edge distance    : edge weights"<<endl;    
+				FileOutput<<" Edge distance                 : edge weights"<<endl;    
 			  } else {
-				FileOutput<<"Edge distance    : unweighted"<<endl;     
+				FileOutput<<" Edge distance                 : unweighted"<<endl;     
 			  }
-			  FileOutput<<"Group size       : "<<param.size<<endl;      
-			  FileOutput<<"Number of groups : "<<total_group<<endl;      
-			  FileOutput<<"First group      : "<<param.first<<endl;      
-			  FileOutput<<"Last group       : "<<param.last<<endl;
-			  FileOutput<<"Maxdistance      : "<<param.maxdistance<<endl;       
-			  FileOutput<<"Maxnode          : "<<param.maxnode<<endl;       	  
-			  FileOutput<<"Maxtime (s)      : "<<(param.maxtime/1000)<<endl;      
-			  FileOutput<<"Maxpathnumber    : "<<param.max_individual_path<<endl; 	                                             
+			  FileOutput<<" Group size                    : "<<param.size<<endl;      
+			  FileOutput<<" Number of groups              : "<<total_group<<endl;      
+			  FileOutput<<" First group                   : "<<param.first<<endl;      
+			  FileOutput<<" Last group                    : "<<param.last<<endl;
+			  FileOutput<<" Maxdistance                   : "<<param.maxdistance<<endl;       
+			  FileOutput<<" Maxnode                       : "<<param.maxnode<<endl;       	  
+			  FileOutput<<" Maxtime (s)                   : "<<(param.maxtime/1000)<<endl;      
+			  FileOutput<<" Maxpathnumber                 : "<<param.max_individual_path<<endl; 	                                             
 			  
-			  FileOutput<<"\n-=[Miscellaneous]=-"<<endl;
+			  FileOutput<<"\n -=[Miscellaneous]=-"<<endl;
 			  if (param.seed<0) {
-				  FileOutput<<"Seed            : clock time"<<endl;      
+				  FileOutput<<" Seed                          : clock time"<<endl;				  
 			  } else {
-				  FileOutput<<"Seed             : "<<param.seed<<endl;      
+				  FileOutput<<" Seed                          : "<<param.seed<<endl;      
 			  }  
-			FileOutput<<"K nodes ordering : strategy "<<param.strategy<<endl;      
+			       
+			FileOutput<<" Added nodes ordering          : strategy "<<param.strategy<<endl;      
 			  switch(param.heuristic) {
-				  case 1:FileOutput<<"Heuristic        : BRIDES     (1)"<<endl;break;
-				  case 2:FileOutput<<"Heuristic        : BRIDES_Y   (2)"<<endl;break;
-				  case 3:FileOutput<<"Heuristic        : BRIDES_YC  (3)"<<endl;break;
-				  case 4:FileOutput<<"Heuristic        : BRIDES_EC  (4)"<<endl;break;
-				  case 5:FileOutput<<"Heuristic        : DFS        (5)"<<endl;break;
+				  case 1:FileOutput<<" Algorithm                     : BRIDES     (1)"<<endl;break;
+				  case 2:FileOutput<<" Algorithm                     : BRIDES_Y   (2)"<<endl;break;
+				  case 3:FileOutput<<" Algorithm                     : BRIDES_YC  (3)"<<endl;break;
+				  case 4:FileOutput<<" Algorithm                     : BRIDES_EC  (4)"<<endl;break;
+				  case 5:FileOutput<<" Algorithm                     : DFS        (5)"<<endl;break;
 			  }
 			  if (param.maxthread!=0) {
-				  FileOutput<<"Maxthread        : "<<param.maxthread<<endl;      
+				  FileOutput<<" Maxthread                     : "<<param.maxthread<<endl;      
 			  }
-			  if (param.verbose) 
-				  FileOutput<<"Output file      : "<<param.outputfile<<endl;  
+			  if (param.verbose)      
+				  FileOutput<<" Output file                   : "<<param.outputfile<<endl;  
 			  FileOutput<<"\n===============================================================================\n";	
 	  }
 			
@@ -2056,7 +2076,7 @@ void help(){
 		printf("\n-directed         [specifies that the networks are directed]");
 		printf("\n-K=B,C            [attributes to consider as added nodes (K), e.g. B,C]");
         printf("\n-NK=A             [attributes to considers as original nodes (NK), e.g. A]");
-		printf("\n-random=XX        [sample XX random pathways]");
+		printf("\n-random=XX        [sample XX random paths]");
 		printf("\n-first=1          [first group of path to process]");
         printf("\n-last=n           [last group of path to process]");
 		printf("\n-size=1000        [group size, default: 1000]");      
@@ -2065,10 +2085,10 @@ void help(){
 		printf("\n-maxtime=10       [maximum time for each path search, default: 10 second]");
 		printf("\n-maxpathnumber=100[maximum number of shortest-path return by Dijkstra: 100]");
 		printf("\n-maxthread=XXX    [maximum number of OpenMP threads to use, default unlimited]");
-        printf("\n-outfile=file      [output path information into file: taxa, distance, etc.]");
+        printf("\n-outfile=file     [output path information into file: taxa, distance, etc.]");
 		printf("\n-seed=999         [set the random seed generator to a specific seed]");
 		printf("\n-strategy=1       [set the K nodes ordering strategy: (1) maxdist.,(2) sum.]");
-		printf("\n-heuristic=1      [1-BRIDES, 2-BRIDES_Y, 3-BRIDES_YC, 4-BRIDES_EC,5-DFS]");
+		printf("\n-algo=1           [1-BRIDES, 2-BRIDES_Y, 3-BRIDES_YC, 4-BRIDES_EC,5-DFS]");
 		printf("\n\nExample : \n: ./BRIDES -X=networkX.txt -Y=networkY.txt\n\n");
 }
 
@@ -2248,7 +2268,7 @@ int readParameters(Parameters *param, char **argv, int nargc){
                                 if ((Input1 = fopen((*param).attributes,"r"))!=0) {(*param).found_attributes=true;fclose(Input1);}
 			}
            //======== heuristic ================
-			else if(strcmp("heuristic",champs) == 0){
+			else if(strcmp("heuristic",champs) == 0||strcmp("algo",champs) == 0){
                   (*param).heuristic = atoi(contenu);
 			}
 			//============ output file ===============
