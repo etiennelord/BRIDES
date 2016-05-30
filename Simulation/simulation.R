@@ -2,8 +2,8 @@ source("BRIDES.R")
 options(error = function() traceback())
 # This generate some random networks and then, execute the C++ version of BRIDES
 # to evaluate different paths.
-# Repeat 100
-nreplicate=100;
+# Repeat 1000
+nreplicate=1000;
 time_h1=c();
 time_h2=c();
 time_h3=c();
