@@ -60,7 +60,7 @@ where the Makefile.VERSION is either Makefile.Linux, or Makefile.MacOSX, or Make
 
 **Sample networks** can be found in both [R](https://github.com/etiennelord/BRIDES/tree/master/R_src/sample) and [C++](https://github.com/etiennelord/BRIDES/tree/master/Cpp_src/sample) source directories.
 
-**Gene similarity networks** (70% cover, 90% similarity threshold, minimum BLAST e-value 10e-5) from 2,094,593 nucleotide sequenes of archaea, bacteria and eukaryotes can be found in the [GenomeNetwork](https://github.com/etiennelord/BRIDES/tree/master/GenomeNetwork) directory, along with BRIDES algorithm results for those network using the parameters: (MaxPathNumber=100, MaxDistance=100, MaxNode=100, please see [manual](https://github.com/etiennelord/BRIDES/blob/master/Manual/BRIDES_User_Guide.pdf) for explanations).  
+**Genome similarity networks** (70% cover, 90% similarity threshold, minimum BLAST e-value 10e-5) from 2,094,593 nucleotide sequenes of archaea, bacteria and eukaryotes can be found in the [GenomeNetwork](https://github.com/etiennelord/BRIDES/tree/master/GenomeNetwork) directory, along with BRIDES algorithm results for those network using the parameters: (MaxPathNumber=100, MaxDistance=100, MaxNode=100, please see [manual](https://github.com/etiennelord/BRIDES/blob/master/Manual/BRIDES_User_Guide.pdf) for explanations).  
 
 **Simulation scripts** for different networks can be found in the [simulation](https://github.com/etiennelord/BRIDES/tree/master/Simulation) directory.
 
