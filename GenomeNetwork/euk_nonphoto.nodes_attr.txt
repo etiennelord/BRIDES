@@ -1,0 +1,388 @@
+Natrialba magadii ATCC 43099	archae
+Intrasporangium calvum DSM 43043	eubacteria
+Mahella australiensis 50-1 BON	eubacteria
+Saprospira grandis str. Lewin	eubacteria
+Idiomarina loihiensis GSL 199	eubacteria
+Legionella pneumophila subsp. pneumophila LPE509	eubacteria
+Akkermansia muciniphila ATCC BAA-835	eubacteria
+Halobacteroides halobius DSM 5150	eubacteria
+Pyrobaculum arsenaticum DSM 13514	archae
+Octadecabacter antarcticus 307	eubacteria
+Leuconostoc sp. C2	eubacteria
+Mesoplasma florum L1	eubacteria
+Desulfurococcus kamchatkensis 1221n	archae
+Ddiscoideum	eukaryote_nonphoto
+Pyrobaculum neutrophilum V24Sta	archae
+Spunctatus	eukaryote_nonphoto
+Halothiobacillus neapolitanus c2	eubacteria
+Chlamydia trachomatis Sweden2	eubacteria
+Thermococcus barophilus MP	archae
+Archaeoglobus fulgidus DSM 4304	archae
+Chlorobium phaeobacteroides DSM 266	eubacteria
+Beutenbergia cavernae DSM 12333	eubacteria
+Methylobacillus flagellatus KT	eubacteria
+Thermus oshimai JL-2	eubacteria
+Mesorhizobium australicum WSM2073	eubacteria
+Caldisphaera lagunensis DSM 15908	archae
+Natronobacterium gregoryi SP2	archae
+Nitrosopumilus maritimus SCM1	archae
+Caldivirga maquilingensis IC-167	archae
+Lactobacillus rhamnosus LOCK908	eubacteria
+Sulfolobus islandicus Y.G.57.14	archae
+Mbrevicollis	eukaryote_nonphoto
+Sphaerobacter thermophilus DSM 20745	eubacteria
+Sulfolobus islandicus M.16.4	archae
+Methanothermus fervidus DSM 2088	archae
+Ruminococcus bromii L2-63	eubacteria
+Thermoplasma volcanium GSS1	archae
+Pelobacter propionicus DSM 2379	eubacteria
+Myxococcus fulvus HW-1	eubacteria
+Clostridium lentocellum DSM 5427	eubacteria
+Ignavibacterium album JCM 16511	eubacteria
+Rubrobacter xylanophilus DSM 9941	eubacteria
+Natronococcus occultus SP4	archae
+Candidatus Nitrosopumilus sp. AR2	archae
+Natranaerobius thermophilus JW/NM-WN-LF	eubacteria
+Spiroplasma diminutum CUAS-1	eubacteria
+Opitutus terrae PB90-1	eubacteria
+Methanococcus maripaludis S2	archae
+Candidatus Midichloria mitochondrii IricVA	eubacteria
+Pyrococcus sp. NA2	archae
+Thermofilum sp. 1910b	archae
+Methanolobus psychrophilus R15	archae
+Pelagibacterium halotolerans B2	eubacteria
+Staphylothermus marinus F1	archae
+Nostoc sp. PCC 7107	eubacteria
+Halanaerobium praevalens DSM 2228	eubacteria
+Chloroflexus aurantiacus J-10-fl	eubacteria
+Acidianus hospitalis W1	archae
+Thermodesulfatator indicus DSM 15286	eubacteria
+Haliangium ochraceum DSM 14365	eubacteria
+Thermomicrobium roseum DSM 5159	eubacteria
+Desulfitobacterium dehalogenans ATCC 51507	eubacteria
+Liberibacter crescens BT-1	eubacteria
+Thermosphaera aggregans DSM 11486	archae
+Gordonia bronchialis DSM 43247	eubacteria
+Methanospirillum hungatei JF-1	archae
+Corynebacterium diphtheriae HC03	eubacteria
+Symbiobacterium thermophilum IAM 14863	eubacteria
+Pyrococcus furiosus DSM 3638	archae
+Thermococcus kodakarensis KOD1	archae
+Alistipes finegoldii DSM 17242	eubacteria
+Clostridium botulinum F str. 230613	eubacteria
+Stigmatella aurantiaca DW4/3-1	eubacteria
+Sulfolobus islandicus M.16.27	archae
+Methylomonas methanica MC09	eubacteria
+Xylanimonas cellulosilytica DSM 15894	eubacteria
+Bradyrhizobium japonicum USDA 6	eubacteria
+Methanosalsum zhilinae DSM 4017	archae
+Desulfobacterium autotrophicum HRM2	eubacteria
+Klebsiella pneumoniae subsp. rhinoscleromatis SB3432	eubacteria
+Coxiella burnetii CbuG_Q212	eubacteria
+Pyrobaculum islandicum DSM 4184	archae
+Desulfomicrobium baculatum DSM 4028	eubacteria
+Amycolatopsis mediterranei RB	eubacteria
+Halalkalicoccus jeotgali B3	archae
+Methylacidiphilum infernorum V4	eubacteria
+Candidatus Korarchaeum cryptofilum OPF8	archae
+Brucella melitensis ATCC 23457	eubacteria
+Streptomyces fulvissimus DSM 40593	eubacteria
+Pyrobaculum calidifontis JCM 11548	archae
+Elusimicrobium minutum Pei191	eubacteria
+Oscillibacter valericigenes Sjm18-20	eubacteria
+Thermococcus onnurineus NA1	archae
+Bifidobacterium longum subsp. longum JDM301	eubacteria
+Metallosphaera cuprina Ar-4	archae
+Imultifiliis	eukaryote_nonphoto
+Neisseria meningitidis M01-240149	eubacteria
+Pedobacter heparinus DSM 2366	eubacteria
+Desulfocapsa sulfexigens DSM 10523	eubacteria
+Desulfarculus baarsii DSM 2075	eubacteria
+Alcanivorax borkumensis SK2	eubacteria
+Sanguibacter keddieii DSM 10542	eubacteria
+Candidatus Protochlamydia amoebophila UWE25	eubacteria
+Nanoarchaeum equitans Kin4-M	archae
+Srosetta	eukaryote_nonphoto
+Erysipelothrix rhusiopathiae str. Fujisawa	eubacteria
+Methanobrevibacter ruminantium M1	archae
+Vibrio vulnificus MO6-24/O	eubacteria
+Xanthomonas campestris pv. campestris str. 8004	eubacteria
+halophilic archaeon DL31	archae
+Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111	eubacteria
+Advenella kashmirensis WT001	eubacteria
+Marinomonas posidonica IVIA-Po-181	eubacteria
+Methanocaldococcus fervens AG86	archae
+Ppallidum	eukaryote_nonphoto
+Thermococcus sp. CL1	archae
+Acastellanii	eukaryote_nonphoto
+Methanobrevibacter smithii ATCC 35061	archae
+Methanosarcina acetivorans C2A	archae
+Methanosarcina barkeri str. Fusaro	archae
+Haloarcula hispanica ATCC 33960	archae
+Carnobacterium sp. WN1359	eubacteria
+Natronomonas pharaonis DSM 2160	archae
+Methanocaldococcus jannaschii DSM 2661	archae
+Prochlorococcus marinus str. MIT 9211	eubacteria
+Bdellovibrio exovorus JSS	eubacteria
+Thermoanaerobacter italicus Ab9	eubacteria
+Prevotella intermedia 17	eubacteria
+Campylobacter jejuni subsp. jejuni NCTC 11168-BN148	eubacteria
+Jonesia denitrificans DSM 20603	eubacteria
+Aciduliprofundum boonei T469	archae
+Methanoculleus marisnigri JR1	archae
+Ttrahens	eukaryote_nonphoto
+Solibacillus silvestris StLB046	eubacteria
+Eubacterium rectale ATCC 33656	eubacteria
+Arcanobacterium haemolyticum DSM 20595	eubacteria
+Aeropyrum camini SY1 = JCM 12091	archae
+Sulfolobus acidocaldarius Ron12/I	archae
+Haloquadratum walsbyi C23	archae
+Pyrobaculum aerophilum str. IM2	archae
+Leptospira borgpetersenii serovar Hardjo-bovis str. L550	eubacteria
+Sulfolobus acidocaldarius N8	archae
+Burkholderia rhizoxinica HKI 454	eubacteria
+Renibacterium salmoninarum ATCC 33209	eubacteria
+Methanosaeta concilii GP6	archae
+Natronomonas moolapensis 8.8.11	archae
+Halopiger xanaduensis SH-6	archae
+Catenulispora acidiphila DSM 44928	eubacteria
+Acidothermus cellulolyticus 11B	eubacteria
+Methanocella conradii HZ254	archae
+Rickettsia massiliae MTU5	eubacteria
+Aeromonas hydrophila subsp. hydrophila ATCC 7966	eubacteria
+Sorangium cellulosum So0157-2	eubacteria
+Propionibacterium acnes KPA171202	eubacteria
+Methanococcus vannielii SB	archae
+Pyrococcus yayanosii CH1	archae
+Methanosarcina mazei Go1	archae
+Thermococcus gammatolerans EJ3	archae
+Candidatus Solibacter usitatus Ellin6076	eubacteria
+Hirschia baltica ATCC 49814	eubacteria
+Caldisericum exile AZM16c01	eubacteria
+Sulfuricella denitrificans skB26	eubacteria
+Methanobrevibacter sp. AbM4	archae
+Thermococcus sibiricus MM 739	archae
+Marivirga tractuosa DSM 4126	eubacteria
+Tbrucei	eukaryote_nonphoto
+Veillonella parvula DSM 2008	eubacteria
+Dictyoglomus turgidum DSM 6724	eubacteria
+Aromatoleum aromaticum EbN1	eubacteria
+Kytococcus sedentarius DSM 20547	eubacteria
+Methanoplanus petrolearius DSM 11571	archae
+Acidaminococcus fermentans DSM 20731	eubacteria
+Haloferax mediterranei ATCC 33500	archae
+Thermococcus sp. 4557	archae
+Alicyclobacillus acidocaldarius subsp. acidocaldarius Tc-4-1	eubacteria
+Aeropyrum pernix K1	archae
+Anaerococcus prevotii DSM 20548	eubacteria
+Candidatus Nitrosopumilus koreensis AR1	archae
+Halomicrobium mukohataei DSM 12286	archae
+Mverticillata	eukaryote_nonphoto
+Methanothermobacter thermautotrophicus str. Delta H	archae
+Stackebrandtia nassauensis DSM 44728	eubacteria
+Micromonospora sp. L5	eubacteria
+Methanococcus maripaludis X1	archae
+Methanoculleus bourgensis MS2	archae
+Falba	eukaryote_nonphoto
+Hippea maritima DSM 10411	eubacteria
+Nocardia cyriacigeorgica GUH-2	eubacteria
+Bacteriovorax marinus SJ	eubacteria
+Aerococcus urinae ACS-120-V-Col10a	eubacteria
+Gallionella capsiferriformans ES-2	eubacteria
+Hyperthermus butylicus DSM 5456	archae
+Methylocella silvestris BL2	eubacteria
+Halogeometricum borinquense DSM 11551	archae
+Ferrimonas balearica DSM 9799	eubacteria
+Methanococcus voltae A3	archae
+Staphylococcus aureus subsp. aureus JKD6159	eubacteria
+Brachyspira hyodysenteriae WA1	eubacteria
+Sulfobacillus acidophilus TPY	eubacteria
+Clostridium sticklandii	eubacteria
+Calothrix sp. PCC 6303	eubacteria
+Methanothermobacter marburgensis str. Marburg	archae
+Sulfolobus islandicus REY15A	archae
+Parvularcula bermudensis HTCC2503	eubacteria
+Streptosporangium roseum DSM 43021	eubacteria
+Anaerolinea thermophila UNI-1	eubacteria
+Thermococcus litoralis DSM 5473	archae
+Segniliparus rotundus DSM 44985	eubacteria
+Hahella chejuensis KCTC 2396	eubacteria
+Cyclobacterium marinum DSM 745	eubacteria
+Pyrobaculum oguniense TE7	archae
+Conexibacter woesei DSM 14684	eubacteria
+Sphingobium sp. SYK-6	eubacteria
+Sulfolobus islandicus M.14.25	archae
+Heliobacterium modesticaldum Ice1	eubacteria
+Ilumatobacter coccineus YM16-304	eubacteria
+Chthonomonas calidirosea T49	eubacteria
+Halovivax ruber XH-70	archae
+Methanocorpusculum labreanum Z	archae
+Pyrococcus sp. ST04	archae
+Nocardioides sp. JS614	eubacteria
+Vulcanisaeta distributa DSM 14429	archae
+Haloarcula marismortui ATCC 43049	archae
+Brachybacterium faecium DSM 4810	eubacteria
+Enterococcus faecalis D32	eubacteria
+Natrinema sp. J7-2	archae
+Thermovibrio ammonificans HB-1	eubacteria
+Bacillus sp. JS	eubacteria
+Blattabacterium sp. (Cryptocercus punctulatus) str. Cpu	eubacteria
+Thermococcus sp. AM4	archae
+Methanosphaera stadtmanae DSM 3091	archae
+Pyrobaculum sp. 1860	archae
+Sarctica	eukaryote_nonphoto
+Ignisphaera aggregans DSM 17230	archae
+Coraliomargarita akajimensis DSM 45221	eubacteria
+Desulfurococcus fermentans DSM 16532	archae
+Candidatus Nitrososphaera gargensis Ga9.2	archae
+Ehrlichia chaffeensis str. Arkansas	eubacteria
+Methanocaldococcus infernus ME	archae
+Metallosphaera sedula DSM 5348	archae
+Ptetraurelia	eukaryote_nonphoto
+Nautilia profundicola AmH	eubacteria
+Methanocaldococcus sp. FS406-22	archae
+Azotobacter vinelandii DJ	eubacteria
+Methanocaldococcus vulcanius M7	archae
+Runella slithyformis DSM 19594	eubacteria
+Haemophilus influenzae PittEE	eubacteria
+Fervidicoccus fontis Kam940	archae
+Truepera radiovictrix DSM 17093	eubacteria
+Riemerella anatipestifer ATCC 11845 = DSM 15868	eubacteria
+Haloferax volcanii DS2	archae
+Sulfolobus islandicus L.D.8.5	archae
+Sulfolobus islandicus HVE10/4	archae
+Methylobacterium nodulans ORS 2060	eubacteria
+Geobacter sulfurreducens KN400	eubacteria
+Thermofilum pendens Hrk 5	archae
+Calditerrivibrio nitroreducens DSM 19672	eubacteria
+Halobacterium sp. NRC-1	archae
+Desulfovibrio gigas DSM 1382 = ATCC 19364	eubacteria
+Paludibacter propionicigenes WB4	eubacteria
+Picrophilus torridus DSM 9790	archae
+Archaeoglobus sulfaticallidus PM70-1	archae
+Methanobacterium sp. AL-21	archae
+Helicobacter pylori F16	eubacteria
+Methanobacterium sp. SWAN-1	archae
+Sulfolobus acidocaldarius DSM 639	archae
+Sulfolobus tokodaii str. 7	archae
+Desulfobacca acetoxidans DSM 11109	eubacteria
+Pyrococcus horikoshii OT3	archae
+Listeria monocytogenes SLCC5850	eubacteria
+Methylophaga sp. JAM7	eubacteria
+Cellvibrio gilvus ATCC 13127	eubacteria
+Salinarchaeum sp. Harcht-Bsk1	archae
+Sulfolobus islandicus Y.N.15.51	archae
+Methanopyrus kandleri AV19	archae
+Shewanella halifaxensis HAW-EB4	eubacteria
+Spiribacter salinus M19-40	eubacteria
+Methanothermococcus okinawensis IH1	archae
+Sulfolobus islandicus LAL14/1	archae
+Kineococcus radiotolerans SRS30216	eubacteria
+Syntrophobacter fumaroxidans MPOB	eubacteria
+Geodermatophilus obscurus DSM 43160	eubacteria
+Psychromonas sp. CNPT3	eubacteria
+Ignicoccus hospitalis KIN4/I	archae
+Candidatus Portiera aleyrodidarum BT-QVLC	eubacteria
+Frankia sp. EAN1pec	eubacteria
+Deinococcus geothermalis DSM 11300	eubacteria
+Caldilinea aerophila DSM 14535 = NBRC 104270	eubacteria
+Vulcanisaeta moutnovskia 768-28	archae
+Methanotorris igneus Kol 5	archae
+Caulobacter sp. K31	eubacteria
+Candidatus Phytoplasma solani 284/09	eubacteria
+Methylocystis sp. SC2	eubacteria
+Terriglobus roseus DSM 18391	eubacteria
+Pirellula staleyi DSM 6068	eubacteria
+Sulfolobus solfataricus P2	archae
+Pyrococcus furiosus COM1	archae
+Bacteroides helcogenes P 36-108	eubacteria
+Sulfurihydrogenibium azorense Az-Fu1	eubacteria
+Candidatus Nitrospira defluvii	eubacteria
+Borrelia crocidurae str. Achema	eubacteria
+Haloterrigena turkmenica DSM 5511	archae
+Acidithiobacillus caldus SM-1	eubacteria
+Amacrogynus	eukaryote_nonphoto
+Ngruberi	eukaryote_nonphoto
+Methanosphaerula palustris E1-9c	archae
+Rhodospirillum rubrum ATCC 11170	eubacteria
+Methanosaeta harundinacea 6Ac	archae
+Methanoregula boonei 6A8	archae
+Haloquadratum walsbyi DSM 16790	archae
+Methanohalobium evestigatum Z-7303	archae
+Thermoproteus uzoniensis 768-20	archae
+Archaeoglobus veneficus SNP6	archae
+Streptococcus gallolyticus subsp. gallolyticus ATCC 43143	eubacteria
+Halobacterium salinarum R1	archae
+Syntrophomonas wolfei subsp. wolfei str. Goettingen	eubacteria
+Nitrosococcus oceani ATCC 19707	eubacteria
+Erythrobacter litoralis HTCC2594	eubacteria
+Bartonella quintana str. Toulouse	eubacteria
+Methanosarcina mazei Tuc01	archae
+Desulfohalobium retbaense DSM 5692	eubacteria
+Methanoregula formicica SMSP	archae
+Methanocella paludicola SANAE	archae
+Methanococcus maripaludis C6	archae
+Methanococcus maripaludis C7	archae
+Methanococcus maripaludis C5	archae
+Tthermophila	eukaryote_nonphoto
+Tsukamurella paurometabola DSM 20162	eubacteria
+Pseudoalteromonas atlantica T6c	eubacteria
+Halorubrum lacusprofundi ATCC 49239	archae
+Dehalococcoides mccartyi BTF08	eubacteria
+Hydrogenobaculum sp. SN	eubacteria
+Ferroplasma acidarmanus fer1	archae
+Pyrolobus fumarii 1A	archae
+Nitrosomonas sp. AL212	eubacteria
+Gemmatimonas aurantiaca T-27	eubacteria
+Nakamurella multipartita DSM 44233	eubacteria
+Halorhabdus utahensis DSM 12940	archae
+Mycoplasma hyorhinis SK76	eubacteria
+Colwellia psychrerythraea 34H	eubacteria
+Owenweeksia hongkongensis DSM 17368	eubacteria
+Francisella sp. TX077308	eubacteria
+Dichelobacter nodosus VCS1703A	eubacteria
+Acinetobacter oleivorans DR1	eubacteria
+Staphylothermus hellenicus DSM 12710	archae
+Rhodothermus marinus SG0.5JP17-172	eubacteria
+Acidovorax citrulli AAC00-1	eubacteria
+Starkeya novella DSM 506	eubacteria
+Simkania negevensis Z	eubacteria
+Herpetosiphon aurantiacus DSM 785	eubacteria
+Eggerthella lenta DSM 2243	eubacteria
+Bsaltans	eukaryote_nonphoto
+Methanohalophilus mahii DSM 5219	archae
+Desulfurispirillum indicum S5	eubacteria
+Thermomonospora curvata DSM 43183	eubacteria
+Cowczarzaki	eukaryote_nonphoto
+Phycisphaera mikurensis NBRC 102666	eubacteria
+Thermodesulfobium narugense DSM 14796	eubacteria
+Acetobacter pasteurianus IFO 3283-32	eubacteria
+Aminobacterium colombiense DSM 12261	eubacteria
+Thermosediminibacter oceani DSM 16646	eubacteria
+Fusobacterium nucleatum subsp. vincentii 3_1_36A2	eubacteria
+Kosmotoga olearia TBF 19.5.1	eubacteria
+Ferroglobus placidus DSM 10642	archae
+Archaeoglobus profundus DSM 5631	archae
+Methanocella arvoryzae MRE50	archae
+Mycobacterium sp. KMS	eubacteria
+Paenibacillus polymyxa M1	eubacteria
+Methanomethylovorans hollandica DSM 15978	archae
+Acidilobus saccharovorans 345-15	archae
+Desulfurococcus mucosus DSM 2162	archae
+Scerevisiae	eukaryote_nonphoto
+Waddlia chondrophila WSU 86-1044	eubacteria
+Alteromonas macleodii str. 'Ionian Sea U4'	eubacteria
+Melioribacter roseus P3M-2	eubacteria
+Methanosaeta thermophila PT	archae
+Clavibacter michiganensis subsp. michiganensis NCPPB 382	eubacteria
+Sulfolobus solfataricus 98/2	archae
+Magnetococcus marinus MC-1	eubacteria
+Methanococcoides burtonii DSM 6242	archae
+Thermogladius cellulolyticus 1633	archae
+Fibrobacter succinogenes subsp. succinogenes S85	eubacteria
+Herbaspirillum seropedicae SmR1	eubacteria
+Natrinema pellirubrum DSM 15624	archae
+Sulfolobus islandicus L.S.2.15	archae
+Parvibaculum lavamentivorans DS-1	eubacteria
+Sebaldella termitidis ATCC 33386	eubacteria
+Methanococcus aeolicus Nankai-3	archae

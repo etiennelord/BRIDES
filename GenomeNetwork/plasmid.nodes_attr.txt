@@ -1,0 +1,4210 @@
+plasmid pVCG4.1	plasmid
+plasmid pACRY02	plasmid
+plasmid SAP051B	plasmid
+plasmid 297_lp36	plasmid
+plasmid 297_lp38	plasmid
+plasmid pcpWSRTE30	plasmid
+plasmid pQnrS1-cp17s	plasmid
+plasmid pSotonF3	plasmid
+plasmid pHW66	plasmid
+plasmid pPCP1	plasmid
+plasmid pSTA7437.01	plasmid
+plasmid pSTA7437.02	plasmid
+plasmid pSTA7437.03	plasmid
+plasmid pSTA7437.04	plasmid
+plasmid pSTA7437.05	plasmid
+plasmid pcpMN	plasmid
+plasmid extrachromosomal DNA	plasmid
+plasmid pLME1	plasmid
+plasmid pZZ6.03	plasmid
+plasmid BTB_2p	plasmid
+plasmid pO157_Sal	plasmid
+plasmid pZZ6.02	plasmid
+plasmid pEK516	plasmid
+plasmid pSM19035	plasmid
+plasmid pOR1	plasmid
+plasmid pWW1	plasmid
+plasmid pBK31567	plasmid
+plasmid pMT1	plasmid
+plasmid pGK12	plasmid
+plasmid pCfe1	plasmid
+plasmid S25	plasmid
+plasmid pVJL1	plasmid
+plasmid pXcB	plasmid
+plasmid p3132-53	plasmid
+Natrialba magadii ATCC 43099	archae
+Intrasporangium calvum DSM 43043	eubacteria
+plasmid pAMalpha1	plasmid
+plasmid pCKL1	plasmid
+plasmid pVAPB1593	plasmid
+plasmid bgla_4p	plasmid
+plasmid SAP048A	plasmid
+plasmid pXap41	plasmid
+plasmid pEA320	plasmid
+plasmid pSINME02	plasmid
+plasmid pSINME01	plasmid
+plasmid pSK108	plasmid
+plasmid pLPL	plasmid
+plasmid pAm05WL6211	plasmid
+plasmid pMU3262	plasmid
+plasmid pJJ1886_5	plasmid
+plasmid pJJ1886_4	plasmid
+plasmid pJJ1886_3	plasmid
+plasmid pJJ1886_2	plasmid
+plasmid pJJ1886_1	plasmid
+plasmid pSARC14-41	plasmid
+plasmid pQA518	plasmid
+plasmid SCP2	plasmid
+plasmid pBCJ2315	plasmid
+plasmid pPAU1	plasmid
+Mahella australiensis 50-1 BON	eubacteria
+plasmid pDBORO	plasmid
+plasmid pGUE-NDM	plasmid
+plasmid pNG600	plasmid
+plasmid pBOT3502	plasmid
+plasmid virulence plasmid PX01	plasmid
+Saprospira grandis str. Lewin	eubacteria
+plasmid pCHE-A	plasmid
+plasmid pPM18	plasmid
+plasmid pCS0010A_95	plasmid
+plasmid pR18	plasmid
+plasmid p3BJAB0868	plasmid
+plasmid pLFH64	plasmid
+plasmid EcOYNIM_1998	plasmid
+plasmid EcOYNIM_1999	plasmid
+plasmid p18805-P03	plasmid
+plasmid pKYM	plasmid
+plasmid pcpNJ1	plasmid
+plasmid pTSC8	plasmid
+plasmid pKN-LS6	plasmid
+plasmid pTSC1	plasmid
+plasmid pRCEID2.9	plasmid
+plasmid pTSC2	plasmid
+plasmid pROB01	plasmid
+plasmid pROB02	plasmid
+plasmid pHW126	plasmid
+plasmid pVSAL320	plasmid
+plasmid pCI305	plasmid
+Idiomarina loihiensis GSL 199	eubacteria
+plasmid pAS9A-1	plasmid
+plasmid Far04_cp26	plasmid
+plasmid pAS9A-2	plasmid
+plasmid pLR002	plasmid
+plasmid pLR001	plasmid
+plasmid pSTUK-100	plasmid
+plasmid pA82	plasmid
+plasmid pA81	plasmid
+plasmid pCRI9333.01	plasmid
+plasmid pCRI9333.03	plasmid
+plasmid pCRI9333.02	plasmid
+plasmid pCRI9333.05	plasmid
+plasmid pCRI9333.04	plasmid
+plasmid pCRI9333.07	plasmid
+plasmid pCRI9333.08	plasmid
+Legionella pneumophila subsp. pneumophila LPE509	eubacteria
+plasmid pSR61	plasmid
+Akkermansia muciniphila ATCC BAA-835	eubacteria
+plasmid pAP3.9	plasmid
+plasmid pMCE_1	plasmid
+plasmid pMCE_2	plasmid
+plasmid pMCE_3	plasmid
+plasmid pSHJG1	plasmid
+plasmid pSHJG2	plasmid
+plasmid pRKU1	plasmid
+Halobacteroides halobius DSM 5150	eubacteria
+plasmid Bol26_cp32-12	plasmid
+plasmid pSP291-2	plasmid
+plasmid pSP291-3	plasmid
+plasmid pSP291-1	plasmid
+plasmid pUR2355	plasmid
+plasmid pSINAC01	plasmid
+plasmid pPARG1	plasmid
+plasmid pSH163_120	plasmid
+plasmid pTGRD1	plasmid
+plasmid p6148	plasmid
+plasmid p232	plasmid
+plasmid pTXL1	plasmid
+plasmid pNL7.1	plasmid
+plasmid pCC31	plasmid
+plasmid 118a_lp25	plasmid
+plasmid pLM7	plasmid
+plasmid pAPEC-O2-ColV	plasmid
+plasmid pIS56-85	plasmid
+plasmid pAOVO01	plasmid
+plasmid pAOVO02	plasmid
+plasmid pCQ4	plasmid
+plasmid pCQ3	plasmid
+plasmid p14-120	plasmid
+plasmid pA172	plasmid
+Pyrobaculum arsenaticum DSM 13514	archae
+plasmid JD1 lp38	plasmid
+plasmid JD1 lp36	plasmid
+plasmid pHW42	plasmid
+plasmid pKST21	plasmid
+plasmid pKST23	plasmid
+Octadecabacter antarcticus 307	eubacteria
+plasmid pINCan01	plasmid
+Leuconostoc sp. C2	eubacteria
+plasmid pBCNF5603	plasmid
+plasmid pCHRO.02	plasmid
+plasmid pRD1	plasmid
+Mesoplasma florum L1	eubacteria
+plasmid pTM4	plasmid
+plasmid pTM1	plasmid
+plasmid pTM2	plasmid
+plasmid pCC7120zeta	plasmid
+Desulfurococcus kamchatkensis 1221n	archae
+plasmid 2 SCP2*	plasmid
+plasmid p1414	plasmid
+plasmid pMG2F-1	plasmid
+plasmid pXCV2	plasmid
+plasmid pSSU1	plasmid
+plasmid pSD_88	plasmid
+plasmid pVEF3	plasmid
+plasmid pGLAAG01	plasmid
+plasmid pCM05	plasmid
+plasmid pSM103mini	plasmid
+plasmid pJS-B	plasmid
+plasmid Lpl	plasmid
+Pyrobaculum neutrophilum V24Sta	archae
+plasmid pSTK1	plasmid
+plasmid p18811-P01	plasmid
+plasmid p18811-P03	plasmid
+plasmid pKp11-42	plasmid
+plasmid pL11322	plasmid
+plasmid pKOX_NDM1	plasmid
+plasmid pSMQ173b	plasmid
+Halothiobacillus neapolitanus c2	eubacteria
+plasmid pABIR	plasmid
+plasmid pDU1	plasmid
+plasmid pJV	plasmid
+plasmid pMETHO01	plasmid
+plasmid CA-11.2A_cp26	plasmid
+plasmid pCHA6605.02	plasmid
+plasmid pCHA6605.01	plasmid
+plasmid B1	plasmid
+plasmid pS22301	plasmid
+plasmid pC4602-1	plasmid
+plasmid pNGX2-QnrS1	plasmid
+plasmid pUMNK88_Hly	plasmid
+plasmid pIS56-285	plasmid
+plasmid pGIAK1	plasmid
+plasmid pMC5_1	plasmid
+plasmid pXV64	plasmid
+Chlamydia trachomatis Sweden2	eubacteria
+plasmid R751	plasmid
+plasmid ZS7_cp32-12	plasmid
+plasmid pL3404	plasmid
+plasmid Ti plasmid pTiBo542	plasmid
+plasmid pMG828-5	plasmid
+plasmid pMEA100	plasmid
+plasmid pHPSNT	plasmid
+plasmid pAsa3	plasmid
+plasmid pPR9	plasmid
+plasmid pPR2	plasmid
+Thermococcus barophilus MP	archae
+plasmid SAP087A	plasmid
+plasmid pLPI8	plasmid
+plasmid EFD32pA	plasmid
+plasmid EFD32pB	plasmid
+plasmid NR1	plasmid
+plasmid pEF1071	plasmid
+plasmid Lp16L	plasmid
+plasmid Lp16H	plasmid
+plasmid Lp16I	plasmid
+plasmid Lp16D	plasmid
+plasmid Lp16E	plasmid
+plasmid Lp16F	plasmid
+plasmid Lp16G	plasmid
+plasmid pB264	plasmid
+plasmid Lp16B	plasmid
+plasmid Lp16C	plasmid
+plasmid pSV2	plasmid
+plasmid pPRH	plasmid
+Archaeoglobus fulgidus DSM 4304	archae
+plasmid pLD-TEX-KL	plasmid
+plasmid pTLIE01	plasmid
+plasmid pRWF102	plasmid
+plasmid Rms149	plasmid
+plasmid pRWF101	plasmid
+plasmid pPLLHn-1	plasmid
+plasmid pOA238_118	plasmid
+plasmid pMmc-95010	plasmid
+plasmid pAQ3	plasmid
+plasmid pAQ4	plasmid
+plasmid pAQ5	plasmid
+plasmid pAQ6	plasmid
+plasmid pAQ7	plasmid
+plasmid pSBardo-Kan	plasmid
+plasmid pXZ1	plasmid
+Chlorobium phaeobacteroides DSM 266	eubacteria
+plasmid R830b	plasmid
+plasmid pABVA01	plasmid
+plasmid ece1	plasmid
+Beutenbergia cavernae DSM 12333	eubacteria
+plasmid pSM327	plasmid
+plasmid pSGSC3045-121	plasmid
+plasmid pLPP	plasmid
+plasmid SAP069A	plasmid
+plasmid pPO1	plasmid
+plasmid pKP53IL	plasmid
+plasmid pBM600	plasmid
+plasmid Plasmid pOAD2	plasmid
+plasmid pL2/434/Bu(i)	plasmid
+plasmid pNCcld	plasmid
+plasmid pBG7AU	plasmid
+plasmid pCC2228-3	plasmid
+plasmid pMWHK1	plasmid
+plasmid CA-11.2A_cp32-5	plasmid
+plasmid CA-11.2A_cp32-3	plasmid
+plasmid CA-11.2A_cp32-1	plasmid
+plasmid pLP2111	plasmid
+plasmid pBMB2062	plasmid
+plasmid pT26-2	plasmid
+plasmid pHTUR01	plasmid
+plasmid pHTUR02	plasmid
+plasmid pHTUR03	plasmid
+plasmid pHTUR04	plasmid
+plasmid pHTUR05	plasmid
+plasmid pHTUR06	plasmid
+plasmid SAP099B	plasmid
+plasmid 21kb plasmid	plasmid
+plasmid pACK6	plasmid
+plasmid pACK4	plasmid
+plasmid pACK5	plasmid
+plasmid pACK3	plasmid
+plasmid pTINT02	plasmid
+plasmid pAPA12-060	plasmid
+plasmid R-plasmid pCG4	plasmid
+plasmid BLNIAS_P2	plasmid
+plasmid BLNIAS_P1	plasmid
+plasmid pWBG752	plasmid
+plasmid pBc239	plasmid
+plasmid pTE44	plasmid
+plasmid pWBG750	plasmid
+Methylobacillus flagellatus KT	eubacteria
+Thermus oshimai JL-2	eubacteria
+plasmid pGS5	plasmid
+Mesorhizobium australicum WSM2073	eubacteria
+plasmid pAG20	plasmid
+Caldisphaera lagunensis DSM 15908	archae
+plasmid pWBG754	plasmid
+plasmid R27	plasmid
+plasmid 64b_cp32-7	plasmid
+plasmid 64b_cp32-4	plasmid
+plasmid 64b_cp32-5	plasmid
+plasmid pHT beta	plasmid
+plasmid 64b_cp32-1	plasmid
+plasmid pAlvB	plasmid
+plasmid pAlvA	plasmid
+Natronobacterium gregoryi SP2	archae
+plasmid 64b_cp32-9	plasmid
+plasmid SAP019A	plasmid
+plasmid pAPA32-060	plasmid
+plasmid pET35	plasmid
+plasmid pGB2001	plasmid
+plasmid pGB2002	plasmid
+plasmid pBWB402	plasmid
+plasmid pBWB403	plasmid
+plasmid SV1_cp26	plasmid
+plasmid plasmI	plasmid
+plasmid pBWB404	plasmid
+plasmid pQA554	plasmid
+Nitrosopumilus maritimus SCM1	archae
+plasmid pLCK1	plasmid
+plasmid pLCK3	plasmid
+plasmid pLCK2	plasmid
+plasmid pLCK4	plasmid
+plasmid pLAtc2	plasmid
+plasmid pLAtc3	plasmid
+plasmid pTN38148	plasmid
+plasmid pFOS-HK151325	plasmid
+plasmid pRV500	plasmid
+plasmid pKpS90	plasmid
+plasmid PB5	plasmid
+plasmid pWBD1	plasmid
+plasmid pWBD2	plasmid
+plasmid pWBD3	plasmid
+plasmid 64b_cp26	plasmid
+plasmid pSB2	plasmid
+plasmid pUSA01-HOU	plasmid
+plasmid pMR68	plasmid
+plasmid SAP073A	plasmid
+plasmid pNAD1	plasmid
+plasmid pRKC30SC2	plasmid
+plasmid pRKC30SC1	plasmid
+plasmid Bol26_lp54	plasmid
+Caldivirga maquilingensis IC-167	archae
+plasmid pZMO7	plasmid
+plasmid pUCLAc	plasmid
+plasmid pUCLAa	plasmid
+plasmid SAP108D	plasmid
+plasmid pGDIPal5I	plasmid
+plasmid cp27	plasmid
+plasmid cp26	plasmid
+plasmid pSM101A	plasmid
+plasmid pSM101B	plasmid
+Lactobacillus rhamnosus LOCK908	eubacteria
+plasmid pPSE7367.01	plasmid
+plasmid PL47	plasmid
+plasmid pNE131	plasmid
+plasmid SAP085B	plasmid
+plasmid Gle4293	plasmid
+plasmid SAP085A	plasmid
+plasmid pEP3	plasmid
+plasmid pWZ7140	plasmid
+Sulfolobus islandicus Y.G.57.14	archae
+plasmid pABZ78	plasmid
+plasmid pS23A	plasmid
+plasmid pSD4.6	plasmid
+plasmid pAPA07-030	plasmid
+plasmid pALVIN01	plasmid
+plasmid pALVIN02	plasmid
+plasmid pJIR3537	plasmid
+plasmid pWBG738	plasmid
+plasmid pNO33	plasmid
+plasmid pZS50	plasmid
+plasmid pSAM7	plasmid
+plasmid SAP050A	plasmid
+plasmid pMAS2027	plasmid
+plasmid pEMTOL01	plasmid
+plasmid pEMTOL03	plasmid
+plasmid pEMTOL02	plasmid
+plasmid pEMTOL05	plasmid
+plasmid pEMTOL04	plasmid
+plasmid SAP110A	plasmid
+plasmid pEP2.6	plasmid
+plasmid pLTK2	plasmid
+plasmid pRAM4	plasmid
+plasmid pWCH7001	plasmid
+plasmid pWCH7002	plasmid
+plasmid pMAB01	plasmid
+plasmid pFTRAC01	plasmid
+Sphaerobacter thermophilus DSM 20745	eubacteria
+plasmid pB1019	plasmid
+plasmid pXCV38	plasmid
+plasmid pNS1	plasmid
+Sulfolobus islandicus M.16.4	archae
+plasmid pHB0503	plasmid
+plasmid pBS-02	plasmid
+plasmid pBS-01	plasmid
+Methanothermus fervidus DSM 2088	archae
+plasmid pLB925A02	plasmid
+plasmid pTetHS016	plasmid
+plasmid pLB925A03	plasmid
+plasmid pPM1	plasmid
+plasmid ZS7_cp32-1	plasmid
+Ruminococcus bromii L2-63	eubacteria
+plasmid pSPHCH01	plasmid
+Thermoplasma volcanium GSS1	archae
+plasmid pG-EA11	plasmid
+plasmid Gro4970	plasmid
+plasmid p09022A	plasmid
+plasmid pA5291	plasmid
+plasmid pCM2	plasmid
+plasmid pHEN7	plasmid
+plasmid pXCV183	plasmid
+plasmid pAms4	plasmid
+plasmid pAms5	plasmid
+plasmid pAms1	plasmid
+plasmid pAms2	plasmid
+plasmid pAms3	plasmid
+plasmid pGdh442	plasmid
+Pelobacter propionicus DSM 2379	eubacteria
+plasmid pPCZ2	plasmid
+Myxococcus fulvus HW-1	eubacteria
+plasmid pCmaris1	plasmid
+plasmid pMG2B-1	plasmid
+plasmid p1BKT015925	plasmid
+plasmid pS7b	plasmid
+plasmid pPECL-3	plasmid
+plasmid pPECL-1	plasmid
+plasmid pPECL-6	plasmid
+plasmid pPECL-7	plasmid
+plasmid pPECL-4	plasmid
+plasmid pPECL-5	plasmid
+plasmid pSotonK1	plasmid
+plasmid pH205	plasmid
+Clostridium lentocellum DSM 5427	eubacteria
+plasmid pIRI48	plasmid
+plasmid pMCCL7	plasmid
+plasmid pMCCL6	plasmid
+plasmid pMCCL5	plasmid
+plasmid pMCCL3	plasmid
+plasmid pMCCL2	plasmid
+plasmid pMCCL1	plasmid
+plasmid pMCCL8	plasmid
+Ignavibacterium album JCM 16511	eubacteria
+plasmid pKKTET7	plasmid
+plasmid pPREDE01	plasmid
+Rubrobacter xylanophilus DSM 9941	eubacteria
+plasmid pNDM10469	plasmid
+plasmid pleC9	plasmid
+plasmid pSBAL11702	plasmid
+plasmid pYC	plasmid
+plasmid pYV	plasmid
+plasmid pPECL-8	plasmid
+plasmid pFKN	plasmid
+plasmid pEC-IMP	plasmid
+plasmid pAPA32-040	plasmid
+plasmid pEC158	plasmid
+plasmid pEC159	plasmid
+plasmid pSH1148_4.8	plasmid
+plasmid pSK3	plasmid
+plasmid LkipL4719	plasmid
+plasmid pColE8	plasmid
+plasmid 72a_lp36	plasmid
+plasmid pNG400	plasmid
+plasmid pPHB2	plasmid
+plasmid N40_lp28-2	plasmid
+plasmid N40_lp28-4	plasmid
+plasmid N40_lp28-5	plasmid
+Natronococcus occultus SP4	archae
+plasmid pNSL1	plasmid
+plasmid pKF147A	plasmid
+plasmid pKM19s	plasmid
+plasmid Plasmid1	plasmid
+plasmid 156a_cp26	plasmid
+plasmid 29805_lp25	plasmid
+plasmid JD1 cp26	plasmid
+Candidatus Nitrosopumilus sp. AR2	archae
+plasmid pcp8455	plasmid
+plasmid pG6302	plasmid
+plasmid pG6303	plasmid
+plasmid VS116_lp28-3	plasmid
+plasmid pG6301	plasmid
+plasmid VS116_lp28-8	plasmid
+plasmid p4BKT015925	plasmid
+plasmid pBMUL01	plasmid
+plasmid pIE1107	plasmid
+plasmid PSP21	plasmid
+plasmid pAA-EA11	plasmid
+plasmid pLQ510	plasmid
+plasmid pSARA30	plasmid
+plasmid pColK-K235	plasmid
+plasmid pUM146	plasmid
+plasmid pRT1	plasmid
+plasmid pGL1	plasmid
+plasmid pPGA1_65	plasmid
+plasmid pGL3	plasmid
+plasmid pGL2	plasmid
+plasmid pGL5	plasmid
+plasmid pGL4	plasmid
+plasmid 118a_cp32-8	plasmid
+plasmid 118a_cp32-4	plasmid
+plasmid 118a_cp32-5	plasmid
+plasmid pIS56-63	plasmid
+plasmid NTP16	plasmid
+plasmid pSE-12228-06	plasmid
+plasmid pSE-12228-05	plasmid
+plasmid pSE-12228-04	plasmid
+plasmid pSE-12228-03	plasmid
+plasmid pSE-12228-02	plasmid
+plasmid pSE-12228-01	plasmid
+plasmid pNDM-1_Dok01	plasmid
+plasmid pGKT1	plasmid
+plasmid pGKT3	plasmid
+plasmid pGKT2	plasmid
+plasmid pPRO1	plasmid
+plasmid pPRO2	plasmid
+plasmid pNB8c	plasmid
+plasmid pZMOB01	plasmid
+plasmid pBPHYT01	plasmid
+plasmid pP32BP1	plasmid
+Natranaerobius thermophilus JW/NM-WN-LF	eubacteria
+plasmid pAPA07-010	plasmid
+plasmid pTrp	plasmid
+plasmid pBL1	plasmid
+plasmid pN315	plasmid
+plasmid SLP2	plasmid
+plasmid pSNA1	plasmid
+plasmid pPABN1	plasmid
+plasmid pHCD	plasmid
+plasmid pI7S6	plasmid
+plasmid pTHEBA.01	plasmid
+plasmid pHCW	plasmid
+plasmid pLM1-2cUG1	plasmid
+plasmid pWBG753	plasmid
+Spiroplasma diminutum CUAS-1	eubacteria
+plasmid pBC9801	plasmid
+plasmid pWBG751	plasmid
+plasmid pMATVIM-7	plasmid
+plasmid pHK17a	plasmid
+plasmid pHLHK8	plasmid
+plasmid pCT83	plasmid
+plasmid pHH400	plasmid
+plasmid pYptb32953	plasmid
+plasmid lp54	plasmid
+plasmid lp56	plasmid
+plasmid lp53	plasmid
+plasmid PsyG_3	plasmid
+plasmid pBF9343	plasmid
+plasmid pMUM001	plasmid
+plasmid pMUM002	plasmid
+plasmid pMUM003	plasmid
+plasmid pNP40	plasmid
+plasmid pDYM4.3k	plasmid
+plasmid pO86A1	plasmid
+Opitutus terrae PB90-1	eubacteria
+plasmid linear plasmid	plasmid
+plasmid pSJ2-8	plasmid
+plasmid pYE854	plasmid
+plasmid pXCV19	plasmid
+plasmid pFP4	plasmid
+plasmid pFP1	plasmid
+plasmid JD1 cp32-12	plasmid
+plasmid JD1 cp32-10	plasmid
+plasmid JD1 cp32-11	plasmid
+plasmid pBM19	plasmid
+plasmid pBMB2062-4ac	plasmid
+plasmid pJS42	plasmid
+plasmid pRLG202	plasmid
+plasmid pRLG203	plasmid
+Methanococcus maripaludis S2	archae
+plasmid pCLOPA01	plasmid
+plasmid pRtrCIAT899b	plasmid
+plasmid pRtrCIAT899a	plasmid
+plasmid pMW2	plasmid
+plasmid pEC14_114	plasmid
+Candidatus Midichloria mitochondrii IricVA	eubacteria
+plasmid pK50-2	plasmid
+Pyrococcus sp. NA2	archae
+plasmid pHP-42	plasmid
+plasmid k1	plasmid
+plasmid APP7_A	plasmid
+plasmid APP7_C	plasmid
+Thermofilum sp. 1910b	archae
+plasmid pAPA12-020	plasmid
+plasmid pSMS35_130	plasmid
+plasmid pLgLA39	plasmid
+plasmid SAP095B	plasmid
+plasmid ABIBUN107mP1	plasmid
+plasmid pCLJ2	plasmid
+plasmid pSERP	plasmid
+plasmid pFL129	plasmid
+plasmid pBM200	plasmid
+plasmid EcOYW1	plasmid
+Methanolobus psychrophilus R15	archae
+plasmid pCY360	plasmid
+plasmid pGY4MC101	plasmid
+Pelagibacterium halotolerans B2	eubacteria
+plasmid pCRP3	plasmid
+plasmid pHUSEC41-4	plasmid
+plasmid pHUSEC41-2	plasmid
+plasmid pHUSEC41-3	plasmid
+plasmid pHUSEC41-1	plasmid
+plasmid pEB170	plasmid
+plasmid pPANA10	plasmid
+plasmid pAPA03-030	plasmid
+plasmid pCRI9333.06	plasmid
+Staphylothermus marinus F1	archae
+plasmid pGL	plasmid
+plasmid pHT926	plasmid
+plasmid pFMC	plasmid
+plasmid pSM1	plasmid
+Nostoc sp. PCC 7107	eubacteria
+Halanaerobium praevalens DSM 2228	eubacteria
+plasmid pAPA26-050	plasmid
+plasmid pAPA32-020	plasmid
+plasmid pEcWSU1_A	plasmid
+plasmid pRetMIM1b	plasmid
+plasmid pST12	plasmid
+plasmid pCss165Kan	plasmid
+plasmid 72a_lp17	plasmid
+plasmid pAsal3	plasmid
+plasmid pE66An	plasmid
+plasmid pHPM186	plasmid
+plasmid pHPM180	plasmid
+plasmid pSA8589	plasmid
+plasmid pFiD188	plasmid
+plasmid SAP077B	plasmid
+plasmid SAP077A	plasmid
+plasmid pSD15	plasmid
+plasmid pSD11	plasmid
+plasmid pSD10	plasmid
+plasmid pCFI-3	plasmid
+plasmid Bol26_lp17	plasmid
+plasmid pBORa53	plasmid
+plasmid WI91-23_cp32-4	plasmid
+plasmid WI91-23_cp32-5	plasmid
+plasmid WI91-23_cp32-6	plasmid
+plasmid WI91-23_cp32-7	plasmid
+plasmid WI91-23_cp32-1	plasmid
+plasmid pB76-81	plasmid
+plasmid pSinA	plasmid
+plasmid pBMB2062-32	plasmid
+plasmid pKPHS2	plasmid
+plasmid pKPHS3	plasmid
+plasmid pKPHS1	plasmid
+plasmid pKPHS6	plasmid
+plasmid pKPHS4	plasmid
+plasmid pKPHS5	plasmid
+plasmid pP880204	plasmid
+plasmid pP880201	plasmid
+plasmid pP880202	plasmid
+plasmid pP880203	plasmid
+plasmid p18810-P03	plasmid
+plasmid pAPA22-020	plasmid
+Chloroflexus aurantiacus J-10-fl	eubacteria
+Acidianus hospitalis W1	archae
+plasmid pRSPA01	plasmid
+plasmid pRSPA03	plasmid
+plasmid pRSPA02	plasmid
+plasmid pRSPA05	plasmid
+plasmid pRSPA04	plasmid
+plasmid pDMV2	plasmid
+plasmid IncQ-type pQ7	plasmid
+Thermodesulfatator indicus DSM 15286	eubacteria
+plasmid p08PLY-1	plasmid
+plasmid WI91-23_cp32-10	plasmid
+plasmid WI91-23_cp32-11	plasmid
+plasmid 105.5R(r)p	plasmid
+Haliangium ochraceum DSM 14365	eubacteria
+plasmid pPSMK1	plasmid
+plasmid pBJS-O	plasmid
+plasmid pOSC7112.03	plasmid
+plasmid lp28-4	plasmid
+plasmid lp28-7	plasmid
+plasmid lp28-1	plasmid
+plasmid lp28-3	plasmid
+plasmid lp28-2	plasmid
+plasmid pETB	plasmid
+plasmid pI1T1	plasmid
+plasmid lp28-8	plasmid
+plasmid pP742405	plasmid
+plasmid pP742404	plasmid
+plasmid pP742406	plasmid
+plasmid pP742401	plasmid
+plasmid cp32-quad	plasmid
+plasmid pP742403	plasmid
+plasmid pR148	plasmid
+plasmid pHP51	plasmid
+plasmid pC223	plasmid
+plasmid pC221	plasmid
+plasmid pCPS32	plasmid
+plasmid pMOL30	plasmid
+Thermomicrobium roseum DSM 5159	eubacteria
+plasmid pHLAC01	plasmid
+plasmid pIR52-1	plasmid
+Desulfitobacterium dehalogenans ATCC 51507	eubacteria
+plasmid pVT745	plasmid
+plasmid pWZ909	plasmid
+plasmid ColE1	plasmid
+plasmid pFL6-60	plasmid
+plasmid pXAUT01	plasmid
+plasmid pOM1	plasmid
+plasmid pB171	plasmid
+plasmid pDEVAL01	plasmid
+plasmid pE33L8	plasmid
+Liberibacter crescens BT-1	eubacteria
+plasmid lp38	plasmid
+plasmid lp32	plasmid
+plasmid lp31	plasmid
+plasmid lp36	plasmid
+plasmid lp34	plasmid
+plasmid pA852	plasmid
+plasmid pCT8513	plasmid
+plasmid pKpQIL-SC29	plasmid
+plasmid p74	plasmid
+plasmid p75	plasmid
+plasmid pZL12	plasmid
+plasmid pKH19	plasmid
+plasmid pF1947	plasmid
+plasmid p2ABSDF	plasmid
+plasmid pKH13	plasmid
+plasmid pKH12	plasmid
+plasmid pKH15	plasmid
+plasmid pKH14	plasmid
+plasmid pKH17	plasmid
+plasmid pKH16	plasmid
+plasmid pAPEC-1	plasmid
+plasmid new_pCD	plasmid
+plasmid F plasmid	plasmid
+plasmid pLME300	plasmid
+Thermosphaera aggregans DSM 11486	archae
+plasmid pEC34B	plasmid
+plasmid pEC34A	plasmid
+Gordonia bronchialis DSM 43247	eubacteria
+plasmid pASPHE302	plasmid
+plasmid pASPHE301	plasmid
+Methanospirillum hungatei JF-1	archae
+plasmid pSR56	plasmid
+plasmid pMG828-2	plasmid
+plasmid pMG828-1	plasmid
+plasmid pBRH01	plasmid
+plasmid pBRH02	plasmid
+plasmid pMG828-4	plasmid
+plasmid pRLO149_94	plasmid
+plasmid pIS56-328	plasmid
+plasmid p417H-90	plasmid
+Corynebacterium diphtheriae HC03	eubacteria
+Symbiobacterium thermophilum IAM 14863	eubacteria
+plasmid p1BJAB0868	plasmid
+plasmid Far04_lp32-10	plasmid
+plasmid pSDA1	plasmid
+plasmid pEC4115	plasmid
+Pyrococcus furiosus DSM 3638	archae
+plasmid pHCG11	plasmid
+Thermococcus kodakarensis KOD1	archae
+plasmid SAP008A	plasmid
+plasmid p1ESCUM	plasmid
+plasmid pLGV440	plasmid
+plasmid SAP108B	plasmid
+plasmid SAP108C	plasmid
+plasmid SAP108A	plasmid
+Alistipes finegoldii DSM 17242	eubacteria
+plasmid pCTXM360	plasmid
+plasmid IncA/C-LS6	plasmid
+plasmid pURB500	plasmid
+plasmid pW240	plasmid
+plasmid pNDMCFuy	plasmid
+plasmid pCGB40	plasmid
+plasmid pEMCJH03	plasmid
+plasmid pNL18.2	plasmid
+plasmid pNL18.1	plasmid
+Clostridium botulinum F str. 230613	eubacteria
+plasmid pN42	plasmid
+plasmid pND12_96	plasmid
+plasmid pSK1	plasmid
+plasmid pAPA03-010	plasmid
+plasmid pSK6	plasmid
+plasmid p1HPAKL117	plasmid
+plasmid pAPEC1990_61	plasmid
+plasmid pDLK2	plasmid
+plasmid pDLK3	plasmid
+plasmid pDLK1	plasmid
+plasmid pAPA26-030	plasmid
+Stigmatella aurantiaca DW4/3-1	eubacteria
+plasmid pDEIPR02	plasmid
+plasmid pHPSAT464	plasmid
+plasmid pA996	plasmid
+plasmid pDEIPR04	plasmid
+plasmid pPHDP10	plasmid
+plasmid pKL0018	plasmid
+plasmid bglu_4p	plasmid
+plasmid pRAM23	plasmid
+plasmid pLM7UG1	plasmid
+plasmid pMETVU02	plasmid
+plasmid pMETVU01	plasmid
+plasmid pBEE99	plasmid
+plasmid Bol26_lp36	plasmid
+Sulfolobus islandicus M.16.27	archae
+plasmid pRPR	plasmid
+plasmid pNJAKD	plasmid
+plasmid PL3	plasmid
+plasmid pRPA	plasmid
+plasmid pACIX902	plasmid
+plasmid pACIX903	plasmid
+plasmid p23023	plasmid
+plasmid pACIX901	plasmid
+plasmid pACIX904	plasmid
+plasmid pACIX905	plasmid
+plasmid pSal6919a	plasmid
+plasmid pBMB2062-56	plasmid
+plasmid pQBR55	plasmid
+plasmid pNL1	plasmid
+plasmid pNL2	plasmid
+plasmid pCpA1	plasmid
+plasmid pNL9	plasmid
+plasmid pMEFER01	plasmid
+Methylomonas methanica MC09	eubacteria
+plasmid pTPEN01	plasmid
+plasmid pCALNI01	plasmid
+Xylanimonas cellulosilytica DSM 15894	eubacteria
+plasmid megaplasmid	plasmid
+Bradyrhizobium japonicum USDA 6	eubacteria
+plasmid pS51A	plasmid
+plasmid pS51B	plasmid
+plasmid pSN22	plasmid
+plasmid SV1_cp32-7	plasmid
+plasmid pG9842_209	plasmid
+plasmid pAPA03-060	plasmid
+plasmid pAMDE1-300	plasmid
+plasmid large	plasmid
+plasmid pSL254_3	plasmid
+plasmid p1META1	plasmid
+plasmid pRL8	plasmid
+plasmid pFZ51	plasmid
+plasmid pRL9	plasmid
+plasmid LBPp5	plasmid
+plasmid LBPp4	plasmid
+plasmid LBPp6	plasmid
+plasmid LBPp1	plasmid
+plasmid 19-pEI1	plasmid
+plasmid LBPp3	plasmid
+plasmid LBPp2	plasmid
+plasmid pPrY2001	plasmid
+plasmid pRL7	plasmid
+plasmid pRahaq201	plasmid
+plasmid pRahaq202	plasmid
+plasmid pRahaq203	plasmid
+plasmid pAYS	plasmid
+plasmid pAYL	plasmid
+plasmid JD1 lp28-5	plasmid
+plasmid pP12-1	plasmid
+plasmid pBHB	plasmid
+Methanosalsum zhilinae DSM 4017	archae
+plasmid pRC18	plasmid
+plasmid pND6-1	plasmid
+Desulfobacterium autotrophicum HRM2	eubacteria
+Klebsiella pneumoniae subsp. rhinoscleromatis SB3432	eubacteria
+plasmid N40_cp32-9	plasmid
+plasmid HPP12	plasmid
+plasmid lp17	plasmid
+plasmid pPL395	plasmid
+plasmid p52	plasmid
+plasmid 72a_lp28-4	plasmid
+plasmid p58	plasmid
+plasmid pISP2	plasmid
+plasmid pXAC64	plasmid
+plasmid pXF-RIV11	plasmid
+plasmid pXF-RIV19	plasmid
+plasmid JD1 lp28-1	plasmid
+Coxiella burnetii CbuG_Q212	eubacteria
+plasmid p53638_226	plasmid
+Pyrobaculum islandicum DSM 4184	archae
+plasmid pWNCR15	plasmid
+plasmid pWNCR12	plasmid
+plasmid JD1 lp28-6	plasmid
+plasmid pQpRS_K_Q154	plasmid
+plasmid JD1 lp28-7	plasmid
+plasmid pAH187_270	plasmid
+plasmid pIGJC156	plasmid
+plasmid pHCG3B	plasmid
+plasmid pCG2	plasmid
+plasmid pRMAR01	plasmid
+plasmid pCIR10	plasmid
+plasmid pMARC4	plasmid
+Desulfomicrobium baculatum DSM 4028	eubacteria
+plasmid pRp12D03	plasmid
+plasmid pRp12D02	plasmid
+plasmid pRp12D01	plasmid
+plasmid pAYWB-III	plasmid
+Amycolatopsis mediterranei RB	eubacteria
+plasmid pWS58	plasmid
+plasmid pMA3	plasmid
+plasmid pGKL1	plasmid
+plasmid pTS1	plasmid
+plasmid QpRS	plasmid
+Halalkalicoccus jeotgali B3	archae
+plasmid pAPA01-020	plasmid
+Methylacidiphilum infernorum V4	eubacteria
+plasmid lp5	plasmid
+plasmid pNHAL01	plasmid
+plasmid pSENV	plasmid
+plasmid byi_3p	plasmid
+plasmid pFS39	plasmid
+plasmid pTHEAM01	plasmid
+plasmid ETB plasmid	plasmid
+plasmid ZS7_lp28-4	plasmid
+plasmid ZS7_lp28-2	plasmid
+plasmid ZS7_lp28-1	plasmid
+plasmid pRmeGR4a	plasmid
+plasmid pRmeGR4b	plasmid
+plasmid pC1	plasmid
+plasmid pCT281	plasmid
+plasmid pCT	plasmid
+plasmid pUMNK88_Ent	plasmid
+plasmid IncW pIE321	plasmid
+plasmid pB182_37	plasmid
+plasmid pCD	plasmid
+plasmid pLNU5 (naturally occurring)	plasmid
+plasmid pNDM-1saitama01	plasmid
+plasmid pPsv48A	plasmid
+plasmid pPsv48B	plasmid
+plasmid pPsv48C	plasmid
+plasmid pFW213	plasmid
+plasmid pSD_77	plasmid
+plasmid pAPA26-013	plasmid
+Candidatus Korarchaeum cryptofilum OPF8	archae
+plasmid unnamed29	plasmid
+plasmid unnamed28	plasmid
+plasmid CloDF13	plasmid
+plasmid pSYM1	plasmid
+plasmid 72a_lp54	plasmid
+plasmid pBMYdx	plasmid
+plasmid pUB101	plasmid
+plasmid pKB290-6	plasmid
+plasmid pOC167	plasmid
+Brucella melitensis ATCC 23457	eubacteria
+plasmid unnamed21	plasmid
+plasmid pYVe8081	plasmid
+plasmid bglu_2p	plasmid
+plasmid pZM3H1	plasmid
+plasmid unnamed27	plasmid
+plasmid pBpOF4-02	plasmid
+plasmid pBpOF4-01	plasmid
+Streptomyces fulvissimus DSM 40593	eubacteria
+plasmid pK18An	plasmid
+plasmid pNDM-BTR	plasmid
+plasmid pTT8	plasmid
+plasmid pCVM29188_46	plasmid
+plasmid ColEST258	plasmid
+plasmid pCS0010A	plasmid
+plasmid RPME01	plasmid
+plasmid pAPA32-012	plasmid
+plasmid pAPA22-060	plasmid
+plasmid pXZ608	plasmid
+plasmid pPZZ84	plasmid
+plasmid pEOC01	plasmid
+plasmid CA-11.2A_cp32-13	plasmid
+plasmid CA-11.2A_cp32-10	plasmid
+Pyrobaculum calidifontis JCM 11548	archae
+plasmid pUMNK88_91	plasmid
+plasmid pAR060302	plasmid
+plasmid pSG53	plasmid
+plasmid pAH33	plasmid
+plasmid unnamed20	plasmid
+plasmid pW2580	plasmid
+plasmid pKOX105	plasmid
+Elusimicrobium minutum Pei191	eubacteria
+plasmid pCVM19633_4	plasmid
+plasmid pMsip02	plasmid
+plasmid 29805_cp32-12	plasmid
+plasmid pLL1212	plasmid
+plasmid pJB01	plasmid
+plasmid large ECE	plasmid
+plasmid pHLHK22	plasmid
+plasmid 64b_cp32-11	plasmid
+plasmid pES213	plasmid
+plasmid pDRET01	plasmid
+plasmid 72a_cp26	plasmid
+Oscillibacter valericigenes Sjm18-20	eubacteria
+plasmid pTX14-1	plasmid
+plasmid pTX14-3	plasmid
+plasmid pTX14-2	plasmid
+plasmid pECSF1	plasmid
+plasmid pEXIG01	plasmid
+plasmid pHDC-I	plasmid
+plasmid pHDC-A	plasmid
+plasmid MEALZ_p	plasmid
+plasmid Bol26_cp26	plasmid
+plasmid pNI10	plasmid
+Thermococcus onnurineus NA1	archae
+Bifidobacterium longum subsp. longum JDM301	eubacteria
+plasmid pNZ4000	plasmid
+plasmid p2METDI	plasmid
+plasmid Gch7220	plasmid
+plasmid pSHJGH1	plasmid
+plasmid pSHJGH2	plasmid
+plasmid Far04_lp28-1	plasmid
+plasmid pPAB19-3	plasmid
+plasmid pPAB19-4	plasmid
+plasmid pCTU1	plasmid
+plasmid pCTU3	plasmid
+plasmid pCTU2	plasmid
+plasmid pK45-67VIM	plasmid
+plasmid p5BKT015925	plasmid
+plasmid pBP68	plasmid
+plasmid pBC201	plasmid
+plasmid pOZ176	plasmid
+plasmid 64b_lp28-5	plasmid
+Metallosphaera cuprina Ar-4	archae
+plasmid pTpau01	plasmid
+plasmid pHRC017	plasmid
+plasmid pUR3912	plasmid
+plasmid pLELO	plasmid
+plasmid pAPA12-040	plasmid
+plasmid pFV1	plasmid
+plasmid pl6	plasmid
+plasmid pMUR050	plasmid
+plasmid pB85766	plasmid
+plasmid pPHDP60	plasmid
+plasmid pFNL10	plasmid
+plasmid pKLH80	plasmid
+plasmid pXAC47	plasmid
+plasmid pBt40	plasmid
+plasmid pla	plasmid
+plasmid plc	plasmid
+plasmid plb	plasmid
+plasmid unnamed	plasmid
+plasmid pSRQ800	plasmid
+plasmid pCCK3259	plasmid
+plasmid pKPC_FCF/3SP	plasmid
+plasmid mF	plasmid
+plasmid pCE2	plasmid
+plasmid pCE3	plasmid
+plasmid p1B146	plasmid
+plasmid pMSPYR101	plasmid
+plasmid pMSPYR102	plasmid
+plasmid pLST424C-61	plasmid
+plasmid pCGS49	plasmid
+plasmid pRPSZY	plasmid
+plasmid pCD02	plasmid
+plasmid pCD01	plasmid
+plasmid pADP-1	plasmid
+plasmid pLRI01	plasmid
+plasmid pRPEC180_47	plasmid
+plasmid p2007057	plasmid
+plasmid p271A	plasmid
+plasmid pl42	plasmid
+plasmid pl40	plasmid
+plasmid pl41	plasmid
+plasmid pST-III	plasmid
+plasmid SAP093A	plasmid
+plasmid pYS1	plasmid
+plasmid pRSF1010_SL1344	plasmid
+plasmid pRSKD131A	plasmid
+plasmid pAPA01-040	plasmid
+Neisseria meningitidis M01-240149	eubacteria
+plasmid pGXY010	plasmid
+plasmid pGY1	plasmid
+plasmid SAP105A	plasmid
+plasmid pCC42yr	plasmid
+plasmid pRHL3	plasmid
+plasmid pA1	plasmid
+plasmid pSG4	plasmid
+plasmid pSG5	plasmid
+plasmid pSG1	plasmid
+plasmid pSG2	plasmid
+plasmid p9785L	plasmid
+plasmid p9785S	plasmid
+plasmid pST75	plasmid
+plasmid pAA	plasmid
+plasmid pPMA4326D	plasmid
+plasmid pPMA4326E	plasmid
+plasmid pPMA4326A	plasmid
+plasmid pPMA4326B	plasmid
+plasmid Plasmid pCHL1	plasmid
+plasmid pTPqnrS-1a	plasmid
+plasmid pLNU8 (naturally occurring)	plasmid
+plasmid pSYSX	plasmid
+plasmid pSC101	plasmid
+plasmid pDESTI.01	plasmid
+plasmid pSH696_135	plasmid
+plasmid pSYSG	plasmid
+plasmid pSYSA	plasmid
+plasmid pAYWB-IV	plasmid
+Pedobacter heparinus DSM 2366	eubacteria
+plasmid pTBMP1	plasmid
+Desulfocapsa sulfexigens DSM 10523	eubacteria
+plasmid SAP079A	plasmid
+plasmid VS116_lp17	plasmid
+plasmid pAYWB-II	plasmid
+plasmid pNAL21202	plasmid
+plasmid pNAL21201	plasmid
+plasmid pAB510b	plasmid
+plasmid pKLCA	plasmid
+Desulfarculus baarsii DSM 2075	eubacteria
+plasmid pSpnP1	plasmid
+Alcanivorax borkumensis SK2	eubacteria
+plasmid pLC1	plasmid
+plasmid pKLC3	plasmid
+plasmid pKLC2	plasmid
+plasmid pKLC1	plasmid
+plasmid pTEF1	plasmid
+plasmid pTEF2	plasmid
+plasmid pTEF3	plasmid
+plasmid DN1	plasmid
+plasmid pAW63	plasmid
+plasmid megaplasmid pCL2100	plasmid
+plasmid pNPUN04	plasmid
+plasmid pNPUN05	plasmid
+plasmid pNPUN02	plasmid
+plasmid pNPUN03	plasmid
+plasmid pNPUN01	plasmid
+Sanguibacter keddieii DSM 10542	eubacteria
+plasmid SAP068A	plasmid
+plasmid 72a_cp32-12	plasmid
+plasmid 72a_cp32-13	plasmid
+Candidatus Protochlamydia amoebophila UWE25	eubacteria
+plasmid p712	plasmid
+plasmid pBour	plasmid
+plasmid pSR84	plasmid
+plasmid pBACSA01	plasmid
+plasmid pBACSA02	plasmid
+plasmid pLP712	plasmid
+plasmid pG-09EL50	plasmid
+plasmid p9123	plasmid
+plasmid pSYSM_M	plasmid
+plasmid p18809-P04	plasmid
+plasmid p18809-P03	plasmid
+plasmid pC15-1a	plasmid
+plasmid pPaWBNy-2	plasmid
+plasmid pCM959	plasmid
+Nanoarchaeum equitans Kin4-M	archae
+plasmid pECTm80	plasmid
+plasmid pB10	plasmid
+plasmid pYPTS01	plasmid
+plasmid pXF51	plasmid
+plasmid pF3031	plasmid
+plasmid pMCC_1	plasmid
+plasmid p19	plasmid
+plasmid pAH3680	plasmid
+plasmid pUR3937	plasmid
+plasmid pREC1	plasmid
+plasmid pKPoxa-48N1	plasmid
+plasmid pPstS1	plasmid
+plasmid pSHaeA	plasmid
+plasmid pSHaeC	plasmid
+plasmid pSHaeB	plasmid
+plasmid pND6-2	plasmid
+plasmid pAL226	plasmid
+plasmid pIGMS5	plasmid
+Erysipelothrix rhusiopathiae str. Fujisawa	eubacteria
+plasmid pQ1-1	plasmid
+Methanobrevibacter ruminantium M1	archae
+plasmid pDPT4	plasmid
+plasmid pDPT3	plasmid
+plasmid pDPT2	plasmid
+plasmid pDPT1	plasmid
+plasmid pLME106	plasmid
+plasmid ColE-LS6	plasmid
+plasmid pLME108	plasmid
+plasmid pEP03	plasmid
+plasmid pAL5000	plasmid
+plasmid pCC1	plasmid
+plasmid pCC2	plasmid
+plasmid pCC3	plasmid
+plasmid pCC7	plasmid
+plasmid pP9014	plasmid
+plasmid pVF22	plasmid
+Vibrio vulnificus MO6-24/O	eubacteria
+plasmid pEC_L8	plasmid
+plasmid pGB3634	plasmid
+plasmid pP880103	plasmid
+plasmid pP880102	plasmid
+plasmid pHD5AT	plasmid
+plasmid pMET-1	plasmid
+plasmid pCCK647	plasmid
+plasmid pXZ274	plasmid
+plasmid pHPB14	plasmid
+plasmid pl28	plasmid
+plasmid pEKO1102	plasmid
+plasmid pEKO1101	plasmid
+plasmid pl23	plasmid
+plasmid pl26	plasmid
+plasmid pl27	plasmid
+plasmid N40_lp25	plasmid
+plasmid pCPF4969	plasmid
+plasmid ZS7_lp36	plasmid
+plasmid pI8T7	plasmid
+plasmid pWCFS101	plasmid
+plasmid PBr_lp25	plasmid
+plasmid pSSIL1	plasmid
+plasmid pGXY030	plasmid
+plasmid BTB_78p	plasmid
+plasmid pAPA01-060	plasmid
+plasmid pRI1	plasmid
+plasmid lp60-2	plasmid
+plasmid pREL1	plasmid
+plasmid pE33L466	plasmid
+plasmid pMG2D-1	plasmid
+plasmid pLNU6 (naturally occurr	plasmid
+plasmid pTA1040	plasmid
+Xanthomonas campestris pv. campestris str. 8004	eubacteria
+plasmid pAMI8	plasmid
+plasmid pAMI6	plasmid
+plasmid pAMI7	plasmid
+plasmid pAMI4	plasmid
+plasmid pAMI5	plasmid
+plasmid pEN2701	plasmid
+plasmid pAMI3	plasmid
+plasmid pAMI1	plasmid
+plasmid pLB1	plasmid
+plasmid pC194-like	plasmid
+plasmid pSMON01	plasmid
+plasmid pOV	plasmid
+halophilic archaeon DL31	archae
+plasmid pcchauvoei	plasmid
+plasmid pSRC1	plasmid
+plasmid pSRC3	plasmid
+plasmid pSRC2	plasmid
+plasmid pSRC5	plasmid
+plasmid pSRC4	plasmid
+plasmid pSRC7	plasmid
+plasmid pSRC6	plasmid
+plasmid pSRC9	plasmid
+plasmid pSRC8	plasmid
+plasmid p18808-P03	plasmid
+plasmid 29805_cp26	plasmid
+Nocardiopsis dassonvillei subsp. dassonvillei DSM 43111	eubacteria
+plasmid pTOR_02	plasmid
+plasmid pTOR_01	plasmid
+plasmid pD1279779	plasmid
+Advenella kashmirensis WT001	eubacteria
+plasmid VS116_lp36	plasmid
+plasmid pKV29	plasmid
+plasmid pMSR-1	plasmid
+plasmid pRMB	plasmid
+plasmid pR132505	plasmid
+Marinomonas posidonica IVIA-Po-181	eubacteria
+plasmid pRMA	plasmid
+plasmid pI5S5	plasmid
+plasmid pASV479	plasmid
+plasmid pYMH5	plasmid
+plasmid pEntH10407	plasmid
+plasmid pLN126_33	plasmid
+plasmid pNB2	plasmid
+plasmid PL23	plasmid
+Methanocaldococcus fervens AG86	archae
+plasmid pKEF9	plasmid
+plasmid pARD3079	plasmid
+Thermococcus sp. CL1	archae
+plasmid 29805_cp32-4	plasmid
+plasmid 29805_cp32-5	plasmid
+plasmid 29805_cp32-7	plasmid
+plasmid Far04_lp17	plasmid
+plasmid pMG1C-1	plasmid
+plasmid 29805_cp32-9	plasmid
+plasmid 118a_cp32-10	plasmid
+plasmid pPASb11	plasmid
+plasmid pSROS01	plasmid
+plasmid pKPX-1	plasmid
+plasmid pING1	plasmid
+plasmid pBMC401	plasmid
+plasmid pG-09EL71	plasmid
+plasmid pTW20_1	plasmid
+plasmid pHCM1	plasmid
+plasmid pTW20_2	plasmid
+Methanobrevibacter smithii ATCC 35061	archae
+plasmid pMAR2	plasmid
+Methanosarcina acetivorans C2A	archae
+plasmid EF62pA	plasmid
+plasmid EF62pC	plasmid
+plasmid EF62pB	plasmid
+plasmid VS116_cp9	plasmid
+plasmid p1ABSDF	plasmid
+plasmid pMADDUR1	plasmid
+plasmid pKKS966	plasmid
+plasmid pCL2.1	plasmid
+plasmid 94a_cp26	plasmid
+plasmid p7313178-1	plasmid
+plasmid pNDM10505	plasmid
+plasmid pHW30076	plasmid
+plasmid pWTY27	plasmid
+plasmid pNRC200	plasmid
+plasmid p174	plasmid
+plasmid ZS7_lp28-3	plasmid
+plasmid WI91-23_cp9-3	plasmid
+plasmid pGB354	plasmid
+plasmid pCpb2-CP1	plasmid
+plasmid 15S	plasmid
+plasmid pAnkS	plasmid
+plasmid pSSAP03302A	plasmid
+plasmid pWES-1	plasmid
+Methanosarcina barkeri str. Fusaro	archae
+plasmid pFZ1	plasmid
+Haloarcula hispanica ATCC 33960	archae
+plasmid pRW35	plasmid
+plasmid pJ349-116	plasmid
+plasmid pBS512_33	plasmid
+plasmid Plasmid pPF1	plasmid
+plasmid pNDM-KN	plasmid
+plasmid SAP045A	plasmid
+plasmid pS0385-1	plasmid
+plasmid pS0385-2	plasmid
+plasmid pS0385-3	plasmid
+plasmid pCPa	plasmid
+plasmid pIJ101	plasmid
+plasmid pTRACA30	plasmid
+plasmid invasion plasmid pIS2	plasmid
+plasmid p545	plasmid
+plasmid pANACY.06	plasmid
+plasmid pANACY.05	plasmid
+plasmid pANACY.04	plasmid
+plasmid pANACY.03	plasmid
+plasmid pANACY.02	plasmid
+plasmid pANACY.01	plasmid
+plasmid pCPPB-1	plasmid
+plasmid pREAT701 (p33701)	plasmid
+plasmid pCIBb1	plasmid
+plasmid VS116_cp32-10	plasmid
+plasmid pHac1	plasmid
+plasmid pIGRK	plasmid
+plasmid pNAH20	plasmid
+Carnobacterium sp. WN1359	eubacteria
+plasmid pNDM-HN380	plasmid
+plasmid Plasmid0001	plasmid
+plasmid pPN223	plasmid
+plasmid pXF-RIV5	plasmid
+plasmid ZS7_lp17	plasmid
+plasmid pHKU1	plasmid
+plasmid XNC1_p	plasmid
+plasmid pGXY050	plasmid
+plasmid CA-11.2A_lp17	plasmid
+plasmid pRK2	plasmid
+plasmid pJA144188	plasmid
+plasmid pREB7	plasmid
+plasmid pREB4	plasmid
+plasmid pREB5	plasmid
+plasmid pREB2	plasmid
+plasmid pREB3	plasmid
+plasmid pREB1	plasmid
+plasmid pREB8	plasmid
+plasmid pREB9	plasmid
+plasmid pSN254	plasmid
+plasmid pACICU2	plasmid
+plasmid p4ABAYE	plasmid
+Natronomonas pharaonis DSM 2160	archae
+plasmid pACICU1	plasmid
+plasmid pTA1060	plasmid
+Methanocaldococcus jannaschii DSM 2661	archae
+plasmid pM4	plasmid
+plasmid pRM21	plasmid
+plasmid pMF1	plasmid
+plasmid PHS4	plasmid
+plasmid pBmb9393	plasmid
+Prochlorococcus marinus str. MIT 9211	eubacteria
+plasmid R-plasmid pAG1	plasmid
+plasmid pMT	plasmid
+plasmid pML	plasmid
+Bdellovibrio exovorus JSS	eubacteria
+plasmid pAPA42C_060	plasmid
+plasmid pSSAP2	plasmid
+plasmid pSSAP1	plasmid
+plasmid pRi2659	plasmid
+plasmid pSmWW4	plasmid
+plasmid pSEEH1578_01	plasmid
+plasmid pSEEH1578_03	plasmid
+plasmid pSEEH1578_02	plasmid
+plasmid pABU	plasmid
+plasmid pABL	plasmid
+plasmid pSC2	plasmid
+plasmid pSCL	plasmid
+plasmid pAB1	plasmid
+plasmid SAP020A	plasmid
+plasmid pAB2	plasmid
+plasmid unnamed30	plasmid
+plasmid PPC1	plasmid
+Thermoanaerobacter italicus Ab9	eubacteria
+plasmid pIH01	plasmid
+plasmid p2BJAB07104	plasmid
+plasmid plasmid2	plasmid
+plasmid pSmeSM11b	plasmid
+plasmid p12579_5	plasmid
+Prevotella intermedia 17	eubacteria
+plasmid pSmeSM11a	plasmid
+plasmid p1ABTCDC0715	plasmid
+plasmid pSD5.6	plasmid
+plasmid pB000b	plasmid
+plasmid pTN2	plasmid
+plasmid pB000a	plasmid
+plasmid pSICJ18-1	plasmid
+plasmid pRPCMY	plasmid
+plasmid pCIZ2	plasmid
+plasmid pTet	plasmid
+plasmid pEC886	plasmid
+plasmid lp32-10	plasmid
+plasmid pCmGFP	plasmid
+plasmid pPAES01	plasmid
+plasmid pNGR234a	plasmid
+plasmid pSPRO01	plasmid
+plasmid pMV158	plasmid
+plasmid pLG13	plasmid
+Campylobacter jejuni subsp. jejuni NCTC 11168-BN148	eubacteria
+plasmid pSP187	plasmid
+Jonesia denitrificans DSM 20603	eubacteria
+plasmid pCT02021853_74	plasmid
+plasmid Far04_lp36	plasmid
+Aciduliprofundum boonei T469	archae
+plasmid pABCA95	plasmid
+Methanoculleus marisnigri JR1	archae
+plasmid pPB1	plasmid
+plasmid pBClin15	plasmid
+plasmid pDL10	plasmid
+plasmid pCHRO.01	plasmid
+plasmid p9705	plasmid
+plasmid A14S_lp36	plasmid
+plasmid p9701	plasmid
+plasmid A14S_lp38	plasmid
+plasmid RM1	plasmid
+plasmid pEA29	plasmid
+plasmid pSULKU03	plasmid
+plasmid pSULKU01	plasmid
+plasmid pBRST7.6	plasmid
+plasmid pC4602-2	plasmid
+plasmid pO26-L	plasmid
+plasmid Lp16A	plasmid
+plasmid EcOYNIM_2005	plasmid
+plasmid pPAT9B04	plasmid
+plasmid 118a_cp9	plasmid
+plasmid EcOYNIM_2000	plasmid
+plasmid pVT1	plasmid
+plasmid pVT2	plasmid
+plasmid pNDM102337	plasmid
+plasmid pSMA198	plasmid
+plasmid pCCK13698	plasmid
+plasmid p1081	plasmid
+plasmid WI91-23_lp54	plasmid
+plasmid WI91-23_lp56	plasmid
+plasmid pTF5	plasmid
+plasmid pCVM19633_110	plasmid
+plasmid pBBKW-1	plasmid
+plasmid pBBKW-2	plasmid
+plasmid pTINT01	plasmid
+Solibacillus silvestris StLB046	eubacteria
+plasmid pZZ6.01	plasmid
+plasmid pPNAP08	plasmid
+plasmid phalar01	plasmid
+plasmid phalar02	plasmid
+plasmid pPNAP01	plasmid
+plasmid pPNAP02	plasmid
+plasmid pPNAP03	plasmid
+plasmid pPNAP04	plasmid
+plasmid pPNAP05	plasmid
+plasmid pPNAP06	plasmid
+plasmid pPNAP07	plasmid
+plasmid pRetNIM1c	plasmid
+plasmid pAF07	plasmid
+plasmid pAF04	plasmid
+plasmid pMHSCS1	plasmid
+plasmid pKPN101-IT	plasmid
+plasmid pNG700	plasmid
+plasmid N40_cp32-12	plasmid
+plasmid N40_cp32-10	plasmid
+plasmid pKDO1	plasmid
+plasmid pB1018	plasmid
+plasmid pJ340-69	plasmid
+plasmid pVS	plasmid
+plasmid CA-11.2A_lp38	plasmid
+plasmid VS116_cp32-2-7	plasmid
+plasmid pBsph	plasmid
+plasmid pEC14-9	plasmid
+plasmid pEFER	plasmid
+Eubacterium rectale ATCC 33656	eubacteria
+plasmid pGO128	plasmid
+plasmid pIP843	plasmid
+plasmid pSK62	plasmid
+plasmid pSK67	plasmid
+plasmid PsyG_26	plasmid
+plasmid ZS7_lp54	plasmid
+plasmid pLNU7 (naturally occurring)	plasmid
+Arcanobacterium haemolyticum DSM 20595	eubacteria
+plasmid pLW1071	plasmid
+plasmid pP60P2	plasmid
+plasmid pZMOB03	plasmid
+plasmid pZMOB02	plasmid
+plasmid pZMOB05	plasmid
+plasmid pZMOB04	plasmid
+plasmid pMdT	plasmid
+plasmid pPAGA3	plasmid
+plasmid p11745	plasmid
+plasmid PB11	plasmid
+Aeropyrum camini SY1 = JCM 12091	archae
+Sulfolobus acidocaldarius Ron12/I	archae
+Haloquadratum walsbyi C23	archae
+plasmid pREN	plasmid
+plasmid pCC7120epsilon	plasmid
+plasmid pUCH-1	plasmid
+plasmid pGXY070	plasmid
+plasmid 118a_lp32-3	plasmid
+plasmid pLP2000	plasmid
+plasmid virulence plasmid	plasmid
+plasmid pRetMIM1a	plasmid
+plasmid pCA2.4_M	plasmid
+plasmid pRetMIM1d	plasmid
+plasmid pRetMIM1e	plasmid
+plasmid pJARS36	plasmid
+plasmid pJARS35	plasmid
+plasmid pNL750149	plasmid
+plasmid pWb1	plasmid
+plasmid VIBNI_pA	plasmid
+plasmid pSWIT01	plasmid
+plasmid pSWIT02	plasmid
+Pyrobaculum aerophilum str. IM2	archae
+plasmid pPSEST03	plasmid
+plasmid pSD4.0	plasmid
+plasmid pA1606	plasmid
+plasmid pW56	plasmid
+plasmid SAP106A	plasmid
+plasmid SAP106B	plasmid
+plasmid pK2044	plasmid
+plasmid pEl1573	plasmid
+plasmid pCP8533S12	plasmid
+plasmid pAPA42C_040	plasmid
+plasmid pTC68	plasmid
+plasmid R621a	plasmid
+plasmid pWBG744	plasmid
+plasmid pWBG745	plasmid
+plasmid pWBG746	plasmid
+plasmid pWBG747	plasmid
+Leptospira borgpetersenii serovar Hardjo-bovis str. L550	eubacteria
+plasmid pHLR25	plasmid
+plasmid pSE34	plasmid
+Sulfolobus acidocaldarius N8	archae
+Burkholderia rhizoxinica HKI 454	eubacteria
+plasmid pAL1	plasmid
+plasmid pAPA07-050	plasmid
+plasmid pHDC-I-1	plasmid
+plasmid pHDC-I-9	plasmid
+plasmid pLNU2	plasmid
+plasmid pLNU3	plasmid
+plasmid pLNU1	plasmid
+plasmid pLNU4	plasmid
+plasmid pLNU9	plasmid
+plasmid pME2001	plasmid
+plasmid P9	plasmid
+plasmid P4	plasmid
+plasmid P5	plasmid
+plasmid P6	plasmid
+plasmid P1	plasmid
+plasmid P2	plasmid
+plasmid P3	plasmid
+plasmid pBS512_211	plasmid
+plasmid pAspH13-3a	plasmid
+plasmid pSOL1	plasmid
+Renibacterium salmoninarum ATCC 33209	eubacteria
+plasmid R485	plasmid
+plasmid pAQ1	plasmid
+plasmid plasmid pFL1	plasmid
+plasmid pKP1780	plasmid
+Methanosaeta concilii GP6	archae
+plasmid pXO2	plasmid
+plasmid pXO1	plasmid
+Natronomonas moolapensis 8.8.11	archae
+plasmid unnamed23	plasmid
+plasmid unnamed22	plasmid
+plasmid unnamed25	plasmid
+plasmid unnamed24	plasmid
+plasmid unnamed26	plasmid
+Halopiger xanaduensis SH-6	archae
+plasmid pQNR2078	plasmid
+plasmid pCFSAN002069_01	plasmid
+plasmid pCFSAN002069_02	plasmid
+plasmid pBSDMV9	plasmid
+plasmid pMsip01	plasmid
+plasmid pNF2	plasmid
+plasmid pNF1	plasmid
+plasmid Far04_lp54	plasmid
+plasmid pUO-SbR5	plasmid
+plasmid pACHL01	plasmid
+plasmid pUO-SbR3	plasmid
+plasmid pACHL02	plasmid
+Catenulispora acidiphila DSM 44928	eubacteria
+Acidothermus cellulolyticus 11B	eubacteria
+plasmid pPG010208	plasmid
+plasmid A14S_lp17	plasmid
+plasmid pECY6-7	plasmid
+plasmid small Plasmid pMA1	plasmid
+Methanocella conradii HZ254	archae
+Rickettsia massiliae MTU5	eubacteria
+plasmid pVV8	plasmid
+plasmid pHM100	plasmid
+plasmid pBM100	plasmid
+plasmid pBB2	plasmid
+plasmid pS18501	plasmid
+plasmid pSK11P	plasmid
+plasmid pSK11L	plasmid
+plasmid pSK11A	plasmid
+plasmid pSK11B	plasmid
+plasmid pBLO1	plasmid
+plasmid pOLA52	plasmid
+Aeromonas hydrophila subsp. hydrophila ATCC 7966	eubacteria
+plasmid pOYM	plasmid
+Sorangium cellulosum So0157-2	eubacteria
+plasmid pE33L54	plasmid
+plasmid pP99-018	plasmid
+plasmid p18813-P03	plasmid
+plasmid pUH24	plasmid
+plasmid PRA2	plasmid
+plasmid PRA1	plasmid
+plasmid SAP104B	plasmid
+plasmid pAF22	plasmid
+plasmid pSYSA_M	plasmid
+plasmid Plasmid pMA2	plasmid
+plasmid cryptic plasmid pDR1-1B	plasmid
+Propionibacterium acnes KPA171202	eubacteria
+plasmid bgla_3p	plasmid
+plasmid pE88	plasmid
+plasmid pPag3	plasmid
+plasmid pPag2	plasmid
+plasmid pPag1	plasmid
+plasmid pPL373	plasmid
+plasmid pPL374	plasmid
+Methanococcus vannielii SB	archae
+plasmid cryptic plasmid pLJ42	plasmid
+plasmid pO55	plasmid
+plasmid BTB_9p	plasmid
+plasmid pTC	plasmid
+plasmid WI91-23_lp5	plasmid
+plasmid pNMAG02	plasmid
+plasmid pNMAG03	plasmid
+plasmid pNMAG01	plasmid
+Pyrococcus yayanosii CH1	archae
+plasmid SAP014A	plasmid
+plasmid PRA22	plasmid
+plasmid pETEC_35	plasmid
+plasmid pBGIBA	plasmid
+Methanosarcina mazei Go1	archae
+plasmid pJW1	plasmid
+plasmid pBgh	plasmid
+plasmid pBge	plasmid
+plasmid pPDL2	plasmid
+plasmid cp32-5	plasmid
+plasmid cp32-4	plasmid
+plasmid cp32-7	plasmid
+plasmid cp32-6	plasmid
+plasmid cp32-1	plasmid
+plasmid cp32-3	plasmid
+plasmid cp32-9	plasmid
+plasmid cp32-8	plasmid
+plasmid pBMB2062-2	plasmid
+plasmid pFAES01	plasmid
+plasmid pETN48	plasmid
+plasmid p3ABAYE	plasmid
+plasmid pIGRW12	plasmid
+plasmid pGA2	plasmid
+Thermococcus gammatolerans EJ3	archae
+plasmid pBIFA24	plasmid
+plasmid pSLPG	plasmid
+plasmid pET44827	plasmid
+plasmid pIS56-233	plasmid
+plasmid pI2	plasmid
+plasmid QpH1	plasmid
+plasmid 297_lp28-4	plasmid
+plasmid 297_lp28-5	plasmid
+plasmid 297_lp28-6	plasmid
+plasmid 297_lp28-1	plasmid
+plasmid 297_lp28-3	plasmid
+plasmid pSIO1	plasmid
+plasmid pAPA42C_020	plasmid
+plasmid pKP1	plasmid
+plasmid SAP104A	plasmid
+plasmid pCP13	plasmid
+Candidatus Solibacter usitatus Ellin6076	eubacteria
+plasmid mega plasmid	plasmid
+plasmid pWBG763	plasmid
+plasmid pYC2	plasmid
+plasmid pWBG764	plasmid
+plasmid pSW82	plasmid
+plasmid pMJ100	plasmid
+plasmid pMFLV02	plasmid
+plasmid pMFLV03	plasmid
+plasmid pMFLV01	plasmid
+plasmid pCAL6303.01	plasmid
+plasmid pCAL6303.03	plasmid
+plasmid pCAL6303.02	plasmid
+plasmid pL2b795	plasmid
+plasmid pL2b820007	plasmid
+Hirschia baltica ATCC 49814	eubacteria
+plasmid pCI-XO2	plasmid
+plasmid pCI-XO1	plasmid
+plasmid p2BJAB0868	plasmid
+plasmid pSH111_166	plasmid
+plasmid pAC450	plasmid
+plasmid pAm05WL3325	plasmid
+Caldisericum exile AZM16c01	eubacteria
+plasmid cp9	plasmid
+Sulfuricella denitrificans skB26	eubacteria
+Methanobrevibacter sp. AbM4	archae
+plasmid pInt	plasmid
+plasmid pSH111_227	plasmid
+plasmid pAH187_12	plasmid
+plasmid SAP060B	plasmid
+plasmid SAP060A	plasmid
+plasmid ZS7_cp26	plasmid
+plasmid pWCZ	plasmid
+plasmid pHV1	plasmid
+plasmid pHV3	plasmid
+plasmid pHV4	plasmid
+plasmid pCher	plasmid
+plasmid pANL	plasmid
+plasmid pCYAN10605.01	plasmid
+plasmid pWC1	plasmid
+plasmid pIMD50	plasmid
+plasmid pCE10A	plasmid
+plasmid pCE10C	plasmid
+plasmid p18806-P03	plasmid
+plasmid pCE10D	plasmid
+plasmid pNDM-HK	plasmid
+plasmid pIS56-16	plasmid
+plasmid pIS56-15	plasmid
+plasmid pIS56-11	plasmid
+plasmid pTHTHE1601	plasmid
+plasmid pMVSCS1	plasmid
+Thermococcus sibiricus MM 739	archae
+plasmid pES100	plasmid
+plasmid pMSR0	plasmid
+plasmid 29805_lp28-3	plasmid
+plasmid pSBAL17501	plasmid
+plasmid pSK76	plasmid
+plasmid pCB2.4_M	plasmid
+plasmid pBM500	plasmid
+Marivirga tractuosa DSM 4126	eubacteria
+plasmid pESBL-EA11	plasmid
+plasmid pHmuk01	plasmid
+plasmid pSbal03	plasmid
+plasmid pSbal02	plasmid
+plasmid pSbal04	plasmid
+plasmid SAP064A	plasmid
+plasmid pRAS3.2	plasmid
+plasmid pRAS3.1	plasmid
+plasmid p9b	plasmid
+plasmid pPHB194	plasmid
+plasmid WI91-23_lp17	plasmid
+plasmid pTB1	plasmid
+plasmid pTB2	plasmid
+plasmid pTB3	plasmid
+plasmid pTB4	plasmid
+plasmid pTB6	plasmid
+plasmid pEF-01	plasmid
+plasmid pAMT11	plasmid
+Veillonella parvula DSM 2008	eubacteria
+plasmid pPAPh2	plasmid
+plasmid p9L	plasmid
+plasmid pHCG3	plasmid
+plasmid pMMA2	plasmid
+plasmid pF243	plasmid
+plasmid bgla_1p	plasmid
+plasmid SAP093B	plasmid
+plasmid pSMQ308	plasmid
+Dictyoglomus turgidum DSM 6724	eubacteria
+plasmid pWCFS103	plasmid
+plasmid pAES4	plasmid
+plasmid pAQ2-2	plasmid
+plasmid pAQ2-1	plasmid
+Aromatoleum aromaticum EbN1	eubacteria
+plasmid BTB_7p	plasmid
+plasmid pRF	plasmid
+plasmid pAES2	plasmid
+plasmid pRM	plasmid
+plasmid 94a_cp32-10	plasmid
+plasmid 94a_cp32-11	plasmid
+plasmid pO3K6	plasmid
+plasmid Pp6427	plasmid
+plasmid pTRACA18	plasmid
+plasmid pTF62	plasmid
+plasmid pTRACA22	plasmid
+plasmid pJ353-116	plasmid
+plasmid pHHA45	plasmid
+plasmid pSYN6312.01	plasmid
+Kytococcus sedentarius DSM 20547	eubacteria
+Methanoplanus petrolearius DSM 11571	archae
+Acidaminococcus fermentans DSM 20731	eubacteria
+Haloferax mediterranei ATCC 33500	archae
+plasmid 94a_lp36	plasmid
+plasmid pJAM1	plasmid
+plasmid indigenous plasmid	plasmid
+plasmid p47S	plasmid
+plasmid p47L	plasmid
+plasmid pATHE02	plasmid
+plasmid pATHE01	plasmid
+plasmid pIGWZ12	plasmid
+plasmid pTi-SAKURA	plasmid
+plasmid pNOCA01	plasmid
+Thermococcus sp. 4557	archae
+plasmid pBFP35	plasmid
+plasmid pKF3-140	plasmid
+plasmid pSM22	plasmid
+plasmid pUSA01	plasmid
+plasmid bgla_2p	plasmid
+plasmid pUSA03	plasmid
+plasmid pUSA02	plasmid
+plasmid PL131	plasmid
+plasmid pAB0057	plasmid
+plasmid pZA1001	plasmid
+plasmid pCCK1900	plasmid
+plasmid pZA1003	plasmid
+plasmid pVAE259	plasmid
+plasmid pS177	plasmid
+plasmid Bol26_lp28-4	plasmid
+plasmid Bol26_lp28-3	plasmid
+plasmid Bol26_lp28-9	plasmid
+Alicyclobacillus acidocaldarius subsp. acidocaldarius Tc-4-1	eubacteria
+plasmid pSH1	plasmid
+plasmid pACMV8	plasmid
+plasmid pACMV7	plasmid
+plasmid pACMV6	plasmid
+plasmid pACMV5	plasmid
+plasmid pACMV4	plasmid
+plasmid pACMV3	plasmid
+plasmid pACMV2	plasmid
+plasmid pACMV1	plasmid
+plasmid LkipL48	plasmid
+plasmid pRAF	plasmid
+plasmid pRAY	plasmid
+plasmid pEC386IL	plasmid
+plasmid pMLb	plasmid
+plasmid pMLa	plasmid
+plasmid pCK41	plasmid
+plasmid pBEST195S	plasmid
+plasmid pHRM2a	plasmid
+plasmid pRAx	plasmid
+plasmid miniplasmid	plasmid
+plasmid pKKS627	plasmid
+plasmid pCY186	plasmid
+plasmid pSPUV	plasmid
+plasmid pLMO226	plasmid
+plasmid pLS20	plasmid
+plasmid pSotonE4	plasmid
+plasmid PL16	plasmid
+plasmid pSotonE8	plasmid
+plasmid pFSYMDG02	plasmid
+plasmid pFSYMDG01	plasmid
+plasmid pG9842_140	plasmid
+plasmid R7K	plasmid
+plasmid pDKX1-TEM-52	plasmid
+plasmid pBMB0558	plasmid
+plasmid pTP10	plasmid
+plasmid pZY5	plasmid
+plasmid pAL236-5	plasmid
+plasmid pHT7	plasmid
+plasmid pBD-II	plasmid
+plasmid pAL236-2	plasmid
+plasmid pAH1	plasmid
+plasmid pSCM201	plasmid
+plasmid Ti	plasmid
+plasmid pMO17_54	plasmid
+plasmid p1-4	plasmid
+plasmid pNTHE02	plasmid
+plasmid pNTHE01	plasmid
+plasmid pENTAS01	plasmid
+plasmid pENTAS02	plasmid
+plasmid pCFSAN001992_1	plasmid
+plasmid pCFSAN001992_2	plasmid
+plasmid pO83_CORR	plasmid
+Aeropyrum pernix K1	archae
+plasmid pRIO-5	plasmid
+plasmid pCSL1	plasmid
+Anaerococcus prevotii DSM 20548	eubacteria
+plasmid pPAB19-2	plasmid
+plasmid pTC-F14	plasmid
+plasmid pIS56-39	plasmid
+plasmid pSA737	plasmid
+plasmid pH308197_10	plasmid
+plasmid A14S_lp54	plasmid
+plasmid pUUH239.1	plasmid
+plasmid pUUH239.2	plasmid
+plasmid pO103	plasmid
+plasmid pSdyT132	plasmid
+plasmid pME2200	plasmid
+plasmid pCYLM01	plasmid
+plasmid pCYLM02	plasmid
+Candidatus Nitrosopumilus koreensis AR1	archae
+plasmid pKP187	plasmid
+plasmid pACK2	plasmid
+plasmid 12	plasmid
+plasmid pMTH1	plasmid
+plasmid pACK1	plasmid
+plasmid pLP5402	plasmid
+plasmid pLP5401	plasmid
+plasmid WI91-23_lp36	plasmid
+plasmid pH10	plasmid
+plasmid WI91-23_lp38	plasmid
+plasmid BAP1	plasmid
+plasmid BAP2	plasmid
+plasmid MP1	plasmid
+plasmid p11819-97	plasmid
+plasmid pPA52	plasmid
+plasmid pRA0511	plasmid
+plasmid pSRQ900	plasmid
+plasmid unnamed9	plasmid
+plasmid unnamed2	plasmid
+plasmid unnamed3	plasmid
+Halomicrobium mukohataei DSM 12286	archae
+plasmid unnamed6	plasmid
+plasmid unnamed7	plasmid
+plasmid unnamed4	plasmid
+plasmid unnamed5	plasmid
+plasmid pEAR5.2	plasmid
+plasmid pT-OXA-181	plasmid
+plasmid pFB1	plasmid
+plasmid pOANT02	plasmid
+plasmid pO26_4	plasmid
+plasmid pO26_2	plasmid
+plasmid pO26_3	plasmid
+plasmid BTB_5p	plasmid
+plasmid pCC7120gamma	plasmid
+plasmid pOANT04	plasmid
+plasmid pSWS47	plasmid
+plasmid pOU1115	plasmid
+plasmid pHM500	plasmid
+plasmid pOU1113	plasmid
+plasmid pETEC_74	plasmid
+plasmid CA-11.2A_lp56	plasmid
+plasmid CA-11.2A_lp54	plasmid
+plasmid pcpWC	plasmid
+plasmid pSMQ172	plasmid
+plasmid WI91-23_lp25	plasmid
+plasmid pS22303	plasmid
+plasmid pS22302	plasmid
+plasmid 94a_lp17	plasmid
+plasmid pColG	plasmid
+plasmid pYVe227	plasmid
+plasmid pGT231	plasmid
+plasmid pGT232	plasmid
+plasmid pHS-Rec	plasmid
+plasmid pNAC1	plasmid
+plasmid pHK01	plasmid
+plasmid pNAC3	plasmid
+plasmid pKJ006	plasmid
+Methanothermobacter thermautotrophicus str. Delta H	archae
+plasmid pASL01a	plasmid
+plasmid p3META1	plasmid
+plasmid pMN5	plasmid
+plasmid pTha01	plasmid
+plasmid pLBUC02	plasmid
+plasmid p1ABAYE	plasmid
+plasmid pJTPS1	plasmid
+plasmid pNDM-CIT	plasmid
+plasmid p9555	plasmid
+plasmid pYVa127/90	plasmid
+plasmid cp18-2	plasmid
+Stackebrandtia nassauensis DSM 44728	eubacteria
+plasmid pND324	plasmid
+plasmid pSMBa	plasmid
+plasmid ColJs	plasmid
+plasmid pSE11-4	plasmid
+plasmid pSE11-5	plasmid
+plasmid pSE11-6	plasmid
+plasmid pSMBb	plasmid
+plasmid pSE11-1	plasmid
+plasmid pSE11-2	plasmid
+plasmid pSE11-3	plasmid
+plasmid Mauriceville plasmid	plasmid
+plasmid pGS18	plasmid
+Micromonospora sp. L5	eubacteria
+plasmid pSal8934b	plasmid
+plasmid pIS56-9	plasmid
+plasmid pIS56-8	plasmid
+plasmid SAP082A	plasmid
+plasmid pBP136	plasmid
+plasmid pIS56-6	plasmid
+plasmid 44-kb linear plasmid	plasmid
+plasmid pCAR1	plasmid
+plasmid pCAR3	plasmid
+plasmid pKKS49	plasmid
+plasmid pCT14	plasmid
+plasmid pLR585	plasmid
+plasmid pLR584	plasmid
+plasmid Pp6859	plasmid
+plasmid pLR581	plasmid
+plasmid pLR580	plasmid
+plasmid pBT9727	plasmid
+plasmid pLAC1	plasmid
+plasmid JD1 cp32-6	plasmid
+plasmid pUL3AT	plasmid
+plasmid JD1 cp32-3	plasmid
+plasmid p12579_4	plasmid
+plasmid JD1 cp32-8	plasmid
+plasmid JD1 cp32-9	plasmid
+plasmid pSCV50	plasmid
+plasmid pMETEV01	plasmid
+plasmid p09PLY-2	plasmid
+plasmid pSYSM	plasmid
+plasmid pAP1	plasmid
+plasmid pSH146_32	plasmid
+plasmid pIP404	plasmid
+plasmid pBIND01	plasmid
+plasmid pBIND02	plasmid
+plasmid pCha1	plasmid
+plasmid pONE429	plasmid
+plasmid pOENI-1v2	plasmid
+plasmid pCTDLC1	plasmid
+plasmid pAtS4e	plasmid
+plasmid pTML1	plasmid
+plasmid p3521	plasmid
+plasmid pMT-pPCP	plasmid
+plasmid pSbal01	plasmid
+plasmid pH308197_73	plasmid
+plasmid pMK101	plasmid
+plasmid pZZM404	plasmid
+plasmid pZZM405	plasmid
+plasmid pZZM402	plasmid
+plasmid pZZM403	plasmid
+plasmid pZZM401	plasmid
+plasmid pMGB1	plasmid
+plasmid pEF1	plasmid
+plasmid pGEOTH01	plasmid
+plasmid pGEOTH02	plasmid
+plasmid plasmid_59kb	plasmid
+plasmid pIncX-SHV	plasmid
+plasmid pMSA16	plasmid
+plasmid 64b_cp32-6	plasmid
+plasmid pO26-S4	plasmid
+plasmid pHALXA01	plasmid
+Methanococcus maripaludis X1	archae
+plasmid pHALXA03	plasmid
+plasmid CP1	plasmid
+plasmid 118a_cp32-7-9	plasmid
+plasmid pSC138	plasmid
+plasmid pMRAD01	plasmid
+plasmid pMRAD07	plasmid
+plasmid pMRAD05	plasmid
+plasmid pMRAD04	plasmid
+plasmid pARN4	plasmid
+plasmid pMRAD08	plasmid
+plasmid pARN3	plasmid
+Methanoculleus bourgensis MS2	archae
+plasmid pBt1-3	plasmid
+plasmid pRN2	plasmid
+plasmid pKPN_CZ	plasmid
+plasmid pNE1280	plasmid
+plasmid pMG2E-1	plasmid
+plasmid pRCEID7.6	plasmid
+plasmid pCTA	plasmid
+plasmid pCTB	plasmid
+plasmid pCTR	plasmid
+plasmid pPCZ1	plasmid
+plasmid pEP5289	plasmid
+plasmid pTN3	plasmid
+plasmid pRN1	plasmid
+plasmid pHP003	plasmid
+plasmid ABKp2	plasmid
+plasmid ABKp1	plasmid
+plasmid pEsp1396	plasmid
+plasmid pSA1308	plasmid
+plasmid pMPOP02	plasmid
+plasmid pMPOP01	plasmid
+Hippea maritima DSM 10411	eubacteria
+plasmid pIL7	plasmid
+plasmid pSRD191	plasmid
+plasmid pSRD192	plasmid
+plasmid pSK639	plasmid
+Nocardia cyriacigeorgica GUH-2	eubacteria
+plasmid pNL932024	plasmid
+plasmid SAP012A	plasmid
+plasmid pMU1	plasmid
+plasmid pBK31551	plasmid
+plasmid ABB7_B	plasmid
+plasmid pBS32	plasmid
+plasmid pPGA2_71	plasmid
+plasmid pCFPG1	plasmid
+plasmid pCFPG2	plasmid
+plasmid pCFPG3	plasmid
+Bacteriovorax marinus SJ	eubacteria
+Aerococcus urinae ACS-120-V-Col10a	eubacteria
+plasmid pLS2	plasmid
+plasmid pGDT4	plasmid
+Gallionella capsiferriformans ES-2	eubacteria
+plasmid BTB_502p	plasmid
+plasmid pRm1132f	plasmid
+plasmid pSFxv_1	plasmid
+plasmid pSFxv_3	plasmid
+plasmid pSFxv_2	plasmid
+plasmid pSFxv_5	plasmid
+plasmid pN-Cit	plasmid
+plasmid pMP118	plasmid
+Hyperthermus butylicus DSM 5456	archae
+plasmid pBWB401	plasmid
+plasmid pJ7-1	plasmid
+plasmid pMG2200	plasmid
+plasmid Rts1	plasmid
+plasmid SV1_lp17	plasmid
+plasmid pLRI02	plasmid
+Methylocella silvestris BL2	eubacteria
+Halogeometricum borinquense DSM 11551	archae
+plasmid pEC278	plasmid
+plasmid pAPEC-O2-R	plasmid
+plasmid QKH54	plasmid
+plasmid pD2RT	plasmid
+plasmid pVMKU	plasmid
+plasmid DAN-involved plasmid	plasmid
+plasmid pAm08CQ3205	plasmid
+plasmid pRAY*-v2	plasmid
+plasmid pLAtc1	plasmid
+plasmid pKP3-A	plasmid
+plasmid pAH820_3	plasmid
+plasmid pTHIMO01	plasmid
+plasmid pHAU02	plasmid
+Ferrimonas balearica DSM 9799	eubacteria
+plasmid pHAU01	plasmid
+plasmid pSx-Qyy	plasmid
+plasmid extrachromosomal element	plasmid
+plasmid pSN11/00Kan	plasmid
+plasmid pS194	plasmid
+plasmid TY474p1	plasmid
+Methanococcus voltae A3	archae
+plasmid plLF82	plasmid
+plasmid pSY2	plasmid
+plasmid pAPA07-060	plasmid
+plasmid pDK1	plasmid
+plasmid 72a_cp32-1	plasmid
+plasmid 72a_cp32-7	plasmid
+plasmid 72a_cp32-5	plasmid
+plasmid pLEW6932	plasmid
+plasmid pL4C	plasmid
+plasmid pAM04528	plasmid
+plasmid pAzo01	plasmid
+plasmid pAzo02	plasmid
+plasmid SAP080A	plasmid
+Staphylococcus aureus subsp. aureus JKD6159	eubacteria
+plasmid pCV56B	plasmid
+plasmid pCV56C	plasmid
+plasmid pCV56A	plasmid
+plasmid pCV56D	plasmid
+plasmid pCV56E	plasmid
+plasmid pVSAL840	plasmid
+Brachyspira hyodysenteriae WA1	eubacteria
+plasmid pAB-NCGM253	plasmid
+plasmid pTET3	plasmid
+plasmid pPS1M3	plasmid
+plasmid pVir	plasmid
+plasmid pSH163_135	plasmid
+plasmid pJEG011	plasmid
+plasmid pJEG012	plasmid
+Sulfobacillus acidophilus TPY	eubacteria
+plasmid pP742402	plasmid
+plasmid pLLO	plasmid
+plasmid pHel4	plasmid
+plasmid pHel5	plasmid
+plasmid extrachromosomal rDNA p	plasmid
+plasmid pCH91	plasmid
+plasmid 118a_lp17	plasmid
+Clostridium sticklandii	eubacteria
+plasmid pRSKD131B	plasmid
+plasmid pMADAR_001	plasmid
+plasmid pRUNSL01	plasmid
+plasmid pRUNSL03	plasmid
+plasmid pRUNSL05	plasmid
+plasmid pXZ10142	plasmid
+plasmid pCR1	plasmid
+plasmid pWCFS102	plasmid
+plasmid ZS7_cp32-9	plasmid
+plasmid 297_cp26	plasmid
+plasmid pRECF1	plasmid
+plasmid ZS7_cp32-4	plasmid
+Calothrix sp. PCC 6303	eubacteria
+plasmid pADAP	plasmid
+plasmid pCYLST.02	plasmid
+plasmid pCYLST.03	plasmid
+plasmid pCYLST.01	plasmid
+plasmid pCG103-32	plasmid
+plasmid pRH45II	plasmid
+plasmid pCRY	plasmid
+Methanothermobacter marburgensis str. Marburg	archae
+plasmid pCC7120beta	plasmid
+plasmid pMLU1	plasmid
+plasmid pAMBAS45	plasmid
+plasmid pUIBI-1	plasmid
+Sulfolobus islandicus REY15A	archae
+plasmid pZMO1A	plasmid
+plasmid pZMO1B	plasmid
+Parvularcula bermudensis HTCC2503	eubacteria
+plasmid pSMA23	plasmid
+plasmid pPAT9B03	plasmid
+plasmid pTLC	plasmid
+plasmid pSLMT	plasmid
+Streptosporangium roseum DSM 43021	eubacteria
+plasmid pSD118	plasmid
+plasmid SAP049B	plasmid
+plasmid SAP049A	plasmid
+plasmid pEB102	plasmid
+plasmid pGBRO01	plasmid
+plasmid pSL491_5	plasmid
+plasmid pAB120	plasmid
+plasmid pM44601	plasmid
+plasmid pM44602	plasmid
+plasmid TC1	plasmid
+plasmid TC2	plasmid
+plasmid pAMbeta1	plasmid
+plasmid pEBM107	plasmid
+plasmid pFP11	plasmid
+plasmid pBPS1	plasmid
+plasmid pMh1405	plasmid
+plasmid pAph01	plasmid
+plasmid pAph03	plasmid
+plasmid pAph02	plasmid
+Anaerolinea thermophila UNI-1	eubacteria
+plasmid pRHL2	plasmid
+Thermococcus litoralis DSM 5473	archae
+plasmid SAP016A	plasmid
+plasmid 94a_lp56	plasmid
+plasmid 94a_lp54	plasmid
+plasmid pQA504	plasmid
+plasmid pKMA2425	plasmid
+plasmid pSCEC2	plasmid
+plasmid pF837_55	plasmid
+plasmid unnamed11	plasmid
+plasmid pTCCB09	plasmid
+plasmid pAPEC-O103-ColBM	plasmid
+plasmid pNL3.2	plasmid
+plasmid pNL3.1	plasmid
+plasmid unnamed19	plasmid
+plasmid pCJ1170	plasmid
+plasmid N40_cp32-4	plasmid
+plasmid N40_cp32-5	plasmid
+plasmid pMARPI01	plasmid
+plasmid N40_cp32-7	plasmid
+plasmid pLGUG1	plasmid
+plasmid 2kb cryptic plasmid	plasmid
+plasmid pR23	plasmid
+plasmid pPI-1	plasmid
+Segniliparus rotundus DSM 44985	eubacteria
+plasmid SV1_lp28-4	plasmid
+plasmid SV1_lp28-2	plasmid
+plasmid pSFLA01	plasmid
+plasmid pPI-2	plasmid
+plasmid pSH163_34	plasmid
+plasmid pHM300	plasmid
+plasmid pSG3	plasmid
+plasmid pBMB9741	plasmid
+plasmid pND103	plasmid
+plasmid pGI3	plasmid
+plasmid pGI1	plasmid
+plasmid pSB102	plasmid
+plasmid JD1 cp32-1+5	plasmid
+plasmid pZGX01	plasmid
+plasmid pCCK411	plasmid
+Hahella chejuensis KCTC 2396	eubacteria
+plasmid pKKS825	plasmid
+plasmid pSL003B	plasmid
+plasmid pSW4	plasmid
+plasmid pSW5	plasmid
+plasmid pSW2	plasmid
+plasmid pSW3	plasmid
+plasmid pAPA07-040	plasmid
+plasmid pAPA03-050	plasmid
+plasmid p2ABTCDC0715	plasmid
+Cyclobacterium marinum DSM 745	eubacteria
+plasmid AZOBR_p3	plasmid
+plasmid AZOBR_p2	plasmid
+plasmid AZOBR_p5	plasmid
+plasmid AZOBR_p4	plasmid
+plasmid AZOBR_p6	plasmid
+plasmid VS116_cp32-5	plasmid
+Pyrobaculum oguniense TE7	archae
+plasmid pB21a	plasmid
+Conexibacter woesei DSM 14684	eubacteria
+Sphingobium sp. SYK-6	eubacteria
+Sulfolobus islandicus M.14.25	archae
+plasmid plca36	plasmid
+plasmid pAW153	plasmid
+plasmid pCT51	plasmid
+plasmid pAH82	plasmid
+plasmid pSP02	plasmid
+plasmid pHN1	plasmid
+plasmid pHN2	plasmid
+plasmid pHN3	plasmid
+plasmid pAV1	plasmid
+plasmid pAV2	plasmid
+plasmid p49879.2	plasmid
+plasmid KOPRI126573	plasmid
+plasmid pAVY	plasmid
+plasmid pAVX	plasmid
+plasmid pSF118-20	plasmid
+plasmid pMD136	plasmid
+plasmid pCol-let	plasmid
+Heliobacterium modesticaldum Ice1	eubacteria
+plasmid pN29710-1	plasmid
+plasmid pMKMS01	plasmid
+plasmid pMKMS02	plasmid
+plasmid pAP13	plasmid
+plasmid pTJ86-2	plasmid
+plasmid pTJ86-1	plasmid
+plasmid pLJ1	plasmid
+plasmid 118a_lp36	plasmid
+plasmid 118a_lp38	plasmid
+plasmid p3384	plasmid
+plasmid p3386	plasmid
+Ilumatobacter coccineus YM16-304	eubacteria
+plasmid pPP81	plasmid
+plasmid pZ172_1	plasmid
+plasmid pZ172_2	plasmid
+plasmid pKPX-2	plasmid
+plasmid JD1 lp25	plasmid
+plasmid pCP1	plasmid
+Chthonomonas calidirosea T49	eubacteria
+plasmid pUSA300HOUMS	plasmid
+plasmid pUSA300HOUMR	plasmid
+plasmid pHALHY01	plasmid
+plasmid pHALHY02	plasmid
+plasmid pHALHY03	plasmid
+plasmid pTV1422	plasmid
+Halovivax ruber XH-70	archae
+plasmid pGOX1	plasmid
+plasmid pGOX3	plasmid
+plasmid pGOX2	plasmid
+plasmid pGOX5	plasmid
+plasmid pGOX4	plasmid
+plasmid pTer331	plasmid
+plasmid pLM33	plasmid
+plasmid IRBL74_p	plasmid
+plasmid p02	plasmid
+plasmid pAoF64/95	plasmid
+plasmid SAP046B	plasmid
+plasmid SAP046A	plasmid
+plasmid pUSDA257	plasmid
+plasmid pCE10B	plasmid
+plasmid pGLE121P3	plasmid
+plasmid pGLE121P2	plasmid
+plasmid pGLE121P1	plasmid
+plasmid pAPA12-050	plasmid
+Methanocorpusculum labreanum Z	archae
+plasmid pMOS6	plasmid
+plasmid pMOS7	plasmid
+plasmid pRSB101	plasmid
+plasmid pMOS2	plasmid
+plasmid pRSB105	plasmid
+plasmid pP60P1	plasmid
+plasmid pDEIPE01	plasmid
+plasmid pDEIPE02	plasmid
+plasmid pYe4449-2	plasmid
+plasmid pSSVi	plasmid
+plasmid pYe4449-1	plasmid
+plasmid pSSVx	plasmid
+plasmid pMRC01	plasmid
+plasmid pSMED03	plasmid
+plasmid pCKO2	plasmid
+plasmid pCKO3	plasmid
+plasmid pLBB1	plasmid
+plasmid pSF301-3	plasmid
+Pyrococcus sp. ST04	archae
+plasmid pKAP298	plasmid
+plasmid pQY431	plasmid
+plasmid pC2C203U28	plasmid
+plasmid pUR5425	plasmid
+plasmid pET45	plasmid
+plasmid pET46	plasmid
+Nocardioides sp. JS614	eubacteria
+plasmid pET49	plasmid
+plasmid pL2bCan1	plasmid
+plasmid pL2bCan2	plasmid
+Vulcanisaeta distributa DSM 14429	archae
+plasmid SV1_lp54	plasmid
+plasmid cp30	plasmid
+plasmid 64b_lp28-2	plasmid
+plasmid 64b_lp28-3	plasmid
+plasmid 64b_lp28-1	plasmid
+plasmid 64b_lp28-4	plasmid
+plasmid p6043B	plasmid
+plasmid p6043A	plasmid
+plasmid small plasmid	plasmid
+plasmid pWNCR9	plasmid
+plasmid 29805_lp28-2	plasmid
+plasmid 29805_lp28-4	plasmid
+plasmid 29805_lp28-6	plasmid
+plasmid pSBAL17502	plasmid
+plasmid pBSG3	plasmid
+plasmid pES657-44	plasmid
+plasmid Csp_135p	plasmid
+plasmid PAGR_p	plasmid
+plasmid p169	plasmid
+plasmid CD	plasmid
+plasmid pc15-k	plasmid
+plasmid pNOR-2000	plasmid
+plasmid pGO1	plasmid
+plasmid pKNR02	plasmid
+plasmid pKNR01	plasmid
+plasmid EcOYNIM_2002-2004	plasmid
+plasmid pYV-WA314	plasmid
+plasmid pPS1	plasmid
+plasmid pP43BP4	plasmid
+plasmid pP43BP2	plasmid
+plasmid pP43BP3	plasmid
+plasmid pP43BP1	plasmid
+plasmid pWTk445	plasmid
+plasmid pTG9790	plasmid
+plasmid pCVM29188_146	plasmid
+plasmid pSU1	plasmid
+plasmid pKLCB	plasmid
+plasmid SAP110B	plasmid
+Haloarcula marismortui ATCC 43049	archae
+plasmid pAPA07-020	plasmid
+plasmid cryptic plasmid	plasmid
+plasmid pZA1002	plasmid
+plasmid LIM	plasmid
+plasmid pMT-1	plasmid
+plasmid SAP084A	plasmid
+plasmid p798_93	plasmid
+plasmid p14-95A	plasmid
+plasmid pPSR1	plasmid
+plasmid pSR35	plasmid
+plasmid pL2bCV204	plasmid
+plasmid pKOX_R1	plasmid
+plasmid pAP2	plasmid
+plasmid p09PLY-1	plasmid
+Brachybacterium faecium DSM 4810	eubacteria
+plasmid pPZG500	plasmid
+plasmid pSMB1	plasmid
+plasmid SV1_cp32-4	plasmid
+plasmid 156a_cp32-12	plasmid
+Enterococcus faecalis D32	eubacteria
+plasmid SAP051A	plasmid
+plasmid 156a_cp32-11	plasmid
+plasmid pCT72	plasmid
+plasmid pYQ39	plasmid
+plasmid lp60	plasmid
+plasmid p29807	plasmid
+plasmid pKB1A97-67	plasmid
+plasmid pSJH901	plasmid
+plasmid pPL1	plasmid
+plasmid pMGD2	plasmid
+plasmid pLH1	plasmid
+plasmid 118a_lp54	plasmid
+plasmid pAPA22-040	plasmid
+plasmid pAQU1	plasmid
+plasmid pISP3	plasmid
+plasmid pColK-JA533	plasmid
+plasmid pISP1	plasmid
+plasmid pISP0	plasmid
+plasmid pISP4	plasmid
+plasmid ICEhin1056	plasmid
+plasmid pPSED01	plasmid
+plasmid pPSED03	plasmid
+plasmid pPSED02	plasmid
+plasmid pSFKW33	plasmid
+plasmid pEXT9a	plasmid
+plasmid pDESACI.01	plasmid
+plasmid pDESACI.02	plasmid
+plasmid EA2018plasmid	plasmid
+plasmid pRA3	plasmid
+plasmid pIG1	plasmid
+plasmid pRA2	plasmid
+plasmid pHW15	plasmid
+plasmid pRA1	plasmid
+plasmid pSFLA02	plasmid
+plasmid pRUMAL03	plasmid
+plasmid pNL194	plasmid
+plasmid pCNB	plasmid
+plasmid pSLA5	plasmid
+plasmid pTHI	plasmid
+plasmid pNOB8	plasmid
+plasmid pKLC4	plasmid
+plasmid pPA-2	plasmid
+plasmid pN29710-2	plasmid
+plasmid p0908	plasmid
+plasmid N40_cp26	plasmid
+plasmid pI2T2	plasmid
+plasmid pAH820_10	plasmid
+plasmid pCJ84	plasmid
+plasmid pSF301-2	plasmid
+plasmid pOCEGK02	plasmid
+plasmid pOCEGK01	plasmid
+plasmid pSF301-1	plasmid
+plasmid p19321-P01	plasmid
+plasmid pC1-1	plasmid
+plasmid p19321-P03	plasmid
+plasmid pPvu1	plasmid
+plasmid S57	plasmid
+plasmid SAP072A	plasmid
+plasmid pSSP1	plasmid
+plasmid pPHDD1	plasmid
+plasmid pSSP2	plasmid
+plasmid pCol1B9_SL1344	plasmid
+plasmid SAP018A	plasmid
+plasmid SAP018B	plasmid
+plasmid pXZ	plasmid
+plasmid pL1115	plasmid
+plasmid pAZKH	plasmid
+plasmid pRA0726	plasmid
+plasmid JD1_lp54	plasmid
+plasmid pGR7	plasmid
+plasmid pVEIS01	plasmid
+plasmid pCWBFq	plasmid
+plasmid pSF118-44	plasmid
+plasmid pK64	plasmid
+plasmid pBHWA1	plasmid
+plasmid pCC7120delta	plasmid
+plasmid PPN500	plasmid
+plasmid pNCPPB880-40	plasmid
+plasmid pKHSB1	plasmid
+plasmid pLEUM1	plasmid
+plasmid pDP1	plasmid
+plasmid pDN571	plasmid
+plasmid pSS-03	plasmid
+plasmid LkipL4726	plasmid
+plasmid pQA549	plasmid
+plasmid pQpH1	plasmid
+plasmid pT108	plasmid
+plasmid p96A29192-65	plasmid
+plasmid pAK51	plasmid
+plasmid pt38	plasmid
+plasmid pWVO2	plasmid
+plasmid pF837_10	plasmid
+plasmid p5753cA	plasmid
+plasmid 29805_lp36	plasmid
+plasmid p01DC12	plasmid
+plasmid pTiS4	plasmid
+plasmid At	plasmid
+plasmid pMBLR00	plasmid
+Natrinema sp. J7-2	archae
+plasmid pIE1130	plasmid
+plasmid pHPG27	plasmid
+plasmid pGA2000	plasmid
+plasmid pFAJ2600	plasmid
+Thermovibrio ammonificans HB-1	eubacteria
+plasmid pDVUL01	plasmid
+plasmid pLeu	plasmid
+plasmid pLC22R	plasmid
+plasmid pMEC2	plasmid
+plasmid pRE25	plasmid
+Bacillus sp. JS	eubacteria
+Blattabacterium sp. (Cryptocercus punctulatus) str. Cpu	eubacteria
+plasmid 72a_cp32-10	plasmid
+Thermococcus sp. AM4	archae
+plasmid pFR12.5	plasmid
+plasmid pCps6BC	plasmid
+plasmid pAbNDM-1	plasmid
+plasmid pUMN179	plasmid
+plasmid QpDV	plasmid
+Methanosphaera stadtmanae DSM 3091	archae
+plasmid pUMNK88	plasmid
+plasmid pDC3000A	plasmid
+plasmid pDC3000B	plasmid
+plasmid pVGA	plasmid
+plasmid p3ABSDF	plasmid
+Pyrobaculum sp. 1860	archae
+plasmid pLW043	plasmid
+plasmid p3BKT015925	plasmid
+plasmid pSW49	plasmid
+plasmid pHP69	plasmid
+plasmid pSR11	plasmid
+plasmid pLFS5	plasmid
+plasmid pPWD4_103	plasmid
+plasmid pSP01	plasmid
+plasmid pB80	plasmid
+plasmid 297_cp32-9	plasmid
+plasmid 297_cp32-1	plasmid
+plasmid 297_cp32-3	plasmid
+plasmid 297_cp32-4	plasmid
+plasmid 297_cp32-5	plasmid
+plasmid 297_cp32-6	plasmid
+plasmid pAR6	plasmid
+plasmid pESA2	plasmid
+plasmid pESA3	plasmid
+plasmid PHS2	plasmid
+plasmid pTRESU01	plasmid
+plasmid pXY3	plasmid
+plasmid 29805_lp38	plasmid
+plasmid pSB13	plasmid
+plasmid 50k virulence plasmid	plasmid
+plasmid pOA238_160	plasmid
+plasmid pUPTC237	plasmid
+plasmid pHPPN120	plasmid
+plasmid SAP053A	plasmid
+Ignisphaera aggregans DSM 17230	archae
+plasmid pF8801	plasmid
+Coraliomargarita akajimensis DSM 45221	eubacteria
+Desulfurococcus fermentans DSM 16532	archae
+plasmid pCT8252	plasmid
+plasmid pNB101	plasmid
+plasmid pCGH69	plasmid
+plasmid 156a_lp28-4	plasmid
+plasmid 156a_lp28-5	plasmid
+plasmid 156a_lp28-6	plasmid
+plasmid 156a_lp28-1	plasmid
+plasmid 156a_lp28-3	plasmid
+plasmid pWBG749	plasmid
+plasmid pAPEC-O1-R	plasmid
+plasmid pCL1	plasmid
+plasmid pHPAG1	plasmid
+plasmid p05PLY-2	plasmid
+plasmid pNGA2	plasmid
+plasmid pSepCH	plasmid
+plasmid pBACSA03	plasmid
+plasmid pVAPA1037	plasmid
+plasmid pSGG1	plasmid
+plasmid pCM1	plasmid
+Candidatus Nitrososphaera gargensis Ga9.2	archae
+plasmid pY0017	plasmid
+plasmid pPCY1	plasmid
+plasmid pCLP	plasmid
+plasmid pMBCP	plasmid
+Ehrlichia chaffeensis str. Arkansas	eubacteria
+plasmid pCLI	plasmid
+plasmid pCLK	plasmid
+plasmid pCLJ	plasmid
+plasmid pLST424C-10	plasmid
+plasmid pEC-IMPQ	plasmid
+plasmid pL2bUCH2	plasmid
+plasmid pSMQ-316	plasmid
+plasmid pIP1206	plasmid
+plasmid pIP1202	plasmid
+plasmid pGNB2	plasmid
+plasmid pSS_046	plasmid
+Methanocaldococcus infernus ME	archae
+plasmid pVM01	plasmid
+plasmid pKpn114	plasmid
+plasmid pBERT	plasmid
+plasmid pAP12875	plasmid
+plasmid p64a	plasmid
+plasmid pAPA12-014	plasmid
+plasmid pCERC1	plasmid
+plasmid 118a_cp26	plasmid
+Metallosphaera sedula DSM 5348	archae
+plasmid pLOCK919	plasmid
+plasmid pGP6	plasmid
+plasmid pA505	plasmid
+plasmid pA506	plasmid
+plasmid pA501	plasmid
+plasmid Apa386Bp3	plasmid
+plasmid Apa386Bp1	plasmid
+plasmid Apa386Bp6	plasmid
+plasmid Apa386Bp7	plasmid
+plasmid Apa386Bp4	plasmid
+plasmid Apa386Bp5	plasmid
+plasmid pPA43082	plasmid
+plasmid pH308197_3	plasmid
+plasmid pSLIN01	plasmid
+plasmid pRCEID13.9	plasmid
+plasmid p18808-P01	plasmid
+plasmid pSYSG_M	plasmid
+plasmid pFL5	plasmid
+plasmid pFL7	plasmid
+plasmid pMRI 5.2	plasmid
+plasmid pK43	plasmid
+plasmid pVAPAMBE116	plasmid
+plasmid pSLIN04	plasmid
+plasmid pAPA03-020	plasmid
+plasmid pSN2	plasmid
+plasmid pBD146	plasmid
+plasmid SAP070A	plasmid
+plasmid pAPA26-060	plasmid
+plasmid pAPA32-050	plasmid
+plasmid pCoo	plasmid
+plasmid pAYWB-I	plasmid
+plasmid pCADAB1	plasmid
+plasmid LkipL4704	plasmid
+plasmid LkipL4701	plasmid
+plasmid pEG356	plasmid
+plasmid pECOS88	plasmid
+plasmid Cy782203	plasmid
+plasmid Cy782202	plasmid
+plasmid Cy782201	plasmid
+plasmid Cy782206	plasmid
+plasmid Cy782205	plasmid
+plasmid Cy782204	plasmid
+plasmid pXF868	plasmid
+plasmid pKlebB-k17/80	plasmid
+plasmid pLC2W	plasmid
+plasmid 29805_lp17	plasmid
+plasmid pET09	plasmid
+plasmid pPaWBNy-1	plasmid
+plasmid CA-11.2A_lp36-28-4	plasmid
+plasmid pBD2	plasmid
+plasmid pYF27601	plasmid
+plasmid pBJAB0715	plasmid
+plasmid pCB42	plasmid
+plasmid pUE30	plasmid
+plasmid pWKS1	plasmid
+plasmid pIRI33	plasmid
+plasmid virulence plasmid pWR50	plasmid
+plasmid pSF5	plasmid
+plasmid pPGA1_78	plasmid
+plasmid pAPA22-030	plasmid
+plasmid pColE1-H22	plasmid
+plasmid pI258	plasmid
+plasmid pCJ419	plasmid
+plasmid p1658/97	plasmid
+Nautilia profundicola AmH	eubacteria
+plasmid pGDIA01	plasmid
+plasmid pRUM	plasmid
+plasmid pCFV108	plasmid
+plasmid pTBBperi	plasmid
+plasmid pCVM29188_101	plasmid
+plasmid pSJ5.2	plasmid
+plasmid pHW114A	plasmid
+plasmid pHW114B	plasmid
+plasmid pNF1358	plasmid
+plasmid unknown plasmid	plasmid
+plasmid pCD034-3	plasmid
+plasmid pCD034-2	plasmid
+plasmid pCD034-1	plasmid
+plasmid pRCB133	plasmid
+plasmid pRL12	plasmid
+Methanocaldococcus sp. FS406-22	archae
+plasmid pAPEC-O1-ColBM	plasmid
+plasmid pRL11	plasmid
+plasmid pJE05	plasmid
+plasmid pJE01	plasmid
+plasmid pJE02	plasmid
+plasmid pJE03	plasmid
+plasmid pMOL28	plasmid
+plasmid pMA67	plasmid
+plasmid pNDM-BJ01	plasmid
+plasmid pSD853_7.9	plasmid
+plasmid pZMN1-1	plasmid
+plasmid pKLC102	plasmid
+plasmid pMG160	plasmid
+plasmid pFOXC2	plasmid
+plasmid pFOXC3	plasmid
+plasmid pS7a	plasmid
+plasmid pEM65	plasmid
+plasmid pLEW279b	plasmid
+plasmid lp21	plasmid
+plasmid lp25	plasmid
+plasmid pVir68	plasmid
+plasmid pJ612	plasmid
+plasmid PBr_cp26	plasmid
+plasmid pA7249	plasmid
+plasmid pCI411	plasmid
+plasmid 118a_lp28-6	plasmid
+plasmid 118a_lp28-4	plasmid
+plasmid 118a_lp28-5	plasmid
+plasmid 118a_lp28-3	plasmid
+plasmid p62	plasmid
+plasmid pEp5	plasmid
+plasmid pLD1	plasmid
+plasmid pAm08CD7339	plasmid
+plasmid pPECL-2	plasmid
+Azotobacter vinelandii DJ	eubacteria
+plasmid pKP1433	plasmid
+plasmid pER13	plasmid
+Methanocaldococcus vulcanius M7	archae
+plasmid pS4C	plasmid
+plasmid Mitochondrial plasmid V	plasmid
+plasmid pYC93	plasmid
+plasmid pRHOM17201	plasmid
+plasmid pRHOM17202	plasmid
+Runella slithyformis DSM 19594	eubacteria
+plasmid pSINAC02	plasmid
+plasmid pSINAC03	plasmid
+plasmid pRALTA	plasmid
+plasmid pHPO100	plasmid
+plasmid pCP301	plasmid
+plasmid pCGS13	plasmid
+plasmid pHN7A8	plasmid
+plasmid WKp2903	plasmid
+plasmid pAPA12-030	plasmid
+plasmid pBMB175	plasmid
+plasmid pKW2126	plasmid
+plasmid pBMB171	plasmid
+plasmid pKD1	plasmid
+plasmid pVCG1.2	plasmid
+plasmid pM7M2	plasmid
+plasmid pVCG1.1	plasmid
+plasmid mlp1	plasmid
+plasmid pIGAL1	plasmid
+plasmid pRK10	plasmid
+Haemophilus influenzae PittEE	eubacteria
+plasmid pYT3	plasmid
+plasmid pYT2	plasmid
+plasmid pYT1	plasmid
+plasmid pBLTVA-2	plasmid
+plasmid pDV	plasmid
+plasmid pLEW517	plasmid
+plasmid pEIB202	plasmid
+plasmid pMC95	plasmid
+Fervidicoccus fontis Kam940	archae
+Truepera radiovictrix DSM 17093	eubacteria
+plasmid SAP094A	plasmid
+plasmid pIPO2T	plasmid
+plasmid pFN3	plasmid
+plasmid pFN1	plasmid
+plasmid pHV2	plasmid
+plasmid pK29	plasmid
+Riemerella anatipestifer ATCC 11845 = DSM 15868	eubacteria
+plasmid pHH1107	plasmid
+plasmid pMC189	plasmid
+plasmid pMC183	plasmid
+plasmid SCP1	plasmid
+plasmid plasmIII	plasmid
+plasmid SAP076A	plasmid
+Haloferax volcanii DS2	archae
+plasmid pLA103	plasmid
+plasmid pQpDG	plasmid
+plasmid pAPA32-030	plasmid
+plasmid pAPA26-040	plasmid
+plasmid pHW120	plasmid
+plasmid pHW121	plasmid
+Sulfolobus islandicus L.D.8.5	archae
+plasmid pSTRVI01	plasmid
+plasmid pSTRVI02	plasmid
+plasmid pH308197_11	plasmid
+plasmid pSLT	plasmid
+plasmid pSLS	plasmid
+Sulfolobus islandicus HVE10/4	archae
+plasmid pFI2576	plasmid
+Methylobacterium nodulans ORS 2060	eubacteria
+plasmid pRSPH01	plasmid
+Geobacter sulfurreducens KN400	eubacteria
+plasmid pIJB1	plasmid
+plasmid pMCCL4	plasmid
+plasmid pTS236	plasmid
+plasmid pTHECO01	plasmid
+plasmid pWBG1773	plasmid
+plasmid R721	plasmid
+plasmid pBPLAN	plasmid
+Thermofilum pendens Hrk 5	archae
+plasmid p2ABAYE	plasmid
+plasmid pAPRE01	plasmid
+plasmid pCHQ1	plasmid
+Calditerrivibrio nitroreducens DSM 19672	eubacteria
+plasmid pKF3-70	plasmid
+plasmid pKJ36	plasmid
+plasmid pAPA22-010	plasmid
+plasmid pCC2228-1	plasmid
+plasmid pCC2228-2	plasmid
+plasmid pXFPD1.3	plasmid
+Halobacterium sp. NRC-1	archae
+plasmid pBAW301	plasmid
+Desulfovibrio gigas DSM 1382 = ATCC 19364	eubacteria
+plasmid pNWAT02	plasmid
+plasmid pNWAT01	plasmid
+plasmid pHci1	plasmid
+plasmid p09EL50	plasmid
+plasmid pCL300	plasmid
+plasmid pEA1.7	plasmid
+plasmid pBMSmt1.9	plasmid
+plasmid pALIDE201	plasmid
+plasmid pB44	plasmid
+plasmid SAP057A	plasmid
+plasmid pPREDE02	plasmid
+plasmid p2META1	plasmid
+plasmid pLI100	plasmid
+plasmid SAP047A	plasmid
+plasmid pCP4.2	plasmid
+plasmid pHPv225d	plasmid
+plasmid pHS129	plasmid
+plasmid pAA-09EL50	plasmid
+plasmid 297_cp32-7	plasmid
+Paludibacter propionicigenes WB4	eubacteria
+plasmid pEP05	plasmid
+plasmid pSL476_3	plasmid
+plasmid pHVE14	plasmid
+Picrophilus torridus DSM 9790	archae
+plasmid pDRPIS7493	plasmid
+plasmid pSBAL11701	plasmid
+plasmid pMC319	plasmid
+plasmid pSBAL11703	plasmid
+Archaeoglobus sulfaticallidus PM70-1	archae
+plasmid pP880101	plasmid
+plasmid pTK9001	plasmid
+plasmid pYIT356	plasmid
+plasmid p4M	plasmid
+plasmid pSHK1	plasmid
+plasmid pOYNIM	plasmid
+plasmid pER36	plasmid
+plasmid pER35	plasmid
+Methanobacterium sp. AL-21	archae
+plasmid pK1002C2	plasmid
+plasmid pHTA426	plasmid
+plasmid pHbal01	plasmid
+plasmid pRE8424	plasmid
+plasmid pTTJL1802	plasmid
+plasmid pTTJL1801	plasmid
+plasmid pIM13	plasmid
+plasmid pMAQU01	plasmid
+plasmid pMAQU02	plasmid
+plasmid pCH4	plasmid
+plasmid pVEF2	plasmid
+plasmid pVEF1	plasmid
+plasmid pSKPB18	plasmid
+plasmid pOSAK1	plasmid
+plasmid pECOED	plasmid
+plasmid pBl1	plasmid
+Helicobacter pylori F16	eubacteria
+plasmid pC2A	plasmid
+plasmid pLP5403	plasmid
+Methanobacterium sp. SWAN-1	archae
+plasmid pCTX-M3	plasmid
+plasmid pTR4	plasmid
+Sulfolobus acidocaldarius DSM 639	archae
+plasmid pVF21	plasmid
+plasmid pAPA01-011	plasmid
+plasmid A14S_lp28-8	plasmid
+plasmid A14S_lp28-4	plasmid
+Sulfolobus tokodaii str. 7	archae
+plasmid A14S_lp28-3	plasmid
+plasmid pSB4_227	plasmid
+plasmid 297_cp32-11	plasmid
+plasmid p12494	plasmid
+plasmid pFS01	plasmid
+plasmid pOBV01	plasmid
+plasmid pRL1	plasmid
+plasmid pRL2	plasmid
+plasmid pMAC	plasmid
+plasmid pGT5	plasmid
+plasmid pDOJ1	plasmid
+plasmid pB4	plasmid
+plasmid pB3	plasmid
+plasmid pB8	plasmid
+plasmid PBr_cp32-10	plasmid
+plasmid pAMT7	plasmid
+plasmid pRIV7116.01	plasmid
+plasmid pRIV7116.02	plasmid
+plasmid pI4T8	plasmid
+plasmid pOA307_63	plasmid
+plasmid bglu_3p	plasmid
+plasmid pAPA26-020	plasmid
+plasmid SAP074A	plasmid
+plasmid pCT127	plasmid
+plasmid pO26-CRL	plasmid
+plasmid pHW104	plasmid
+plasmid pNGTCDC08107	plasmid
+plasmid pNG300	plasmid
+plasmid pTRACA 17	plasmid
+plasmid pTRACA 10	plasmid
+plasmid pCIS8	plasmid
+Desulfobacca acetoxidans DSM 11109	eubacteria
+plasmid pCIS6	plasmid
+plasmid pCIS7	plasmid
+plasmid pCIS4	plasmid
+plasmid pCIS5	plasmid
+plasmid pCIS2	plasmid
+plasmid pCIS3	plasmid
+plasmid pCIS1	plasmid
+plasmid p9956	plasmid
+plasmid pSD25	plasmid
+plasmid pSD20	plasmid
+plasmid pUA140	plasmid
+plasmid pCMU01	plasmid
+plasmid pCMU02	plasmid
+Pyrococcus horikoshii OT3	archae
+plasmid pRAM32	plasmid
+plasmid 29805_lp54	plasmid
+plasmid pMC54	plasmid
+plasmid unnamed8	plasmid
+plasmid 72a_lp38	plasmid
+plasmid pJD1	plasmid
+Listeria monocytogenes SLCC5850	eubacteria
+plasmid pNM8	plasmid
+plasmid pZB18	plasmid
+plasmid pMNOD05	plasmid
+plasmid pMNOD04	plasmid
+plasmid pMNOD07	plasmid
+plasmid pMNOD06	plasmid
+plasmid pMNOD01	plasmid
+Methylophaga sp. JAM7	eubacteria
+plasmid pMNOD03	plasmid
+plasmid pMNOD02	plasmid
+plasmid pGYMC6101	plasmid
+plasmid pBC16	plasmid
+plasmid pEI1	plasmid
+plasmid pEI2	plasmid
+plasmid pEI3	plasmid
+Cellvibrio gilvus ATCC 13127	eubacteria
+plasmid pGLO7428.01	plasmid
+plasmid pP62BP1	plasmid
+plasmid pLeu-Sg	plasmid
+plasmid pYSI8	plasmid
+plasmid pHN61	plasmid
+plasmid JD1 lp28-3	plasmid
+plasmid pCpGP1	plasmid
+plasmid pOSC7112.05	plasmid
+plasmid pAR141	plasmid
+plasmid JD1 lp28-4	plasmid
+plasmid pSMS35_4	plasmid
+plasmid pK214	plasmid
+plasmid pSMS35_3	plasmid
+plasmid pSMS35_8	plasmid
+plasmid pHS-Tet	plasmid
+plasmid pKNR	plasmid
+plasmid pA1209	plasmid
+plasmid pSotonD6	plasmid
+plasmid pBI143	plasmid
+plasmid pSTMDT12_L	plasmid
+plasmid pUR4128	plasmid
+plasmid pSTMDT12_S	plasmid
+plasmid pAA-09EL71	plasmid
+Salinarchaeum sp. Harcht-Bsk1	archae
+plasmid WSH-002_p2	plasmid
+plasmid Plasmid2	plasmid
+plasmid pMP-R124	plasmid
+plasmid pUB110	plasmid
+plasmid AUS0004_p1	plasmid
+plasmid AUS0004_p2	plasmid
+plasmid AUS0004_p3	plasmid
+plasmid pFQ12	plasmid
+plasmid pLeu-Dn(SAM)	plasmid
+plasmid pHDC	plasmid
+Sulfolobus islandicus Y.N.15.51	archae
+plasmid pZMOBP6	plasmid
+plasmid pCGR2	plasmid
+plasmid pCGR1	plasmid
+plasmid pCpu	plasmid
+plasmid pBS228	plasmid
+plasmid pEP36	plasmid
+plasmid pKH20	plasmid
+plasmid pKH21	plasmid
+plasmid pChr15	plasmid
+plasmid pIGMS31	plasmid
+plasmid pIGMS32	plasmid
+plasmid pHPELS37	plasmid
+plasmid pUT2	plasmid
+plasmid pKC5b	plasmid
+plasmid pLeu-Dn	plasmid
+Methanopyrus kandleri AV19	archae
+Shewanella halifaxensis HAW-EB4	eubacteria
+plasmid pJS33	plasmid
+plasmid pl23b	plasmid
+plasmid pEAR4.3	plasmid
+plasmid pWNCR64	plasmid
+plasmid pSotonIa3	plasmid
+plasmid pSotonIa1	plasmid
+plasmid pHP-187	plasmid
+plasmid pMM23	plasmid
+plasmid pMoPn	plasmid
+plasmid p2BKT015925	plasmid
+plasmid p05PLY-1	plasmid
+plasmid pTURPA.01	plasmid
+plasmid pUR3036	plasmid
+plasmid byi_2p	plasmid
+plasmid pO26_1	plasmid
+plasmid pKRAD01	plasmid
+plasmid pKRAD02	plasmid
+plasmid N40_lp17	plasmid
+plasmid pCJ01	plasmid
+plasmid pl70	plasmid
+plasmid pTP6	plasmid
+plasmid p5580	plasmid
+plasmid pTP2	plasmid
+plasmid pTP1	plasmid
+plasmid pOU7519	plasmid
+plasmid pYP1	plasmid
+plasmid J3358	plasmid
+plasmid pAPA01-030	plasmid
+plasmid pGLOV01	plasmid
+plasmid 64b_lp54	plasmid
+plasmid pEC_B24	plasmid
+Spiribacter salinus M19-40	eubacteria
+Methanothermococcus okinawensis IH1	archae
+plasmid pXZ10145.1	plasmid
+plasmid Dgp1	plasmid
+plasmid pCRL1127	plasmid
+plasmid pMC8	plasmid
+Sulfolobus islandicus LAL14/1	archae
+plasmid pMC1	plasmid
+plasmid pANA02	plasmid
+plasmid pANA03	plasmid
+plasmid pANA01	plasmid
+plasmid pCIBAO89	plasmid
+plasmid pSH1148_107	plasmid
+plasmid pAPA03-040	plasmid
+plasmid pEC_Bactec	plasmid
+plasmid pHHV35	plasmid
+plasmid pLP-ZJ101	plasmid
+plasmid bglu_1p	plasmid
+plasmid pLP-ZJ103	plasmid
+plasmid pLP-ZJ102	plasmid
+plasmid pTB30	plasmid
+plasmid pT181	plasmid
+Kineococcus radiotolerans SRS30216	eubacteria
+plasmid pOU1114	plasmid
+Syntrophobacter fumaroxidans MPOB	eubacteria
+plasmid pALH1	plasmid
+plasmid pKMA757	plasmid
+plasmid pHPM8	plasmid
+plasmid pSPI12	plasmid
+plasmid II	plasmid
+plasmid pOANT03	plasmid
+plasmid pAMI2	plasmid
+plasmid pOANT01	plasmid
+plasmid pYP12	plasmid
+plasmid pcpVS225	plasmid
+plasmid pAG3	plasmid
+plasmid pAG1	plasmid
+plasmid pAG6	plasmid
+plasmid pAG5	plasmid
+plasmid pUTI89	plasmid
+plasmid pJHCMW1	plasmid
+plasmid pRAM18	plasmid
+plasmid 72a_lp32-3	plasmid
+plasmid pCuri3	plasmid
+plasmid pA363	plasmid
+Geodermatophilus obscurus DSM 43160	eubacteria
+plasmid pSL476_91	plasmid
+plasmid pAX22	plasmid
+plasmid 118a_cp32-6	plasmid
+plasmid pRS3	plasmid
+plasmid pRS2	plasmid
+plasmid pRS5	plasmid
+plasmid pETEC_73	plasmid
+plasmid VS116_lp54	plasmid
+plasmid pAPA22-050	plasmid
+plasmid pCT6880	plasmid
+plasmid pCLD	plasmid
+plasmid pVCR1	plasmid
+Psychromonas sp. CNPT3	eubacteria
+Ignicoccus hospitalis KIN4/I	archae
+plasmid pKP048	plasmid
+plasmid pCLL	plasmid
+plasmid pBMS1	plasmid
+plasmid pK2007C6	plasmid
+plasmid pPT4-NU	plasmid
+plasmid SV1_lp32-12	plasmid
+plasmid pKL1	plasmid
+plasmid TY474p3	plasmid
+plasmid TY474p2	plasmid
+plasmid N40_cp9	plasmid
+plasmid pEK204	plasmid
+plasmid pCPS49	plasmid
+plasmid pMD5057	plasmid
+plasmid pZYMOP02	plasmid
+plasmid pZYMOP01	plasmid
+plasmid Plm	plasmid
+plasmid endogenous plasmid	plasmid
+plasmid pOCEPR01	plasmid
+plasmid pTB11	plasmid
+Candidatus Portiera aleyrodidarum BT-QVLC	eubacteria
+plasmid plasmII	plasmid
+plasmid p49879.1	plasmid
+plasmid pSS046_spB	plasmid
+plasmid pSS046_spC	plasmid
+plasmid pSS046_spA	plasmid
+plasmid pWW0	plasmid
+plasmid p08	plasmid
+plasmid pWW2	plasmid
+plasmid p01	plasmid
+plasmid p03	plasmid
+Frankia sp. EAN1pec	eubacteria
+plasmid p05	plasmid
+plasmid p04	plasmid
+plasmid p07	plasmid
+plasmid p06	plasmid
+plasmid pPstS2	plasmid
+plasmid p40-95A	plasmid
+plasmid pPNWB	plasmid
+Deinococcus geothermalis DSM 11300	eubacteria
+plasmid Harbin-3	plasmid
+plasmid pLS1	plasmid
+plasmid pBFUK1	plasmid
+plasmid pWNCR47	plasmid
+plasmid pSR1	plasmid
+plasmid pI3T3	plasmid
+plasmid pCPF5603	plasmid
+plasmid pBS608	plasmid
+plasmid pE001	plasmid
+plasmid pRLO149_63	plasmid
+plasmid pCCK381	plasmid
+plasmid pCD4	plasmid
+plasmid pCD6	plasmid
+plasmid pCD1	plasmid
+plasmid 55989p	plasmid
+plasmid pSRD77	plasmid
+plasmid pEC01	plasmid
+plasmid pMobC	plasmid
+plasmid NAH7	plasmid
+plasmid pSYSX_M	plasmid
+plasmid N40_lp38	plasmid
+plasmid N40_lp36	plasmid
+plasmid pMESCI01	plasmid
+plasmid pl53	plasmid
+plasmid Dfp1	plasmid
+plasmid pOC167B	plasmid
+plasmid pYR1	plasmid
+plasmid pLM1-2bUG1	plasmid
+plasmid plasmid_153kb	plasmid
+plasmid pTcM1	plasmid
+plasmid PBr_lp36	plasmid
+Caldilinea aerophila DSM 14535 = NBRC 104270	eubacteria
+plasmid pAPA01-050	plasmid
+plasmid pGXY020	plasmid
+plasmid 64b_lp38	plasmid
+plasmid 64b_lp36	plasmid
+plasmid pLGA251	plasmid
+plasmid pEA2.8	plasmid
+plasmid pCP8533etx	plasmid
+plasmid pLUG10	plasmid
+plasmid pKJK5	plasmid
+plasmid pUT1	plasmid
+plasmid pSLIN03	plasmid
+plasmid pSLIN02	plasmid
+plasmid pSLIN05	plasmid
+plasmid pHDC-HO	plasmid
+plasmid pSLIN07	plasmid
+plasmid pSLIN06	plasmid
+plasmid pSLIN08	plasmid
+plasmid pMYCCH.01	plasmid
+plasmid pMYCCH.02	plasmid
+plasmid pOYNIM_1998-2000	plasmid
+plasmid pKMA5	plasmid
+plasmid p2HPAKL86	plasmid
+plasmid pCAR1.2	plasmid
+plasmid pCAR1.3	plasmid
+plasmid pKW4	plasmid
+plasmid pPGA2_239	plasmid
+plasmid pKW1	plasmid
+plasmid pSH696_117	plasmid
+plasmid pOYNIM_2002-2006	plasmid
+Vulcanisaeta moutnovskia 768-28	archae
+plasmid pJM1	plasmid
+plasmid pKP91	plasmid
+plasmid SAP1	plasmid
+plasmid pKP96	plasmid
+Methanotorris igneus Kol 5	archae
+plasmid pSOG1	plasmid
+plasmid pSOG2	plasmid
+plasmid pPAB19	plasmid
+plasmid pNDM-AB	plasmid
+plasmid VS116_lp25	plasmid
+plasmid SAP078B	plasmid
+plasmid SAP078A	plasmid
+Caulobacter sp. K31	eubacteria
+plasmid cp32-11	plasmid
+plasmid cp32-12	plasmid
+plasmid pSVH1	plasmid
+plasmid pHK08	plasmid
+plasmid pHK09	plasmid
+plasmid pWV01	plasmid
+plasmid pHI4320	plasmid
+plasmid pRSI13	plasmid
+plasmid 297_cp32-12	plasmid
+plasmid pEM1	plasmid
+plasmid 156a_cp32-4	plasmid
+plasmid 156a_cp32-6	plasmid
+plasmid 156a_cp32-7	plasmid
+plasmid 156a_cp32-1	plasmid
+plasmid 156a_cp32-3	plasmid
+plasmid 156a_cp32-8	plasmid
+Candidatus Phytoplasma solani 284/09	eubacteria
+plasmid pXcaw19	plasmid
+plasmid pRi1724	plasmid
+plasmid pGLO7428.02	plasmid
+plasmid pGLO7428.03	plasmid
+plasmid pPT14-32	plasmid
+plasmid pGLO7428.04	plasmid
+plasmid pSKU146	plasmid
+plasmid pEC14_35	plasmid
+Methylocystis sp. SC2	eubacteria
+plasmid pADEG01	plasmid
+plasmid pLVPK	plasmid
+plasmid pHPOK310	plasmid
+plasmid pIT3	plasmid
+plasmid pBHS24	plasmid
+plasmid p1METDI	plasmid
+plasmid pHP666	plasmid
+Terriglobus roseus DSM 18391	eubacteria
+Pirellula staleyi DSM 6068	eubacteria
+Sulfolobus solfataricus P2	archae
+plasmid pBM400	plasmid
+plasmid pRE117-1	plasmid
+plasmid pRE117-2	plasmid
+plasmid pCD630	plasmid
+plasmid pL2/434/Bu(f)	plasmid
+plasmid pOSCIL6304.01	plasmid
+plasmid pOSCIL6304.02	plasmid
+Pyrococcus furiosus COM1	archae
+plasmid pF3028	plasmid
+plasmid pHUSEC411like	plasmid
+plasmid pNL871104	plasmid
+plasmid pBMB0228	plasmid
+plasmid pCTDEC1	plasmid
+plasmid pXAC33	plasmid
+plasmid pYAN-2	plasmid
+plasmid pYAN-1	plasmid
+plasmid pORA1	plasmid
+Bacteroides helcogenes P 36-108	eubacteria
+plasmid pCBF	plasmid
+plasmid pSES22	plasmid
+plasmid pBVIE05	plasmid
+plasmid pBVIE04	plasmid
+plasmid pBVIE03	plasmid
+plasmid pBVIE02	plasmid
+plasmid pBVIE01	plasmid
+plasmid pNATPE02	plasmid
+plasmid pMMC501	plasmid
+plasmid pNATPE01	plasmid
+plasmid pH6Ac	plasmid
+plasmid p557	plasmid
+plasmid pYV03	plasmid
+plasmid pEC_L46	plasmid
+Sulfurihydrogenibium azorense Az-Fu1	eubacteria
+plasmid pKLE02	plasmid
+plasmid pKLE01	plasmid
+plasmid pSal8934a	plasmid
+plasmid pKLE04	plasmid
+plasmid p4	plasmid
+plasmid p5	plasmid
+plasmid p6	plasmid
+plasmid p157F-NC2	plasmid
+plasmid p1	plasmid
+plasmid p2	plasmid
+plasmid p157F-NC1	plasmid
+plasmid pL2bLST	plasmid
+plasmid PML21	plasmid
+plasmid CA-11.2A_lp28-3	plasmid
+plasmid pP91278	plasmid
+plasmid pP109bwP1	plasmid
+Candidatus Nitrospira defluvii	eubacteria
+plasmid pABTJ1	plasmid
+plasmid pABTJ2	plasmid
+plasmid pl33	plasmid
+plasmid pl32	plasmid
+plasmid pl31	plasmid
+plasmid pl37	plasmid
+plasmid pl36	plasmid
+plasmid pl35	plasmid
+plasmid pKLE03	plasmid
+plasmid ZS7_lp25	plasmid
+plasmid pCBM588	plasmid
+plasmid pK	plasmid
+plasmid PBr_lp17	plasmid
+Borrelia crocidurae str. Achema	eubacteria
+plasmid pKLE05	plasmid
+plasmid pB	plasmid
+plasmid pC	plasmid
+plasmid pRJ6	plasmid
+plasmid pGXY040	plasmid
+plasmid pREC2	plasmid
+Haloterrigena turkmenica DSM 5511	archae
+plasmid pLG	plasmid
+plasmid pLP9000	plasmid
+plasmid pMGT	plasmid
+plasmid pMDR-ZJ06	plasmid
+plasmid pLRI022	plasmid
+plasmid pLRI023	plasmid
+plasmid pRUMAL01	plasmid
+plasmid pLRI024	plasmid
+plasmid pLRI025	plasmid
+plasmid p3M-2B	plasmid
+plasmid p3M-2A	plasmid
+plasmid pL2	plasmid
+plasmid p3	plasmid
+plasmid pMG1	plasmid
+plasmid pC194	plasmid
+plasmid 64b_lp17	plasmid
+plasmid pHBOR01	plasmid
+plasmid pHBOR02	plasmid
+plasmid pHBOR04	plasmid
+plasmid pHBOR05	plasmid
+plasmid pS1400_89	plasmid
+plasmid SAP027A	plasmid
+plasmid pNL15	plasmid
+plasmid pMbo4.6	plasmid
+plasmid pSCO2	plasmid
+plasmid pMS260	plasmid
+plasmid pKPoxa-48N2	plasmid
+plasmid pRGO1	plasmid
+plasmid SAP052A	plasmid
+plasmid pI6T6	plasmid
+plasmid pBtoxis	plasmid
+plasmid pWG13	plasmid
+plasmid pWG16	plasmid
+plasmid pAC5	plasmid
+plasmid MccC7-H22	plasmid
+plasmid MT	plasmid
+plasmid pAH187_45	plasmid
+Acidithiobacillus caldus SM-1	eubacteria
+plasmid pSCFS1	plasmid
+plasmid pCALKR01	plasmid
+plasmid pXAG81	plasmid
+plasmid pXAG82	plasmid
+plasmid PL6A	plasmid
+plasmid PL6B	plasmid
+plasmid pXT107	plasmid
+plasmid pKpQIL-LS6	plasmid
+plasmid p948	plasmid
+plasmid pPLIM01	plasmid
+plasmid pDx14.2	plasmid
+plasmid pAm08WL3069	plasmid
+plasmid pNDM-MAR	plasmid
+plasmid SV1_cp32-3	plasmid
+plasmid pL1224	plasmid
+plasmid A14S_cp26	plasmid
+plasmid pKB290-9	plasmid
+plasmid pKB290-8	plasmid
+plasmid pXFAS01	plasmid
+plasmid pECA1039	plasmid
+plasmid pKB290-1	plasmid
+plasmid pKB290-3	plasmid
+plasmid pKB290-2	plasmid
+plasmid pKB290-5	plasmid
+plasmid pKB290-4	plasmid
+plasmid pKB290-7	plasmid
+Methanosphaerula palustris E1-9c	archae
+plasmid pALIDE02	plasmid
+plasmid pALIDE01	plasmid
+plasmid N40_lp54	plasmid
+plasmid Far04_lp25	plasmid
+plasmid 118a_cp32-13	plasmid
+plasmid pGRT1	plasmid
+plasmid pNC1	plasmid
+plasmid pNC3	plasmid
+plasmid pNC2	plasmid
+plasmid pKH3	plasmid
+plasmid pSFn1	plasmid
+plasmid pKH7	plasmid
+plasmid pE2348-2	plasmid
+plasmid pKH9	plasmid
+Rhodospirillum rubrum ATCC 11170	eubacteria
+plasmid pTT0105	plasmid
+plasmid pJIR3843	plasmid
+plasmid pPL10	plasmid
+plasmid pCFC1	plasmid
+plasmid pCFC2	plasmid
+Methanosaeta harundinacea 6Ac	archae
+Methanoregula boonei 6A8	archae
+plasmid pFRL1	plasmid
+plasmid pSI01	plasmid
+plasmid p9811071-1	plasmid
+plasmid pP	plasmid
+Haloquadratum walsbyi DSM 16790	archae
+Methanohalobium evestigatum Z-7303	archae
+plasmid pSotonG1	plasmid
+plasmid pMAK1	plasmid
+plasmid pMAK2	plasmid
+plasmid pMAK3	plasmid
+plasmid 156a_lp36	plasmid
+plasmid pPBPR1	plasmid
+plasmid 156a_lp38	plasmid
+plasmid pJ	plasmid
+plasmid pYN01	plasmid
+plasmid pSPCV	plasmid
+plasmid pECO29	plasmid
+plasmid pBFY46	plasmid
+plasmid pA	plasmid
+Thermoproteus uzoniensis 768-20	archae
+plasmid p121BS	plasmid
+Archaeoglobus veneficus SNP6	archae
+plasmid pleu-BTg	plasmid
+plasmid pBMBt1	plasmid
+plasmid pOENI-1	plasmid
+plasmid pILR091	plasmid
+plasmid pKL001	plasmid
+plasmid C	plasmid
+plasmid B	plasmid
+plasmid A	plasmid
+plasmid F	plasmid
+plasmid E	plasmid
+plasmid D	plasmid
+plasmid pAF14	plasmid
+plasmid p2HPAKL117	plasmid
+plasmid pZMX101	plasmid
+plasmid pAF12	plasmid
+plasmid pLeu-BCc	plasmid
+plasmid 9	plasmid
+plasmid 2	plasmid
+plasmid 6	plasmid
+plasmid 5	plasmid
+plasmid 4	plasmid
+plasmid pYJ016	plasmid
+plasmid pAAC154	plasmid
+plasmid pHDC-RI	plasmid
+plasmid BTB_15p	plasmid
+plasmid pl165	plasmid
+plasmid pACRY08	plasmid
+plasmid pACRY06	plasmid
+plasmid pACRY07	plasmid
+plasmid pACRY04	plasmid
+plasmid pACRY05	plasmid
+plasmid pACRY03	plasmid
+plasmid pACRY01	plasmid
+plasmid pKMA505	plasmid
+plasmid pSK156	plasmid
+plasmid pCAR50	plasmid
+plasmid pSK67-M1	plasmid
+plasmid pMG828-3	plasmid
+plasmid pCF10	plasmid
+plasmid pSI-1	plasmid
+Streptococcus gallolyticus subsp. gallolyticus ATCC 43143	eubacteria
+Halobacterium salinarum R1	archae
+plasmid pWZ1668	plasmid
+plasmid pPGA1_262	plasmid
+plasmid pJIR3844	plasmid
+plasmid pISOP01	plasmid
+plasmid pVF18	plasmid
+plasmid pLMV7	plasmid
+Syntrophomonas wolfei subsp. wolfei str. Goettingen	eubacteria
+plasmid pRM41A	plasmid
+plasmid pAAk1	plasmid
+plasmid pl11	plasmid
+plasmid pl15	plasmid
+plasmid pCLG2	plasmid
+plasmid pCLG1	plasmid
+plasmid pCROD2	plasmid
+plasmid pCROD3	plasmid
+plasmid pBM700	plasmid
+plasmid pCROD1	plasmid
+plasmid pTZ4	plasmid
+plasmid pIE1115	plasmid
+plasmid pSTERM02	plasmid
+plasmid pSTERM01	plasmid
+plasmid pGXY060	plasmid
+plasmid SAP107B	plasmid
+plasmid SAP107A	plasmid
+plasmid pMyBK1	plasmid
+plasmid pH308197_258	plasmid
+plasmid pETEC_6	plasmid
+plasmid pETEC_5	plasmid
+plasmid pRUMAL04	plasmid
+plasmid pAhy2.5	plasmid
+plasmid pNC101	plasmid
+plasmid pLVP1401	plasmid
+Nitrosococcus oceani ATCC 19707	eubacteria
+plasmid pHCM2	plasmid
+plasmid pAsa6	plasmid
+plasmid pAsa1	plasmid
+plasmid pAsa2	plasmid
+Erythrobacter litoralis HTCC2594	eubacteria
+plasmid pRUMAL02	plasmid
+plasmid pSMB74	plasmid
+Bartonella quintana str. Toulouse	eubacteria
+plasmid pNRC100	plasmid
+plasmid pER371	plasmid
+plasmid pDB1	plasmid
+plasmid p5217	plasmid
+Methanosarcina mazei Tuc01	archae
+plasmid pMIC7113.04	plasmid
+plasmid pMIC7113.05	plasmid
+plasmid pMIC7113.07	plasmid
+plasmid pWBG757	plasmid
+plasmid pMIC7113.01	plasmid
+plasmid pMIC7113.02	plasmid
+plasmid pMIC7113.03	plasmid
+plasmid pWBG759	plasmid
+plasmid pWBG758	plasmid
+plasmid pMIC7113.08	plasmid
+plasmid pTZ2162	plasmid
+plasmid pJ340-114	plasmid
+plasmid pMa025	plasmid
+plasmid pSB3	plasmid
+plasmid pRLG204	plasmid
+plasmid pAM373	plasmid
+plasmid pZMO1	plasmid
+plasmid pAM5	plasmid
+plasmid pZMO2	plasmid
+plasmid pHBOR03	plasmid
+plasmid pPAT9B01	plasmid
+plasmid 156a_lp25	plasmid
+plasmid pPAT9B02	plasmid
+Desulfohalobium retbaense DSM 5692	eubacteria
+plasmid pHW4594	plasmid
+plasmid pPAT9B05	plasmid
+plasmid pLB925A04	plasmid
+plasmid pA387	plasmid
+plasmid pKPN2	plasmid
+plasmid pLB925A01	plasmid
+plasmid pHSB	plasmid
+plasmid 94a_cp32-6	plasmid
+plasmid 94a_cp32-7	plasmid
+plasmid 94a_cp32-5	plasmid
+plasmid small ECE	plasmid
+plasmid pDMC2	plasmid
+plasmid pDMC1	plasmid
+plasmid pHT11	plasmid
+plasmid pBMB28	plasmid
+plasmid pHGN1	plasmid
+plasmid pBMB26	plasmid
+plasmid pIS56-68	plasmid
+plasmid PB1000	plasmid
+plasmid pKJ50	plasmid
+plasmid pXcaw58	plasmid
+plasmid AZO_p3	plasmid
+plasmid AZO_p2	plasmid
+plasmid PsyG_4	plasmid
+plasmid AZO_p6	plasmid
+plasmid AZO_p5	plasmid
+plasmid AZO_p4	plasmid
+plasmid pSGI15	plasmid
+plasmid p746	plasmid
+plasmid pPC9	plasmid
+plasmid pSCO1	plasmid
+plasmid pSK41	plasmid
+plasmid pEA3	plasmid
+Methanoregula formicica SMSP	archae
+plasmid pPCP	plasmid
+plasmid pAsal1	plasmid
+Methanocella paludicola SANAE	archae
+plasmid pAsal2	plasmid
+Methanococcus maripaludis C6	archae
+Methanococcus maripaludis C7	archae
+Methanococcus maripaludis C5	archae
+plasmid pDB2011	plasmid
+plasmid pIU824	plasmid
+plasmid pRAHAQ01	plasmid
+plasmid pRAHAQ02	plasmid
+plasmid pSYMBR3459	plasmid
+plasmid pRCEID3.2	plasmid
+plasmid pGYMC5201	plasmid
+plasmid 156a_lp17	plasmid
+plasmid pSin9.7	plasmid
+plasmid pJBL2	plasmid
+plasmid pMBLT00	plasmid
+plasmid pWc	plasmid
+plasmid pDEIPR03	plasmid
+plasmid pDEIPR01	plasmid
+plasmid SAP015A	plasmid
+plasmid pHN3A11	plasmid
+plasmid pBBp1	plasmid
+plasmid pIMP-HZ1	plasmid
+plasmid pB1000x	plasmid
+plasmid pUO1	plasmid
+plasmid p1643_10	plasmid
+plasmid pW2	plasmid
+plasmid pB1000	plasmid
+plasmid pB1002	plasmid
+plasmid pB1005	plasmid
+plasmid pB1006	plasmid
+plasmid pNG100	plasmid
+plasmid pSBAL67801	plasmid
+plasmid pFMBL1	plasmid
+plasmid pEBM130	plasmid
+plasmid ColE9-J	plasmid
+plasmid pMARC3	plasmid
+plasmid pMARC2	plasmid
+plasmid pMARC5	plasmid
+plasmid pBM02	plasmid
+plasmid pRPIC01	plasmid
+plasmid pcpM56	plasmid
+plasmid pSJH101	plasmid
+plasmid pJV1	plasmid
+plasmid pEL60	plasmid
+plasmid p6BC	plasmid
+plasmid pBA45-1	plasmid
+plasmid pTXW	plasmid
+plasmid pRK1	plasmid
+plasmid pR99	plasmid
+plasmid pKB1	plasmid
+plasmid PBr_lp54	plasmid
+plasmid pKPC-LK30	plasmid
+plasmid pUCD5000	plasmid
+plasmid pTW9	plasmid
+plasmid pAm08CD9902	plasmid
+plasmid pRF1	plasmid
+plasmid pSM76	plasmid
+plasmid pKPC_FCF13/05	plasmid
+plasmid symbiotic plasmid p42d	plasmid
+plasmid IncN plasmid N3	plasmid
+plasmid SAP105B	plasmid
+plasmid pHT8_1	plasmid
+plasmid pCASE1	plasmid
+plasmid pHT8_2	plasmid
+plasmid pHY	plasmid
+plasmid pVCM01	plasmid
+plasmid pVCM04	plasmid
+plasmid pTA1015	plasmid
+plasmid pAB510f	plasmid
+plasmid pAB510d	plasmid
+plasmid pAB510e	plasmid
+plasmid pAB510c	plasmid
+plasmid pQBR103	plasmid
+plasmid pSQ10	plasmid
+plasmid pCKL555A	plasmid
+plasmid pVIBHAR	plasmid
+plasmid pAPA42C_050	plasmid
+plasmid SAP089A	plasmid
+Tsukamurella paurometabola DSM 20162	eubacteria
+plasmid pSYN7502.02	plasmid
+plasmid pSYN7502.01	plasmid
+plasmid pIMP-PH114	plasmid
+plasmid pA01	plasmid
+plasmid R46	plasmid
+plasmid pRL10	plasmid
+plasmid pDGEO02	plasmid
+plasmid pKMA202	plasmid
+plasmid pDGEO01	plasmid
+plasmid pJE04	plasmid
+plasmid lp150	plasmid
+plasmid pLS55	plasmid
+plasmid pFBAOT6	plasmid
+Pseudoalteromonas atlantica T6c	eubacteria
+plasmid pAHH01	plasmid
+plasmid pAHH04	plasmid
+Halorubrum lacusprofundi ATCC 49239	archae
+plasmid pMAR7	plasmid
+plasmid pBSSB1	plasmid
+plasmid pVSAL54	plasmid
+plasmid pUMNK88_K88	plasmid
+Dehalococcoides mccartyi BTF08	eubacteria
+plasmid pPGA2_95	plasmid
+plasmid Plasmid pC30il	plasmid
+plasmid pSH146_87	plasmid
+Hydrogenobaculum sp. SN	eubacteria
+plasmid pNGK	plasmid
+Ferroplasma acidarmanus fer1	archae
+plasmid pJD8	plasmid
+plasmid unnamed38	plasmid
+plasmid unnamed39	plasmid
+plasmid pHALXA02	plasmid
+plasmid pNG500	plasmid
+plasmid unnamed32	plasmid
+plasmid unnamed33	plasmid
+plasmid unnamed31	plasmid
+plasmid unnamed36	plasmid
+plasmid unnamed37	plasmid
+plasmid unnamed34	plasmid
+plasmid unnamed35	plasmid
+plasmid p12579_1	plasmid
+plasmid plasmid1	plasmid
+plasmid p12579_3	plasmid
+plasmid p12579_2	plasmid
+plasmid pHT73	plasmid
+plasmid pLM5578	plasmid
+plasmid pHT77	plasmid
+plasmid pSD1_197	plasmid
+Pyrolobus fumarii 1A	archae
+plasmid pSULKU02	plasmid
+Nitrosomonas sp. AL212	eubacteria
+plasmid pNG2	plasmid
+plasmid pSULKU04	plasmid
+plasmid pCSA2	plasmid
+plasmid pMRAD03	plasmid
+plasmid pEspB	plasmid
+plasmid pEspA	plasmid
+plasmid pMRAD02	plasmid
+Gemmatimonas aurantiaca T-27	eubacteria
+plasmid pLD8501	plasmid
+plasmid pNDM-BJ02	plasmid
+plasmid SAP055A	plasmid
+plasmid pMRAD06	plasmid
+plasmid pDOJH10S	plasmid
+plasmid pSK103	plasmid
+plasmid pSK105	plasmid
+plasmid pK1HV	plasmid
+plasmid pPAN	plasmid
+plasmid pDOJH10L	plasmid
+plasmid pPSEST02	plasmid
+plasmid pPSEST01	plasmid
+plasmid pBc53	plasmid
+plasmid pMETOK01	plasmid
+plasmid 297_lp54	plasmid
+plasmid pEXIG02	plasmid
+plasmid pO157	plasmid
+plasmid p2ESCUM	plasmid
+plasmid 64b_cp32-3-8	plasmid
+plasmid pSci2	plasmid
+plasmid pSci3	plasmid
+plasmid pSci1	plasmid
+plasmid pSci6	plasmid
+plasmid pSci4	plasmid
+plasmid pSci5	plasmid
+plasmid pBC1	plasmid
+plasmid 94a_lp28-4	plasmid
+plasmid 94a_lp28-3	plasmid
+plasmid pBc10987	plasmid
+plasmid pF856	plasmid
+Nakamurella multipartita DSM 44233	eubacteria
+plasmid pSciA	plasmid
+plasmid pBAslCI14	plasmid
+plasmid pNC500	plasmid
+plasmid pAL202	plasmid
+plasmid Bol26_cp32-9	plasmid
+plasmid Bol26_cp32-5	plasmid
+plasmid pSFD10	plasmid
+plasmid BTB_8p	plasmid
+plasmid pSA1379	plasmid
+plasmid SAP017A	plasmid
+Halorhabdus utahensis DSM 12940	archae
+plasmid pCfc1	plasmid
+plasmid Gch3937	plasmid
+plasmid pMC429	plasmid
+plasmid pl124	plasmid
+plasmid pSD107	plasmid
+plasmid pAtK84c	plasmid
+plasmid pAtK84b	plasmid
+plasmid pAES7	plasmid
+plasmid pAES1	plasmid
+plasmid pEBM113	plasmid
+plasmid pAES3	plasmid
+plasmid megaplasmid pDF308	plasmid
+plasmid pTRACA20	plasmid
+plasmid ZS7_cp32-3+10	plasmid
+plasmid pBL63.1	plasmid
+plasmid pIP816	plasmid
+plasmid pVF50	plasmid
+plasmid pJD4	plasmid
+plasmid pB1023	plasmid
+plasmid pB1022	plasmid
+plasmid pB1021	plasmid
+plasmid pB1020	plasmid
+plasmid pB1024	plasmid
+plasmid pASTEX01	plasmid
+plasmid pASTEX02	plasmid
+plasmid pSLT_SL1344	plasmid
+Mycoplasma hyorhinis SK76	eubacteria
+Colwellia psychrerythraea 34H	eubacteria
+plasmid pTN1	plasmid
+plasmid pBGR1	plasmid
+plasmid pBGR2	plasmid
+plasmid pBGR3	plasmid
+Owenweeksia hongkongensis DSM 17368	eubacteria
+plasmid pMK12478	plasmid
+Francisella sp. TX077308	eubacteria
+Dichelobacter nodosus VCS1703A	eubacteria
+plasmid pMR0211	plasmid
+plasmid pTGL1	plasmid
+plasmid pTYM1	plasmid
+plasmid PL100	plasmid
+plasmid pLBUC03	plasmid
+Acinetobacter oleivorans DR1	eubacteria
+plasmid pLBUC01	plasmid
+plasmid R100	plasmid
+plasmid pHAE1	plasmid
+Staphylothermus hellenicus DSM 12710	archae
+plasmid pHAE2	plasmid
+plasmid pE194	plasmid
+plasmid pMMD	plasmid
+Rhodothermus marinus SG0.5JP17-172	eubacteria
+plasmid pSD_174	plasmid
+plasmid pMM1	plasmid
+plasmid Spl	plasmid
+plasmid pAtS4b	plasmid
+plasmid pAtS4c	plasmid
+plasmid pAtS4a	plasmid
+plasmid pO26-S1	plasmid
+plasmid pO26-S3	plasmid
+Acidovorax citrulli AAC00-1	eubacteria
+plasmid p1HPAKL86	plasmid
+plasmid pGDIPal5II	plasmid
+plasmid lp28	plasmid
+plasmid pAPA42C_030	plasmid
+plasmid pTHEOS01	plasmid
+plasmid pTHEOS02	plasmid
+plasmid pIU888	plasmid
+plasmid pHNDD81-1	plasmid
+plasmid pSL491_3	plasmid
+plasmid pG8786	plasmid
+plasmid cryptic plasmid pDR1-1	plasmid
+plasmid R64	plasmid
+plasmid pPSAS1522	plasmid
+plasmid pPL7065	plasmid
+plasmid pFR55	plasmid
+Starkeya novella DSM 506	eubacteria
+plasmid lp174	plasmid
+plasmid pBM300	plasmid
+plasmid pEST4011	plasmid
+plasmid pLS30	plasmid
+plasmid pLS32	plasmid
+Simkania negevensis Z	eubacteria
+plasmid pENTE01	plasmid
+plasmid pDFL14-10	plasmid
+plasmid pRUNSL02	plasmid
+plasmid pRUNSL04	plasmid
+plasmid pBT01	plasmid
+Herpetosiphon aurantiacus DSM 785	eubacteria
+plasmid pNC4	plasmid
+Eggerthella lenta DSM 2243	eubacteria
+plasmid Plasmid pADB201	plasmid
+plasmid pMG1B-1	plasmid
+plasmid unnamed10	plasmid
+plasmid unnamed12	plasmid
+plasmid unnamed13	plasmid
+plasmid unnamed14	plasmid
+plasmid unnamed15	plasmid
+plasmid unnamed16	plasmid
+plasmid unnamed17	plasmid
+plasmid unnamed18	plasmid
+plasmid pKpQIL	plasmid
+plasmid pSH146_65	plasmid
+plasmid pRSC35	plasmid
+plasmid pKH6	plasmid
+plasmid pBMY1	plasmid
+plasmid pAACI03	plasmid
+plasmid pAACI02	plasmid
+plasmid pAACI01	plasmid
+plasmid p256	plasmid
+plasmid pBMB67	plasmid
+plasmid p250	plasmid
+plasmid pKF3-94	plasmid
+plasmid pMBO-2	plasmid
+plasmid pMBO-1	plasmid
+plasmid pSRC15	plasmid
+plasmid pSRQ700	plasmid
+Methanohalophilus mahii DSM 5219	archae
+plasmid pKC396	plasmid
+plasmid pKC394	plasmid
+plasmid pKpQIL-IT	plasmid
+plasmid pH308197_29	plasmid
+Desulfurispirillum indicum S5	eubacteria
+plasmid pLFE1	plasmid
+plasmid pKCTC2242	plasmid
+plasmid pCW3	plasmid
+plasmid PEI1	plasmid
+plasmid PEI2	plasmid
+plasmid pBK32179	plasmid
+plasmid pTA144 Up	plasmid
+plasmid 156a_lp54	plasmid
+plasmid p1BJAB07104	plasmid
+plasmid pAC258-29	plasmid
+plasmid pAC258-26	plasmid
+plasmid pOSC7112.01	plasmid
+plasmid large plasmid	plasmid
+plasmid pIL6	plasmid
+plasmid pIL5	plasmid
+plasmid pIL4	plasmid
+plasmid pIL3	plasmid
+plasmid pIL2	plasmid
+plasmid pIL1	plasmid
+plasmid pIL105	plasmid
+plasmid pChi7122-3	plasmid
+plasmid pChi7122-2	plasmid
+plasmid pChi7122-4	plasmid
+plasmid pE33L9	plasmid
+plasmid pTC2	plasmid
+plasmid pTC1	plasmid
+Thermomonospora curvata DSM 43183	eubacteria
+plasmid pE33L5	plasmid
+plasmid pP742501	plasmid
+plasmid pP742502	plasmid
+plasmid pP742503	plasmid
+plasmid pO26-Vir	plasmid
+plasmid pPMA4326C	plasmid
+plasmid pSn	plasmid
+plasmid p2457TS2	plasmid
+plasmid pSaa6159	plasmid
+plasmid BTB_6p	plasmid
+plasmid pNOS7524.01	plasmid
+plasmid pBS512_5	plasmid
+plasmid pBS512_7	plasmid
+plasmid pBS512_2	plasmid
+plasmid pOXA-48	plasmid
+plasmid pSN	plasmid
+plasmid pKMA1467	plasmid
+plasmid pX02	plasmid
+plasmid pX01	plasmid
+plasmid pNG200	plasmid
+plasmid pMP1	plasmid
+plasmid pREB6	plasmid
+plasmid pCFI-2	plasmid
+plasmid pNOS7524.02	plasmid
+plasmid pCFI-1	plasmid
+plasmid BPP5P1	plasmid
+plasmid p03BB102_179	plasmid
+plasmid pHK23a	plasmid
+plasmid pSTE1	plasmid
+plasmid pSTE2	plasmid
+plasmid pSe-Kan	plasmid
+plasmid pMyong1	plasmid
+plasmid pMyong2	plasmid
+plasmid pHDC-Tm	plasmid
+plasmid WI91-23_lp28-1	plasmid
+plasmid WI91-23_lp28-3	plasmid
+plasmid WI91-23_lp28-4	plasmid
+plasmid WI91-23_lp28-6	plasmid
+plasmid pJR2	plasmid
+plasmid pJR1	plasmid
+plasmid pCFPG4	plasmid
+plasmid pAgK84	plasmid
+Phycisphaera mikurensis NBRC 102666	eubacteria
+plasmid pCAUL02	plasmid
+plasmid pCAUL01	plasmid
+plasmid pDSHI03	plasmid
+plasmid pDSHI02	plasmid
+plasmid pDSHI01	plasmid
+plasmid pLEW279a	plasmid
+plasmid pDSHI05	plasmid
+plasmid pDSHI04	plasmid
+plasmid pLTK13	plasmid
+plasmid pND11_107	plasmid
+plasmid pFPHI01	plasmid
+plasmid pJALI	plasmid
+plasmid pMESIL01	plasmid
+plasmid pMESIL02	plasmid
+plasmid pKPC-NY79	plasmid
+plasmid pLK39	plasmid
+plasmid pCT9547	plasmid
+plasmid pLA106	plasmid
+plasmid pMIC7113.06	plasmid
+plasmid PBr_cp32-5	plasmid
+plasmid RSF1010	plasmid
+plasmid pMMCU2	plasmid
+plasmid pMMCU3	plasmid
+plasmid pMMCU1	plasmid
+plasmid pR55	plasmid
+plasmid pBK15692	plasmid
+plasmid cryptic plasmid pPG01	plasmid
+plasmid pAL236-11	plasmid
+Thermodesulfobium narugense DSM 14796	eubacteria
+plasmid pArcpr01	plasmid
+plasmid pMTBMA4	plasmid
+plasmid pLUH02	plasmid
+plasmid pLUH01	plasmid
+plasmid pcpCP3	plasmid
+plasmid pFLIM01	plasmid
+plasmid pFLIM03	plasmid
+plasmid pFLIM02	plasmid
+plasmid pEK499	plasmid
+plasmid pAPA42C_011	plasmid
+plasmid pYE315203	plasmid
+plasmid pCDBI1	plasmid
+plasmid pK1S1	plasmid
+plasmid pECL_A	plasmid
+plasmid pECL_B	plasmid
+plasmid pRLO149_83	plasmid
+plasmid PHS3	plasmid
+Acetobacter pasteurianus IFO 3283-32	eubacteria
+plasmid PHS1	plasmid
+plasmid pAO1	plasmid
+plasmid pLP2140	plasmid
+plasmid 2 micron circle plasmid	plasmid
+plasmid pSotonD1	plasmid
+Aminobacterium colombiense DSM 12261	eubacteria
+plasmid pSotonD5	plasmid
+plasmid p18807-P01	plasmid
+plasmid WSH-002_p3	plasmid
+plasmid p18807-P03	plasmid
+plasmid WSH-002_p1	plasmid
+plasmid p53638_75	plasmid
+Thermosediminibacter oceani DSM 16646	eubacteria
+plasmid pDN281	plasmid
+plasmid pAm08CQ6130	plasmid
+plasmid pBSDMV46A	plasmid
+Fusobacterium nucleatum subsp. vincentii 3_1_36A2	eubacteria
+plasmid pLF24	plasmid
+plasmid pSAS	plasmid
+plasmid pAK1	plasmid
+plasmid pZMX201	plasmid
+plasmid pNVH01	plasmid
+plasmid pSFxv_4	plasmid
+plasmid pRFdelta	plasmid
+plasmid pNDM-OM	plasmid
+plasmid p7ME01	plasmid
+plasmid SAP063A	plasmid
+plasmid pEU30	plasmid
+plasmid pJIE186-2	plasmid
+plasmid pTHETHE01	plasmid
+plasmid pBPHY02	plasmid
+plasmid pXF1.3	plasmid
+Kosmotoga olearia TBF 19.5.1	eubacteria
+Ferroglobus placidus DSM 10642	archae
+plasmid pHN1122-1	plasmid
+plasmid pVI678	plasmid
+plasmid pHPF32	plasmid
+plasmid pHPF30	plasmid
+plasmid pSD197_spA	plasmid
+plasmid pCCON16	plasmid
+Archaeoglobus profundus DSM 5631	archae
+plasmid p5482	plasmid
+plasmid pVSAL43	plasmid
+Methanocella arvoryzae MRE50	archae
+plasmid pRYCKPC3.1	plasmid
+plasmid pRJF1	plasmid
+plasmid pRJF2	plasmid
+plasmid pT48	plasmid
+plasmid pO113	plasmid
+plasmid pTF4.1	plasmid
+plasmid 297_lp17	plasmid
+plasmid p666	plasmid
+plasmid pBM407	plasmid
+Mycobacterium sp. KMS	eubacteria
+plasmid WI91-23_cp26	plasmid
+Paenibacillus polymyxa M1	eubacteria
+plasmid pSTU288-3	plasmid
+plasmid pCOL-1	plasmid
+plasmid EaACW_pEI70	plasmid
+plasmid Gro4059	plasmid
+plasmid pPDDCC3357-6	plasmid
+Methanomethylovorans hollandica DSM 15978	archae
+plasmid pTA1	plasmid
+plasmid pNL11	plasmid
+plasmid pNL14	plasmid
+Acidilobus saccharovorans 345-15	archae
+plasmid pNMEC31_31	plasmid
+Desulfurococcus mucosus DSM 2162	archae
+plasmid pCC7120alpha	plasmid
+plasmid SAP065A	plasmid
+plasmid pMR1	plasmid
+plasmid pMR3	plasmid
+plasmid pMR2	plasmid
+Waddlia chondrophila WSU 86-1044	eubacteria
+plasmid R478	plasmid
+plasmid pSfHH103d	plasmid
+Alteromonas macleodii str. Ionian Sea U4	eubacteria
+plasmid small	plasmid
+plasmid pSH696_34	plasmid
+plasmid pLR1	plasmid
+plasmid pLeu-Dn(USA1)	plasmid
+plasmid pDC09	plasmid
+plasmid pEJ30	plasmid
+plasmid pCCK343	plasmid
+plasmid pKPN4	plasmid
+plasmid pKPN5	plasmid
+plasmid pKPN6	plasmid
+plasmid pKPN7	plasmid
+plasmid pHHV216	plasmid
+plasmid pKPN3	plasmid
+plasmid p838C-R1	plasmid
+plasmid 2s-pEI2	plasmid
+plasmid pETEC_80	plasmid
+plasmid pTIW94	plasmid
+Melioribacter roseus P3M-2	eubacteria
+plasmid pBBta01	plasmid
+plasmid ColA	plasmid
+Methanosaeta thermophila PT	archae
+Clavibacter michiganensis subsp. michiganensis NCPPB 382	eubacteria
+plasmid pAH187_3	plasmid
+Sulfolobus solfataricus 98/2	archae
+plasmid pV030-8	plasmid
+plasmid pOSC7112.02	plasmid
+plasmid PNAC2	plasmid
+plasmid pMG2C-1	plasmid
+plasmid pNM11	plasmid
+plasmid pOSC7112.04	plasmid
+plasmid pAb5S9	plasmid
+plasmid phbz1	plasmid
+Magnetococcus marinus MC-1	eubacteria
+plasmid pMG1A-1	plasmid
+plasmid pTGRD3	plasmid
+plasmid pTGRD2	plasmid
+plasmid megaplasmid pHG1	plasmid
+plasmid VS116_cp26	plasmid
+plasmid pDTG1	plasmid
+plasmid pMG2A-1	plasmid
+plasmid pIS56-107	plasmid
+plasmid pLFH49	plasmid
+plasmid pXCEL01	plasmid
+plasmid peH4H	plasmid
+plasmid p42a	plasmid
+plasmid p42b	plasmid
+plasmid p42c	plasmid
+plasmid p42e	plasmid
+plasmid p42f	plasmid
+plasmid pCC5.2_M	plasmid
+plasmid pSLT-BT	plasmid
+Methanococcoides burtonii DSM 6242	archae
+plasmid pHP489	plasmid
+plasmid pBLTVA-1	plasmid
+Thermogladius cellulolyticus 1633	archae
+plasmid pSW174	plasmid
+plasmid 3	plasmid
+plasmid pBMB7635	plasmid
+plasmid pR132504	plasmid
+plasmid pR132503	plasmid
+plasmid pR132502	plasmid
+plasmid pR132501	plasmid
+plasmid pSLA2-L	plasmid
+plasmid 1	plasmid
+plasmid DESAM_p	plasmid
+plasmid HPB8p	plasmid
+plasmid plasmid pAM330	plasmid
+plasmid pK245	plasmid
+plasmid pNB2354_1	plasmid
+plasmid pSFyv	plasmid
+plasmid pSCD	plasmid
+plasmid pFR18	plasmid
+Fibrobacter succinogenes subsp. succinogenes S85	eubacteria
+plasmid pFR12	plasmid
+Herbaspirillum seropedicae SmR1	eubacteria
+plasmid pSZ4	plasmid
+plasmid pNetB-NE10	plasmid
+plasmid pCRL291.1	plasmid
+plasmid pAH820_272	plasmid
+plasmid VRSAp	plasmid
+plasmid pO111_4	plasmid
+plasmid pO111_5	plasmid
+plasmid pO111_2	plasmid
+plasmid pO111_3	plasmid
+plasmid pO111_1	plasmid
+plasmid PBr_lp28-7	plasmid
+plasmid PBr_lp28-4	plasmid
+plasmid PBr_lp28-3	plasmid
+plasmid PBr_lp28-1	plasmid
+plasmid 94a_cp9	plasmid
+plasmid pU302S	plasmid
+plasmid pRA0846	plasmid
+Natrinema pellirubrum DSM 15624	archae
+plasmid pU302L	plasmid
+Sulfolobus islandicus L.S.2.15	archae
+plasmid pHK2	plasmid
+plasmid pST728/06-2	plasmid
+plasmid pJ337-114	plasmid
+plasmid pPPM1a	plasmid
+plasmid pS19503	plasmid
+plasmid pS19502	plasmid
+plasmid pS19501	plasmid
+Parvibaculum lavamentivorans DS-1	eubacteria
+plasmid Ddp5	plasmid
+plasmid pCER270	plasmid
+plasmid pONE430	plasmid
+plasmid pSTU288-1	plasmid
+plasmid pSTU288-2	plasmid
+plasmid pSFO157	plasmid
+plasmid pRAY*-v1	plasmid
+plasmid pSfHH103b	plasmid
+plasmid pSfHH103c	plasmid
+plasmid pSfHH103a	plasmid
+plasmid pThr1	plasmid
+plasmid pWW53	plasmid
+Sebaldella termitidis ATCC 33386	eubacteria
+plasmid pTT27	plasmid
+plasmid pLO2	plasmid
+Methanococcus aeolicus Nankai-3	archae
+plasmid pHPPC4	plasmid
+plasmid pILYOP02	plasmid
+plasmid pILYOP01	plasmid
+plasmid pCCON31	plasmid
+plasmid pF242	plasmid
+plasmid pHTIA	plasmid
+plasmid EDINA plasmid	plasmid
+plasmid linear	plasmid
+plasmid pCS1	plasmid
+plasmid pKPN5047	plasmid
+plasmid pMYCSM03	plasmid
+plasmid pMYCSM02	plasmid
+plasmid pMYCSM01	plasmid
+plasmid BRA100	plasmid
+plasmid pVQS1	plasmid
+plasmid JD1 lp17	plasmid
