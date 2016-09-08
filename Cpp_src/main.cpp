@@ -196,7 +196,7 @@ int total_group=0;
 int size_of_groups=0;
 float total_paths=0;
 int total_k_node=0;
-int total_nonk_node=0; //--shoudl be equal to g1 normally
+int total_nonk_node=0; //--should be equal to g1 normally
 	
 ofstream FileOutput; //verbose path to output
 
