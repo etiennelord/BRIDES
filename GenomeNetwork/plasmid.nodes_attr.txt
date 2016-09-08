@@ -1190,7 +1190,7 @@ plasmid lp60-2	plasmid
 plasmid pREL1	plasmid
 plasmid pE33L466	plasmid
 plasmid pMG2D-1	plasmid
-plasmid pLNU6 (naturally occurr	plasmid
+plasmid pLNU6 (naturally occur	plasmid
 plasmid pTA1040	plasmid
 Xanthomonas campestris pv. campestris str. 8004	eubacteria
 plasmid pAMI8	plasmid
