@@ -116,7 +116,7 @@ struct Parameters {
 
         int first;      //-- Start group of vertex (defined by size)
         int last;       //-- End group of vertex
-		int strategy;   //-- K Node ordering startegy (either 1- max(d(i,k), d(j,k)) or 2- (d(i,k)+d(j,k)))
+		int strategy;   //-- K Node ordering strategy (either 1- max(d(i,k), d(j,k)) or 2- (d(i,k)+d(j,k)))
 
         float maxdistance;       //--default search length (default=100);		
 		int maxtime;             //--Max time to search for Detour or Equal path (default=10 s)
