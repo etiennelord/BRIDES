@@ -127,9 +127,13 @@ struct Parameters {
 		int maxthread;           //--Default: system 
 		bool verbose;            //-- Output more result to file              
 
-		int heuristic; //--BRIDES =1, BRIDES_YEN=2, BRIDES_YC=3, BRIDES_EC=4
+		int heuristic; //--BRIDES =1, BRIDES_YEN=2, BRIDES_YC=3, BRIDES_EC=4. DFS=5, BRIDES RELAXED=6
 		int weight_method; //All weight as equal, inverse, default
-		bool use_multiple_color; // do
+		bool use_multiple_color; // TO DO
+		int start_time_code;   //Time code for including vertex (Unix timestamps)
+		int end_time_code;     //Time code for including vertex (Unix timestamps)
+		bool output_graph;      
+		bool use_time_code;
       
 };
 
@@ -160,7 +164,8 @@ int add_node(std::string name);
 void cout_map(vector< map<int, int> > p);
 int randomInt (int min, int max);
 bool good_path(vector<int> path, int S, int T);
-
+void output_graph();
+ 
 /////////////////////////////////////////////////////////////////////////////////////
 //--Variables
 struct Parameters param; //--Input parameters
@@ -581,22 +586,35 @@ float dist_path(vector<int> path,vector< std::map<int,float> > adj_dist) {
 	return len;
 }	 
 	 
+/**
+ * This verify that a path is good i.e. contains one k-node
+  * If the algo is relaxed (param.heuristic=6)
+ */
 bool good_path(vector<int> path, int S, int T) {
 		bool found=false;
 		bool found_S=false;
 		bool found_T=false;
 		map<int,int> ht;
+		if (param.heuristic==6) {
+			found=true;
+			for (int i=0; i<path.size();i++) {
+				if (ht[path[i]]!=0) return false; //Duplicate node
+				ht[path[i]]=1;
+				if (path[i]==T) found_T=true;
+				if (path[i]==S) found_S=true;
+			}
 		
-		if (path.size()<3) return false;
-		// any duplicate and path contains one k nodes
-		for (int i=0; i<path.size();i++) {
-			if (Nsb[path[i]]) found=true;
-			if (ht[path[i]]!=0) return false;
-			ht[path[i]]=1;
-			if (path[i]==T) found_T=true;
-			if (path[i]==S) found_S=true;
+		} else {
+			if (path.size()<3) return false;
+			// any duplicate and path contains one k nodes
+			for (int i=0; i<path.size();i++) {
+				if (Nsb[path[i]]) found=true;
+				if (ht[path[i]]!=0) return false;
+				ht[path[i]]=1;
+				if (path[i]==T) found_T=true;
+				if (path[i]==S) found_S=true;
+			}
 		}
-		
 	return found&&found_S&&found_T;
 }	
 
@@ -1040,14 +1058,15 @@ vector<int> brides(int group) {
 			 vector< vector<int> > path=get_path(i,j,prev_g2);
 			 vector<int> gp=good_path2(path,i,j); 
 			 real_dist_g2=dist_g2[j];
-			 if (dist_g1[j]<Inf&&dist_g2[j]>=Inf) {
+			 //cout<<i<<" "<<j<<" "<<dist_g1[j]<<" "<<dist_g2[j]<<endl;
+			 if (dist_g1[j]<Inf&&dist_g2[j]>=Inf) {				
 				path_type=c_roadblock;
 			 } else			
 			 if (dist_g1[j]>=Inf) {
 			
 				if (dist_g2[j]<Inf&&gp.size()>0) {
 					path_type=c_breakthrough;
-				} else {
+				} else {					
 					path_type=c_impasse;
 				}				
 			 } else {
@@ -1462,11 +1481,26 @@ int main(int nargc, char** argv) {
           exit(-1);
       }
 	  
-      if (!param.found_g2&&!param.found_attributes) {
+      if (!param.found_g2&&!param.found_attributes&&!param.use_time_code) {
           cout<<"Error. Unable to locate the g2 or attributes file g2:"<<param.graph2<<" attributes:"<<param.attributes<<endl;
 		  destructor();
           exit(-1);
       }
+	  if (param.use_time_code) {
+		  cout<<"Saving to "<<param.outputfile<<" the nodes from :"<<param.start_time_code<<" to "<<param.end_time_code<<endl;
+		  FileOutput.open(param.outputfile);	  
+		   if(!FileOutput.is_open()) {
+			  printf("\n%s: verbose result file open failed...",param.outputfile);
+			  destructor();
+			  exit(1);
+			   
+		   }
+		   output_graph();
+		   
+		   FileOutput.close();
+		  exit(0);
+	  }
+	  
 	  if (param.verbose) {
 		  FileOutput.open(param.outputfile);	  
 		   if(!FileOutput.is_open())
@@ -1856,15 +1890,25 @@ std::map<int,int> load_edge(char* filename, std::vector<edge> &edge_list) {
 				dist=1.0f;
                 if (tokens.size()>2) dist=atof(tokens[2].c_str());
 				if (dist<=0.0f) dist=1.0f; //--Don't permit negative distance
-                 edge t;             
-				 t.from=add_node(from);
-				 t.to=add_node(to);
-				 t.dist=dist; 
-				 
-				 local_node.insert ( std::pair<int,int>(t.from,0));
-				 if (t.to!=-1) local_node.insert ( std::pair<int,int>(t.to,0));
-				 
-                 if (t.to!=t.from)  edge_list.push_back(t);
+                 if (!param.use_time_code) {
+					 edge t;             
+					 t.from=add_node(from);
+					 t.to=add_node(to);
+					 t.dist=dist; 
+					 local_node.insert ( std::pair<int,int>(t.from,0));
+					 if (t.to!=-1) local_node.insert ( std::pair<int,int>(t.to,0));				 
+					 if (t.to!=t.from)  edge_list.push_back(t);
+				 } else {
+					 if (dist>=param.start_time_code&&dist<=param.end_time_code) {
+						 edge t;             
+						 t.from=add_node(from);
+						 t.to=add_node(to);
+						 t.dist=dist; 
+						 local_node.insert ( std::pair<int,int>(t.from,0));
+						 if (t.to!=-1) local_node.insert ( std::pair<int,int>(t.to,0));				 
+						 if (t.to!=t.from)  edge_list.push_back(t);
+					 }
+				 }
             }
         }
    } catch(const std::exception& e) {}   
@@ -1877,6 +1921,20 @@ int randomInt (int min, int max){
     int n = rand()%(max-min)+min; 
     return n;
 }
+
+/**
+ * Save to output the selected network
+ */
+void output_graph() {
+	for (int i=0; i<edge_list_g1.size();i++) {
+			if (edge_list_g1[i].to!=-1) {
+				FileOutput<<node_name[edge_list_g1[i].from]<<"\t"<<node_name[edge_list_g1[i].to]<<"\t"<<edge_list_g1[i].dist<<endl;
+			} else {
+				FileOutput<<node_name[edge_list_g1[i].from]<<"\t"<<edge_list_g1[i].dist<<endl;
+			}
+	}
+	
+} 
 
 /**
  * output some information to the file
@@ -1965,6 +2023,7 @@ void output_header(char** argv) {
 		  case 3:cout<<" Algorithm                     : BRIDES_YC  (3)"<<endl;break;
 		  case 4:cout<<" Algorithm                     : BRIDES_EC  (4)"<<endl;break;
 		  case 5:cout<<" Algorithm                     : DFS        (5)"<<endl;break;
+		  case 6:cout<<" Algorithm                     : B. RELAXED (6)"<<endl;break;
 	  }
 	  
 	  
@@ -2051,6 +2110,7 @@ void output_header(char** argv) {
 				  case 3:FileOutput<<" Algorithm                     : BRIDES_YC  (3)"<<endl;break;
 				  case 4:FileOutput<<" Algorithm                     : BRIDES_EC  (4)"<<endl;break;
 				  case 5:FileOutput<<" Algorithm                     : DFS        (5)"<<endl;break;
+				  case 6:FileOutput<<" Algorithm                     : B. RELAX   (6)"<<endl;break;
 			  }
 			  if (param.maxthread!=0) {
 				  FileOutput<<" Maxthread                     : "<<param.maxthread<<endl;      
@@ -2089,6 +2149,7 @@ void help(){
 		printf("\n-seed=999         [set the random seed generator to a specific seed]");
 		printf("\n-strategy=1       [set the K nodes ordering strategy: (1) maxdist.,(2) sum.]");
 		printf("\n-algo=1           [1-BRIDES, 2-BRIDES_Y, 3-BRIDES_YC, 4-BRIDES_EC,5-DFS]");
+		printf("\n                  [6-RELAXED]");
 		printf("\n\nExample : \n: ./BRIDES -X=networkX.txt -Y=networkY.txt\n\n");
 }
 
@@ -2168,6 +2229,11 @@ int readParameters(Parameters *param, char **argv, int nargc){
 		 (*param).use_dist=false;
 		 (*param).inv_dist=false;
 		 (*param).removeK_from_X=false;
+		 (*param).output_graph=false;
+		 (*param).use_time_code=false;
+		 (*param).start_time_code=0;   //Time code for including vertex (Unix timestamps)
+		 (*param).end_time_code=1;
+		
          //(*param).use_g2=false;
          //sprintf((*param).outputfile,"%s","output.txt");
 		/*(*param).distance_method=0;  //default cosine distance
@@ -2192,7 +2258,7 @@ int readParameters(Parameters *param, char **argv, int nargc){
 							(*param).verbose=true;							
             }  
             //======= maxnode ==============       
-			 else if(strcmp("maxnode",champs) == 0){                                
+			else if(strcmp("maxnode",champs) == 0){                                
 				  (*param).maxnode = atoi(contenu);
 			}              
             //======= maxdistance ==============       
@@ -2210,6 +2276,16 @@ int readParameters(Parameters *param, char **argv, int nargc){
             //======= end ==============       
                          else if(strcmp("last",champs) == 0){                                
                               (*param).last = atoi(contenu);
+			}
+			//======= start timecode ==============       
+                         else if(strcmp("tstart",champs) == 0){                                
+                              (*param).start_time_code = atoi(contenu);
+							  (*param).use_time_code=true;
+			}
+            //======= end ==============       
+                         else if(strcmp("tend",champs) == 0){                                
+                              (*param).end_time_code = atoi(contenu);
+							  (*param).use_time_code=true;
 			}
 			//======= K ================
 			 else if(strcmp("K",champs) == 0){    

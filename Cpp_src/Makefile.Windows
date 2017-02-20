@@ -1,9 +1,9 @@
-all: clean BRIDES test
+all: clean BRIDES
 
 BRIDES: main.cpp
 	g++ -O3 main.cpp -o brides.exe -fopenmp 
 
-test:
+test: brides.exe
 	brides.exe -X=sample\\t0.txt -Y=sample\\t1.txt
 	
 clean:
