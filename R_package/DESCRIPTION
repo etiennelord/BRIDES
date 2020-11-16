@@ -1,0 +1,18 @@
+Package: BRIDES
+Type: Package
+Depends: R (>= 3.0), igraph (>= 1.0.0), doParallel, foreach
+Title: Characterizing Path Types in Evolving Networks
+Version: 1.2.1
+Date: 2020-08-20
+Author: Etienne Lord <m.etienne.lord@gmail.com>, Cindy Bouchard, Vladimir Makarenkov and Francois-Joseph Lapointe
+Maintainer: Etienne Lord <m.etienne.lord@gmail.com>
+Description: Characterize the evolution of an original network X 
+			 into an augmented network Y by counting the number of 
+			 Breakthroughs, Roadblocks, Impasses, Detours, Equal and Shortcuts paths.
+URL: https://github.com/etiennelord/BRIDES
+License: GPL-3
+LazyLoad: yes
+Packaged: 2020-08-20 18:49:10 UTC; etienne
+NeedsCompilation: yes
+Repository: CRAN
+Date/Publication: 2020-08-26 23:23:36

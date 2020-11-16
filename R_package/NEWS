@@ -1,0 +1,33 @@
+NEWS/ChangeLog for BRIDES 1.2.1 (7-09-2020)
+-------------------------------------------------------------------------
+
+NEW FEATURES
+
+* Created the R package version on CRAN
+
+* Added BRIDES evaluation of network scenarios (runmode): "exhaustive", "genetics" and "stepwise"
+  Those scenarios evaluate successive addition of nodes from augmented network Y, from the 
+  network X, in order to MAXIMIZE the BRIDES score using a scoring function.
+  
+* Added the wt parameter to the BRIDES function to set a scoring strategy for the BRIDES statistics.
+* Added the min_additionnal and max_additionnal nodes to the BRIDES function. 
+* Added the path_information parameter to the BRIDES function to save the traversed path information.
+* Added the mutationChance parameter to the BRIDES function to control the genetics algorithm scenario.
+* Added the legend_position parameter to the plot_network function.
+
+CHANGES
+
+* Added Cindy Bouchard (PhD student, UdeM) to the author list.
+* Changed the default behavior so that weighted edges are taken into account.
+* Added a save network function.
+* Fixed some path that were not displayed correcly in the traces in the R version.
+* Various fixed to the output of the BRIDES functions.
+* Fixed some error in the directed network evaluation.
+* Added various warnings in the R code.
+* Correction to the C code.
+
+NOTE
+
+Old version 1.0 and C++ versions are found at https://github.com/etiennelord/BRIDES
+
+
