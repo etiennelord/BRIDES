@@ -2,7 +2,9 @@
 This program allows the user to follow the evolution of an original network X into an augmented network Y by counting the number of Breakthroughs, Roadblocks, Impasses, Detours, Equal paths and Shortcuts (BRIDES) in the network Y. 
 ## About
 
-This repository includes the R and C++ source codes of BRIDES, examples of simple evolving networks and examples of real genome similarity networks which can be given as input of our program
+* New version 2020 - Cindy Bouchard (Université de Montréal) *
+
+This repository includes the R, R package and C++ source codes of BRIDES, examples of simple evolving networks and examples of real genome similarity networks which can be given as input of our program
 
 Given an original network X and its augmented network Y (with additional nodes and edges), the BRIDES program calculates the number of Breakthroughs, Roadblocks, Impasses, Detours, Equal paths and Shortcuts characterizing the evolution of X into Y.
 
@@ -15,11 +17,13 @@ Six types of paths are thus possible:
 5.	Equal: a path that has the same length in networks X and Y.
 6.	Shortcut: a path that is longer in network X than in network Y.
 
-The R version of BRIDES is suitable for small networks (with less than 1,000 nodes), while the C++ version can handle millions of nodes.
+The R and R package versions of BRIDES is suitable for small networks (with less than 1,000 nodes), while the C++ version can handle millions of nodes.
+
+One novelty of the R package version (2020) is the addition of scenarios maximize a search for the best additions of nodes to the starting network. 
 
 ## Installation
 
-1. Clone the git repository to your computer or download the corresponding zip file
+1. Clone the git repository to your computer or download the corresponding zip file or download the R package version in the release section
 
 ```
 git clone https://github.com/etiennelord/COMPONENT-GRAPHER.git
@@ -27,16 +31,28 @@ git clone https://github.com/etiennelord/COMPONENT-GRAPHER.git
 
 2. Follow the following steps (depending of the BRIDES version):
 
-A) For the R version
+A) For the R standalone version
 
 From the R_src directory, enter the R shell. Then execute: 
 
 ```
 install.packages("SDDE")
 source("BRIDES.R")
+# OR 
+source("BRIDES_2020.R")
 ```
 
-B) For the C++ version
+B) For the R package version
+
+Enter the R shell. Then execute:
+
+```
+install.packages("BRIDES_1.2.1.tar.gz", repos = NULL, type = "source")
+```
+
+Alternatively, use the "Install from Package Archive File" in the R Studio package menu.
+
+C) For the C++ version
 
 This version requires the use of **gcc version 4.5** or higher for the C++ compiler. 
 On MacOSX, the use of OpenMP will require the installation of [Homebrew](http://brew.sh/) and the execution of:
@@ -64,8 +80,6 @@ where the Makefile.VERSION is either Makefile.Linux, or Makefile.MacOSX, or Make
 
 **Simulation scripts** for different networks can be found in the [simulation](https://github.com/etiennelord/BRIDES/tree/master/Simulation) directory.
 
-
-
 ## Usage 
 
 Also see the program manual in the **Manual** directory.
@@ -74,7 +88,7 @@ A) Using the R version:
 
 ```R
 ## Load the functions and dependencies
-source("BRIDES.R")
+source("BRIDES.R") or library(BRIDES)
 
 ## Load the sample network
 t0<-load_network("sample/t0.txt")
@@ -86,6 +100,44 @@ BRIDES(t0,t1)
 
 ## Execute BRIDES on directed networks U0 with an attribute file
 BRIDES(u0, A="2")
+```
+
+## For the scenarios (R package version - 2020 - Cindy Bouchard)
+
+* Scenarios: Exhaustive search *
+```
+# Searching for the scenario favoring: Breakthough [B=1 R=0 I=0 D=0 E=0 S=0]
+# The scenario is to add 1 to 2 new nodes to network X
+# The search will be un undirected and unweighted networks
+# This search mode will evaluate ALL possible scenarios
+# Note: this search mode could take some time on bigger networks
+data(networkX)
+data(networkY)
+BRIDES(networkX, networkY,runmode='exhaustive',max_additional=2, wt=c(1,0,0,0,0,0))
+```
+
+* Scenarios: Genetics search *
+```
+# Searching for the scenario favoring:Breakthough [B=1 R=0 I=0 D=0 E=0 S=0]
+# The scenario is to add 1 to 2 new nodes to network X
+# The search will be un undirected and unweighted networks
+# This search mode will use a genetic algorithm to converge to a solution
+# using artificial crossing over between the best local solutions.
+data(networkX)
+data(networkY)
+results<-BRIDES(networkX, networkY,runmode='genetics',max_additional=2, wt=c(1,0,0,0,0,0),
+```
+
+* Scenarios: Stepwise search *
+```
+# Searching for the scenario favoring:Breakthough [B=1 R=0 I=0 D=0 E=0 S=0]
+# The scenario is to add 1 to 2 new nodes to network X
+# The search will be un undirected and unweighted networks
+# This search mode add iteratively the first best node, then try to add
+# the second best node, etc.
+data(networkX)
+data(networkY)
+results<-BRIDES(networkX, networkY,runmode='stepwise',max_additional=2, wt=c(1,0,0,0,0,0))
 ```
 
 B) Using the C++ version: 
