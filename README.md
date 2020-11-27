@@ -2,7 +2,8 @@
 This program allows the user to follow the evolution of an original network X into an augmented network Y by counting the number of Breakthroughs, Roadblocks, Impasses, Detours, Equal paths and Shortcuts (BRIDES) in the network Y. 
 ## About
 
-* New version 2020 - Cindy Bouchard (Université de Montréal) *
+* New version 2020 - Cindy Bouchard (Université de Montréal) 
+* This new version (see the release section) allows scenarios simulation and search using genetics algorithm and more...  
 
 This repository includes the R, R package and C++ source codes of BRIDES, examples of simple evolving networks and examples of real genome similarity networks which can be given as input of our program
 
@@ -104,7 +105,7 @@ BRIDES(u0, A="2")
 
 ## For the scenarios (R package version - 2020 - Cindy Bouchard)
 
-* Scenarios: Exhaustive search *
+* Scenarios: Exhaustive search 
 ```
 # Searching for the scenario favoring: Breakthough [B=1 R=0 I=0 D=0 E=0 S=0]
 # The scenario is to add 1 to 2 new nodes to network X
@@ -116,7 +117,7 @@ data(networkY)
 BRIDES(networkX, networkY,runmode='exhaustive',max_additional=2, wt=c(1,0,0,0,0,0))
 ```
 
-* Scenarios: Genetics search *
+* Scenarios: Genetics search 
 ```
 # Searching for the scenario favoring:Breakthough [B=1 R=0 I=0 D=0 E=0 S=0]
 # The scenario is to add 1 to 2 new nodes to network X
@@ -128,7 +129,7 @@ data(networkY)
 results<-BRIDES(networkX, networkY,runmode='genetics',max_additional=2, wt=c(1,0,0,0,0,0),
 ```
 
-* Scenarios: Stepwise search *
+* Scenarios: Stepwise search 
 ```
 # Searching for the scenario favoring:Breakthough [B=1 R=0 I=0 D=0 E=0 S=0]
 # The scenario is to add 1 to 2 new nodes to network X
