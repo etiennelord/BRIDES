@@ -1,4 +1,4 @@
-source("BRIDES.R")
+source("BRIDES_2022.R")
 options(error = function() traceback())
 # This generate some random networks and then, execute the C++ version of BRIDES
 # to evaluate different paths.
