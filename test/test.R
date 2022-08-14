@@ -1,16 +1,16 @@
-library(BRIDES)
+#Test the vanilla R version (in development)
+source("BRIDES_2022.R")
 
-setwd("BRIDES_2020/data")
 X=load_network("sample_X.txt")
 y=load_network("sample_Y.txt")
 
 BRIDES(X,y,runmode = "stepwise", min_additional = 2, max_additional = 3)
-
 BRIDES(X,y,runmode = "exhaustive", min_additional = 1, max_additional = 2)
 BRIDES(X,y,runmode = "genetics", min_additional = 1, max_additional = 3)
 BRIDES(X,y,runmode = "stepwise", min_additional = 1, max_additional = 3)
 
-install.packages("C:/Users/etien/OneDrive/Desktop/BRIDES_2020/BRIDES_1.2.0.tar.gz", repos = NULL, type = "source")
+#Test the package version located in the Releases section of the Github
+install.packages("BRIDES_1.2.1.tar.gz", repos = NULL, type = "source")
 library(BRIDES)
 set.seed(22)
 g=random_network(20,10,type = "barabasi")
