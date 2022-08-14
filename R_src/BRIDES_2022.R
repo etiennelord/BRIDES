@@ -8,7 +8,7 @@
 #| 2019. Addition of adaptive search for best paths                                   | 
 #| 2020. Addition of weighted scenarios                                               |
 #| 2022. Removed the SDDE dependency                                                  |
-#| Revision : 14 August 2012                                                          |
+#| Revision : 14 August 2022                                                          |
 #======================================================================================
 #
 # Usage: 
@@ -16,10 +16,11 @@
 # set.seed(1)
 # g=random_network(10)
 # BRIDES(g$g1,g$g2)
-# BRIDES(g$g1,g$g2,runmode="incremental",min_additional = 1, max_additional = 2)
+# BRIDES(g$g1,g$g2,runmode="stepwise",min_additional = 1, max_additional = 2)
 # BRIDES(g$g1,g$g2,runmode="exhaustive", max_additional = 2)
 # BRIDES(g$g1,g$g2,runmode="exhaustive", max_additional = 2, wt=c(-3,-1,1,1,1,1))
-# 
+# BRIDES(g$g1,g$g2,runmode="genetics", max_additional = 2, wt=c(-3,-1,1,1,1,1)
+# # 
 # *Note: wt refers to the B R I D E S scoring scheme.
 
 library(igraph)
@@ -27,7 +28,7 @@ library(foreach)
 library(doParallel)
 library(fastmap)
 
-  ###################################################
+
   # Function match_matrix
   # Helper function for genetic search
   # Giving a chromosome, look if it is contained 
@@ -35,25 +36,83 @@ library(fastmap)
   match_matrix=function(chromosome, matr) {
     # Don't allow empty chromosome
     if (sum(chromosome)==0) return (TRUE)
+    if (nrow(matr)==0) return (FALSE)
     for (i in 1:nrow(matr)) {
       if (all(matr[i,]==chromosome)) return(TRUE)
     }
     return (FALSE)
   }
   
+  ###################################################
+  # Function all_combn : create all combination
+  # Helper function for the allsolution
+  # Create the list of solution to explore
+  # size : total number of additionnal node
+  # min_additional: number of nodes to add
+  # max_additional; max. number of nodes to add
+  all_combn=function(size=1, min_additional=1, max_additional=1) { 
+    template_chromosome=array(0,size)
+     results=matrix(0,nrow=0,ncol=size)
+    if (min_additional>max_additional) {
+        m=max_additional
+        max_additional=min_additional
+        min_additional=m
+    }
+    for (idx in min_additional:max_additional) {
+        chromosome_comb=combn(size,idx)
+        for (idx2 in 1:ncol(chromosome_comb)) {
+            chromosome=template_chromosome
+            ch_template=chromosome_comb[,idx2]
+            chromosome[ch_template]=1
+            results=rbind(results,chromosome)
+        }
+    }
+    return(results)
+  }
+  
+  ###################################################
+  # Function fixed_combn : create all combination at a levels 
+  # with fixed nodes
+  # Helper function for the stepwise
+  # Create the list of solution to explore
+  # size   :total number of additionnal node
+  # level : current level i.e. number of node to add
+  # fixed  : list of array of nodes in the previous level that are needed
+  fixed_combn=function(size=1, level=1, fixed=list()) { 
+    template_chromosome=array(0,size)
+    results=matrix(0,nrow=0,ncol=size)
+    chromosome_comb=combn(size,level)
+    for (idx2 in 1:ncol(chromosome_comb)) {
+            chromosome=template_chromosome
+            ch_template=chromosome_comb[,idx2]
+            chromosome[ch_template]=1
+            if (length(fixed)==0) {
+                results=rbind(results,chromosome)
+            } else {
+                for (f in fixed) {
+                    if (sum(ch_template %in% f)==length(f)) results=rbind(results,chromosome)
+                }
+            }
+    }
+    return(results)
+  }
+  
    ###################################################
   # Function allsolution
   # if some results are equals, return the combn results 
-  # BRIDES 2020  
-  # size is still the number of added nodes
-  allsolution=function(size=2, evalFunc=NULL, maxgenes=0) {
+  # BRIDES 2019-2020  
+  # size : number of added nodes in network Y\n
+  # min_additional: minimum number of node to add (must be >0)
+  # max_additional: maximum number of node to add (must be >0)
+  allsolution=function(size=2, evalFunc=NULL, min_additional=1, max_additional=0) {
+    options(warn=-1); #Disable warnings 
     if (is.null(evalFunc)) {
       warning("No eval function defined. Note, we try to minimize this function.");
       return(NULL);
     }
     
-    if (maxgenes>size||maxgenes==0) {
-      maxgenes=size;
+    if (max_additional>size||max_additional==0) {
+      max_additional=size;
     }
     
     results=list()
@@ -76,25 +135,29 @@ library(fastmap)
     results$evaluations=c()
     results$additional_nodes=c()
     
-    chromosome_comb=combn(size,maxgenes)
+    chromosome_comb=all_combn(size,min_additional,max_additional)
     # Test each chromosomes
-    cat("Exhaustive search for ",ncol(chromosome_comb)," iterations with max.:",maxgenes," additional nodes.\n",sep="")
-    for (idx in 1:ncol(chromosome_comb)){
-        best_parents=which(results$evaluations==min(results$evaluations))
-        chromosome=array(0,size)
-        ch_template=chromosome_comb[,idx]
-        chromosome[ch_template]=1
+    cat("Exhaustive search for ",nrow(chromosome_comb)," iterations with min. : ", min_additional, " and max.:",max_additional," additional nodes.\n",sep="")
+    for (idx in 1:nrow(chromosome_comb)){
+        
+        #chromosome=array(0,size)
+        chromosome=chromosome_comb[idx,]
+        #chromosome[ch_template]=1
         res=evalFunc(chromosome)
         score=res$score
-        cat("[Iteration ",idx,"/",ncol(chromosome_comb),"] (score:",score,")\n", sep="")
+        cat("[Iteration ",idx,"/",nrow(chromosome_comb),"] (score:",score,")\n", sep="")
         results$brides=rbind(results$brides,res$brides)
         results$population=rbind(results$population,chromosome)
         results$evaluations=c(results$evaluations,score)
         results$additional_nodes=c(results$additional_nodes,res$nodes)
-        results$best_chromosome=c(results$best_chromosome,best_parents)
+        #if (length(results$evaluations)>0) {
+        #   best_parents=which(results$evaluations==max(results$evaluations))
+        #   results$best_chromosome=c(results$best_chromosome,best_parents)
+        #}
+        
     }
     rownames(results$population)=1:nrow(results$population)
-    best_parents=which(results$evaluations==min(results$evaluations))
+    best_parents=which(results$evaluations==max(results$evaluations))
     results$final=results$population[best_parents,]
     results$final_score=results$evaluations[best_parents]
     results$final_chromosome=best_parents;
@@ -102,17 +165,92 @@ library(fastmap)
     return(results)
   
   }
+
+ ###################################################
+  # Function stepwise
+  # note: if some score are equals, try each branch separately 
+  # BRIDES 2019-2020  
+  # size : number of added nodes in network Y\n
+  # min_additional: minimum number of node to add (must be >0)
+  # max_additional: maximum number of node to add (must be >0)
+  stepwise=function(size=2, evalFunc=NULL, min_additional=1, max_additional=0) {
+    options(warn=-1); #Disable warnings 
+    if (is.null(evalFunc)) {
+      warning("No eval function defined. Note, we try to minimize this function.");
+      return(NULL);
+    }
+    
+    if (max_additional>size||max_additional==0) {
+      max_additional=size;
+    }
+    
+    results=list()
+    
+    results$population=matrix(0,nrow=0,ncol=size)
+    results$brides=matrix(0,nrow=0, ncol=8)
+    results$size=size
+    results$best=c()
+    results$evaluations=c()
+    results$additional_nodes=c()
+    
+    # Test each chromosomes
+    cat("Stepwise search for maximum :",max_additional," additional nodes.\n",sep="")
+    fixed=c()
+    for (level in 1:max_additional) {
+        chromosome_comb=fixed_combn(size,level,fixed)
+        cat ("Starting adding new nodes: ", level, " of ", max_additional,"\n")
+        if (length(chromosome_comb)>0) {
+            for (idx in 1:nrow(chromosome_comb)){
+                #chromosome=array(0,size)
+                chromosome=chromosome_comb[idx,]
+                cat("[Iteration ",idx,"/",nrow(chromosome_comb),"] (in progress)\n", sep="")
+                # Ensure that we don't do the same twice
+                if (!match_matrix(chromosome,results$population)) {
+                    #chromosome[ch_template]=1
+                    res=evalFunc(chromosome)
+                    score=res$score
+                    results$brides=rbind(results$brides,res$brides)
+                    results$population=rbind(results$population,chromosome)
+                    results$evaluations=c(results$evaluations,score)
+                    results$additional_nodes=c(results$additional_nodes,res$nodes)
+                }
+                
+            }
+        }
+        best_parents=which(results$evaluations==max(results$evaluations, na.rm=T))
+        # Fix some nodes for the solutions (note, there might be equality 
+        fixed=list()
+        for (i in 1:length(best_parents)) {
+            bidx=best_parents[i]
+            fixed[[i]]=(which(results$population[bidx,]==1))
+        
+        }
+    }
+    
+    rownames(results$population)=1:nrow(results$population)
+    best_parents=which(results$evaluations==max(results$evaluations, na.rm=T))
+    results$final=results$population[best_parents,]
+    results$final_score=results$evaluations[best_parents]
+    results$final_chromosome=best_parents;
+    cat("Stepwise search done.\n")
+    return(results)
+  
+  }
+
   
   ###################################################
   # Function optimize_ga
   # Genetic Algorithm to optimize the solution of 
-  # BRIDES 2019
+  # BRIDES 2019-2020
   # This is a 0,1 chromosome model which try to 
-  # MINIMIZE the evalFunc.
+  # MAXIMIZE the evalFunc.
   # size:  is the size(len) of the binary array
   # iters: number of iterations to run
   # mutationChance: chance of having a completely random chromosome
+  # mingenes: minimum number of added nodes
+  # maxgenes: maximum number of added nodes
   optimize_ga=function(size=2,iters=50,evalFunc=NULL, mutationChance=0.10, maxgenes=0, mingenes=1) {
+    options(warn=-1); #Disable warnings 
     if (is.null(evalFunc)) {
       warning("No eval function defined. Note, we try to minimize this function.");
       return(NULL);
@@ -164,7 +302,7 @@ library(fastmap)
     retry=0
     cat("Optimization for ",iters," iterations with min.:",mingenes," max.:",maxgenes," additional nodes.\n",sep="")
     while (i<=iters) {
-      best_parents=which(results$evaluations==min(results$evaluations))
+      best_parents=which(results$evaluations==max(results$evaluations, na.rm=T))
       other_parents=c(1:nrow(results$population))
       other_parents=other_parents[-best_parents]
       if (length(other_parents)==0) other_parents=best_parents; #Just in case there is no winner
@@ -181,9 +319,13 @@ library(fastmap)
         # Constrained mutations
         possible=rep(0,size)
         possible[1:mingenes]=1
-        possible[mingenes+1:maxgenes]=sample(0:1,maxgenes-mingenes,replace=T)
-        chromosome=sample(possible,size,replace=F)
-        #chromosome=sample(0:1,size,replace = T) # Completely random chromosome
+        lenp=length(c(mingenes+1:maxgenes))
+        if (lenp>0) {
+            possible[mingenes+1:maxgenes]=sample(0:1,lenp,replace=T)
+            chromosome=sample(possible,size,replace=F)
+        } else {
+            chromosome=sample(0:1,size,replace = T) # Completely random chromosome
+        }
       }
       if (retry>4*iters) {
         parents=sample(other_parents,2,replace=F)
@@ -212,15 +354,24 @@ library(fastmap)
       }
     }
     rownames(results$population)=1:nrow(results$population)
-    best_parents=which(results$evaluations==min(results$evaluations))
+    best_parents=which(results$evaluations==max(results$evaluations, na.rm=T))
     results$final=results$population[best_parents,]
     results$final_score=results$evaluations[best_parents]
     results$final_chromosome=best_parents;
-    cat("Optimization done.\n")
+    cat("Genetics search done.\n")
     return(results)
     
   }
     
+    ###################################################
+    #function split_sample
+    #Split a sample x into equals parts of maxsize
+    split_sample<-function(x, maxsize=1000) {
+        #note: since we want both node, we multiply by 2
+        maxsize<-maxsize*2;
+        return (split(x, ceiling(seq_along(x)/maxsize)));
+    }
+        
     ###################################################
     #function split_sample
     #Split a sample x into equals parts of maxsize
@@ -282,8 +433,8 @@ library(fastmap)
     #Added support for edge.weights
     export_network<-function(g,file,attributes=F){
         if (!is.igraph(g)) {
-            export_network(g$g1,paste(file,"_g1.txt",sep=""), attributes);
-            export_network(g$g2,paste(file,"_g2.txt",sep=""),file, attributes);
+            export_network(g$g1,paste0(file,"_g1.txt"), attributes);
+            export_network(g$g2,paste0(file,"_g2.txt"),file, attributes);
         } else {
             if (file.exists(file)) file.remove(file)
             file_attr=paste(file,".attr.txt",sep="")
@@ -309,7 +460,7 @@ library(fastmap)
             for (n in names(V(g)[degree(g)==0])) cat(n,"\t\n", file=file, sep="",append=T); #Slow
             if (attributes&& ("tax"%in%v_attribute)) {
                 for (nid in V(g)[degree(g)==0]) {
-                    cat(V(g)[nid]$name,"\t",V(g)[nid]$tax,"\t\n",sep="", file=file_attr,sep="",append=T);
+                    cat(V(g)[nid]$name,"\t",V(g)[nid]$tax,"\t\n",sep="", file=file_attr,append=T);
                 }
             }
         }
@@ -318,14 +469,14 @@ library(fastmap)
     #function load network from edgelist
     load_network<-function(filename_or_df, filename_tax_or_df='', edge_weight='equal',directed=FALSE) { 
         if (!is.data.frame(filename_or_df)) {
-            dS=read.table(filename_or_df,sep='\t');
+            dS=read.table(filename_or_df,sep='\t', fill=T);
         } else {
             dS=filename_or_df;
         }
         gS=graph.data.frame(dS,directed=directed);
         if (filename_tax_or_df!='') {
             if (!is.data.frame(filename_tax_or_df)) {
-                dS2=read.table(filename_tax_or_df,sep='\t',row.names=1);
+                dS2=read.table(filename_tax_or_df,sep='\t',row.names=1, fill=T);
             } else {
                 dS2=filename_tax_or_df;
             }
@@ -623,7 +774,6 @@ library(fastmap)
 #This is the main compute function for one pathway
 pathBRIDES<-function(g1,g2_without_k,g1names,g2_unique_names_primed,g2_unique_number_primed,node1_number,node2_number,no_new_node,maxdistance,maxtime,maxnode,t0) {
     options(warn=-1); #disable warnings since some vertex could become unreachable
-    print("HELLO\n")
     ###################################################
     ## Flags
     verbose<-FALSE;
@@ -1074,20 +1224,33 @@ return(result)
 # This version record the different pattern of path
 # e.g. Euk->Pla->Pla->Vir->Euk
 # New version Jan 2019, added the option for incremental graph analysis
-BRIDES<-function(X,Y=NULL,src="default", dest="default",A='default',random=0, maxdistance=100, maxtime=100,maxnode=100,maxcores=1, outfile="",size=1000, first=0, last=0, sample_paths=c(), weighted=FALSE, runmode="default", verbose=TRUE, min_additional=1, max_additional=0, max_iters=100, mutationChance=0.1, wt =c(-2,1,2,-1,-1,-2)) 
+# New version July 2020, added the option for genetics algorithm 
+BRIDES<-function(X,Y=NULL,src="default", dest="default",attributes='default',random=0, maxdistance=100, maxtime=100,maxnode=100,maxcores=1, outfile="",size=1000, first=0, last=0, weighted=TRUE, runmode="default", path_information=TRUE, verbose=TRUE, min_additional=1, max_additional=0, max_iters=100, mutationChance=0.1, wt=c(3,-1,-2,1,1,2)) 
 {
     #####################################################
     ## Options
-    if (!runmode %in% c("incremental","default","exhaustive")) {
-       warning("The runmode parameter must be either: 'default','incremental' or 'exhaustive'.\n");
+    options(warn=1) #Ensure warnings
+    if (!runmode %in% c("genetics","default","exhaustive","stepwise")) {
+       warning("The runmode parameter must be either: 'default','exhaustive','genetics' or 'stepwise'.\nSee the help section for explanation.\n");
        return (NULL);
     }
+    #####################################################
+    ## Weighting scheme for the optimization model score
+        #      B R I D E  S  [Note, additionnal zero since vector contains other parameters]
+        #wt =c(-2,1,2,-1,-1,-2,0,0) # scoring scheme
+        
+        if (length(wt)<8) {
+            for (i in ((length(wt)+1):8)) {
+                wt[i]=0;
+            }
+        }
+        
     
     #####################################################
     ## Wrapper
     g1=X
     g2=Y
-    taxnames=A;
+    taxnames=attributes;
     npath=random;
     node1=src
     node2=dest
@@ -1098,15 +1261,13 @@ BRIDES<-function(X,Y=NULL,src="default", dest="default",A='default',random=0, ma
      g1=g1$g1
     }
     if (is.null(g2)&&taxnames=="default") {
-        print(is.null(g2))
-        print(taxnames=="default")
-        warning("No augmented network set. Either supply two networks or supply one network with some attributes.\n");
+       warning("No augmented network set. Either supply two networks or supply one network with some attributes.\n");
        return (NULL);
     }
     if (is.null(g2)) {
         g2=g1;
     }
-    if ((is.directed(g1)&&!is.directed(g2))||(is.directed(g2)&&!is.directed(g1))) {
+    if (sum(is.directed(g1),is.directed(g2))==1) {
       warning("Both networks must be either directed or undirected.\n");
       return (NULL);
     }   
@@ -1128,20 +1289,25 @@ BRIDES<-function(X,Y=NULL,src="default", dest="default",A='default',random=0, ma
         g1names<-V(g1)$name;
     }
     #Replace edges with NA weight with 1
-    E(g1)[is.na(weight)]$weight=1
-    E(g2)[is.na(weight)]$weight=1
-    # Be sure to remove weights
+    if (length(which(is.na(E(g1)$weight)))>0) {
+        E(g1)[which(is.na(E(g1)$weight))]$weight=1
+    }
+    if (length(which(is.na(E(g2)$weight)))>0) {
+        E(g2)[which(is.na(E(g2)$weight))]$weight=1
+    }
+    
+    # Be sure to remove weights is we are not taking them into account
     if (weighted==FALSE) {
         E(g1)$weight=1
         E(g2)$weight=1
     }
     
     #####################################################
-    # Incremental 2019 (call multiple time BRIDES       #
+    # Incremental 2019-2020 (call multiple time BRIDES) #
     # To try to find the 'BEST' additionnal nodes       #
 
     if (runmode!="default"&&is.null(g2))  {
-        warning("In incremental or exhaustive mode, a source graph X (smaller) and destination graph Y(bigger) must be specified.\n");
+        warning("In runmode which is not 'default', a source graph X (smaller) and destination graph Y(bigger) must be specified.\n");
         return (NULL);
     }
     
@@ -1150,20 +1316,18 @@ BRIDES<-function(X,Y=NULL,src="default", dest="default",A='default',random=0, ma
         # 1. vertex in first graph
         # 2. vertex in second graph
         g2_unique_names<-V(g2)[!(V(g2)$name %in% V(g1)$name)]$name;
-        if (length(g2_unique_names)<2) {
-            warning("In incremental mode, a source graph X (smaller) and destination graph Y(bigger) must be specified.\n");
+        if (length(g2_unique_names)<1) {
+            # TODO: Add a better message here.
+            warning("After pruning, no new node found in network Y. In runmode which is not 'default', this is not valid.\n");
             return (NULL);
         }
-        #Weight for the optimization model score
-        #      B R I D E  S  [Note, additionnal zero since vector contains other parameters]
-        #wt =c(-2,1,2,-1,-1,-2,0,0) # scoring scheme
-        
-        if (length(wt)<8) {
-            for (i in ((length(wt)+1):8)) {
-                wt[i]=0;
-            }
+        if (length(g2_unique_names)<2) {
+            # TODO: Add a better message here.
+            warning("After pruning, only one new node was found. In runmode which is which is not 'default', this is not valid.\n");
+            return (NULL);
         }
-        cat("Using the weighing scheme [ B R I D E S ]: ",wt[1:6],"\n")
+        
+        
         maxn=length(g2_unique_names);
         
         # Evaluation function 
@@ -1173,7 +1337,7 @@ BRIDES<-function(X,Y=NULL,src="default", dest="default",A='default',random=0, ma
            g2n_names=c(g1names,g2n)
            ing2=induced_subgraph(g2,V(g2)[g2n_names])
            
-            brides=BRIDES(g1,ing2,maxdistance=maxdistance, maxtime=maxtime,maxnode=maxnode,outfile="",size=size,verbose=FALSE, maxcores=maxcores)
+            brides=BRIDES(g1,ing2,maxdistance=maxdistance, maxtime=maxtime,maxnode=maxnode,outfile="",size=size,verbose=FALSE, maxcores=maxcores, path_information=FALSE, weighted=weighted)
             score=sum(wt*brides)
           results=list()
           results$score=score;
@@ -1182,16 +1346,24 @@ BRIDES<-function(X,Y=NULL,src="default", dest="default",A='default',random=0, ma
         return(results)
         }
         
+         cat("Using scoring scheme [ B R I D E S ] :",wt[1:6],"\n");    
         # Genetic algorithm 
-        if (runmode=="incremental") {
+        if (runmode=="genetics") {
             results=optimize_ga(size = maxn, iters = max_iters,mingenes=min_additional,maxgenes=max_additional,mutationChance=mutationChance,evalFunc = evalFunc)
         }
+        # Exhaustive mode (all solutions)
         if (runmode=="exhaustive") {
-            results=allsolution(size = maxn, maxgenes=max_additional,evalFunc = evalFunc)
+            results=allsolution(size = maxn, min_additional=min_additional, max_additional=max_additional,evalFunc = evalFunc)
         }
+        # Stepwise (best of each steps so it will not search the complete search space)
+        if (runmode=="stepwise") {
+            results=stepwise(size = maxn, min_additional=min_additional, max_additional=max_additional,evalFunc = evalFunc)
+        }
+        
         # Create the human-readable outputs
         results$nodes=g2_unique_names;
         df=data.frame(results$brides)
+        # Note: this might fail if we have duplicated resuls
         rownames(df)=results$additional_nodes
         df$score=results$evaluations
         df$best=rep("",nrow(df))
@@ -1209,7 +1381,7 @@ BRIDES<-function(X,Y=NULL,src="default", dest="default",A='default',random=0, ma
           ing2=induced_subgraph(g2,V(g2)[g2n_names])
           results$networks[[ni]]=ing2
           ni=ni+1
-          plot(ing2,main=paste("Addition of ",results$additional_nodes[idx]))
+          plot_network(g1,ing2,main=paste("Addition of ",results$additional_nodes[idx]))
         }
         
         # return the optimization results
@@ -1235,7 +1407,7 @@ BRIDES<-function(X,Y=NULL,src="default", dest="default",A='default',random=0, ma
     }
     
 ################################################
-    ## If we have a node1, we only take this node1
+    ## If we have a node1 i.e. number, we only take this node1
     
     if (is.numeric(node1)) {
         node1_number=node1;
@@ -1276,7 +1448,7 @@ BRIDES<-function(X,Y=NULL,src="default", dest="default",A='default',random=0, ma
     g2_unique_names_primed=c()  #Name of unique vertex in g2 without the degree one
     g2_unique_number_primed=c()  #Number of unique vertex
     # First prime not connected k
-    if (verbose) cat("Priming unconnected nodes...\n");
+    if (verbose) cat("Prunning unconnected nodes...\n");
     for (name in g2_unique_names) {
     
         if(degree(g2,name)==1) {
@@ -1351,6 +1523,13 @@ BRIDES<-function(X,Y=NULL,src="default", dest="default",A='default',random=0, ma
         cat("Total paths                 :",total_paths,"\n");
         #cat("Randomize paths        :",randomize,"\n");
         cat("Weighted edges              :",weighted,"\n");
+        if (runmode!="default") cat("Scoring [ B R I D E S ]     :",wt[1:6],"\n");  
+        if (!path_information) {
+        cat("Path information (trace)    : partial\n");
+        } else {
+        cat("Path information (trace)    : complete\n");
+        }
+        if (outfile!='') cat("Output file                 :",outfile,"\n");
         cat("Group size                  :",size,"\n");
         cat("Start group                 :",first,"\n");
         cat("End group                   :",last,"\n");
@@ -1360,16 +1539,14 @@ BRIDES<-function(X,Y=NULL,src="default", dest="default",A='default',random=0, ma
         cat("Maxcores                    :",maxcores,"\n");  
         cat("==========================================================\n");
     }
-    if (outfile!="") write("# src\tdest\tdist_x\tdist_y\tBRIDES\tpath\ttaxa\n",outfile)
+    if (outfile!="") write("src\tdest\tdist_x\tdist_y\tBRIDES\tpath\tpath_attributes",outfile)
         if (npath==0) {
             npath=(total_n*(total_n-1))/2;
             if (directed) npath=npath*2;
         }
         
-        #Try to run multicore
-        
         cl <- makeCluster(multicore(maxcores))
-        registerDoParallel(cl=cl)
+        registerDoParallel(cl=cl);
             
         total_s=array(0,8);
         if (verbose) cat("#  ","B","R","I","D","E","S","(utime","stime)","\n", sep="\t")
@@ -1384,11 +1561,9 @@ BRIDES<-function(X,Y=NULL,src="default", dest="default",A='default',random=0, ma
             sample_paths=sample_paths[sample_paths != 0] #Trim the sample_path of zero (0) indice
             npath=length(sample_paths)/2;
             total=0
+            hi=0
             t0=proc.time();
             s<-foreach(hi=1:npath, .combine=function(i,j, .export=c("pathways")) { return(i+j)}) %dopar% {
-            #For debug
-            #s=c()
-            #for (hi in 1:npath) {
                 if(!exists("pathBRIDES", mode="function")) source("BRIDES_2022.R")
                 i=sample_paths[(hi-1)*2+1];
                 j=sample_paths[(hi-1)*2+2];             
@@ -1402,25 +1577,32 @@ BRIDES<-function(X,Y=NULL,src="default", dest="default",A='default',random=0, ma
                 a
                 #s=c(s,a)
             }
-            stopImplicitCluster()
+            
             ttime=(proc.time()-t0)
             s=c(s,as.numeric(ttime[1]),as.numeric(ttime[3]))            
             total_s = total_s +s
             names(s)<-c("B","R","I","D","E","S","(utime","stime)")
             if (verbose) cat("",s[1],s[2],s[3],s[4],s[5],s[6],s[7],s[8],"\n",sep="\t");
+            
+            
         } # End first to last group 
         if (verbose)  cat("====================== RESULTS ===========================\n");
+        total_s
+        options(warn=0)
+        stopCluster(cl)
+        options(warn=1)
         names(total_s)<-c("B","R","I","D","E","S","(utime","stime)")
         return(total_s)
     # CASE 2. We have one sample 
     } else {
+        options(warn=1)
         pathBRIDES(g1,g2_without_k,g1names,g2_unique_names_primed,g2_unique_number_primed,node1_number,node2_number,no_new_node,maxdistance,maxtime,maxnode,proc.time());
     }
     
 }
 
 ###################################################
-    #Any good path
+#Any good path
     good_path2<-function(g,node1,node2, additional_node) {
         path<-get.all.shortest.paths(g,node1,node2, mode="out")$res;    
         for (p in path) {
@@ -1451,325 +1633,364 @@ BRIDES<-function(X,Y=NULL,src="default", dest="default",A='default',random=0, ma
     # Color from Kelly KL. Twenty-two colors of maximum contrast. Col Eng 1976;3:26-27. See also :
     # http://jfly.iam.u-tokyo.ac.jp/color/, and Campadelli, P., Posenato, R., & Schettini, R. (1999). An algorithm for the selection of high-contrast color sets. Color Research & Application, 24(2), 132-138.
       
-    save_network<-function(g1,g2, filename, layout=layout.kamada.kawai, taxnames='', mode='png', imagesize=800) {   
-        #g1 = blue
-        #g2 = orange
-        if (mode!="screen") cat("Saving graph [",filename,"]\n");   
-        # Color from Kelly KL. Twenty-two colors of maximum contrast. Col Eng 1976;3:26-27. See also :
-        # http://jfly.iam.u-tokyo.ac.jp/color/, and Campadelli, P., Posenato, R., & Schettini, R. (1999). An algorithm for the selection of high-contrast color sets. Color Research & Application, 24(2), 132-138.
-        Kelly_color=c("#FFFFFF","#FFB300","#803E75","#FF6800","#A6BDD7","#C10020","#CEA262","#817066","#007D34","#F6768E","#00538A","#FF7A5C","#53377A","#FF8E00","#B32851","#F4C800","#7F180D","#93AA00","#593315","#F13A13","#232C16","#000000")    
-        nv=c("Original nodes","Augmented nodes"); #name vector
-        cv=c("white","orange"); #color vector
-        if (taxnames=='') {
-            V(g2)$color <- ifelse((V(g2)$name %in% V(g1)$name), "white", "orange");
-            V(g1)$color <-"white";
-        } else if (taxnames=='allgroup'&&!is.null(V(g2)$name)&&!is.null(V(g2)$tax)) {                   
-                i=1;
-                nv=c();
-                cv=c();
-                
-                cl=Kelly_color;
-                if (length(table(V(g2)$tax))<10) cl=rainbow(length(table(V(g2)$tax))); 
-                #Create a table of the coloring
-                for (a in names(table(V(g2)$tax))) {            
-                    cv=c(cv,cl[i]);
-                    nv=c(nv,a);
-                    i=i+1;
-                }           
-                for (i in 1:length(V(g2)$name)) {               
-                    color_pos=match(V(g2)[i]$tax, nv);                              
-                    V(g2)[i]$color=cv[color_pos];               
-                }
-                for (i in 1:length(V(g1)$name)) {               
-                    color_pos=match(V(g1)[i]$tax, nv);                              
-                    V(g1)[i]$color=cv[color_pos];               
-                }
-        } else if (taxnames!=''&&taxnames!='allgroup'){         
-            V(g2)$color <- ifelse((V(g2)$tax != taxnames||V(g2)$name!=taxnames), "white", "orange")
-            V(g1)$color <-"white";  
-        } else {
-            
-            V(g2)$color <- ifelse((V(g2)$name %in% V(g1)$name), "white", "orange");
-            V(g1)$color <-"white";
-        }
-        V(g2)$size=10;
-        V(g1)$size=10;
-        
-        #Unique
-        vertex_of_g2<-V(g2)[!(V(g2) %in% V(g1))]
-        vertex_of_g1=length(V(g1)$name)
-        if (length(V(g2)) > 50) {
-            save_network_big(g1,g2, filename, layout, taxnames, mode, imagesize);
-        } else {        
-            if (mode=='png') {
-                f2<-paste(filename,"_2",".png", sep="");
-                png(f2, imagesize, imagesize, pointsize = 14);
-                plot(g2, 
-                layout=layout, 
-                main=filename,  #specifies the title
-                vertex.label.dist=0,            #puts the name labels slightly off the dots
-                vertex.frame.color='black',         #the color of the border of the dots 
-                vertex.label.color='black',     #the color of the name labels
-                vertex.label.font=1,            #the font of the name labels
-                vertex.label=V(g2)$name     #specifies the lables of the vertices. in this case the 'name' attribute is used
-                );
-                legend(x="bottomright",title="Legend", legend=nv,pt.bg=cv, pt.cex=2, col="black",pch=21, yjust=0, lty=0);
-                a=dev.off();        
-            } else if (mode=='svg') {
-                f2<-paste(filename,"_2",".svg", sep="");
-                svg(f2);
-                plot(g2, 
-                layout=layout, 
-                main=filename,  #specifies the title
-                vertex.label.dist=0,            #puts the name labels slightly off the dots
-                vertex.frame.color='black',         #the color of the border of the dots 
-                vertex.label.color='black',     #the color of the name labels
-                vertex.label.font=1,            #the font of the name labels
-                vertex.label=V(g2)$name     #specifies the lables of the vertices. in this case the 'name' attribute is used
-                );
-                legend(x="bottomright",title="Legend", legend=nv,pt.bg=cv, pt.cex=2, col="black",pch=21, yjust=0, lty=0);
-                a=dev.off();        
-            } else if (mode=='eps'){
-                f2<-paste(filename,"_2",".eps", sep="");
-                postscript(f2, horizontal = FALSE, fonts=c("serif", "Palatino"), onefile = FALSE, paper = "special", height = 8, width = 10)
-                    plot(g2, 
-                    layout=layout, 
-                    vertex.label.family="serif",
-                    edge.label.family="Palatino",           
-                    main=filename,  #specifies the title
-                    vertex.label.dist=0,            #puts the name labels slightly off the dots
-                    vertex.frame.color='black',         #the color of the border of the dots 
-                    vertex.label.color='black',     #the color of the name labels
-                    vertex.label.font=1,            #the font of the name labels
-                    vertex.label=V(g1)$name     #specifies the lables of the vertices. in this case the 'name' attribute is used
-                    );
-                    legend(x="bottomright",title="Legend", legend=nv,pt.bg=cv, pt.cex=2, col="black",pch=21, yjust=0, lty=0);
-                    a=dev.off();        
-            } else {            
-                    plot(g2, 
-                    layout=layout, 
-                    vertex.label.family="serif",
-                    edge.label.family="Palatino",           
-                    main=filename,  #specifies the title
-                    vertex.label.dist=0,            #puts the name labels slightly off the dots
-                    vertex.frame.color='black',         #the color of the border of the dots 
-                    vertex.label.color='black',     #the color of the name labels
-                    vertex.label.font=1,            #the font of the name labels
-                    vertex.label=V(g1)$name     #specifies the lables of the vertices. in this case the 'name' attribute is used
-                    );
-                    legend(x="bottomright",title="Legend", legend=nv,pt.bg=cv, pt.cex=2, col="black",pch=21, yjust=0, lty=0);               
-            }       
-            #layout=layout, # the layout method. see the igraph documentation for details
-            
-            if (mode=='png') {
-                f1<-paste(filename,"_1",".png", sep="");
-                png(f1, 800, 800, pointsize = 14);
-                plot(g1, 
-                layout=layout, 
-                main=filename,  #specifies the title
-                vertex.label.dist=0,            #puts the name labels slightly off the dots
-                vertex.frame.color='black',         #the color of the border of the dots 
-                vertex.label.color='black',     #the color of the name labels
-                vertex.label.font=1,            #the font of the name labels
-                vertex.label=V(g1)$name     #specifies the lables of the vertices. in this case the 'name' attribute is used
-                );
-                legend(x="bottomright",title="Legend", legend=nv,pt.bg=cv, pt.cex=2, col="black",pch=21, yjust=0, lty=0);
-                a=dev.off();
-            } else if (mode=='svg') {
-                f1<-paste(filename,"_1",".svg", sep="");
-                svg(f1);
-                plot(g1, 
-                layout=layout, 
-                main=filename,  #specifies the title
-                vertex.label.dist=0,            #puts the name labels slightly off the dots
-                vertex.frame.color='black',         #the color of the border of the dots 
-                vertex.label.color='black',     #the color of the name labels
-                vertex.label.font=1,            #the font of the name labels
-                vertex.label=V(g1)$name     #specifies the lables of the vertices. in this case the 'name' attribute is used
-                );
-                legend(x="bottomright",title="Legend", legend=nv,pt.bg=cv, pt.cex=2, col="black",pch=21, yjust=0, lty=0);
-                a=dev.off();
-            } else if (mode=='eps') {
-                    f1<-paste(filename,"_1",".eps", sep="");
-                    postscript(f1, fonts=c("serif", "Palatino"),horizontal = FALSE, onefile = FALSE, paper = "special", height = 8, width = 10)
-                    plot(g1, 
-                        layout=layout, 
-                        vertex.label.family="serif",
-                        edge.label.family="Palatino",           
-                        main=filename,  #specifies the title
-                        vertex.label.dist=0,            #puts the name labels slightly off the dots
-                        vertex.frame.color='black',         #the color of the border of the dots 
-                        vertex.label.color='black',     #the color of the name labels
-                        vertex.label.font=1,            #the font of the name labels
-                        vertex.label=V(g1)$name     #specifies the lables of the vertices. in this case the 'name' attribute is used
-                    );
-                    legend(x="bottomright",title="Legend", legend=nv,pt.bg=cv, pt.cex=2, col="black",pch=21, yjust=0, lty=0);
-                    a=dev.off();
-            } 
-            if (mode!="screen") print("done")
-        }
-    }
+	#########################################################
+	# Corrected version of the save network
+	#
+	save_network<-function(g1,g2=NULL, filename, layout=layout.kamada.kawai, attributes='', mode='png', imagesize=800, main='', legend_position="bottomright", label_filename="") {	
+	if (attributes!='allgroup'&&attributes!=''&&is.null(g2)) {
+		g2=g1
+		g2_unique_names=V(g2)[V(g2)$tax==as.character(attributes)]$name;
+		# Remove from g1 this new node
+		g1=delete_vertices(g1,g2_unique_names)
+	}
+	if (mode!="screen") cat("Saving graph [",filename,"]\n");	
+	# Color from Kelly KL. Twenty-two colors of maximum contrast. Col Eng 1976;3:26-27. See also :
+	# http://jfly.iam.u-tokyo.ac.jp/color/, and Campadelli, P., Posenato, R., & Schettini, R. (1999). An algorithm for the selection of high-contrast color sets. Color Research & Application, 24(2), 132-138.
+	Kelly_color=c("#FFFFFF","#FFB300","#803E75","#FF6800","#A6BDD7","#C10020","#CEA262","#817066","#007D34","#F6768E","#00538A","#FF7A5C","#53377A","#FF8E00","#B32851","#F4C800","#7F180D","#93AA00","#593315","#F13A13","#232C16","#000000")	  
+	nv=c("Original nodes","Augmented nodes"); #name vector
+	cv=c("white","orange"); #color vector
+	if (attributes=='') {
+		V(g2)$color <- ifelse((V(g2)$name %in% V(g1)$name), "white", "orange");
+		V(g1)$color <-"white";
+	} else if (attributes=='allgroup'&&!is.null(V(g2)$name)&&!is.null(V(g2)$tax)) {					
+			i=1;
+			nv=c();
+			cv=c();
+			
+			cl=Kelly_color;
+			if (length(table(V(g2)$tax))<10) cl=rainbow(length(table(V(g2)$tax))); 
+			#Create a table of the coloring
+			for (a in names(table(V(g2)$tax))) {			
+				cv=c(cv,cl[i]);
+				nv=c(nv,a);
+				i=i+1;
+			}			
+			for (i in 1:length(V(g2)$name)) {				
+				color_pos=match(V(g2)[i]$tax, nv);								
+				V(g2)[i]$color=cv[color_pos];				
+			}
+			for (i in 1:length(V(g1)$name)) {				
+				color_pos=match(V(g1)[i]$tax, nv);								
+				V(g1)[i]$color=cv[color_pos];				
+			}
+	} else if (attributes!=''&&attributes!='allgroup'){			
+		V(g2)$color <- ifelse((V(g2)$tax != attributes||V(g2)$name!=attributes), "white", "orange")
+		V(g1)$color <-"white";	
+	} else {
+		
+		V(g2)$color <- ifelse((V(g2)$name %in% V(g1)$name), "white", "orange");
+		V(g1)$color <-"white";
+	}
+	V(g2)$size=10;
+	V(g1)$size=10;
+	
+	#Unique
+	vertex_of_g2<-V(g2)[!(V(g2) %in% V(g1))]
+	vertex_of_g1=length(V(g1)$name)
+	# Label, this is experimental since some path are not simple
+	# if (label_filename!="") {
+		# # Note: we assume the BRIDES outfile
+		# options(warn=-1);
+		# lb=read.table("test.txt",sep="\t",col.names = c("x","y","lx","ly","BRIDES","path","path_attr","blank"), header=T)
+		# lb$x=as.character(lb$x)
+		# lb$y=as.character(lb$y)
+		# lb$BRIDES=as.character(lb$BRIDES)
+		# for (i in (1:nrow(lb))) {
+			# x=lb[i,]$x
+			# y=lb[i,]$y
+			# label=substr(lb[i,]$BRIDES,1,1)
+			# cat(x,y,label,"\n")
+			# E(g2,path=c(x,y))$label=label
+		# }
+		# options(warn=1);
+	# }
+	
+	if (length(V(g2)) > 50) {
+		save_network_big(g1=g1,g2=g2, filename=filename, layout=layout, attributes=attributes, mode=mode, imagesize=imagesize, legend_position=legend_position);
+	} else {		
+		if (mode=='png') {
+			f2<-paste(filename,"_2",".png", sep="");
+			png(f2, imagesize, imagesize, pointsize = 14);
+			plot(g2, 
+			layout=layout, 
+			main=main,	#specifies the title
+			vertex.label.dist=0,			#puts the name labels slightly off the dots
+			vertex.frame.color='black', 		#the color of the border of the dots 
+			vertex.label.color='black',		#the color of the name labels
+			vertex.label.font=1,			#the font of the name labels
+			vertex.label=V(g2)$name		#specifies the lables of the vertices. in this case the 'name' attribute is used
+			);
+			if (!is.null(legend_position)) legend(x=legend_position,title="Legend", legend=nv,pt.bg=cv, pt.cex=2, col="black",pch=21, yjust=0, lty=0);
+			a=dev.off();		
+		} else if (mode=='svg') {
+			f2<-paste(filename,"_2",".svg", sep="");
+			svg(f2);
+			plot(g2, 
+			layout=layout, 
+			main=main,	#specifies the title
+			vertex.label.dist=0,			#puts the name labels slightly off the dots
+			vertex.frame.color='black', 		#the color of the border of the dots 
+			vertex.label.color='black',		#the color of the name labels
+			vertex.label.font=1,			#the font of the name labels
+			vertex.label=V(g2)$name		#specifies the lables of the vertices. in this case the 'name' attribute is used
+			);
+			if (!is.null(legend_position)) legend(x=legend_position,title="Legend", legend=nv,pt.bg=cv, pt.cex=2, col="black",pch=21, yjust=0, lty=0);
+			a=dev.off();		
+		} else if (mode=='eps'){
+			f2<-paste(filename,"_2",".eps", sep="");
+			postscript(f2, horizontal = FALSE, fonts=c("serif", "Palatino"), onefile = FALSE, paper = "special", height = 8, width = 10)
+				plot(g2, 
+				layout=layout, 
+				vertex.label.family="serif",
+				edge.label.family="Palatino", 			
+				main=main,	#specifies the title
+				vertex.label.dist=0,			#puts the name labels slightly off the dots
+				vertex.frame.color='black', 		#the color of the border of the dots 
+				vertex.label.color='black',		#the color of the name labels
+				vertex.label.font=1,			#the font of the name labels
+				vertex.label=V(g2)$name		#specifies the lables of the vertices. in this case the 'name' attribute is used
+				);
+				if (!is.null(legend_position)) legend(x=legend_position,title="Legend", legend=nv,pt.bg=cv, pt.cex=2, col="black",pch=21, yjust=0, lty=0);
+				a=dev.off();		
+		} else {			
+				plot(g2, 
+				layout=layout, 
+				vertex.label.family="serif",
+				edge.label.family="Palatino", 			
+				main=main,	#specifies the title
+				vertex.label.dist=0,			#puts the name labels slightly off the dots
+				vertex.frame.color='black', 		#the color of the border of the dots 
+				vertex.label.color='black',		#the color of the name labels
+				vertex.label.font=1,			#the font of the name labels
+				vertex.label=V(g2)$name		#specifies the lables of the vertices. in this case the 'name' attribute is used
+				);
+				if (!is.null(legend_position)) legend(x=legend_position,title="Legend", legend=nv,pt.bg=cv, pt.cex=2, col="black",pch=21, yjust=0, lty=0);				
+		}		
+		#layout=layout,	# the layout method. see the igraph documentation for details
+		
+		if (mode=='png') {
+			f1<-paste(filename,"_1",".png", sep="");
+			png(f1, 800, 800, pointsize = 14);
+			plot(g1, 
+			layout=layout, 
+			main=main,	#specifies the title
+			vertex.label.dist=0,			#puts the name labels slightly off the dots
+			vertex.frame.color='black', 		#the color of the border of the dots 
+			vertex.label.color='black',		#the color of the name labels
+			vertex.label.font=1,			#the font of the name labels
+			vertex.label=V(g1)$name		#specifies the lables of the vertices. in this case the 'name' attribute is used
+			);
+			if (!is.null(legend_position)) legend(x=legend_position,title="Legend", legend=nv,pt.bg=cv, pt.cex=2, col="black",pch=21, yjust=0, lty=0);
+			a=dev.off();
+		} else if (mode=='svg') {
+			f1<-paste(filename,"_1",".svg", sep="");
+			svg(f1);
+			plot(g1, 
+			layout=layout, 
+			main=main,	#specifies the title
+			vertex.label.dist=0,			#puts the name labels slightly off the dots
+			vertex.frame.color='black', 		#the color of the border of the dots 
+			vertex.label.color='black',		#the color of the name labels
+			vertex.label.font=1,			#the font of the name labels
+			vertex.label=V(g1)$name		#specifies the lables of the vertices. in this case the 'name' attribute is used
+			);
+			if (!is.null(legend_position)) legend(x=legend_position,title="Legend", legend=nv,pt.bg=cv, pt.cex=2, col="black",pch=21, yjust=0, lty=0);
+			a=dev.off();
+		} else if (mode=='eps') {
+				f1<-paste(filename,"_1",".eps", sep="");
+				postscript(f1, fonts=c("serif", "Palatino"),horizontal = FALSE, onefile = FALSE, paper = "special", height = 8, width = 10)
+				plot(g1, 
+					layout=layout, 
+					vertex.label.family="serif",
+					edge.label.family="Palatino", 			
+					main=main,	#specifies the title
+					vertex.label.dist=0,			#puts the name labels slightly off the dots
+					vertex.frame.color='black', 		#the color of the border of the dots 
+					vertex.label.color='black',		#the color of the name labels
+					vertex.label.font=1,			#the font of the name labels
+					vertex.label=V(g1)$name		#specifies the lables of the vertices. in this case the 'name' attribute is used
+				);
+				if (!is.null(legend_position)) legend(x=legend_position,title="Legend", legend=nv,pt.bg=cv, pt.cex=2, col="black",pch=21, yjust=0, lty=0);
+				a=dev.off();
+		} 
+		if (mode!="screen") print("done")
+	}
+}
 
-    save_network_big<-function(g1,g2, filename, layout=layout.kamada.kawai, taxnames='', mode='png', imagesize=2500) {      
-        #g1 = white
-        #g2 = orange
-        
-        
-            Kelly_color=c("#FFFFFF","#FFB300","#803E75","#FF6800","#A6BDD7","#C10020","#CEA262","#817066","#007D34","#F6768E","#00538A","#FF7A5C","#53377A","#FF8E00","#B32851","#F4C800","#7F180D","#93AA00","#593315","#F13A13","#232C16","#000000")    
-        nv=c("Original nodes","Augmented nodes"); #name vector
-        cv=c("white","orange"); #color vector
-        if (taxnames=='') {
-            V(g2)$color <- ifelse((V(g2)$name %in% V(g1)$name), "white", "orange")
-        } else if (taxnames=='allgroup'&&!is.null(V(g2)$name)) {        
-                i=1;
-                nv=c();
-                cv=c();
-                cl=Kelly_color;
-                if (length(table(V(g2)$tax))<10) {
-                    cl=rainbow(length(table(V(g2)$tax))); 
-                    # if (length(table(V(g2)$tax))==3) {
-                        # cl[1]="white";
-                        # cl[2]="orange";
-                        # cl[3]="black";
-                    # }
-                }
-                #Create a table of the coloring
-                for (a in names(table(V(g2)$tax))) {            
-                    cv=c(cv,cl[i]);
-                    nv=c(nv,a);
-                    i=i+1;
-                }           
-                for (i in 1:length(V(g2)$name)) {               
-                    color_pos=match(V(g2)[i]$tax, nv);                              
-                    V(g2)[i]$color=cv[color_pos];               
-                }
-                for (i in 1:length(V(g1)$name)) {               
-                    color_pos=match(V(g1)[i]$tax, nv);                              
-                    V(g1)[i]$color=cv[color_pos];               
-                }
-        } else if (taxnames!=''&&taxnames!='allgroup'){     
-            V(g2)$color <- ifelse((V(g2)$tax != taxnames||V(g2)$name!=taxnames), "white", "orange")
-            V(g1)$color <-"white";  
-        } else {
-            V(g2)$color <- ifelse((V(g2)$name %in% V(g1)$name), "white", "orange");
-            V(g1)$color <-"white";
-        }
-        V(g2)$size=2.5;
-        V(g1)$size=2.5;
-        
-        if (mode=='png') {
-                f2<-paste(filename,"_2",".png", sep="");
-                png(f2, imagesize, imagesize, pointsize = 14);
-                plot(g2, 
-                layout=layout, 
-                main=filename,  #specifies the title
-                vertex.label.dist=0,            #puts the name labels slightly off the dots
-                vertex.frame.color='black',         #the color of the border of the dots 
-                vertex.label.color='black',     #the color of the name labels
-                vertex.label.font=1,            #the font of the name labels
-                vertex.label=NA     #specifies the lables of the vertices. in this case the 'name' attribute is used
-                );
-                legend(x="bottomright",title="Legend", legend=nv,pt.bg=cv, pt.cex=2, col="black",pch=21, yjust=0, lty=0);
-                a=dev.off();
-        } else if (mode=='svg') {
-                f2<-paste(filename,"_2",".svg", sep="");
-                svg(f2);        
-                plot(g2, 
-                layout=layout, 
-                main=filename,  #specifies the title
-                vertex.label.dist=0,            #puts the name labels slightly off the dots
-                vertex.frame.color='black',         #the color of the border of the dots 
-                vertex.label.color='black',     #the color of the name labels
-                vertex.label.font=1,            #the font of the name labels
-                vertex.label=NA     #specifies the lables of the vertices. in this case the 'name' attribute is used
-                );
-                legend(x="bottomright",title="Legend", legend=nv,pt.bg=cv, pt.cex=2, col="black",pch=21, yjust=0, lty=0);
-                a=dev.off();
-        } else if (mode=='eps') {
-                f2<-paste(filename,"_2",".eps", sep="");
-                postscript(f2, , fonts=c("serif", "Palatino"), horizontal = FALSE, onefile = FALSE, paper = "special", height = 8, width = 10)
-                plot(g2, 
-                    layout=layout, 
-                    vertex.label.family="serif",
-                    edge.label.family="Palatino",   
-                    vertex.label.cex=1,
-                    main=filename,  #specifies the title
-                    vertex.label.dist=0,            #puts the name labels slightly off the dots
-                    vertex.frame.color='black',         #the color of the border of the dots 
-                    vertex.label.color='black',     #the color of the name labels
-                    vertex.label.font=1,            #the font of the name labels
-                    vertex.label=NA     #specifies the lables of the vertices. in this case the 'name' attribute is used
-                    );
-                    legend(x="bottomright",title="Legend", legend=nv,pt.bg=cv, pt.cex=2, col="black",pch=21, yjust=0, lty=0);
-                    a=dev.off();
-        } else {
-            plot(g2, 
-                    layout=layout, 
-                    vertex.label.family="serif",
-                    edge.label.family="Palatino",   
-                    vertex.label.cex=1,
-                    main=filename,  #specifies the title
-                    vertex.label.dist=0,            #puts the name labels slightly off the dots
-                    vertex.frame.color='black',         #the color of the border of the dots 
-                    vertex.label.color='black',     #the color of the name labels
-                    vertex.label.font=1,            #the font of the name labels
-                    vertex.label=NA     #specifies the lables of the vertices. in this case the 'name' attribute is used
-                    );
-                    legend(x="bottomright",title="Legend", legend=nv,pt.bg=cv, pt.cex=2, col="black",pch=21, yjust=0, lty=0);
-        }
-        if (mode=='png') {
-                f1<-paste(filename,"_1",".png", sep="");
-                png(f1, imagesize, imagesize, pointsize = 14);
-                plot(g1, 
-                layout=layout, 
-                main=filename,                  #specifies the title
-                vertex.label.dist=0,            #puts the name labels slightly off the dots
-                vertex.frame.color='black',     #the color of the border of the dots 
-                vertex.label.color='black',     #the color of the name labels
-                vertex.label.font=1,            #the font of the name labels
-                vertex.label=NA     #specifies the lables of the vertices. in this case the 'name' attribute is used            
-                );
-                legend(x="bottomright",title="Legend", legend=nv,pt.bg=cv, pt.cex=2, col="black",pch=21, yjust=0, lty=0);
-                a=dev.off();
-        } else if (mode=='svg') {
-                f1<-paste(filename,"_1",".svg", sep="");
-                svg(f1);        
-                plot(g1, 
-                    layout=layout, 
-                    vertex.label.family="serif",
-                    edge.label.family="Palatino",   
-                    vertex.label.cex=1,
-                    main=filename,  #specifies the title
-                    vertex.label.dist=0,            #puts the name labels slightly off the dots
-                    vertex.frame.color='black',         #the color of the border of the dots 
-                    vertex.label.color='black',     #the color of the name labels
-                    vertex.label.font=1,            #the font of the name labels
-                    vertex.label=NA     #specifies the lables of the vertices. in this case the 'name' attribute is used
-                    );
-                    legend(x="bottomright",title="Legend", legend=nv,pt.bg=cv, pt.cex=2, col="black",pch=21, yjust=0, lty=0);
-                    a=dev.off();
-        } else if (mode=='eps'){
-                f1<-paste(filename,"_1",".eps", sep="");
-                postscript(f1, , fonts=c("serif", "Palatino"), horizontal = FALSE, onefile = FALSE, paper = "special", height = 8, width = 10)
-                plot(g1, 
-                    layout=layout, 
-                    vertex.label.family="serif",
-                    edge.label.family="Palatino",   
-                    vertex.label.cex=1,
-                    main=filename,  #specifies the title
-                    vertex.label.dist=0,            #puts the name labels slightly off the dots
-                    vertex.frame.color='black',         #the color of the border of the dots 
-                    vertex.label.color='black',     #the color of the name labels
-                    vertex.label.font=1,            #the font of the name labels
-                    vertex.label=NA     #specifies the lables of the vertices. in this case the 'name' attribute is used
-                    );
-                    legend(x="bottomright",title="Legend", legend=nv,pt.bg=cv, pt.cex=2, col="black",pch=21, yjust=0, lty=0);
-                    a=dev.off();
-        } 
-        if (mode!="screen") print("done")
-    }
+	########################################
+	### Corrected version of the save_network
+	save_network_big<-function(g1,g2, filename, layout=layout.kamada.kawai, attributes='', mode='png', imagesize=2500, main='', legend_position="bottomright") {		
+	#g1 = white
+	#g2 = orange
+	
+	
+	Kelly_color=c("#FFFFFF","#FFB300","#803E75","#FF6800","#A6BDD7","#C10020","#CEA262","#817066","#007D34","#F6768E","#00538A","#FF7A5C","#53377A","#FF8E00","#B32851","#F4C800","#7F180D","#93AA00","#593315","#F13A13","#232C16","#000000")	  
+	nv=c("Original nodes","Augmented nodes"); #name vector
+	cv=c("white","orange"); #color vector
+	if (attributes=='') {
+		V(g2)$color <- ifelse((V(g2)$name %in% V(g1)$name), "white", "orange")
+	} else if (attributes=='allgroup'&&!is.null(V(g2)$name)) {		
+			i=1;
+			nv=c();
+			cv=c();
+			cl=Kelly_color;
+			if (length(table(V(g2)$tax))<10) {
+				cl=rainbow(length(table(V(g2)$tax))); 
+				# if (length(table(V(g2)$tax))==3) {
+					# cl[1]="white";
+					# cl[2]="orange";
+					# cl[3]="black";
+				# }
+			}
+			#Create a table of the coloring
+			for (a in names(table(V(g2)$tax))) {			
+				cv=c(cv,cl[i]);
+				nv=c(nv,a);
+				i=i+1;
+			}			
+			for (i in 1:length(V(g2)$name)) {				
+				color_pos=match(V(g2)[i]$tax, nv);								
+				V(g2)[i]$color=cv[color_pos];				
+			}
+			for (i in 1:length(V(g1)$name)) {				
+				color_pos=match(V(g1)[i]$tax, nv);								
+				V(g1)[i]$color=cv[color_pos];				
+			}
+	} else if (attributes!=''&&attributes!='allgroup'){		
+		V(g2)$color <- ifelse((V(g2)$tax != attributes||V(g2)$name!=attributes), "white", "orange")
+		V(g1)$color <-"white";	
+	} else {
+		V(g2)$color <- ifelse((V(g2)$name %in% V(g1)$name), "white", "orange");
+		V(g1)$color <-"white";
+	}
+	V(g2)$size=2.5;
+	V(g1)$size=2.5;
+	
+	#filename2<-paste("graph_randomy",count,".txt", sep="");
+	#sink(filename2)   
+	#print(res1);
+	#print(res2);
+	#sink()
+	#layout=layout;	# the layout method. see the igraph documentation for details
+	if (mode=='png') {
+			f2<-paste(filename,"_2",".png", sep="");
+			png(f2, imagesize, imagesize, pointsize = 14);
+			plot(g2, 
+			layout=layout, 
+			main=main,	#specifies the title
+			vertex.label.dist=0,			#puts the name labels slightly off the dots
+			vertex.frame.color='black', 		#the color of the border of the dots 
+			vertex.label.color='black',		#the color of the name labels
+			vertex.label.font=1,			#the font of the name labels
+			vertex.label=NA		#specifies the lables of the vertices. in this case the 'name' attribute is used
+			);
+			if (!is.null(legend_position)) legend(x=legend_position,title="Legend", legend=nv,pt.bg=cv, pt.cex=2, col="black",pch=21, yjust=0, lty=0);
+			a=dev.off();
+	} else if (mode=='svg') {
+			f2<-paste(filename,"_2",".svg", sep="");
+			svg(f2);		
+			plot(g2, 
+			layout=layout, 
+			main=main,	#specifies the title
+			vertex.label.dist=0,			#puts the name labels slightly off the dots
+			vertex.frame.color='black', 		#the color of the border of the dots 
+			vertex.label.color='black',		#the color of the name labels
+			vertex.label.font=1,			#the font of the name labels
+			vertex.label=NA		#specifies the lables of the vertices. in this case the 'name' attribute is used
+			);
+			if (!is.null(legend_position)) legend(x=legend_position,title="Legend", legend=nv,pt.bg=cv, pt.cex=2, col="black",pch=21, yjust=0, lty=0);
+			a=dev.off();
+	} else if (mode=='eps') {
+			f2<-paste(filename,"_2",".eps", sep="");
+			postscript(f2, , fonts=c("serif", "Palatino"), horizontal = FALSE, onefile = FALSE, paper = "special", height = 8, width = 10)
+			plot(g2, 
+				layout=layout, 
+				vertex.label.family="serif",
+				edge.label.family="Palatino", 	
+				vertex.label.cex=1,
+				main=main,	#specifies the title
+				vertex.label.dist=0,			#puts the name labels slightly off the dots
+				vertex.frame.color='black', 		#the color of the border of the dots 
+				vertex.label.color='black',		#the color of the name labels
+				vertex.label.font=1,			#the font of the name labels
+				vertex.label=NA		#specifies the lables of the vertices. in this case the 'name' attribute is used
+				);
+				if (!is.null(legend_position)) legend(x=legend_position,title="Legend", legend=nv,pt.bg=cv, pt.cex=2, col="black",pch=21, yjust=0, lty=0);
+				a=dev.off();
+	} else {
+		plot(g2, 
+				layout=layout, 
+				vertex.label.family="serif",
+				edge.label.family="Palatino", 	
+				vertex.label.cex=1,
+				main=main,	#specifies the title
+				vertex.label.dist=0,			#puts the name labels slightly off the dots
+				vertex.frame.color='black', 		#the color of the border of the dots 
+				vertex.label.color='black',		#the color of the name labels
+				vertex.label.font=1,			#the font of the name labels
+				vertex.label=NA		#specifies the lables of the vertices. in this case the 'name' attribute is used
+				);
+				if (!is.null(legend_position)) legend(x=legend_position,title="Legend", legend=nv,pt.bg=cv, pt.cex=2, col="black",pch=21, yjust=0, lty=0);
+	}
+	if (mode=='png') {
+			f1<-paste(filename,"_1",".png", sep="");
+			png(f1, imagesize, imagesize, pointsize = 14);
+			plot(g1, 
+			layout=layout, 
+			main=main,	                #specifies the title
+			vertex.label.dist=0,			#puts the name labels slightly off the dots
+			vertex.frame.color='black',     #the color of the border of the dots 
+			vertex.label.color='black',		#the color of the name labels
+			vertex.label.font=1,			#the font of the name labels
+			vertex.label=NA		#specifies the lables of the vertices. in this case the 'name' attribute is used			
+			);
+			if (!is.null(legend_position)) legend(x=legend_position,title="Legend", legend=nv,pt.bg=cv, pt.cex=2, col="black",pch=21, yjust=0, lty=0);
+			a=dev.off();
+	} else if (mode=='svg') {
+			f1<-paste(filename,"_1",".svg", sep="");
+			svg(f1);		
+			plot(g1, 
+				layout=layout, 
+				vertex.label.family="serif",
+				edge.label.family="Palatino", 	
+				vertex.label.cex=1,
+				main=main,	#specifies the title
+				vertex.label.dist=0,			#puts the name labels slightly off the dots
+				vertex.frame.color='black', 		#the color of the border of the dots 
+				vertex.label.color='black',		#the color of the name labels
+				vertex.label.font=1,			#the font of the name labels
+				vertex.label=NA		#specifies the lables of the vertices. in this case the 'name' attribute is used
+				);
+				if (!is.null(legend_position)) legend(x=legend_position,title="Legend", legend=nv,pt.bg=cv, pt.cex=2, col="black",pch=21, yjust=0, lty=0);
+				a=dev.off();
+	} else if (mode=='eps'){
+			f1<-paste(filename,"_1",".eps", sep="");
+			postscript(f1, , fonts=c("serif", "Palatino"), horizontal = FALSE, onefile = FALSE, paper = "special", height = 8, width = 10)
+			plot(g1, 
+				layout=layout, 
+				vertex.label.family="serif",
+				edge.label.family="Palatino", 	
+				vertex.label.cex=1,
+				main=main,	#specifies the title
+				vertex.label.dist=0,			#puts the name labels slightly off the dots
+				vertex.frame.color='black', 		#the color of the border of the dots 
+				vertex.label.color='black',		#the color of the name labels
+				vertex.label.font=1,			#the font of the name labels
+				vertex.label=NA		#specifies the lables of the vertices. in this case the 'name' attribute is used
+				);
+				if (!is.null(legend_position)) legend(x=legend_position,title="Legend", legend=nv,pt.bg=cv, pt.cex=2, col="black",pch=21, yjust=0, lty=0);
+				a=dev.off();
+	} 
+	if (mode!="screen") print("done")
+}
 
-    #Wrapper to plot to std output
-    plot_network<-function(g1,g2,layout=layout.kamada.kawai, taxnames='') { 
-        save_network(g1,g2,filename='dummy',taxnames=taxnames, layout=layout,mode='screen');
-    }
+#Wrapper to plot to std output
+plot_network<-function(g1,g2=NULL,layout=layout.kamada.kawai, taxnames='', main='', attributes='', legend_position="bottomright", label_filename='') {
+	if (attributes!='allgroup'&&attributes!=''&&is.null(g2)) {
+		g2=g1
+		g2_unique_names=V(g2)[V(g2)$tax==as.character(attributes)]$name;
+		# Remove from g1 this new node
+		g1=delete_vertices(g1,g2_unique_names)
+	}
+	save_network(g1,g2,filename='dummy', layout=layout,mode='screen', main=main, legend_position=legend_position, label_filename=label_filename);
+}
