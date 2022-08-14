@@ -2,7 +2,7 @@
 This program allows the user to follow the evolution of an original network X into an augmented network Y by counting the number of Breakthroughs, Roadblocks, Impasses, Detours, Equal paths and Shortcuts (BRIDES) in the network Y. 
 ## About
 
-* New version 2020 - Cindy Bouchard (Université de Montréal) 
+* New version 2020-2022 - Cindy Bouchard (Université de Montréal) 
 * This new version (see the release section) allows scenarios simulation and search using genetics algorithm and more...  
 
 This repository includes the R, R package and C++ source codes of BRIDES, examples of simple evolving networks and examples of real genome similarity networks which can be given as input of our program
@@ -86,6 +86,7 @@ A) Using the R version:
 
 ```R
 ## Load the functions and dependencies
+## Note: the BRIDES_2022.R and sample networks are located in the R_src folder
 source("BRIDES_2022.R") or library(BRIDES)
 
 ## Load the sample network
