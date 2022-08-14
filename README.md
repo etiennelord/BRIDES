@@ -27,7 +27,7 @@ One novelty of the R package version (2020) is the addition of scenarios maximiz
 1. Clone the git repository to your computer or download the corresponding zip file or download the R package version in the release section
 
 ```
-git clone https://github.com/etiennelord/COMPONENT-GRAPHER.git
+git clone https://github.com/etiennelord/BRIDES.git
 ```
 
 2. Follow the following steps (depending of the BRIDES version):
