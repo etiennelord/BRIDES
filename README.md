@@ -86,7 +86,7 @@ A) Using the R version:
 
 ```R
 ## Load the functions and dependencies
-source("BRIDES.R") or library(BRIDES)
+source("BRIDES_2022.R") or library(BRIDES)
 
 ## Load the sample network
 t0<-load_network("sample/t0.txt")
