@@ -37,10 +37,7 @@ A) For the R standalone version
 From the R_src directory, enter the R shell. Then execute: 
 
 ```
-install.packages("SDDE")
-source("BRIDES.R")
-# OR 
-source("BRIDES_2020.R")
+source("BRIDES_2022.R")
 ```
 
 B) For the R package version
