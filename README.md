@@ -152,8 +152,8 @@ B) Using the C++ version:
 
 The R version of BRIDES depends on the following R libraries:
 
-##### [SDDE](https://cran.r-project.org/web/packages/SDDE/index.html)  
-Wrapper to some useful graph manipulation functions of the 'igraph' library and the 'doParallel' R package.
+##### [fastmap](https://cran.r-project.org/web/packages/fastmap/index.html)  
+Used in the R version to help list operations.
 ##### [igraph](http://igraph.org/r/)
 A collection of network handling tools including shortest-path analysis.   
 ##### [doParallel](https://cran.r-project.org/web/packages/doParallel/index.html)
