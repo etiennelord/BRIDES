@@ -124,7 +124,7 @@ BRIDES(networkX, networkY,runmode='exhaustive',max_additional=2, wt=c(1,0,0,0,0,
 # using artificial crossing over between the best local solutions.
 data(networkX)
 data(networkY)
-results<-BRIDES(networkX, networkY,runmode='genetics',max_additional=2, wt=c(1,0,0,0,0,0),
+results<-BRIDES(networkX, networkY,runmode='genetics',max_additional=2, wt=c(1,0,0,0,0,0))
 ```
 
 * Scenarios: Stepwise search 
