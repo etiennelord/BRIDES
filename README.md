@@ -98,7 +98,7 @@ u0<-load_network("sample/u0.txt","sample/u0.attr.txt", directed=T)
 BRIDES(t0,t1)
 
 ## Execute BRIDES on directed networks U0 with an attribute file
-BRIDES(u0, A="2")
+BRIDES(u0, attributes="2")
 ```
 
 ## For the scenarios (R package version only - 2022 - Cindy Bouchard)
