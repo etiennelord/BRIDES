@@ -154,7 +154,7 @@ B) Using the C++ version:
 The R version of BRIDES depends on the following R libraries:
 
 ##### [fastmap](https://cran.r-project.org/web/packages/fastmap/index.html)  
-Used in the R version to help list operations.
+Used in the R version (BRIDES_2022.R) to help list operations.
 ##### [igraph](http://igraph.org/r/)
 A collection of network handling tools including shortest-path analysis.   
 ##### [doParallel](https://cran.r-project.org/web/packages/doParallel/index.html)
@@ -163,3 +163,13 @@ For-each parallel adaptor for the 'parallel' R package.
 The C++ version of the program is optimized for the use of OpenMP and dispatching tasks to different threads.
 ##### [OpenMP](http://openmp.org/wp/)  
 
+## Citations
+
+```
+Lord, E., Le Cam, M., Bapteste, É., Méheust, R., Makarenkov, V., & Lapointe, F. J. (2016). BRIDES: a new fast algorithm and software for characterizing evolving similarity networks using breakthroughs, roadblocks, impasses, detours, equals and shortcuts. PLoS One, 11(8), e0161474. 
+https://doi.org/10.1371/journal.pone.0161474
+
+Bouchard, C., Lord, E., Tessier, N. & Lapointe, F. J. (2022). Applying novel connectivity networks to wood turtle populations to provide comprehensive conservation management strategies for species at risk. PLoS One
+https://doi.org/10.1371/journal.pone.0271797
+
+```
