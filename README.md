@@ -100,7 +100,7 @@ BRIDES(t0,t1)
 BRIDES(u0, A="2")
 ```
 
-## For the scenarios (R package version - 2020 - Cindy Bouchard)
+## For the scenarios (R package version only - 2022 - Cindy Bouchard)
 
 * Scenarios: Exhaustive search 
 ```
