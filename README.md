@@ -169,7 +169,7 @@ The C++ version of the program is optimized for the use of OpenMP and dispatchin
 Lord, E., Le Cam, M., Bapteste, É., Méheust, R., Makarenkov, V., & Lapointe, F. J. (2016). BRIDES: a new fast algorithm and software for characterizing evolving similarity networks using breakthroughs, roadblocks, impasses, detours, equals and shortcuts. PLoS One, 11(8), e0161474. 
 https://doi.org/10.1371/journal.pone.0161474
 
-Bouchard, C., Lord, E., Tessier, N. & Lapointe, F. J. (2022). Applying novel connectivity networks to wood turtle populations to provide comprehensive conservation management strategies for species at risk. PLoS One
+Bouchard, C., Lord, E., Tessier, N. & Lapointe, F. J. (2022). Applying novel connectivity networks to wood turtle populations to provide comprehensive conservation management strategies for species at risk. PLoS One, 17(8): e0271797.
 https://doi.org/10.1371/journal.pone.0271797
 
 ```
